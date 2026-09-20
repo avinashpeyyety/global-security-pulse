@@ -12,7 +12,7 @@ Cheap, open-source-first cadence for Global Security Pulse. **No paid X API sear
 | Weekends | Same daily inject schedule | UI advances to the next daily slot, including Sat → Sun and Sun → Mon |
 | Ad-hoc | `npm run report:daily` | Snapshot only (current public data) |
 | Ad-hoc dry X | `npm run ingest:x-scroll` | Synthesize pointers (no browser) |
-| Ad-hoc live X | `npm run ingest:x-scroll:live` or `npm run ingest:x-scroll -- --live` | Playwright Chromium allowlist scroll |
+| Ad-hoc live X | `npm run ingest:x-scroll:live` or `npm run ingest:x-scroll -- --live` | Playwright browser-retry allowlist scroll |
 
 ## Playwright install (live X)
 
@@ -50,7 +50,9 @@ npm run ingest:x-scroll:live
 
 `*.storage-state.json`, `.auth/`, and `data/x-storage-state.json` are gitignored.
 
-Smoke / budget overrides: `GSP_X_MAX_PROFILES`, `GSP_X_MAX_POSTS`, `GSP_X_STOP_AFTER_MS`, `GSP_X_MIN_DELAY_MS`, `GSP_X_MAX_DELAY_MS`.
+Live browser order is Chromium with stealth-ish flags and a desktop-like context, Firefox when its Playwright binary is installed, then the system Chrome channel when available. Set `GSP_X_HANDLES=BBCWorld,Reuters` with `GSP_X_MAX_PROFILES=2` for a targeted smoke.
+
+Smoke / budget overrides: `GSP_X_HANDLES`, `GSP_X_MAX_PROFILES`, `GSP_X_MAX_POSTS`, `GSP_X_STOP_AFTER_MS`, `GSP_X_MIN_DELAY_MS`, `GSP_X_MAX_DELAY_MS`.
 
 ## Budgets (X)
 
@@ -59,7 +61,7 @@ Smoke / budget overrides: `GSP_X_MAX_PROFILES`, `GSP_X_MAX_POSTS`, `GSP_X_STOP_A
 - Output: `data/raw/x-scroll-YYYYMMDD.json` → normalize → **merge by `id`** into `events.json`.
 - Place geocode: `ingest/lib/geocode.mjs` keyword → lat/lon from title/summary (Moscow, Riyadh, Hormuz, etc.); else region fallback.
 - Dry-run (`npm run ingest:x-scroll`): synthesizes structured pointers tagged `source: x-scroll`, `mode: dry-run`. Does not call X MCP or paid APIs.
-- Live path (`ingest:all` / `ingest:x-scroll:live`): Playwright Chromium timeline scroll. Falls back to dry-run if Playwright missing **or** zero posts scraped (login wall).
+- Live path (`ingest:all` / `ingest:x-scroll:live`): Playwright browser-retry timeline scroll (Chromium → Firefox → system Chrome channel). Falls back to dry-run if Playwright missing **or** zero posts scraped (login wall).
 
 ## Other open rails
 
