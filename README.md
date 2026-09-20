@@ -19,6 +19,7 @@ No paid Mapbox / Google key is required for v0.1. Optional later: MapTiler / Ama
 
 ```bash
 npm install
+npm run gen:seed       # writes apps/web/public/data/* from data/seed/events.json
 npm run build          # must succeed
 npm run dev            # http://localhost:5173 — works offline on seed JSON
 ```
@@ -31,6 +32,7 @@ Basemap tiles still need network; event/econ panels render from `apps/web/public
 |--------|---------|
 | `npm run dev` | Vite dashboard |
 | `npm run build` | shared types + web production build |
+| `npm run gen:seed` | Rebuild seed series / anomalies / snapshot |
 | `npm run ingest:gdelt` | Refresh GDELT-shaped events (seed fallback) |
 | `npm run ingest:markets` | Stooq/Yahoo series refresh (seed fallback) |
 | `npm run agent:x-scroll` | Allowlist dry-run → `data/ingest/x-pointers.jsonl` |
@@ -56,6 +58,15 @@ Without a key, seed / Stooq / Yahoo cover markets; Fed Funds uses a seed proxy (
 ## Status chips
 
 Pass / Fail / Warn / Not run — same language everywhere.
+
+## Offline vs needs keys
+
+| Path | Offline | Needs network / keys |
+|------|---------|----------------------|
+| `npm run dev` + seed JSON | Yes (panels) | Basemap tiles need network |
+| `ingest:gdelt` / `ingest:markets` | Falls back to seed | Live refresh needs HTTP |
+| `agent:x-scroll` dry-run | Yes | Live Playwright needs browser + X session |
+| FRED series | Seed proxy | `FRED_API_KEY` |
 
 ## Stack
 

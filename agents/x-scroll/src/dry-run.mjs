@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, '../..');
+const root = path.resolve(__dirname, '../../..'); // agents/x-scroll/src → repo root
 const allowlistPath = path.join(__dirname, '../allowlist.yaml');
 const outDir = path.join(root, 'data/ingest');
 const outFile = path.join(outDir, 'x-pointers.jsonl');
@@ -67,7 +67,6 @@ function main() {
 
   fs.mkdirSync(outDir, { recursive: true });
   const lines = [];
-  // 1 sample pointer per account for dry-run
   accounts.forEach((a, i) => lines.push(JSON.stringify(samplePointer(a, i))));
   fs.writeFileSync(outFile, lines.join('\n') + '\n', 'utf8');
 
