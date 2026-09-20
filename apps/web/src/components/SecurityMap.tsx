@@ -1,32 +1,21 @@
 import { useEffect, useRef } from 'react';
 import maplibregl from 'maplibre-gl';
-import type { MilitaryPosture, PrecipitatePotential, SecurityEvent } from '@gsp/shared';
-import { PRECIPITATE_LABELS } from '@gsp/shared';
+import type { MilitaryPosture, SecurityEvent } from '@gsp/shared';
+import {
+  PRECIPITATE_LABELS,
+  RISK_COLORS,
+  ROUTE_KIND_COLORS,
+  eventFalloutRisk,
+  FALLOUT_LABELS,
+} from '@gsp/shared';
 import { ageLabel } from '../lib/time';
 
 const STYLE = 'https://tiles.openfreemap.org/styles/dark';
-const ROUTES_URL = '/data/supply-routes.json';
-
-const LAYER_COLOR: Record<string, string> = {
-  conflict: '#ff6b6b',
-  cyber: '#c084fc',
-  maritime: '#38bdf8',
-  sanctions: '#f0c14b',
-  terrorism: '#fb7185',
-  unrest: '#fb923c',
-  disaster: '#94a3b8',
-};
+const ROUTES_URL = `${import.meta.env.BASE_URL}data/supply-routes.json`;
 
 function markerRadius(severity: number, confidence: number): number {
   return 4 + severity * 2.2 + confidence * 2;
 }
-
-const PRECIP_COLOR: Record<PrecipitatePotential, string> = {
-  low: '#34d399',
-  medium: '#fbbf24',
-  high: '#fb923c',
-  critical: '#ef4444',
-};
 
 export function SecurityMap({
   events,
@@ -83,11 +72,13 @@ export function SecurityMap({
                 'match',
                 ['get', 'kind'],
                 'oil-chokepoint',
-                '#fbbf24',
+                ROUTE_KIND_COLORS['oil-chokepoint'],
                 'oil-route',
-                '#f59e0b',
+                ROUTE_KIND_COLORS['oil-route'],
+                'trade-chokepoint',
+                ROUTE_KIND_COLORS['trade-chokepoint'],
                 'alt-route',
-                '#34d399',
+                ROUTE_KIND_COLORS['alt-route'],
                 '#38bdf8',
               ],
               'line-width': 2.6,
@@ -157,20 +148,25 @@ export function SecurityMap({
     markersRef.current = [];
 
     for (const e of events) {
+      const risk = eventFalloutRisk(e);
+      const color = RISK_COLORS[risk];
       const el = document.createElement('div');
       const r = markerRadius(e.severity, e.confidence);
+      el.className = 'event-marker';
       el.style.width = `${r * 2}px`;
       el.style.height = `${r * 2}px`;
       el.style.borderRadius = '50%';
-      el.style.background = LAYER_COLOR[e.layer] ?? '#5b9fd4';
-      el.style.border = '1px solid rgba(255,255,255,0.35)';
+      el.style.background = color;
+      el.style.border = '1px solid rgba(255,255,255,0.4)';
+      el.style.boxShadow = `0 0 6px ${color}88`;
       el.style.opacity = String(0.55 + e.confidence * 0.4);
       el.style.cursor = 'pointer';
-      el.title = e.title;
+      el.title = `${e.title} · ${FALLOUT_LABELS[risk]}`;
 
       const popup = new maplibregl.Popup({ offset: 12, maxWidth: '280px' }).setHTML(
         `<div>
           <span style="font-family:monospace;font-size:9px;border:1px solid #2a343f;padding:1px 4px;color:#8b9aab">REL ${e.sourceReliability}</span>
+          <span style="font-family:monospace;font-size:9px;color:${color};margin-left:6px">${escapeHtml(FALLOUT_LABELS[risk])}</span>
           <span style="font-family:monospace;font-size:9px;color:#8b9aab;margin-left:6px">${e.layer} · sev ${e.severity} · ${ageLabel(e.observedAt)}</span>
           <div style="font-weight:600;margin:4px 0">${escapeHtml(e.title)}</div>
           <div style="color:#8b9aab">${escapeHtml(e.summary)}</div>
@@ -186,7 +182,6 @@ export function SecurityMap({
     }
   }, [events]);
 
-
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -195,9 +190,9 @@ export function SecurityMap({
     postureMarkersRef.current = [];
 
     for (const p of postures) {
+      const color = RISK_COLORS[p.precipitatePotential] ?? RISK_COLORS.medium;
       const el = document.createElement('div');
       el.className = 'posture-marker';
-      const color = PRECIP_COLOR[p.precipitatePotential] ?? '#fbbf24';
       el.style.width = '0';
       el.style.height = '0';
       el.style.borderLeft = '8px solid transparent';
@@ -210,7 +205,7 @@ export function SecurityMap({
 
       const popup = new maplibregl.Popup({ offset: 14, maxWidth: '300px' }).setHTML(
         `<div>
-          <span style="font-family:monospace;font-size:9px;border:1px solid #fbbf24;padding:1px 4px;color:#fbbf24">POSTURE · ${escapeHtml(p.kind)}</span>
+          <span style="font-family:monospace;font-size:9px;border:1px solid ${color};padding:1px 4px;color:${color}">POSTURE · ${escapeHtml(p.kind)}</span>
           <span style="font-family:monospace;font-size:9px;color:${color};margin-left:6px">${escapeHtml(PRECIPITATE_LABELS[p.precipitatePotential])}</span>
           <div style="font-weight:600;margin:4px 0">${escapeHtml(p.title)}</div>
           <div style="color:#8b9aab">${escapeHtml(p.summary)}</div>

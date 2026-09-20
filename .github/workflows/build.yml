@@ -7,27 +7,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
       - name: Generate seed data
         run: node scripts/gen-seed.mjs
       - run: npm install
       - run: npm run build
       - name: Dry-run x-scroll
         run: npm run agent:x-scroll
-      - name: Commit seed if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/seed apps/web/public/data || true
-          if git diff --staged --quiet; then
-            echo "Seed unchanged"
-          else
-            git commit -m "chore: commit generated seed data for offline first paint"
-            git push
-          fi

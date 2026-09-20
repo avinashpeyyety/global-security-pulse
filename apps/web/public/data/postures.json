@@ -20,7 +20,7 @@
   },
   {
     "id": "pos-002",
-    "title": "Combined air\u2013sea exercise announced in Western Pacific",
+    "title": "Combined air–sea exercise announced in Western Pacific",
     "summary": "Illustrative seed: multi-day bilateral exercise with live-fire windows; messaging emphasizes deterrence and interoperability.",
     "kind": "exercise",
     "actors": [
@@ -31,7 +31,7 @@
     "precipitatePotential": "medium",
     "confidence": 0.6,
     "lat": 23.5,
-    "lon": 122.0,
+    "lon": 122,
     "region": "East Asia",
     "source": "seed/posture-template",
     "sourceReliability": "C",
@@ -41,7 +41,7 @@
   {
     "id": "pos-003",
     "title": "Air-defense readiness raised along forward corridor",
-    "summary": "Illustrative seed: alert state / intercept posture increased along a land\u2013air corridor; potential for miscalculation if paired with GPS/EW disruptions.",
+    "summary": "Illustrative seed: alert state / intercept posture increased along a land–air corridor; potential for miscalculation if paired with GPS/EW disruptions.",
     "kind": "alert",
     "actors": [
       "Regional air force"
@@ -106,8 +106,8 @@
     "inResponseTo": "Alliance reinforcement and exercise calendar",
     "precipitatePotential": "low",
     "confidence": 0.55,
-    "lat": 55.0,
-    "lon": 160.0,
+    "lat": 55,
+    "lon": 160,
     "region": "North Pacific",
     "source": "seed/posture-template",
     "sourceReliability": "C",

@@ -77,23 +77,11 @@ export default function App() {
               labels={LAYER_LABELS}
               active={layers}
               onToggle={toggleLayer}
+              showSupplyRoutes={showSupplyRoutes}
+              onToggleSupply={() => setShowSupplyRoutes((v) => !v)}
+              showPosture={showPosture}
+              onTogglePosture={() => setShowPosture((v) => !v)}
             />
-            <label>
-              <input
-                type="checkbox"
-                checked={showSupplyRoutes}
-                onChange={() => setShowSupplyRoutes((v) => !v)}
-              />
-              Supply routes
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                checked={showPosture}
-                onChange={() => setShowPosture((v) => !v)}
-              />
-              Military posture
-            </label>
           </div>
           <div className="map-overlay scrubber">
             <TimeScrubber value={window} onChange={setWindow} />

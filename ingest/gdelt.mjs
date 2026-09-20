@@ -56,12 +56,14 @@ async function fetchGdelt() {
     const props = f.properties ?? {};
     const title = String(props.name || props.title || props.shareimage || 'GDELT event').slice(0, 160);
     const summary = String(props.urltone != null ? `tone=${props.urltone}; ${title}` : title).slice(0, 280);
+    const severity = Math.min(5, Math.max(1, Math.round(Math.abs(Number(props.urltone) || 2) / 2) + 1));
     return {
       id: `gdelt-${Date.now()}-${i}`,
       title,
       summary,
       layer: guessLayer(`${title} ${props.url ?? ''}`),
-      severity: Math.min(5, Math.max(1, Math.round(Math.abs(Number(props.urltone) || 2) / 2) + 1)),
+      severity,
+      falloutRisk: severityToFallout(severity),
       confidence: 0.55,
       lat: Number(lat),
       lon: Number(lon),
@@ -73,6 +75,13 @@ async function fetchGdelt() {
       ingestedAt: now,
     };
   }).filter((e) => Number.isFinite(e.lat) && Number.isFinite(e.lon));
+}
+
+function severityToFallout(sev) {
+  if (sev >= 5) return 'critical';
+  if (sev >= 4) return 'high';
+  if (sev >= 3) return 'medium';
+  return 'low';
 }
 
 function loadSeed() {

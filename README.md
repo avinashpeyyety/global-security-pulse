@@ -2,26 +2,44 @@
 
 Dense dark ops dashboard for global **security events** (map + hotspots) and **economic stress** (sparklines, z-score anomalies, composite dial).
 
-Private repo · v0.1
+**Live:** https://avinashpeyyety.github.io/global-security-pulse/
+
+## Map legend
+
+| Layer | Depiction | Color meaning |
+|-------|-----------|---------------|
+| Security events | **Circles** | `falloutRisk` / severity → Low (cool muted) → Medium (amber) → High (orange) → Critical (bright red/magenta) |
+| Military posture | **Triangles** | `precipitatePotential` on the same risk scale |
+| Supply routes | **Dotted lines** | Distinct color by kind (oil chokepoint, oil route, trade chokepoint, alt route) |
+
+Layer toggles include a visible legend (swatch/shape) and a Low → Critical risk-scale strip.
+
+## Dynamic updates (GitHub Pages)
+
+The dashboard is hosted on **GitHub Pages** from the Actions workflow (`.github/workflows/pages.yml`).
+
+Routine data inject:
+
+1. Run ingest / seed scripts so `apps/web/public/data/*.json` is refreshed
+2. Commit the JSON
+3. Push to `main`
+
+The Pages workflow rebuilds and republishes. Vite `base` is `/global-security-pulse/` so assets resolve on the project site.
 
 ## Maps: MapLibre (not Google Maps)
-
-There is **no Google Maps MCP** in this account’s Cursor catalog. The web app uses:
 
 - **MapLibre GL JS**
 - Free OpenFreeMap tiles: `https://tiles.openfreemap.org/styles/dark`
 
-No paid Mapbox / Google key is required for v0.1. Optional later: MapTiler / Amazon Location via env.
-
-> **GeoLibre Desktop** on the Mac is available for offline GIS; the *web* dashboard is MapLibre only.
+No paid Mapbox / Google key is required for v0.1.
 
 ## Quick start
 
 ```bash
 npm install
-npm run gen:seed       # writes apps/web/public/data/* from data/seed/events.json
+npm run gen:seed       # writes apps/web/public/data/* from data/seed/
 npm run build          # must succeed
-npm run dev            # http://localhost:5173 — works offline on seed JSON
+npm run dev            # http://localhost:5173/global-security-pulse/
 ```
 
 Basemap tiles still need network; event/econ panels render from `apps/web/public/data/`.
@@ -42,36 +60,13 @@ Basemap tiles still need network; event/econ panels render from `apps/web/public
 - **Do not** call expensive `search_posts_all` by default.
 - Planned path: Playwright scroll of handles in `agents/x-scroll/allowlist.yaml` only.
 - v0.1 ships a **dry-run** that writes sample JSONL from the allowlist (no X API).
-- Optional enrichment via `get_posts_by_ids` only if an X connector env is present later.
 
 See `agents/x-scroll/README.md` for live scroll notes.
 
-## FRED (optional)
-
-```bash
-export FRED_API_KEY=…
-npm run ingest:markets
-```
-
-Without a key, seed / Stooq / Yahoo cover markets; Fed Funds uses a seed proxy (feed chip **Warn**).
-
-## Status chips
-
-Pass / Fail / Warn / Not run — same language everywhere.
-
-## Offline vs needs keys
-
-| Path | Offline | Needs network / keys |
-|------|---------|----------------------|
-| `npm run dev` + seed JSON | Yes (panels) | Basemap tiles need network |
-| `ingest:gdelt` / `ingest:markets` | Falls back to seed | Live refresh needs HTTP |
-| `agent:x-scroll` dry-run | Yes | Live Playwright needs browser + X session |
-| FRED series | Seed proxy | `FRED_API_KEY` |
-
 ## Stack
 
-Vite · React · TypeScript · MapLibre GL JS · npm workspaces
+Vite · React · TypeScript · MapLibre GL JS · npm workspaces · GitHub Pages
 
 ## License
 
-Private / all rights reserved.
+All rights reserved.

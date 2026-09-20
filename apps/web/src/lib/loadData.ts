@@ -8,6 +8,13 @@ import type {
   Hotspot,
   StressComposite,
 } from '@gsp/shared';
+import { severityToFallout } from '@gsp/shared';
+
+const BASE = import.meta.env.BASE_URL || '/';
+
+function dataUrl(file: string): string {
+  return `${BASE}${file}`.replace(/([^:]\/)\/+/g, '$1');
+}
 
 async function getJson<T>(url: string): Promise<T> {
   const res = await fetch(url);
@@ -15,12 +22,20 @@ async function getJson<T>(url: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
+function ensureFallout(events: SecurityEvent[]): SecurityEvent[] {
+  return events.map((e) => ({
+    ...e,
+    falloutRisk: e.falloutRisk ?? severityToFallout(e.severity),
+  }));
+}
+
 export async function loadSnapshot(): Promise<DashboardSnapshot> {
   try {
-    const snap = await getJson<DashboardSnapshot>('/data/snapshot.json');
+    const snap = await getJson<DashboardSnapshot>(dataUrl('data/snapshot.json'));
+    snap.events = ensureFallout(snap.events ?? []);
     if (!snap.postures) {
       try {
-        snap.postures = await getJson<MilitaryPosture[]>('/data/postures.json');
+        snap.postures = await getJson<MilitaryPosture[]>(dataUrl('data/postures.json'));
       } catch {
         snap.postures = [];
       }
@@ -28,17 +43,17 @@ export async function loadSnapshot(): Promise<DashboardSnapshot> {
     return snap;
   } catch {
     const [events, series, anomalies, feeds, stress, hotspots, postures] = await Promise.all([
-      getJson<SecurityEvent[]>('/data/events.json'),
-      getJson<EconSeries[]>('/data/series.json'),
-      getJson<Anomaly[]>('/data/anomalies.json'),
-      getJson<FeedStatus[]>('/data/feeds.json'),
-      getJson<StressComposite>('/data/stress.json'),
-      getJson<Hotspot[]>('/data/hotspots.json'),
-      getJson<MilitaryPosture[]>('/data/postures.json').catch(() => [] as MilitaryPosture[]),
+      getJson<SecurityEvent[]>(dataUrl('data/events.json')),
+      getJson<EconSeries[]>(dataUrl('data/series.json')),
+      getJson<Anomaly[]>(dataUrl('data/anomalies.json')),
+      getJson<FeedStatus[]>(dataUrl('data/feeds.json')),
+      getJson<StressComposite>(dataUrl('data/stress.json')),
+      getJson<Hotspot[]>(dataUrl('data/hotspots.json')),
+      getJson<MilitaryPosture[]>(dataUrl('data/postures.json')).catch(() => [] as MilitaryPosture[]),
     ]);
     return {
       generatedAt: new Date().toISOString(),
-      events,
+      events: ensureFallout(events),
       postures,
       series,
       anomalies,

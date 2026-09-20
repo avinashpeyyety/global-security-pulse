@@ -9,7 +9,26 @@ const now = new Date('2026-09-20T16:00:00Z');
 const iso = (d) => d.toISOString();
 const daysAgo = (d) => new Date(now.getTime() - d * 86400e3);
 
-const events = JSON.parse(fs.readFileSync(path.join(root, 'data/seed/events.json'), 'utf8'));
+const rawEvents = JSON.parse(fs.readFileSync(path.join(root, 'data/seed/events.json'), 'utf8'));
+function severityToFallout(sev) {
+  if (sev >= 5) return 'critical';
+  if (sev >= 4) return 'high';
+  if (sev >= 3) return 'medium';
+  return 'low';
+}
+const events = rawEvents.map((e) => ({
+  ...e,
+  falloutRisk: e.falloutRisk ?? severityToFallout(e.severity),
+}));
+let postures = [];
+const posturesPath = path.join(root, 'data/seed/postures.json');
+if (fs.existsSync(posturesPath)) {
+  postures = JSON.parse(fs.readFileSync(posturesPath, 'utf8'));
+} else {
+  const pubPostures = path.join(root, 'apps/web/public/data/postures.json');
+  if (fs.existsSync(pubPostures)) postures = JSON.parse(fs.readFileSync(pubPostures, 'utf8'));
+}
+
 
 function mulberry32(a) {
   return function () {
@@ -123,12 +142,15 @@ const feeds = [
 ];
 
 const hotspots = buildHotspots(events);
-const snapshot = { generatedAt: iso(now), events, hotspots, feeds, series, anomalies, stress, timeWindows: ['6h', '24h', '7d', '30d'] };
+const snapshot = { generatedAt: iso(now), events, postures, hotspots, feeds, series, anomalies, stress, timeWindows: ['6h', '24h', '7d', '30d'] };
 
 const outs = [
+  ['data/seed/events.json', events],
   ['data/seed/series.json', series],
   ['data/seed/snapshot.json', snapshot],
+  ['data/seed/postures.json', postures],
   ['apps/web/public/data/events.json', events],
+  ['apps/web/public/data/postures.json', postures],
   ['apps/web/public/data/series.json', series],
   ['apps/web/public/data/snapshot.json', snapshot],
   ['apps/web/public/data/feeds.json', feeds],
@@ -142,4 +164,4 @@ for (const [rel, data] of outs) {
   fs.mkdirSync(path.dirname(p), { recursive: true });
   fs.writeFileSync(p, JSON.stringify(data, null, 2));
 }
-console.log('gen-seed ok', { events: events.length, series: series.length, stress: stress.score });
+console.log('gen-seed ok', { events: events.length, postures: postures.length, series: series.length, stress: stress.score });

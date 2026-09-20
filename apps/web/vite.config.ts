@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
 export default defineConfig({
+  // GitHub Pages project site: https://avinashpeyyety.github.io/global-security-pulse/
+  base: '/global-security-pulse/',
   plugins: [react()],
   resolve: {
     alias: {
