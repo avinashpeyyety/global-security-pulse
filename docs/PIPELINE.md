@@ -6,20 +6,60 @@ Cheap, open-source-first cadence for Global Security Pulse. **No paid X API sear
 
 | When | What | Notes |
 |------|------|-------|
-| On demand / CI | `npm run ingest:all` | Markets → GDELT → RSS → X-scroll dry → daily snapshot |
+| On demand / daily | `npm run ingest:all` | Markets → GDELT → RSS → **X-scroll live** (`node ingest/x-scroll.mjs --live`) → daily snapshot |
 | Every day 8:20 AM / 1:20 PM / 6:20 PM CT | Data inject + commit | Header shows Updated / Next update from `meta.json` |
 | Daily evening | Same + commit | Refreshes `apps/web/public/data/*` and archives `reports/daily/YYYY-MM-DD/` |
 | Weekends | Same daily inject schedule | UI advances to the next daily slot, including Sat → Sun and Sun → Mon |
 | Ad-hoc | `npm run report:daily` | Snapshot only (current public data) |
-| Ad-hoc live X | `npm run ingest:x-scroll -- --live` | Only if Playwright + browser available; still allowlist-only |
+| Ad-hoc dry X | `npm run ingest:x-scroll` | Synthesize pointers (no browser) |
+| Ad-hoc live X | `npm run ingest:x-scroll:live` or `npm run ingest:x-scroll -- --live` | Playwright Chromium allowlist scroll |
+
+## Playwright install (live X)
+
+```bash
+npm i -D playwright
+npx playwright install chromium
+# Linux CI / headless boxes may also need:
+npx playwright install-deps chromium
+```
+
+**Note:** Some hosts (cloud/datacenter egress) receive HTTP **403** with an empty body from x.com even before a login wall. In that case live scroll cannot succeed from that machine — run Playwright on a residential/local network with `GSP_X_STORAGE_STATE`, or keep dry-run fallback.
+
+If X shows a login / consent wall (“Sign in”, “Log in”, “Something went wrong”), live scrapes may return **zero** posts. The ingest then falls back to dry-run **only when zero posts were scraped across all profiles**. To unlock real timelines, export a logged-in Playwright `storageState` (never commit cookies):
+
+```bash
+# One-time interactive login (local machine with a browser):
+node -e "
+const { chromium } = require('playwright');
+(async () => {
+  const browser = await chromium.launch({ headless: false });
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.goto('https://x.com/i/flow/login');
+  console.log('Log in in the browser window, then press Enter here…');
+  await new Promise((r) => process.stdin.once('data', r));
+  await context.storageState({ path: 'data/x-storage-state.json' });
+  await browser.close();
+  console.log('Wrote data/x-storage-state.json — keep it out of git');
+})();
+"
+
+export GSP_X_STORAGE_STATE="$(pwd)/data/x-storage-state.json"
+npm run ingest:x-scroll:live
+```
+
+`*.storage-state.json`, `.auth/`, and `data/x-storage-state.json` are gitignored.
+
+Smoke / budget overrides: `GSP_X_MAX_PROFILES`, `GSP_X_MAX_POSTS`, `GSP_X_STOP_AFTER_MS`, `GSP_X_MIN_DELAY_MS`, `GSP_X_MAX_DELAY_MS`.
 
 ## Budgets (X)
 
 - Allowlist only: `ingest/allowlists/x-security.json` (~25 editorial handles: DoD, Reuters, BBC World, Al Jazeera Eng, CSIS, IISS, UN, regional mil).
 - Session caps: max ~12 profiles, ~10 posts each, jittered delays, hard stop ~3 minutes.
 - Output: `data/raw/x-scroll-YYYYMMDD.json` → normalize → **merge by `id`** into `events.json`.
-- Dry-run (default / CI): synthesizes structured pointers tagged `source: x-scroll`, `mode: dry-run`. Does not call X MCP or paid APIs.
-- Live path: optional Playwright Chromium timeline scroll. Falls back to dry-run if Playwright missing.
+- Place geocode: `ingest/lib/geocode.mjs` keyword → lat/lon from title/summary (Moscow, Riyadh, Hormuz, etc.); else region fallback.
+- Dry-run (`npm run ingest:x-scroll`): synthesizes structured pointers tagged `source: x-scroll`, `mode: dry-run`. Does not call X MCP or paid APIs.
+- Live path (`ingest:all` / `ingest:x-scroll:live`): Playwright Chromium timeline scroll. Falls back to dry-run if Playwright missing **or** zero posts scraped (login wall).
 
 ## Other open rails
 
@@ -28,7 +68,7 @@ Cheap, open-source-first cadence for Global Security Pulse. **No paid X API sear
 | `ingest:markets` | Yahoo chart API (+ optional FRED) | Replaces series / anomalies / stress |
 | `ingest:gdelt` | GDELT GEO | Rewrites events from live GeoJSON or keeps seed |
 | `ingest:rss` | BBC World / Guardian / Al Jazeera RSS (Reuters+AP free feeds blocked) | **Merge by id** + keyword geocode |
-| `ingest:x-scroll` | Allowlist dry or Playwright | **Merge by id** |
+| `ingest:x-scroll` / `:live` | Allowlist dry or Playwright | **Merge by id** + keyword geocode |
 | `report:daily` | `public/data/*` | Writes dated archive + indexes |
 
 ## FalloutRisk mapping

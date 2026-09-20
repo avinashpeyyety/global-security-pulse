@@ -3,9 +3,17 @@
  * X allowlist scroll ingest — NO paid X API / no search_posts_all.
  *
  * Modes:
- *   --dry-run (default)  Synthesize structured event pointers from allowlist +
- *                        optional merge of recent GDELT/RSS-shaped titles.
+ *   --dry-run (default when --live not passed)
+ *                        Synthesize structured event pointers from allowlist.
  *   --live               Budgeted Playwright timeline scroll if playwright is installed.
+ *
+ * Env (optional):
+ *   GSP_X_STORAGE_STATE  Path to Playwright storageState JSON (logged-in session).
+ *                        Never commit this file. See agents/x-scroll/README.md.
+ *   GSP_X_MAX_PROFILES   Override max profiles per session (smoke / CI).
+ *   GSP_X_MAX_POSTS      Override max posts per profile.
+ *   GSP_X_STOP_AFTER_MS  Override hard stop budget.
+ *   GSP_X_MIN_DELAY_MS / GSP_X_MAX_DELAY_MS
  *
  * Merges into apps/web/public/data/events.json by id (does not wipe seed blindly).
  * Raw session dump: data/raw/x-scroll-YYYYMMDD.json
@@ -27,7 +35,6 @@ const rawDir = path.join(root, 'data/raw');
 
 const args = new Set(process.argv.slice(2));
 const wantLive = args.has('--live');
-const dryRun = !wantLive || args.has('--dry-run');
 
 const LAYER_GUESS = [
   [/cyber|ransomware|malware|phishing/i, 'cyber'],
@@ -38,6 +45,9 @@ const LAYER_GUESS = [
   [/earthquake|flood|wildfire|disaster|quake/i, 'disaster'],
   [/.*/, 'conflict'],
 ];
+
+const LOGIN_WALL_RE =
+  /sign in to x|log in to x|\bsign in\b|\blog in\b|something went wrong|rate limit|try again later|this account doesn.t exist|account suspended|to view this profile/i;
 
 function guessLayer(text) {
   for (const [re, layer] of LAYER_GUESS) {
@@ -62,9 +72,15 @@ function falloutHeuristic(text, reliability) {
   return { severity: sev, falloutRisk: severityToFallout(sev) };
 }
 
+function envInt(name, fallback) {
+  const v = process.env[name];
+  if (v == null || v === '') return fallback;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : fallback;
+}
+
 function loadAllowlist() {
-  const data = JSON.parse(fs.readFileSync(allowlistPath, 'utf8'));
-  return data;
+  return JSON.parse(fs.readFileSync(allowlistPath, 'utf8'));
 }
 
 function loadExistingEvents() {
@@ -146,7 +162,10 @@ function pointerToEvent(ptr) {
 function dryRunPointers(allowlist) {
   const now = new Date();
   const budget = allowlist.budget || {};
-  const maxProfiles = Math.min(allowlist.accounts.length, budget.maxProfilesPerSession || 12);
+  const maxProfiles = Math.min(
+    allowlist.accounts.length,
+    envInt('GSP_X_MAX_PROFILES', budget.maxProfilesPerSession || 12),
+  );
   const accounts = allowlist.accounts.slice(0, maxProfiles);
   const themes = [
     'Maritime security advisory update',
@@ -177,32 +196,99 @@ function dryRunPointers(allowlist) {
   });
 }
 
+/**
+ * Detect login / consent / soft-block walls from page body text.
+ * @returns {{ wall: boolean, reason: string | null, sample: string }}
+ */
+function detectLoginWall(bodyText) {
+  const sample = String(bodyText || '').replace(/\s+/g, ' ').trim().slice(0, 240);
+  if (!sample) return { wall: true, reason: 'empty-page', sample: '' };
+  const m = sample.match(LOGIN_WALL_RE);
+  if (m) {
+    return { wall: true, reason: `matched:${m[0]}`, sample };
+  }
+  return { wall: false, reason: null, sample };
+}
+
 async function tryLiveScroll(allowlist) {
   let playwright;
   try {
     playwright = await import('playwright');
   } catch {
     console.warn('x-scroll: Playwright not installed — falling back to dry-run');
-    return null;
+    console.warn('  Install: npm i -D playwright && npx playwright install chromium');
+    return { pointers: null, meta: { playwright: false, loginWalls: 0, profilesTried: 0 } };
   }
+
   const budget = allowlist.budget || {};
-  const maxProfiles = Math.min(allowlist.accounts.length, budget.maxProfilesPerSession || 12);
-  const maxPosts = budget.maxPostsPerProfile || 10;
-  const minDelay = budget.minDelayMs || 1500;
-  const maxDelay = budget.maxDelayMs || 4000;
-  const stopAfter = budget.stopAfterMs || 180000;
+  const maxProfiles = Math.min(
+    allowlist.accounts.length,
+    envInt('GSP_X_MAX_PROFILES', budget.maxProfilesPerSession || 12),
+  );
+  const maxPosts = envInt('GSP_X_MAX_POSTS', budget.maxPostsPerProfile || 10);
+  const minDelay = envInt('GSP_X_MIN_DELAY_MS', budget.minDelayMs || 1500);
+  const maxDelay = envInt('GSP_X_MAX_DELAY_MS', budget.maxDelayMs || 4000);
+  const stopAfter = envInt('GSP_X_STOP_AFTER_MS', budget.stopAfterMs || 180000);
   const started = Date.now();
   const pointers = [];
-  const browser = await playwright.chromium.launch({ headless: true });
-  const page = await browser.newPage();
+  let loginWalls = 0;
+  let profilesTried = 0;
+  let profilesWithPosts = 0;
+
+  const storageStatePath = process.env.GSP_X_STORAGE_STATE
+    ? path.resolve(process.env.GSP_X_STORAGE_STATE)
+    : null;
+  if (storageStatePath) {
+    if (!fs.existsSync(storageStatePath)) {
+      console.warn(
+        `x-scroll: GSP_X_STORAGE_STATE set but file missing: ${storageStatePath} — continuing anonymously`,
+      );
+    } else {
+      console.log(`x-scroll: using storageState ${storageStatePath}`);
+    }
+  } else {
+    console.log(
+      'x-scroll: no GSP_X_STORAGE_STATE — anonymous Chromium (login walls likely). See agents/x-scroll/README.md',
+    );
+  }
+
+  const launchOpts = { headless: true };
+  const contextOpts = {
+    userAgent:
+      'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    viewport: { width: 1280, height: 900 },
+    locale: 'en-US',
+  };
+  if (storageStatePath && fs.existsSync(storageStatePath)) {
+    contextOpts.storageState = storageStatePath;
+  }
+
+  const browser = await playwright.chromium.launch(launchOpts);
+  const context = await browser.newContext(contextOpts);
+  const page = await context.newPage();
+
   try {
     for (let i = 0; i < maxProfiles; i++) {
-      if (Date.now() - started > stopAfter) break;
+      if (Date.now() - started > stopAfter) {
+        console.warn(`x-scroll: stopAfterMs=${stopAfter} reached after ${profilesTried} profiles`);
+        break;
+      }
       const a = allowlist.accounts[i];
       const url = `https://x.com/${a.handle}`;
+      profilesTried++;
       try {
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 25000 });
-        await page.waitForTimeout(minDelay + Math.floor(Math.random() * (maxDelay - minDelay)));
+        const resp = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 25000 });
+        const httpStatus = resp ? resp.status() : 0;
+        await page.waitForTimeout(minDelay + Math.floor(Math.random() * Math.max(1, maxDelay - minDelay)));
+
+        const bodyText = await page.evaluate(() => document.body?.innerText || '');
+        let wall = detectLoginWall(bodyText);
+        if (!wall.wall && (httpStatus === 403 || httpStatus === 429)) {
+          wall = { wall: true, reason: `http-${httpStatus}`, sample: bodyText.slice(0, 240) };
+        } else if (wall.wall && wall.reason === 'empty-page' && httpStatus) {
+          wall = { ...wall, reason: `empty-page/http-${httpStatus}` };
+        }
+
         const posts = await page.evaluate((limit) => {
           const articles = [...document.querySelectorAll('article')].slice(0, limit);
           return articles.map((el, idx) => {
@@ -212,9 +298,29 @@ async function tryLiveScroll(allowlist) {
             return { text, href, idx };
           });
         }, maxPosts);
+
+        const usable = posts.filter((p) => p.text && p.text.length >= 20);
+
+        if (wall.wall && usable.length === 0) {
+          loginWalls++;
+          console.warn(
+            `  live @${a.handle}: LOGIN/CONSENT WALL (${wall.reason}) — sample: "${wall.sample.slice(0, 120)}…"`,
+          );
+        } else if (usable.length === 0) {
+          console.warn(
+            `  live @${a.handle}: 0 posts scraped (articles=${posts.length}; wall=${wall.wall ? wall.reason : 'no'})`,
+          );
+        } else {
+          profilesWithPosts++;
+          if (wall.wall) {
+            console.warn(
+              `  live @${a.handle}: wall signals present (${wall.reason}) but scraped ${usable.length} posts`,
+            );
+          }
+        }
+
         const now = new Date();
-        for (const p of posts) {
-          if (!p.text || p.text.length < 20) continue;
+        for (const p of usable) {
           const postId =
             (p.href && (p.href.match(/status\/(\d+)/) || [])[1]) ||
             `live_${a.handle}_${p.idx}_${now.getTime()}`;
@@ -234,7 +340,7 @@ async function tryLiveScroll(allowlist) {
             sourceReliability: a.reliability,
           });
         }
-        console.log(`  live @${a.handle}: ${posts.length} articles scanned`);
+        console.log(`  live @${a.handle}: ${usable.length} posts kept (${posts.length} articles scanned)`);
       } catch (err) {
         console.warn(`  live @${a.handle}: ${err.message}`);
       }
@@ -243,10 +349,38 @@ async function tryLiveScroll(allowlist) {
   } finally {
     await browser.close();
   }
-  return pointers;
+
+  const meta = {
+    playwright: true,
+    loginWalls,
+    profilesTried,
+    profilesWithPosts,
+    storageState: Boolean(storageStatePath && fs.existsSync(storageStatePath)),
+  };
+
+  if (pointers.length === 0) {
+    if (loginWalls > 0) {
+      console.warn(
+        `x-scroll: LIVE scraped 0 posts across ${profilesTried} profiles; login/consent/HTTP walls on ${loginWalls}. ` +
+          `Set GSP_X_STORAGE_STATE to a Playwright storageState JSON from a logged-in session on a network that can reach x.com ` +
+          `(datacenter IPs often get HTTP 403 with an empty body). Falling back to dry-run.`,
+      );
+    } else {
+      console.warn(
+        `x-scroll: LIVE scraped 0 posts across ${profilesTried} profiles (no clear login wall). Falling back to dry-run.`,
+      );
+    }
+  } else {
+    console.log(
+      `x-scroll: LIVE ok — ${pointers.length} posts from ${profilesWithPosts}/${profilesTried} profiles` +
+        (loginWalls ? ` (${loginWalls} wall hits on other profiles)` : ''),
+    );
+  }
+
+  return { pointers, meta };
 }
 
-function updateFeedStatus(mode, count) {
+function updateFeedStatus(mode, count, extra = '') {
   if (!fs.existsSync(publicFeeds)) return;
   const feeds = JSON.parse(fs.readFileSync(publicFeeds, 'utf8'));
   const now = new Date().toISOString();
@@ -256,7 +390,7 @@ function updateFeedStatus(mode, count) {
     name: 'X allowlist scroll',
     status: count > 0 ? 'Pass' : 'Warn',
     lastEvaluatedAt: now,
-    detail: `${mode}: ${count} pointers merged (no X API search)`,
+    detail: `${mode}: ${count} pointers merged (no X API search)${extra ? `; ${extra}` : ''}`,
     rule: 'allowlist_scroll && merge_by_id',
     snapshot: `x-scroll@${now.slice(0, 10)}`,
   };
@@ -265,13 +399,17 @@ function updateFeedStatus(mode, count) {
   fs.writeFileSync(publicFeeds, JSON.stringify(feeds, null, 2));
 }
 
-function writeRaw(pointers, mode) {
+function writeRaw(pointers, mode, meta = {}) {
   fs.mkdirSync(rawDir, { recursive: true });
   const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const out = path.join(rawDir, `x-scroll-${day}.json`);
   fs.writeFileSync(
     out,
-    JSON.stringify({ mode, generatedAt: new Date().toISOString(), count: pointers.length, pointers }, null, 2),
+    JSON.stringify(
+      { mode, generatedAt: new Date().toISOString(), count: pointers.length, meta, pointers },
+      null,
+      2,
+    ),
   );
   return out;
 }
@@ -284,24 +422,32 @@ async function main() {
   const allowlist = loadAllowlist();
   let pointers = null;
   let mode = 'dry-run';
+  let liveMeta = null;
 
   if (wantLive && !args.has('--dry-run')) {
-    pointers = await tryLiveScroll(allowlist);
-    if (pointers && pointers.length) mode = 'live';
+    const result = await tryLiveScroll(allowlist);
+    liveMeta = result.meta;
+    // Fall back to dry-run ONLY if zero posts scraped across all profiles
+    if (result.pointers && result.pointers.length) {
+      pointers = result.pointers;
+      mode = 'live';
+    } else {
+      pointers = null;
+      mode = 'dry-run';
+    }
   }
   if (!pointers || !pointers.length) {
     pointers = dryRunPointers(allowlist);
     mode = 'dry-run';
   }
 
-  const rawPath = writeRaw(pointers, mode);
+  const rawPath = writeRaw(pointers, mode, liveMeta || {});
   const incoming = pointers.map(pointerToEvent);
   const existing = loadExistingEvents();
   const { events, added, updated } = mergeById(existing, incoming);
 
   fs.mkdirSync(path.dirname(publicEvents), { recursive: true });
   fs.writeFileSync(publicEvents, JSON.stringify(events, null, 2));
-  // Keep seed as baseline — only update public; optionally sync seed if empty
   if (fs.existsSync(publicSnapshot)) {
     const snap = JSON.parse(fs.readFileSync(publicSnapshot, 'utf8'));
     snap.events = events;
@@ -311,12 +457,23 @@ async function main() {
     }
     fs.writeFileSync(publicSnapshot, JSON.stringify(snap, null, 2));
   }
-  updateFeedStatus(mode, incoming.length);
+  const wallNote =
+    liveMeta && liveMeta.loginWalls
+      ? `${liveMeta.loginWalls} login-wall profile(s)`
+      : liveMeta && liveMeta.playwright === false
+        ? 'playwright missing'
+        : '';
+  updateFeedStatus(mode, incoming.length, wallNote);
 
   const um = stampMeta();
   console.log(
     `ingest:x-scroll ${mode} — ${incoming.length} pointers (added ${added}, updated ${updated}); raw → ${path.relative(root, rawPath)}`,
   );
+  if (liveMeta) {
+    console.log(
+      `  live meta: profilesTried=${liveMeta.profilesTried ?? 0} withPosts=${liveMeta.profilesWithPosts ?? 0} loginWalls=${liveMeta.loginWalls ?? 0} storageState=${liveMeta.storageState ?? false}`,
+    );
+  }
   console.log('No X API credits used. Allowlist:', path.relative(root, allowlistPath));
   console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
 }

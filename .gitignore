@@ -13,3 +13,10 @@ data/ingest/*.jsonl
 !data/ingest/.gitkeep
 data/raw/*.json
 !data/raw/.gitkeep
+
+# Playwright / X session — never commit cookies or storageState
+*.storage-state.json
+.auth/
+data/x-storage-state.json
+GSP_X_STORAGE_STATE*
+playwright/.auth/
