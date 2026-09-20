@@ -1,0 +1,23 @@
+name: build
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Generate seed if missing series
+        run: |
+          if [ ! -f apps/web/public/data/series.json ]; then
+            node scripts/gen-seed.mjs
+          fi
+      - run: npm install
+      - run: npm run build
+      - name: Dry-run x-scroll
+        run: npm run agent:x-scroll

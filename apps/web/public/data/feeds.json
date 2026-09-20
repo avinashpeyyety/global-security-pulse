@@ -1,0 +1,8 @@
+[
+  {"id":"gdelt","name":"GDELT GEO","status":"Pass","lastEvaluatedAt":"2026-09-20T15:30:00.000Z","detail":"Seed + optional live refresh","rule":"http_200 && events>=1","snapshot":"seed-v0.1"},
+  {"id":"markets","name":"Markets (Stooq/Yahoo)","status":"Pass","lastEvaluatedAt":"2026-09-20T15:36:00.000Z","detail":"Seed series loaded","rule":"series_count>=10","snapshot":"seed-v0.1"},
+  {"id":"x-scroll","name":"X allowlist scroll","status":"Not run","lastEvaluatedAt":null,"detail":"Dry-run agent available; live Playwright scroll not scheduled","rule":"jsonl_written","snapshot":null},
+  {"id":"fred","name":"FRED macros","status":"Warn","lastEvaluatedAt":"2026-09-20T15:00:00.000Z","detail":"No FRED_API_KEY; using seed proxy for fed funds","rule":"api_key_present || seed_fallback","snapshot":"seed-proxy"},
+  {"id":"rss","name":"Wire RSS","status":"Not run","lastEvaluatedAt":null,"detail":"RSS ingest stubbed for v0.1","rule":"feed_parse_ok","snapshot":null},
+  {"id":"baltic","name":"Baltic Dry","status":"Not run","lastEvaluatedAt":null,"detail":"No free reliable source wired","rule":"source_available","snapshot":null}
+]
