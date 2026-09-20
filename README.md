@@ -4,6 +4,10 @@ Dense dark ops dashboard for global **security events** (map + hotspots) and **e
 
 **Live:** https://avinashpeyyety.github.io/global-security-pulse/
 
+## Backlog
+
+See [docs/BACKLOG.md](docs/BACKLOG.md) for v0.2+ iteration items (truth rail, collection, causality, markets join, ops, map, governance).
+
 ## Map legend
 
 | Layer | Depiction | Color meaning |
