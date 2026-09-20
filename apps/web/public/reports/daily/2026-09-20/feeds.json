@@ -39,8 +39,8 @@
     "id": "rss",
     "name": "RSS wires",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-09-20T21:00:18.943Z",
-    "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
+    "lastEvaluatedAt": "2026-09-20T21:12:51.003Z",
+    "detail": "merged 30 (added 2); bbc-world:10, guardian-world:10, aljazeera:10",
     "rule": "http_200 && items>=1",
     "snapshot": "rss@2026-09-20"
   },

@@ -1,6 +1,6 @@
 # Global Security Pulse — Daily Report 2026-09-20
 
-Generated: 2026-09-20T21:04:55.530Z
+Generated: 2026-09-20T21:12:51.450Z
 Ingest package: daily-2026-09-20
 
 ## Stress composite
@@ -29,8 +29,8 @@ Ingest package: daily-2026-09-20
 - **[high]** Ransomware hits regional energy utility — Eastern Europe (GDELT/cyber wire)
 - **[high]** IED blast near convoy route in Sahel — Sahel (GDELT/AFP)
 - **[high]** Missile test reported on peninsula — East Asia (GDELT/Yonhap)
-- **[high]** Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Global (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss))
-- **[high]** Houthis say they targeted Saudi capital with ballistic missiles — Global (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss))
+- **[high]** Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss))
+- **[high]** Houthis say they targeted Saudi capital with ballistic missiles — Middle East (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss))
 - **[high]** Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/20/qatari-pm-warns-against-cycles-of-escalation-in-the-middle-east?traffic_source=rss))
 
 ## High / critical postures
@@ -49,7 +49,7 @@ _No supply-route metadata._
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
 - X allowlist scroll: **Pass** @ 2026-09-20T21:00:19.363Z — dry-run: 12 pointers merged (no X API search)
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
-- RSS wires: **Pass** @ 2026-09-20T21:00:18.943Z — merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10
+- RSS wires: **Pass** @ 2026-09-20T21:12:51.003Z — merged 30 (added 2); bbc-world:10, guardian-world:10, aljazeera:10
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired
 
 ## Notes

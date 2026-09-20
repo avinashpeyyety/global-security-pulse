@@ -14,6 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stampMeta } from './lib/stamp-meta.mjs';
+import { resolveEventGeo } from './lib/geocode.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -37,19 +38,6 @@ const LAYER_GUESS = [
   [/earthquake|flood|wildfire|disaster|quake/i, 'disaster'],
   [/.*/, 'conflict'],
 ];
-
-const REGION_COORDS = {
-  Global: [20, 0],
-  Americas: [38, -95],
-  Europe: [50, 10],
-  'Eastern Europe': [49, 32],
-  'Middle East': [29, 45],
-  'South Asia': [22, 78],
-  'East / SE Asia': [15, 105],
-  Africa: [5, 20],
-  'Red Sea / Bab el-Mandeb': [14.5, 42.5],
-  'Persian Gulf': [26.5, 56],
-};
 
 function guessLayer(text) {
   for (const [re, layer] of LAYER_GUESS) {
@@ -106,28 +94,45 @@ function mergeById(existing, incoming) {
 }
 
 function pointerToEvent(ptr) {
-  const region = ptr.regionHint || 'Global';
-  const [lat, lon] =
-    ptr.lat != null && ptr.lon != null
-      ? [ptr.lat, ptr.lon]
-      : REGION_COORDS[region] || REGION_COORDS.Global;
   const { severity, falloutRisk } = falloutHeuristic(ptr.text || ptr.title || '', ptr.reliability);
   const title = String(ptr.title || ptr.text || `Update from @${ptr.author}`).slice(0, 160);
-  // Deterministic micro-jitter from id (stable across runs)
-  let hash = 0;
-  for (let i = 0; i < ptr.id.length; i++) hash = (hash * 31 + ptr.id.charCodeAt(i)) | 0;
-  const jLat = ((hash % 1000) / 1000 - 0.5) * 0.4;
-  const jLon = ((((hash / 1000) | 0) % 1000) / 1000 - 0.5) * 0.4;
+  const summary = String(ptr.text || title).slice(0, 280);
+  let lat;
+  let lon;
+  let region;
+  if (ptr.lat != null && ptr.lon != null) {
+    lat = Number(ptr.lat);
+    lon = Number(ptr.lon);
+    region = ptr.regionHint || 'Global';
+  } else {
+    const geo = resolveEventGeo({
+      title,
+      summary,
+      region: ptr.regionHint || 'Global',
+      jitterIndex: 0,
+      jitterSalt: ptr.id,
+    });
+    lat = geo.lat;
+    lon = geo.lon;
+    region = geo.region;
+    // Micro-jitter only for region-fallback (place hits stay pinned)
+    if (geo.matchedFrom === 'region-fallback') {
+      let hash = 0;
+      for (let i = 0; i < ptr.id.length; i++) hash = (hash * 31 + ptr.id.charCodeAt(i)) | 0;
+      lat += ((hash % 1000) / 1000 - 0.5) * 0.4;
+      lon += ((((hash / 1000) | 0) % 1000) / 1000 - 0.5) * 0.4;
+    }
+  }
   return {
     id: ptr.id,
     title,
-    summary: String(ptr.text || title).slice(0, 280),
+    summary,
     layer: guessLayer(`${title} ${ptr.text || ''}`),
     severity,
     falloutRisk,
     confidence: ptr.reliability === 'A' ? 0.7 : ptr.reliability === 'B' ? 0.6 : 0.45,
-    lat: Number(lat) + jLat,
-    lon: Number(lon) + jLon,
+    lat,
+    lon,
     region,
     source: 'x-scroll',
     sourceReliability: ptr.reliability || 'C',

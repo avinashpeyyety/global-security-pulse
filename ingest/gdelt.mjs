@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stampMeta } from './lib/stamp-meta.mjs';
+import { geocodeFromText } from './lib/geocode.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -58,6 +59,18 @@ async function fetchGdelt() {
     const title = String(props.name || props.title || props.shareimage || 'GDELT event').slice(0, 160);
     const summary = String(props.urltone != null ? `tone=${props.urltone}; ${title}` : title).slice(0, 280);
     const severity = Math.min(5, Math.max(1, Math.round(Math.abs(Number(props.urltone) || 2) / 2) + 1));
+    let la = Number(lat);
+    let lo = Number(lon);
+    let region = regionFromCoords(la, lo);
+    // If GDELT point is missing/null-island, fall back to keyword place from title
+    if (!Number.isFinite(la) || !Number.isFinite(lo) || (Math.abs(la) < 0.01 && Math.abs(lo) < 0.01)) {
+      const hit = geocodeFromText(title);
+      if (hit) {
+        la = hit.lat;
+        lo = hit.lon;
+        region = hit.region;
+      }
+    }
     return {
       id: `gdelt-${Date.now()}-${i}`,
       title,
@@ -66,9 +79,9 @@ async function fetchGdelt() {
       severity,
       falloutRisk: severityToFallout(severity),
       confidence: 0.55,
-      lat: Number(lat),
-      lon: Number(lon),
-      region: regionFromCoords(Number(lat), Number(lon)),
+      lat: la,
+      lon: lo,
+      region,
       source: 'GDELT GEO',
       sourceReliability: 'B',
       url: props.url || undefined,

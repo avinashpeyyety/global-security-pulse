@@ -27,7 +27,7 @@ Cheap, open-source-first cadence for Global Security Pulse. **No paid X API sear
 |--------|--------|------------|
 | `ingest:markets` | Yahoo chart API (+ optional FRED) | Replaces series / anomalies / stress |
 | `ingest:gdelt` | GDELT GEO | Rewrites events from live GeoJSON or keeps seed |
-| `ingest:rss` | BBC / Reuters / Al Jazeera RSS | **Merge by id** |
+| `ingest:rss` | BBC World / Guardian / Al Jazeera RSS (Reuters+AP free feeds blocked) | **Merge by id** + keyword geocode |
 | `ingest:x-scroll` | Allowlist dry or Playwright | **Merge by id** |
 | `report:daily` | `public/data/*` | Writes dated archive + indexes |
 
@@ -69,3 +69,11 @@ apps/web/public/data/reports-index.json     # UI archive picker
 - MapLibre + OpenFreeMap (no Google Maps / Mapbox required).
 - Markets: Yahoo public chart (no key); FRED optional.
 - X: allowlist scroll only — never `search_posts_all` / never spend X API credits from this repo’s automation.
+
+## Known gaps / limits
+
+- **Telegram** not wired — no channel ingest yet.
+- **X live** needs Playwright (+ browser); default path is dry-run allowlist pointers only. Never uses paid `search_posts_all`.
+- **GDELT** uses live GEO when reachable; on failure falls back to seed events (Warn).
+- **Geocode** is keyword/title matching (`ingest/lib/geocode.mjs`), not full NER. Title beats feed `region`; Global jitter is re-snapped when a place name is clear. Unmatched Global wires still sit near Atlantic fallback coords.
+- **Reuters World / AP** free RSS URLs probed and skipped (401/404/HTML/hijacked Feedburner); BBC + Guardian + Al Jazeera remain the open wires.

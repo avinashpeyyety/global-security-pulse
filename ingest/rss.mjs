@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stampMeta } from './lib/stamp-meta.mjs';
+import { resolveEventGeo, regeocodeWrongGlobal } from './lib/geocode.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -37,6 +38,8 @@ const FEEDS = [
     reliability: 'B',
     region: 'Middle East',
   },
+  // Reuters World / AP free RSS probed 2026-09 — blocked, hijacked, or HTML-only; skipped.
+  // (feeds.reuters.com 401; reutersagency 404; apnews output=rss is HTML; feedburner reuters ≠ Reuters)
 ];
 
 const LAYER_GUESS = [
@@ -49,15 +52,6 @@ const LAYER_GUESS = [
   [/war|attack|military|missile|drone|troop|conflict|bomb/i, 'conflict'],
   [/.*/, 'conflict'],
 ];
-
-const REGION_COORDS = {
-  Global: [20, 0],
-  'Middle East': [29, 45],
-  Europe: [50, 10],
-  Americas: [38, -95],
-  Africa: [5, 20],
-  'East / SE Asia': [15, 105],
-};
 
 function guessLayer(text) {
   for (const [re, layer] of LAYER_GUESS) {
@@ -151,21 +145,29 @@ async function fetchFeed(feed) {
   const xml = await res.text();
   const items = parseItems(xml, 10);
   const now = new Date().toISOString();
-  const [lat0, lon0] = REGION_COORDS[feed.region] || REGION_COORDS.Global;
   return items.map((it, i) => {
     const sev = severityFromTitle(it.title);
     const observed = it.pub ? new Date(it.pub) : new Date(Date.now() - i * 3600e3);
+    const title = it.title.slice(0, 160);
+    const summary = (it.desc || it.title).slice(0, 280);
+    const geo = resolveEventGeo({
+      title,
+      summary,
+      region: feed.region,
+      jitterIndex: i,
+      jitterSalt: slugId(feed.id, it.title),
+    });
     return {
       id: slugId(feed.id, it.title),
-      title: it.title.slice(0, 160),
-      summary: (it.desc || it.title).slice(0, 280),
+      title,
+      summary,
       layer: guessLayer(`${it.title} ${it.desc}`),
       severity: sev,
       falloutRisk: severityToFallout(sev),
       confidence: feed.reliability === 'A' ? 0.72 : 0.58,
-      lat: lat0 + ((((slugId(feed.id, it.title).length * 17 + i * 13) % 100) / 100) - 0.5) * 8,
-      lon: lon0 + ((((slugId(feed.id, it.title).length * 29 + i * 7) % 100) / 100) - 0.5) * 12,
-      region: feed.region,
+      lat: geo.lat,
+      lon: geo.lon,
+      region: geo.region,
       source: `rss:${feed.name}`,
       sourceReliability: feed.reliability,
       url: it.link || undefined,
@@ -195,11 +197,13 @@ function updateFeedStatus(ok, detail) {
 }
 
 async function main() {
-  const existing = fs.existsSync(publicEvents)
+  const rawExisting = fs.existsSync(publicEvents)
     ? JSON.parse(fs.readFileSync(publicEvents, 'utf8'))
     : fs.existsSync(seedEvents)
       ? JSON.parse(fs.readFileSync(seedEvents, 'utf8'))
       : [];
+  const { events: existing, fixed: regeoFixed } = regeocodeWrongGlobal(rawExisting);
+  if (regeoFixed) console.log(`  re-geocoded ${regeoFixed} Global-jitter event(s) from title/summary places`);
 
   const incoming = [];
   const notes = [];
