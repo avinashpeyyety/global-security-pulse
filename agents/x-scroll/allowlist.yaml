@@ -1,15 +1,7 @@
-# accounts:
-#   wire — major news wires
-#   defense — defense / mil outlets
-#   think — think tanks
-#   un — UN / humanitarian
-#   maritime — shipping / threat advisories
+# Legacy YAML allowlist (agent dry-run). Canonical editorial list:
+#   ingest/allowlists/x-security.json
 #
 # Budget defaults for live Playwright scroll (not used in dry-run):
-#   maxScrollsPerAccount: 3
-#   maxPostsPerAccount: 15
-#   scheduleMinutes: 45
-
 budget:
   maxScrollsPerAccount: 3
   maxPostsPerAccount: 15
@@ -17,6 +9,9 @@ budget:
   stopAfterAccounts: 20
 
 accounts:
+  - handle: DeptofDefense
+    category: defense
+    reliability: A
   - handle: Reuters
     category: wire
     reliability: A
@@ -29,6 +24,9 @@ accounts:
   - handle: BBCWorld
     category: wire
     reliability: A
+  - handle: AJEnglish
+    category: wire
+    reliability: B
   - handle: DefenseOne
     category: defense
     reliability: B
@@ -38,6 +36,12 @@ accounts:
   - handle: CENTCOM
     category: defense
     reliability: B
+  - handle: NATO
+    category: defense
+    reliability: A
+  - handle: DefenceHQ
+    category: defense
+    reliability: A
   - handle: IISS_org
     category: think
     reliability: B
@@ -47,9 +51,21 @@ accounts:
   - handle: CFR_org
     category: think
     reliability: B
+  - handle: UN
+    category: un
+    reliability: A
   - handle: UNOCHA
     category: un
     reliability: B
   - handle: UK_MTO
     category: maritime
+    reliability: B
+  - handle: IMOHQ
+    category: maritime
+    reliability: B
+  - handle: IAEAOrg
+    category: un
+    reliability: A
+  - handle: Aus_Defence
+    category: defense
     reliability: B

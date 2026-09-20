@@ -1,0 +1,148 @@
+[
+  {
+    "region": "Red Sea / Bab el-Mandeb",
+    "count": 1,
+    "maxSeverity": 5,
+    "freshestSource": "UKMTO advisory",
+    "freshestAt": "2026-09-20T11:00:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "Eastern Europe",
+    "count": 4,
+    "maxSeverity": 4,
+    "freshestSource": "GDELT/Reuters",
+    "freshestAt": "2026-09-20T13:00:00.000Z",
+    "layers": [
+      "conflict",
+      "cyber"
+    ]
+  },
+  {
+    "region": "East Asia",
+    "count": 3,
+    "maxSeverity": 4,
+    "freshestSource": "USGS",
+    "freshestAt": "2026-09-20T12:00:00.000Z",
+    "layers": [
+      "disaster",
+      "conflict"
+    ]
+  },
+  {
+    "region": "Sahel",
+    "count": 1,
+    "maxSeverity": 4,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-19T18:00:00.000Z",
+    "layers": [
+      "terrorism"
+    ]
+  },
+  {
+    "region": "North America",
+    "count": 5,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-20T10:00:00.000Z",
+    "layers": [
+      "sanctions",
+      "unrest",
+      "disaster",
+      "cyber"
+    ]
+  },
+  {
+    "region": "Persian Gulf",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/Defense News",
+    "freshestAt": "2026-09-20T02:00:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "Mediterranean",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/Reuters",
+    "freshestAt": "2026-09-18T16:00:00.000Z",
+    "layers": [
+      "sanctions"
+    ]
+  },
+  {
+    "region": "South America",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/Al Jazeera",
+    "freshestAt": "2026-09-20T06:00:00.000Z",
+    "layers": [
+      "unrest"
+    ]
+  },
+  {
+    "region": "Southeast Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/wire",
+    "freshestAt": "2026-09-17T16:00:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-19T12:00:00.000Z",
+    "layers": [
+      "conflict"
+    ]
+  },
+  {
+    "region": "West Africa",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/IMB",
+    "freshestAt": "2026-09-19T04:00:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "Western Europe",
+    "count": 2,
+    "maxSeverity": 2,
+    "freshestSource": "seed/intel note",
+    "freshestAt": "2026-09-19T11:12:00.000Z",
+    "layers": [
+      "cyber",
+      "sanctions"
+    ]
+  },
+  {
+    "region": "Levant",
+    "count": 1,
+    "maxSeverity": 2,
+    "freshestSource": "OCHA",
+    "freshestAt": "2026-09-18T04:00:00.000Z",
+    "layers": [
+      "disaster"
+    ]
+  },
+  {
+    "region": "Northern Europe",
+    "count": 1,
+    "maxSeverity": 1,
+    "freshestSource": "GDELT/DefenseOne",
+    "freshestAt": "2026-09-20T08:48:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  }
+]

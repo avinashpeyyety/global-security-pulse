@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { DashboardSnapshot, EventLayer } from '@gsp/shared';
 import { EVENT_LAYERS, LAYER_LABELS } from '@gsp/shared';
-import { loadSnapshot } from './lib/loadData';
+import { loadSnapshot, normalizeSnapshot } from './lib/loadData';
 import { computeHotspots } from './lib/hotspots';
 import { windowCutoff, type TimeWindow, fmtTs } from './lib/time';
 import { SecurityMap } from './components/SecurityMap';
@@ -10,6 +10,7 @@ import { TimeScrubber } from './components/TimeScrubber';
 import { HotspotRail } from './components/HotspotRail';
 import { FeedChips } from './components/FeedChips';
 import { EconPanel } from './components/EconPanel';
+import { DailyReports } from './components/DailyReports';
 
 /** Anchor "now" to snapshot generation so seed windows stay populated. */
 function snapshotNow(snap: DashboardSnapshot): number {
@@ -17,7 +18,9 @@ function snapshotNow(snap: DashboardSnapshot): number {
 }
 
 export default function App() {
-  const [snap, setSnap] = useState<DashboardSnapshot | null>(null);
+  const [liveSnap, setLiveSnap] = useState<DashboardSnapshot | null>(null);
+  const [archiveSnap, setArchiveSnap] = useState<DashboardSnapshot | null>(null);
+  const [archiveDate, setArchiveDate] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [window, setWindow] = useState<TimeWindow>('7d');
   const [layers, setLayers] = useState<Set<EventLayer>>(() => new Set(EVENT_LAYERS));
@@ -26,8 +29,20 @@ export default function App() {
 
   useEffect(() => {
     loadSnapshot()
-      .then(setSnap)
+      .then(setLiveSnap)
       .catch((e: Error) => setErr(e.message));
+  }, []);
+
+  const snap = archiveSnap ?? liveSnap;
+
+  const onSelectLive = useCallback(() => {
+    setArchiveSnap(null);
+    setArchiveDate(null);
+  }, []);
+
+  const onSelectDate = useCallback((date: string, pack: DashboardSnapshot) => {
+    setArchiveDate(date);
+    setArchiveSnap(normalizeSnapshot(pack));
   }, []);
 
   const filtered = useMemo(() => {
@@ -63,8 +78,16 @@ export default function App() {
       <header className="topbar">
         <div className="brand">
           Global Security Pulse
-          <span>v0.1 · evaluated {fmtTs(snap.generatedAt)}</span>
+          <span>
+            v0.1 · evaluated {fmtTs(snap.generatedAt)}
+            {archiveDate ? ` · archive ${archiveDate}` : ''}
+          </span>
         </div>
+        <DailyReports
+          selectedDate={archiveDate}
+          onSelectLive={onSelectLive}
+          onSelectDate={onSelectDate}
+        />
         <FeedChips feeds={snap.feeds} />
       </header>
 

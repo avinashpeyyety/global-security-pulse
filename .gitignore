@@ -11,3 +11,5 @@ coverage/
 .vite/
 data/ingest/*.jsonl
 !data/ingest/.gitkeep
+data/raw/*.json
+!data/raw/.gitkeep

@@ -1,0 +1,38 @@
+{
+  "description": "Editorial allowlist of reputable security / defense / wire accounts for budgeted X timeline scroll. Not an endorsement list — operational source reliability labels for ingest heuristics only. No paid X API search.",
+  "version": "0.2",
+  "budget": {
+    "maxProfilesPerSession": 12,
+    "maxPostsPerProfile": 10,
+    "minDelayMs": 1500,
+    "maxDelayMs": 4000,
+    "stopAfterMs": 180000
+  },
+  "accounts": [
+    { "handle": "DeptofDefense", "displayName": "U.S. Department of Defense", "category": "defense", "reliability": "A", "regionHint": "Americas" },
+    { "handle": "CENTCOM", "displayName": "U.S. Central Command", "category": "defense", "reliability": "B", "regionHint": "Middle East" },
+    { "handle": "USNavy", "displayName": "U.S. Navy", "category": "defense", "reliability": "B", "regionHint": "Global" },
+    { "handle": "Reuters", "displayName": "Reuters", "category": "wire", "reliability": "A", "regionHint": "Global" },
+    { "handle": "AP", "displayName": "Associated Press", "category": "wire", "reliability": "A", "regionHint": "Global" },
+    { "handle": "AFP", "displayName": "Agence France-Presse", "category": "wire", "reliability": "A", "regionHint": "Global" },
+    { "handle": "BBCWorld", "displayName": "BBC News (World)", "category": "wire", "reliability": "A", "regionHint": "Global" },
+    { "handle": "AJEnglish", "displayName": "Al Jazeera English", "category": "wire", "reliability": "B", "regionHint": "Middle East" },
+    { "handle": "DefenceHQ", "displayName": "UK Ministry of Defence", "category": "defense", "reliability": "A", "regionHint": "Europe" },
+    { "handle": "NATO", "displayName": "NATO", "category": "defense", "reliability": "A", "regionHint": "Europe" },
+    { "handle": "CSIS", "displayName": "Center for Strategic & International Studies", "category": "think", "reliability": "B", "regionHint": "Global" },
+    { "handle": "IISS_org", "displayName": "International Institute for Strategic Studies", "category": "think", "reliability": "B", "regionHint": "Global" },
+    { "handle": "CFR_org", "displayName": "Council on Foreign Relations", "category": "think", "reliability": "B", "regionHint": "Global" },
+    { "handle": "UN", "displayName": "United Nations", "category": "un", "reliability": "A", "regionHint": "Global" },
+    { "handle": "UNOCHA", "displayName": "UN OCHA", "category": "un", "reliability": "B", "regionHint": "Global" },
+    { "handle": "UN_News_Centre", "displayName": "UN News", "category": "un", "reliability": "B", "regionHint": "Global" },
+    { "handle": "DefenseOne", "displayName": "Defense One", "category": "defense", "reliability": "B", "regionHint": "Global" },
+    { "handle": "USNINews", "displayName": "USNI News", "category": "defense", "reliability": "B", "regionHint": "Global" },
+    { "handle": "UK_MTO", "displayName": "UK Maritime Trade Operations", "category": "maritime", "reliability": "B", "regionHint": "Red Sea / Bab el-Mandeb" },
+    { "handle": "IMOHQ", "displayName": "International Maritime Organization", "category": "maritime", "reliability": "B", "regionHint": "Global" },
+    { "handle": "IAEAOrg", "displayName": "IAEA", "category": "un", "reliability": "A", "regionHint": "Global" },
+    { "handle": "Aus_Defence", "displayName": "Australian Department of Defence", "category": "defense", "reliability": "B", "regionHint": "East / SE Asia" },
+    { "handle": "IsraeliPM", "displayName": "Prime Minister of Israel", "category": "defense", "reliability": "C", "regionHint": "Middle East" },
+    { "handle": "Ukraine", "displayName": "Ukraine / Official", "category": "defense", "reliability": "C", "regionHint": "Eastern Europe" },
+    { "handle": "ModIndia", "displayName": "Ministry of Defence India", "category": "defense", "reliability": "B", "regionHint": "South Asia" }
+  ]
+}

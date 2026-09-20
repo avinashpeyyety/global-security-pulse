@@ -14,7 +14,10 @@
     "gen:seed": "node scripts/gen-seed.mjs",
     "ingest:gdelt": "node ingest/gdelt.mjs",
     "ingest:markets": "node ingest/markets.mjs",
-    "ingest:all": "npm run ingest:gdelt && npm run ingest:markets",
+    "ingest:rss": "node ingest/rss.mjs",
+    "ingest:x-scroll": "node ingest/x-scroll.mjs",
+    "ingest:all": "npm run ingest:markets && npm run ingest:gdelt && npm run ingest:rss && npm run ingest:x-scroll && npm run report:daily",
+    "report:daily": "node ingest/daily-snapshot.mjs",
     "agent:x-scroll": "npm run start -w @gsp/x-scroll",
     "typecheck": "npm run build -w @gsp/shared && npm run typecheck -w @gsp/web"
   },

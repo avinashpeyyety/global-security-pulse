@@ -18,13 +18,31 @@ Layer toggles include a visible legend (swatch/shape) and a Low → Critical ris
 
 The dashboard is hosted on **GitHub Pages** from the Actions workflow (`.github/workflows/pages.yml`).
 
-Routine data inject:
+Routine data inject (weekday / evening):
 
-1. Run ingest / seed scripts so `apps/web/public/data/*.json` is refreshed
-2. Commit the JSON
-3. Push to `main`
+1. `npm run ingest:all` — markets + GDELT + RSS + X-scroll dry + **daily snapshot**
+2. Commit refreshed `apps/web/public/data/*`, `apps/web/public/reports/daily/*`, and `reports/daily/*`
+3. Push to `main` → Pages rebuilds
 
-The Pages workflow rebuilds and republishes. Vite `base` is `/global-security-pulse/` so assets resolve on the project site.
+Vite `base` is `/global-security-pulse/` so assets resolve on the project site.
+
+### Daily report snapshots
+
+`npm run report:daily` archives the current dashboard JSON into versioned history:
+
+| Location | Purpose |
+|----------|---------|
+| `reports/daily/YYYY-MM-DD/` | Git-versioned archive (`report.md`, `pack.json`, data files, `meta.json`) |
+| `apps/web/public/reports/daily/YYYY-MM-DD/` | Same tree served by Pages |
+| `reports/daily/index.json` | Date list (repo) |
+| `apps/web/public/data/reports-index.json` | Date list for the UI archive picker |
+
+`report.md` summarizes top \|z\| anomalies, high/critical fallout events, and high/critical postures.
+
+Optional: `node ingest/daily-snapshot.mjs --with-ingest` runs `ingest:all` first.  
+Optional: `--date YYYY-MM-DD` overrides the folder date.
+
+Pages serves anything under `apps/web/public/` after build (including `reports/daily/…`).
 
 ## Maps: MapLibre (not Google Maps)
 
@@ -51,17 +69,21 @@ Basemap tiles still need network; event/econ panels render from `apps/web/public
 | `npm run dev` | Vite dashboard |
 | `npm run build` | shared types + web production build |
 | `npm run gen:seed` | Rebuild seed series / anomalies / snapshot |
-| `npm run ingest:gdelt` | Refresh GDELT-shaped events (seed fallback) |
 | `npm run ingest:markets` | Stooq/Yahoo series refresh (seed fallback) |
-| `npm run agent:x-scroll` | Allowlist dry-run → `data/ingest/x-pointers.jsonl` |
+| `npm run ingest:gdelt` | Refresh GDELT-shaped events (seed fallback) |
+| `npm run ingest:rss` | BBC / Reuters / Al Jazeera RSS → merge by id |
+| `npm run ingest:x-scroll` | Allowlist dry-run (default) → merge events; `-- --live` if Playwright present |
+| `npm run ingest:all` | markets → gdelt → rss → x-scroll → daily snapshot |
+| `npm run report:daily` | Archive dated snapshot + update indexes |
+| `npm run agent:x-scroll` | Legacy agent dry-run → `data/ingest/x-pointers.jsonl` |
 
 ## X cost strategy
 
-- **Do not** call expensive `search_posts_all` by default.
-- Planned path: Playwright scroll of handles in `agents/x-scroll/allowlist.yaml` only.
-- v0.1 ships a **dry-run** that writes sample JSONL from the allowlist (no X API).
-
-See `agents/x-scroll/README.md` for live scroll notes.
+- **Do not** call expensive `search_posts_all` / do not spend X API credits from automation.
+- Allowlist: `ingest/allowlists/x-security.json` (editorial list of defense / wire / think / UN / maritime handles).
+- Default path is **dry-run**; live Playwright scroll is optional and budgeted.
+- See `docs/PIPELINE.md` for cadence, budgets, merge rules, and falloutRisk mapping.
+- Agent notes: `agents/x-scroll/README.md`.
 
 ## Stack
 

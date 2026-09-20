@@ -29,10 +29,22 @@ function ensureFallout(events: SecurityEvent[]): SecurityEvent[] {
   }));
 }
 
+export function normalizeSnapshot(snap: DashboardSnapshot): DashboardSnapshot {
+  return {
+    ...snap,
+    events: ensureFallout(snap.events ?? []),
+    postures: snap.postures ?? [],
+    hotspots: snap.hotspots ?? [],
+    feeds: snap.feeds ?? [],
+    series: snap.series ?? [],
+    anomalies: snap.anomalies ?? [],
+    timeWindows: snap.timeWindows ?? ['6h', '24h', '7d', '30d'],
+  };
+}
+
 export async function loadSnapshot(): Promise<DashboardSnapshot> {
   try {
     const snap = await getJson<DashboardSnapshot>(dataUrl('data/snapshot.json'));
-    snap.events = ensureFallout(snap.events ?? []);
     if (!snap.postures) {
       try {
         snap.postures = await getJson<MilitaryPosture[]>(dataUrl('data/postures.json'));
@@ -40,7 +52,7 @@ export async function loadSnapshot(): Promise<DashboardSnapshot> {
         snap.postures = [];
       }
     }
-    return snap;
+    return normalizeSnapshot(snap);
   } catch {
     const [events, series, anomalies, feeds, stress, hotspots, postures] = await Promise.all([
       getJson<SecurityEvent[]>(dataUrl('data/events.json')),
@@ -51,9 +63,9 @@ export async function loadSnapshot(): Promise<DashboardSnapshot> {
       getJson<Hotspot[]>(dataUrl('data/hotspots.json')),
       getJson<MilitaryPosture[]>(dataUrl('data/postures.json')).catch(() => [] as MilitaryPosture[]),
     ]);
-    return {
+    return normalizeSnapshot({
       generatedAt: new Date().toISOString(),
-      events: ensureFallout(events),
+      events,
       postures,
       series,
       anomalies,
@@ -61,6 +73,14 @@ export async function loadSnapshot(): Promise<DashboardSnapshot> {
       stress,
       hotspots,
       timeWindows: ['6h', '24h', '7d', '30d'],
-    };
+    });
   }
+}
+
+/** Load a dated archive pack from public/reports/daily/YYYY-MM-DD/pack.json */
+export async function loadArchivePack(date: string): Promise<DashboardSnapshot> {
+  const pack = await getJson<DashboardSnapshot & { supplyRoutes?: unknown }>(
+    dataUrl(`reports/daily/${date}/pack.json`),
+  );
+  return normalizeSnapshot(pack);
 }

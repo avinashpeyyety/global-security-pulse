@@ -43,3 +43,7 @@ UI copy prefers “evaluated at T against rule R on snapshot S” over narrative
 | `ingest:gdelt` / `ingest:markets` | Falls back to seed | Live refresh needs HTTP |
 | `agent:x-scroll --dry-run` | Yes | Live Playwright needs browser + X session |
 | FRED series | Seed proxy | `FRED_API_KEY` |
+
+
+## Daily snapshots & pipeline
+See `docs/PIPELINE.md` for ingest cadence, X allowlist budgets, merge-by-id rules, and `npm run report:daily` archive layout (`reports/daily/` + Pages mirror under `apps/web/public/reports/daily/`).

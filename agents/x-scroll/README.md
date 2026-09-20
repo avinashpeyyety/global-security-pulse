@@ -1,46 +1,31 @@
 # X allowlist scroll agent
 
-Budgeted scroll of **named** reliable accounts only. Writes append-only pointers to `data/ingest/x-pointers.jsonl`.
+Budgeted scroll of **named** reliable accounts only. Primary ingest entrypoint:
+
+```bash
+npm run ingest:x-scroll          # dry-run (default) → merge into events.json
+npm run ingest:x-scroll -- --live  # Playwright if installed; else dry-run
+```
+
+Canonical allowlist: `ingest/allowlists/x-security.json`  
+Legacy agent YAML: `agents/x-scroll/allowlist.yaml` (used by `npm run agent:x-scroll` → JSONL only)
 
 ## Cost rules
 
 - **Do not** call expensive X `search_posts_all` by default.
+- **Do not** use user-X MCP tools from automation that would spend credits.
 - Optional later: enrich known post IDs via `get_posts_by_ids` if an X connector env is present.
-- Live scroll uses Playwright (or CDP) against allowlisted profile timelines — not firehose search.
+- Live scroll uses Playwright against allowlisted profile timelines — not firehose search.
 
-## Dry-run (v0.1, no network / no X login)
+## Dry-run (default / CI)
 
-```bash
-# from repo root
-npm run agent:x-scroll
-# → data/ingest/x-pointers.jsonl
-```
+Writes `data/raw/x-scroll-YYYYMMDD.json` and **merges** normalized events (`source: x-scroll`) into `apps/web/public/data/events.json` by `id`.
 
-## Live scroll (planned — not wired in v0.1)
+## Live scroll
 
-1. Install Playwright in this package: `npx playwright install chromium`
-2. Authenticate a dedicated browser profile (manual once); never commit cookies.
-3. For each handle in `allowlist.yaml`, open `https://x.com/{handle}`, scroll up to `budget.maxScrollsPerAccount`, collect up to `budget.maxPostsPerAccount`.
-4. Extract: post id, text snippet, timestamp, author, URL, optional place regex.
-5. Append JSONL; schedule every `budget.scheduleMinutes` (e.g. 45).
-6. Stop after `budget.stopAfterAccounts` in a run.
+1. `npm i -D playwright` (or in agent workspace) && `npx playwright install chromium`
+2. Authenticate a dedicated browser profile if X requires login (never commit cookies).
+3. `npm run ingest:x-scroll -- --live` — max N profiles / M tweets, rate-limited.
+4. Same merge path as dry-run; pointers include post URLs when scraped.
 
-Keep sessions short. Prefer wire / defense / think / UN / maritime handles only.
-
-## Output schema (JSONL)
-
-```json
-{
-  "id": "…",
-  "postId": "…",
-  "author": "Reuters",
-  "category": "wire",
-  "reliability": "A",
-  "text": "…",
-  "url": "https://x.com/…",
-  "observedAt": "ISO",
-  "ingestedAt": "ISO",
-  "geoMentions": [],
-  "mode": "dry-run|live"
-}
-```
+See `docs/PIPELINE.md` for budgets and falloutRisk mapping.
