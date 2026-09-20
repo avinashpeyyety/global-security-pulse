@@ -9,6 +9,7 @@ import {
   FALLOUT_LABELS,
 } from '@gsp/shared';
 import { ageLabel } from '../lib/time';
+import { isEventMapPlottable, isPostureMapPlottable } from '../lib/mapCoords';
 
 const STYLE = 'https://tiles.openfreemap.org/styles/dark';
 const ROUTES_URL = `${import.meta.env.BASE_URL}data/supply-routes.json`;
@@ -236,13 +237,9 @@ export function SecurityMap({
     openPopupCount.current = 0;
     setMarkersDimmed(false);
 
+    // Require non-null lat/lon before Number() — Number(null)===0 is finite (null island).
     const mapEvents = events.filter(
-      (e) =>
-        e.mapEligible !== false &&
-        Number.isFinite(Number(e.lat)) &&
-        Number.isFinite(Number(e.lon)) &&
-        !isDryRunXScroll(e) &&
-        !isRawXScrollMarker(e),
+      (e) => isEventMapPlottable(e) && !isDryRunXScroll(e) && !isRawXScrollMarker(e),
     );
 
     for (const e of mapEvents) {
@@ -298,6 +295,7 @@ export function SecurityMap({
     postureMarkersRef.current = [];
 
     for (const p of postures) {
+      if (!isPostureMapPlottable(p)) continue;
       const color = RISK_COLORS[p.precipitatePotential] ?? RISK_COLORS.medium;
       const el = document.createElement('div');
       el.className = 'posture-marker';
