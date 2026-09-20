@@ -13,9 +13,10 @@ jobs:
         with:
           node-version: '20'
           cache: npm
-      - name: Generate seed data
-        run: node scripts/gen-seed.mjs
       - run: npm install
+      # Prefer richer public/data; gen-seed must not clobber ingested events
+      - name: Generate seed data (preserve public events)
+        run: node scripts/gen-seed.mjs
       - run: npm run build
       - name: Dry-run x-scroll
         run: npm run agent:x-scroll

@@ -220,8 +220,40 @@ function main() {
   const stress = readJson('stress.json', null);
   const feeds = readJson('feeds.json', []);
   const supply = readJson('supply-routes.json', []);
-  const hotspots = readJson('hotspots.json', []);
-  const snapshot = readJson('snapshot.json', null);
+  const series = readJson('series.json', []);
+  let hotspots = readJson('hotspots.json', []);
+  // Rebuild hotspots from current events if empty/stale
+  if (!Array.isArray(hotspots) || !hotspots.length) {
+    const by = new Map();
+    for (const e of events || []) {
+      const h = by.get(e.region) || { region: e.region, count: 0, maxSeverity: 0, freshestSource: '', freshestAt: '1970-01-01', layers: new Set() };
+      h.count++;
+      h.maxSeverity = Math.max(h.maxSeverity, e.severity || 0);
+      if (e.observedAt > h.freshestAt) { h.freshestAt = e.observedAt; h.freshestSource = e.source; }
+      if (e.layer) h.layers.add(e.layer);
+      by.set(e.region, h);
+    }
+    hotspots = [...by.values()].map((h) => ({ ...h, layers: [...h.layers] }));
+    fs.writeFileSync(path.join(publicData, 'hotspots.json'), JSON.stringify(hotspots, null, 2));
+  }
+
+  // UI prefers snapshot.json.events — always rebuild from current public/data so Pages never ships a stale 24-event pack.
+  const snapshot = {
+    generatedAt,
+    events: events || [],
+    postures: postures || [],
+    hotspots: hotspots || [],
+    feeds: feeds || [],
+    series: series || [],
+    anomalies: anomalies || [],
+    stress,
+    timeWindows: ['6h', '24h', '7d', '30d'],
+    updatedAt: updateMeta.updatedAt,
+    nextUpdateAt: updateMeta.nextUpdateAt,
+    nextUpdateHint: updateMeta.nextUpdateHint,
+  };
+  fs.writeFileSync(path.join(publicData, 'snapshot.json'), JSON.stringify(snapshot, null, 2));
+  console.log(`report:daily — rebuilt snapshot.json with ${snapshot.events.length} events`);
 
   const meta = {
     date,
@@ -270,7 +302,7 @@ function main() {
     feeds,
     hotspots,
     supplyRoutes: supply,
-    series: readJson('series.json', []),
+    series,
     timeWindows: ['6h', '24h', '7d', '30d'],
   };
   fs.writeFileSync(path.join(archiveDir, 'pack.json'), JSON.stringify(pack, null, 2));

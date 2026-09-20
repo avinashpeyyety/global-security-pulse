@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stampMeta } from './lib/stamp-meta.mjs';
-import { resolveEventGeo, regeocodeWrongGlobal } from './lib/geocode.mjs';
+import { resolveEventGeo, regeocodeWrongGlobal, regeocodeAllNamed } from './lib/geocode.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -202,8 +202,10 @@ async function main() {
     : fs.existsSync(seedEvents)
       ? JSON.parse(fs.readFileSync(seedEvents, 'utf8'))
       : [];
-  const { events: existing, fixed: regeoFixed } = regeocodeWrongGlobal(rawExisting);
+  const { events: jitterFixed, fixed: regeoFixed } = regeocodeWrongGlobal(rawExisting);
   if (regeoFixed) console.log(`  re-geocoded ${regeoFixed} Global-jitter event(s) from title/summary places`);
+  const { events: existing, fixed: namedFixed, filled } = regeocodeAllNamed(jitterFixed);
+  if (namedFixed || filled) console.log(`  regeocodeAllNamed: updated ${namedFixed}, filled missing coords ${filled}`);
 
   const incoming = [];
   const notes = [];

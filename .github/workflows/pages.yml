@@ -25,8 +25,8 @@ jobs:
           cache: npm
       - name: Install
         run: npm install
-      - name: Generate seed data
-        run: node scripts/gen-seed.mjs
+      # Do NOT run gen-seed here — it used to overwrite committed public/data
+      # (RSS/GDELT packs) with the 24-event seed pack before Vite copies to dist.
       - name: Build
         run: npm run build
       - name: Upload Pages artifact

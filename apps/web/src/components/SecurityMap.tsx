@@ -148,6 +148,8 @@ export function SecurityMap({
     markersRef.current = [];
 
     for (const e of events) {
+      const lat = Number.isFinite(Number(e.lat)) ? Number(e.lat) : 20;
+      const lon = Number.isFinite(Number(e.lon)) ? Number(e.lon) : 0;
       const risk = eventFalloutRisk(e);
       const color = RISK_COLORS[risk];
       const el = document.createElement('div');
@@ -175,7 +177,7 @@ export function SecurityMap({
       );
 
       const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([e.lon, e.lat])
+        .setLngLat([lon, lat])
         .setPopup(popup)
         .addTo(map);
       markersRef.current.push(marker);

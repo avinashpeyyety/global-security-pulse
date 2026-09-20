@@ -141,16 +141,43 @@ const feeds = [
   { id: 'baltic', name: 'Baltic Dry', status: 'Not run', lastEvaluatedAt: null, detail: 'No free reliable source wired', rule: 'source_available', snapshot: null },
 ];
 
-const hotspots = buildHotspots(events);
-const snapshot = { generatedAt: iso(now), events, postures, hotspots, feeds, series, anomalies, stress, timeWindows: ['6h', '24h', '7d', '30d'] };
+// Prefer richer ingested public events so CI/Pages never clobber RSS/GDELT packs with the 24-event seed.
+const publicEventsPath = path.join(root, 'apps/web/public/data/events.json');
+let eventsOut = events;
+if (fs.existsSync(publicEventsPath)) {
+  try {
+    const pub = JSON.parse(fs.readFileSync(publicEventsPath, 'utf8'));
+    if (Array.isArray(pub) && pub.length > events.length) {
+      eventsOut = pub.map((e) => ({
+        ...e,
+        falloutRisk: e.falloutRisk ?? severityToFallout(e.severity),
+      }));
+      console.log(`gen-seed: preserving public events (${eventsOut.length} > seed ${events.length})`);
+    }
+  } catch (err) {
+    console.warn('gen-seed: could not read public events, using seed', err.message);
+  }
+}
+
+const publicPosturesPath = path.join(root, 'apps/web/public/data/postures.json');
+let posturesOut = postures;
+if (fs.existsSync(publicPosturesPath)) {
+  try {
+    const pubP = JSON.parse(fs.readFileSync(publicPosturesPath, 'utf8'));
+    if (Array.isArray(pubP) && pubP.length >= postures.length) posturesOut = pubP;
+  } catch { /* keep seed postures */ }
+}
+
+const hotspots = buildHotspots(eventsOut);
+const snapshot = { generatedAt: iso(now), events: eventsOut, postures: posturesOut, hotspots, feeds, series, anomalies, stress, timeWindows: ['6h', '24h', '7d', '30d'] };
 
 const outs = [
-  ['data/seed/events.json', events],
+  ['data/seed/events.json', events], // keep canonical small seed for offline bootstrap
   ['data/seed/series.json', series],
-  ['data/seed/snapshot.json', snapshot],
+  ['data/seed/snapshot.json', { ...snapshot, events, postures }],
   ['data/seed/postures.json', postures],
-  ['apps/web/public/data/events.json', events],
-  ['apps/web/public/data/postures.json', postures],
+  ['apps/web/public/data/events.json', eventsOut],
+  ['apps/web/public/data/postures.json', posturesOut],
   ['apps/web/public/data/series.json', series],
   ['apps/web/public/data/snapshot.json', snapshot],
   ['apps/web/public/data/feeds.json', feeds],
@@ -164,4 +191,4 @@ for (const [rel, data] of outs) {
   fs.mkdirSync(path.dirname(p), { recursive: true });
   fs.writeFileSync(p, JSON.stringify(data, null, 2));
 }
-console.log('gen-seed ok', { events: events.length, postures: postures.length, series: series.length, stress: stress.score });
+console.log('gen-seed ok', { events: eventsOut.length, postures: posturesOut.length, series: series.length, stress: stress.score });
