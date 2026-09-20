@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-20T21:32:10.375Z",
+  "generatedAt": "2026-09-20T22:08:26.111Z",
   "date": "2026-09-20",
   "packageId": "daily-2026-09-20",
-  "updatedAt": "2026-09-20T21:32:10.375Z",
+  "updatedAt": "2026-09-20T22:08:26.111Z",
   "nextUpdateAt": "2026-09-20T23:20:00.000Z",
   "nextUpdateHint": "Next update ~6:20 PM CT",
   "events": [
@@ -14,9 +14,9 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 21.6,
-      "lon": 5.279999999999999,
-      "region": "Global",
+      "lat": 37.98,
+      "lon": 23.73,
+      "region": "Europe",
       "source": "rss:BBC World",
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss",
@@ -24,20 +24,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece — One eyewitness said the scene was so chaotic that screaming could be heard from the other end of the beach.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "Why are parakeet numbers on the rise?",
-          "url": "https://x.com/BBCWorld/status/2101549539396030644",
-          "observedAt": "2026-09-20T06:19:00Z"
-        },
-        {
-          "author": "Reuters",
-          "text": "UBS CEO Ermotti warns against harsh capital rules ahead of vote",
-          "url": "https://x.com/Reuters/status/2101759578471809390",
-          "observedAt": "2026-09-20T20:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-pm-urges-gulf-security-framework-with-iran",
@@ -47,8 +34,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 32.43,
-      "lon": 53.69,
+      "lat": 25.29,
+      "lon": 51.53,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -57,53 +44,34 @@
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Qatar PM urges Gulf security framework with Iran — Qatar’s PM says, the Gulf won&#039;t be the same unless there&#039;s a framework ensuring no one is a threat to each other.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "AP",
-          "text": "Rising gas prices frustrate voters. Trump says it's an 'inexpensive price to pay' for the Iran war. These voters disagree.",
-          "url": "https://x.com/AP/status/2101765621595636105",
-          "observedAt": "2026-09-20T20:19:00Z"
-        },
-        {
-          "author": "AJEnglish",
-          "text": "Schools and universities are reopening across Iran after months of war. More than 1,700 schools were damaged, while educators warn of psychological trauma among children.",
-          "url": "https://x.com/AJEnglish/status/2101770875347566975",
-          "observedAt": "2026-09-20T20:29:00Z"
-        },
-        {
-          "author": "AJEnglish",
-          "text": "War impact on Iran's education: students return to class after months of disruption",
-          "url": "https://x.com/AJEnglish/status/2101763328779399367",
-          "observedAt": "2026-09-20T20:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
-      "id": "curated-x-reuters-2101778467545096594",
-      "title": "Lightning suspends Bucs-Browns at 2-minute warning",
+      "id": "curated-x-reuters-2101778429750485301",
+      "title": "Public timeline link/image post (no text exposed)",
       "summary": "User-generated X post from @Reuters regarding Global — verify against wires.",
       "curatedSummary": "User-generated X post from @Reuters regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "Reuters",
-          "text": "Lightning suspends Bucs-Browns at 2-minute warning",
-          "url": "https://x.com/Reuters/status/2101778467545096594",
+          "text": "[No post text exposed in the public timeline; image/link post visible]",
+          "url": "https://x.com/Reuters/status/2101778429750485301",
           "observedAt": "2026-09-20T21:00:00Z"
         }
       ],
       "layer": "conflict",
-      "severity": 3,
-      "falloutRisk": "critical",
+      "severity": 2,
+      "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 17.238,
-      "lon": 0.4180000000000005,
+      "lat": 0,
+      "lon": 0,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
-      "url": "https://x.com/Reuters/status/2101778467545096594",
+      "url": "https://x.com/Reuters/status/2101778429750485301",
       "observedAt": "2026-09-20T21:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-aljazeera-argentina-s-left-stages-march-of-anger-over-mile",
@@ -113,8 +81,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 31.240000000000002,
-      "lon": 40.44,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -123,20 +91,61 @@
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Argentina’s Left stages ‘March of Anger’ over Milei’s austerity measures — Thousands of protesters took to the streets of Buenos Aires for the ‘March of Anger’.",
       "briefSource": "wire",
+      "mapEligible": false
+    },
+    {
+      "id": "curated-x-reuters-2101775934877483304",
+      "title": "Bryson DeChambeau teases potential PGA Tour return on social media",
+      "summary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "briefSource": "agent",
       "xPosts": [
         {
-          "author": "CENTCOM",
-          "text": "A U.S. Sailor stands watch aboard USS John Paul Jones (DDG 53). As of Sept. 20, CENTCOM forces have redirected 109 commercial vessels to ensure total compliance.",
-          "url": "https://x.com/CENTCOM/status/2101685419179954548",
-          "observedAt": "2026-09-20T15:19:00Z"
-        },
-        {
-          "author": "CENTCOM",
-          "text": "[No post text exposed in the public timeline; photo post visible]",
-          "url": "https://x.com/CENTCOM/status/2101400206784815543",
-          "observedAt": "2026-09-19T00:00:00Z"
+          "author": "Reuters",
+          "text": "Bryson DeChambeau teases potential PGA Tour return on social media",
+          "url": "https://x.com/Reuters/status/2101775934877483304",
+          "observedAt": "2026-09-20T20:50:00Z"
         }
-      ]
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/Reuters/status/2101775934877483304",
+      "observedAt": "2026-09-20T20:50:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-ajenglish-2101774649516339448",
+      "title": "AJ English link/image post",
+      "summary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "AJEnglish",
+          "text": "[No post text exposed in the public timeline; link/image post visible]",
+          "url": "https://x.com/AJEnglish/status/2101774649516339448",
+          "observedAt": "2026-09-20T20:44:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/AJEnglish/status/2101774649516339448",
+      "observedAt": "2026-09-20T20:44:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-aljazeera-eighteen-suspects-extradited-to-us-over-haitian-",
@@ -155,13 +164,14 @@
       "observedAt": "2026-09-20T20:31:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Eighteen suspects extradited to US over Haitian president’s 2021 killing — Federal court in Florida to try men accused of orchestrating the transnational plot to kill Jovenel Moise from US soil.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "curated-x-ajenglish-2101771390391042208",
       "title": "US, China open high-level talks ahead of Trump-Xi summit",
-      "summary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -175,14 +185,41 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.55,
-      "lat": 24.8,
-      "lon": 38.6616,
-      "region": "Middle East",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/AJEnglish/status/2101771390391042208",
       "observedAt": "2026-09-20T20:31:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-ajenglish-2101769650941886802",
+      "title": "Canada and France will pursue cooperation on energy, defence, space and other sectors",
+      "summary": "User-generated X post from @AJEnglish regarding Paris — verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Paris — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "AJEnglish",
+          "text": "Canada and France will pursue cooperation on energy, defence, space and other sectors, in what their leaders say is a reflection of shared values between the two countries.",
+          "url": "https://x.com/AJEnglish/status/2101769650941886802",
+          "observedAt": "2026-09-20T20:24:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 48.86,
+      "lon": 2.35,
+      "region": "Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/AJEnglish/status/2101769650941886802",
+      "observedAt": "2026-09-20T20:24:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-bbc-world-german-chancellor-merz-calls-state-election-a-di",
@@ -201,7 +238,35 @@
       "observedAt": "2026-09-20T20:21:40.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on — Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
+    },
+    {
+      "id": "curated-x-reuters-2101759578471809390",
+      "title": "UBS CEO Ermotti warns against harsh capital rules ahead of vote",
+      "summary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "Reuters",
+          "text": "UBS CEO Ermotti warns against harsh capital rules ahead of vote",
+          "url": "https://x.com/Reuters/status/2101759578471809390",
+          "observedAt": "2026-09-20T20:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 3,
+      "falloutRisk": "critical",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/Reuters/status/2101759578471809390",
+      "observedAt": "2026-09-20T20:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-reuters-2101758312152760656",
@@ -228,13 +293,40 @@
       "sourceReliability": "A",
       "url": "https://x.com/Reuters/status/2101758312152760656",
       "observedAt": "2026-09-20T20:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-reuters-2101757052229980325",
+      "title": "Trump administration prepares to sanction the International Criminal Court",
+      "summary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "Reuters",
+          "text": "Trump administration prepares to sanction the International Criminal Court",
+          "url": "https://x.com/Reuters/status/2101757052229980325",
+          "observedAt": "2026-09-20T20:19:00Z"
+        }
+      ],
+      "layer": "sanctions",
+      "severity": 3,
+      "falloutRisk": "medium",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/Reuters/status/2101757052229980325",
+      "observedAt": "2026-09-20T20:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-ajenglish-2101760834170917301",
       "title": "AJ English video post",
-      "summary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -248,14 +340,14 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 27.459600000000002,
-      "lon": 41.55,
-      "region": "Middle East",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/AJEnglish/status/2101760834170917301",
       "observedAt": "2026-09-20T20:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-guardian-world-more-than-a-dozen-arrested-in-connection-with-20",
@@ -274,7 +366,8 @@
       "observedAt": "2026-09-20T20:17:44.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Jovenel Moïse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Moïse, according to US officials.Moïse, 53, was shot dead on 7 July 2021, at his p",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-pm-describes-fallout-of-us-israel-war-on-i",
@@ -294,6 +387,7 @@
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ — Speaking before the UN General Assembly, Sheikh Mohammed also announces a key shift in Qatar&#039;s investment strategy.",
       "briefSource": "wire",
+      "mapEligible": false,
       "xPosts": [
         {
           "author": "AP",
@@ -323,8 +417,8 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.58,
-      "lat": 30.04,
-      "lon": 43.2,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -332,7 +426,8 @@
       "observedAt": "2026-09-20T19:42:13.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "US, China open high-level talks ahead of Trump-Xi summit — Scott Bessent and He Lifeng meet in New York for US-China talks ahead of the Trump-Xi meeting later this week.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-says-it-is-working-to-revive-iran-us-talks",
@@ -342,8 +437,8 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.58,
-      "lat": 32.43,
-      "lon": 53.69,
+      "lat": 25.29,
+      "lon": 51.53,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -352,26 +447,7 @@
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Qatar says it is working to revive Iran-US talks — Qatar’s Foreign Ministry spokesperson tells Bloomberg that mediators are shuttling between Iran and US to revive talks.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "AP",
-          "text": "Rising gas prices frustrate voters. Trump says it's an 'inexpensive price to pay' for the Iran war. These voters disagree.",
-          "url": "https://x.com/AP/status/2101765621595636105",
-          "observedAt": "2026-09-20T20:19:00Z"
-        },
-        {
-          "author": "AJEnglish",
-          "text": "Schools and universities are reopening across Iran after months of war. More than 1,700 schools were damaged, while educators warn of psychological trauma among children.",
-          "url": "https://x.com/AJEnglish/status/2101770875347566975",
-          "observedAt": "2026-09-20T20:29:00Z"
-        },
-        {
-          "author": "AJEnglish",
-          "text": "War impact on Iran's education: students return to class after months of disruption",
-          "url": "https://x.com/AJEnglish/status/2101763328779399367",
-          "observedAt": "2026-09-20T20:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-france-s-macron-and-canada-s-carney-announce-pla",
@@ -391,20 +467,13 @@
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "France’s Macron and Canada’s Carney announce plans to build stronger ties — Announcement comes as Canada seeks a closer relationship with the EU amid a trade war with the US.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "AJEnglish",
-          "text": "Canada and France will pursue cooperation on energy, defence, space and other sectors, in what their leaders say is a reflection of shared values between the two countries.",
-          "url": "https://x.com/AJEnglish/status/2101769650941886802",
-          "observedAt": "2026-09-20T20:24:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "curated-x-bbcworld-2101752216419750339",
       "title": "West raises thousands for Nepalese flood victims",
-      "summary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
+      "summary": "User-generated X post from @BBCWorld regarding Nepal — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Nepal — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -418,20 +487,47 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 19.2056,
-      "lon": -5.4148000000000005,
-      "region": "Global",
+      "lat": 27.72,
+      "lon": 85.32,
+      "region": "South Asia",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/BBCWorld/status/2101752216419750339",
       "observedAt": "2026-09-20T19:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-bbcworld-2101749946676363386",
+      "title": "Aleema Khanum: Sister of Pakistan's ex-PM Imran Khan arrested",
+      "summary": "User-generated X post from @BBCWorld regarding Pakistan — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Pakistan — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "BBCWorld",
+          "text": "Aleema Khanum: Sister of Pakistan's ex-PM Imran Khan arrested",
+          "url": "https://x.com/BBCWorld/status/2101749946676363386",
+          "observedAt": "2026-09-20T19:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 33.68,
+      "lon": 73.05,
+      "region": "South Asia",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/BBCWorld/status/2101749946676363386",
+      "observedAt": "2026-09-20T19:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-centcom-2101752852917968954",
       "title": "A look into the daily operations of U.S. Navy Sailors aboard USS John Finn",
-      "summary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -445,14 +541,14 @@
       "severity": 3,
       "falloutRisk": "high",
       "confidence": 0.55,
-      "lat": 25.449199999999998,
-      "lon": 42.7336,
-      "region": "Middle East",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2101752852917968954",
       "observedAt": "2026-09-20T19:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-bbc-world-sister-of-pakistan-s-ex-pm-imran-khan-arrested",
@@ -472,14 +568,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Sister of Pakistan's ex-PM Imran Khan arrested — Aleema Khanum is accused of mobilising her brother’s supporters ahead of country-wide protests.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "Aleema Khanum: Sister of Pakistan's ex-PM Imran Khan arrested",
-          "url": "https://x.com/BBCWorld/status/2101749946676363386",
-          "observedAt": "2026-09-20T19:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-how-will-saudi-arabia-deal-with-the-houthis",
@@ -499,14 +588,7 @@
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "How will Saudi Arabia deal with the Houthis? — Yemeni group warns of further attacks on the kingdom.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "Reuters",
-          "text": "PODCAST: Houthis target Saudi, Moscow drone attack and Ed Sheeran",
-          "url": "https://x.com/Reuters/status/2101770899753943435",
-          "observedAt": "2026-09-20T20:30:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-man-utd-salvage-fulham-draw-as-pressure-mounts-o",
@@ -516,8 +598,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 30.92,
-      "lon": 44.52,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -525,13 +607,41 @@
       "observedAt": "2026-09-20T18:32:03.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Man Utd salvage Fulham draw as pressure mounts on Carrick — Matheus Cunha strikes late as Manchester United seal a 1-1 draw at Fulham, but pressure mounts on Michael Carrick.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
+    },
+    {
+      "id": "curated-x-bbcworld-2101725032598708299",
+      "title": "Burnham hails Greenland deal ahead of first Trump meeting in US",
+      "summary": "User-generated X post from @BBCWorld regarding Greenland — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Greenland — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "BBCWorld",
+          "text": "Burnham hails Greenland deal ahead of first Trump meeting in US",
+          "url": "https://x.com/BBCWorld/status/2101725032598708299",
+          "observedAt": "2026-09-20T18:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 72,
+      "lon": -40,
+      "region": "Americas",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/BBCWorld/status/2101725032598708299",
+      "observedAt": "2026-09-20T18:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-ajenglish-2101735768804753752",
       "title": "AJ English video post",
-      "summary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -545,14 +655,14 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 25.842,
-      "lon": 45.2124,
-      "region": "Middle East",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/AJEnglish/status/2101735768804753752",
       "observedAt": "2026-09-20T18:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-aljazeera-gaza-artists-honour-macklemore-for-supporting-pa",
@@ -571,7 +681,8 @@
       "observedAt": "2026-09-20T17:59:10.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Gaza artists honour Macklemore for supporting Palestine — Artists in Gaza are painting murals on destroyed walls, honouring US rapper Macklemore for his support for Palestine.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-jerusalem-daily-israel-pardons-soldier-elor-azar",
@@ -590,7 +701,8 @@
       "observedAt": "2026-09-20T17:55:46.000Z",
       "ingestedAt": "2026-09-20T21:00:18.938Z",
       "curatedSummary": "Jerusalem Daily: Israel pardons soldier Elor Azaria",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-trump-tariffs-hit-canada-s-dairy-farmers-as-us-s",
@@ -600,8 +712,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 30.68,
-      "lon": 46.32,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -610,14 +722,34 @@
       "ingestedAt": "2026-09-20T21:00:18.938Z",
       "curatedSummary": "Trump tariffs hit Canada’s dairy farmers as US sales stall — A 50 percent tariff has disrupted dairy exports, leaving Canadian farmers with milk that cannot be redirected overnight.",
       "briefSource": "wire",
+      "mapEligible": false
+    },
+    {
+      "id": "curated-x-bbcworld-2101715956959453301",
+      "title": "German Chancellor Merz vows to stay on despite 'disaster' in state election exit polls",
+      "summary": "User-generated X post from @BBCWorld regarding Berlin — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Berlin — verify against wires.",
+      "briefSource": "agent",
       "xPosts": [
         {
-          "author": "AJEnglish",
-          "text": "[No post text exposed in the public timeline; link/image post visible]",
-          "url": "https://x.com/AJEnglish/status/2101774649516339448",
-          "observedAt": "2026-09-20T20:44:00Z"
+          "author": "BBCWorld",
+          "text": "German Chancellor Merz vows to stay on despite 'disaster' in state election exit polls",
+          "url": "https://x.com/BBCWorld/status/2101715956959453301",
+          "observedAt": "2026-09-20T17:19:00Z"
         }
-      ]
+      ],
+      "layer": "disaster",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 52.52,
+      "lon": 13.4,
+      "region": "Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/BBCWorld/status/2101715956959453301",
+      "observedAt": "2026-09-20T17:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-ap-2101708475608809936",
@@ -637,14 +769,14 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.55,
-      "lat": 20.4272,
-      "lon": 2.7552,
+      "lat": 0,
+      "lon": 0,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/AP/status/2101708475608809936",
       "observedAt": "2026-09-20T17:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-bbc-world-trump-says-triumphal-arch-will-be-military-compl",
@@ -654,8 +786,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 22.8,
-      "lon": -3.24,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -664,14 +796,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Trump says triumphal arch will be military complex with drones and snipers — Trump said the updated plans were at the request of the US military and for national security purposes.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "German Chancellor Merz vows to stay on despite 'disaster' in state election exit polls",
-          "url": "https://x.com/BBCWorld/status/2101715956959453301",
-          "observedAt": "2026-09-20T17:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "curated-x-ap-2101702184354160723",
@@ -691,20 +816,47 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 18.538,
-      "lon": 5.1544,
+      "lat": 0,
+      "lon": 0,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/AP/status/2101702184354160723",
       "observedAt": "2026-09-20T16:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-ap-2101695389778788391",
+      "title": "AP video/podcast post",
+      "summary": "User-generated X post from @AP regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @AP regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "AP",
+          "text": "[No post text exposed in the public timeline; video post visible]",
+          "url": "https://x.com/AP/status/2101695389778788391",
+          "observedAt": "2026-09-20T16:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/AP/status/2101695389778788391",
+      "observedAt": "2026-09-20T16:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-uk_mto-2101700772211671278",
       "title": "UPDATE 098-JMIC ADVISORY NOTE (20 September)",
-      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
-      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
+      "summary": "User-generated X post from @UK_MTO regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @UK_MTO regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -718,14 +870,14 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.55,
-      "lat": 13.9528,
-      "lon": 40.054,
-      "region": "Red Sea / Bab el-Mandeb",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/UK_MTO/status/2101700772211671278",
       "observedAt": "2026-09-20T16:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-ap-2101685400657936744",
@@ -745,14 +897,95 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 23.5104,
-      "lon": -5.644,
+      "lat": 0,
+      "lon": 0,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/AP/status/2101685400657936744",
       "observedAt": "2026-09-20T15:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-centcom-2101685419179954548",
+      "title": "A U.S. Sailor stands watch aboard USS John Paul Jones",
+      "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "CENTCOM",
+          "text": "A U.S. Sailor stands watch aboard USS John Paul Jones (DDG 53). As of Sept. 20, CENTCOM forces have redirected 109 commercial vessels to ensure total compliance.",
+          "url": "https://x.com/CENTCOM/status/2101685419179954548",
+          "observedAt": "2026-09-20T15:19:00Z"
+        }
+      ],
+      "layer": "maritime",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/CENTCOM/status/2101685419179954548",
+      "observedAt": "2026-09-20T15:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-defencehq-2101689147865841715",
+      "title": "Commemorating 86 years since the Battle of Britain at Westminster Abbey today",
+      "summary": "User-generated X post from @DefenceHQ regarding London — verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenceHQ regarding London — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "DefenceHQ",
+          "text": "Commemorating 86 years since the Battle of Britain at Westminster Abbey today.",
+          "url": "https://x.com/DefenceHQ/status/2101689147865841715",
+          "observedAt": "2026-09-20T15:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 51.51,
+      "lon": -0.13,
+      "region": "Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/DefenceHQ/status/2101689147865841715",
+      "observedAt": "2026-09-20T15:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-bbcworld-2101671281170985037",
+      "title": "Trump says his triumphal arch will become a military ammunition complex",
+      "summary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "BBCWorld",
+          "text": "Trump says his triumphal arch will become a military ammunition complex",
+          "url": "https://x.com/BBCWorld/status/2101671281170985037",
+          "observedAt": "2026-09-20T14:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/BBCWorld/status/2101671281170985037",
+      "observedAt": "2026-09-20T14:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "evt-001",
@@ -771,7 +1004,8 @@
       "ingestedAt": "2026-09-20T13:30:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "Artillery exchanges near Kupiansk — Ukrainian and Russian forces exchange artillery fire northeast of Kupiansk; civilian infrastructure damaged.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-michelle-bachelet-withdraws-from-race-to-become-",
@@ -781,8 +1015,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 17.12,
-      "lon": 2.88,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
@@ -791,20 +1025,7 @@
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Former president of Chile drops out after support collapsed in security council straw poll, leaving seven candidates in contestMichelle Bachelet, a former president of Chile, has withdrawn her candidacy to become the next secretary general of the ⁠UN, ending an attempt ​that had",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "Reuters",
-          "text": "[No post text exposed in the public timeline; image/link post visible]",
-          "url": "https://x.com/Reuters/status/2101778429750485301",
-          "observedAt": "2026-09-20T21:00:00Z"
-        },
-        {
-          "author": "Reuters",
-          "text": "Trump administration prepares to sanction the International Criminal Court",
-          "url": "https://x.com/Reuters/status/2101757052229980325",
-          "observedAt": "2026-09-20T20:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "evt-012",
@@ -813,8 +1034,8 @@
       "layer": "disaster",
       "severity": 3,
       "confidence": 0.95,
-      "lat": 35.6,
-      "lon": 140.1,
+      "lat": null,
+      "lon": null,
       "region": "East Asia",
       "source": "USGS",
       "sourceReliability": "A",
@@ -822,7 +1043,8 @@
       "ingestedAt": "2026-09-20T12:12:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Major earthquake M6.8 offshore — USGS reports M6.8 quake; tsunami watch briefly issued then cancelled.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-003",
@@ -831,9 +1053,9 @@
       "layer": "maritime",
       "severity": 5,
       "confidence": 0.75,
-      "lat": 15.35,
-      "lon": 44.21,
-      "region": "Middle East",
+      "lat": 12.6,
+      "lon": 43.3,
+      "region": "Red Sea / Bab el-Mandeb",
       "source": "UKMTO advisory",
       "sourceReliability": "B",
       "observedAt": "2026-09-20T11:00:00.000Z",
@@ -841,14 +1063,7 @@
       "falloutRisk": "critical",
       "curatedSummary": "Houthi attack claim on commercial vessel — Attack claimed against Liberia-flagged tanker in southern Red Sea; crew status unknown.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "Reuters",
-          "text": "PODCAST: Houthis target Saudi, Moscow drone attack and Ed Sheeran",
-          "url": "https://x.com/Reuters/status/2101770899753943435",
-          "observedAt": "2026-09-20T20:30:00Z"
-        }
-      ]
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-largest-attack-on-moscow-sees-ukraine-fire-hundr",
@@ -868,26 +1083,42 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
       "briefSource": "wire",
+      "mapEligible": true,
       "xPosts": [
-        {
-          "author": "Reuters",
-          "text": "PODCAST: Houthis target Saudi, Moscow drone attack and Ed Sheeran",
-          "url": "https://x.com/Reuters/status/2101770899753943435",
-          "observedAt": "2026-09-20T20:30:00Z"
-        },
         {
           "author": "DefenseOne",
           "text": "Russia is weaponizing US-built AI to make killer drones, cyberattacks…",
           "url": "https://x.com/DefenseOne/status/2099609383491527020",
           "observedAt": "2026-09-14T00:00:00Z"
-        },
+        }
+      ]
+    },
+    {
+      "id": "curated-x-ukraine-2101612308787053053",
+      "title": "Good morning and happy Moscow burning day",
+      "summary": "User-generated X post from @Ukraine regarding Moscow — verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Moscow — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
         {
           "author": "Ukraine",
           "text": "Good morning and happy Moscow burning day 🔥",
           "url": "https://x.com/Ukraine/status/2101612308787053053",
           "observedAt": "2026-09-20T10:19:00Z"
         }
-      ]
+      ],
+      "layer": "conflict",
+      "severity": 1,
+      "falloutRisk": "low",
+      "confidence": 0.45,
+      "lat": 55.76,
+      "lon": 37.62,
+      "region": "Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "C",
+      "url": "https://x.com/Ukraine/status/2101612308787053053",
+      "observedAt": "2026-09-20T10:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "evt-007",
@@ -905,7 +1136,8 @@
       "ingestedAt": "2026-09-20T10:30:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "UNSC session on Gaza ceasefire draft — Draft resolution circulated; abstention math unclear; markets watch oil risk premium.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-018",
@@ -923,7 +1155,35 @@
       "ingestedAt": "2026-09-20T10:00:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "NATO maritime exercise begins — Standing naval group begins scheduled exercise in North Sea.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
+    },
+    {
+      "id": "curated-x-bbcworld-2101582383564599772",
+      "title": "German elections under way which could decide fate of Chancellor Merz",
+      "summary": "User-generated X post from @BBCWorld regarding Berlin — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Berlin — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "BBCWorld",
+          "text": "German elections under way which could decide fate of Chancellor Merz",
+          "url": "https://x.com/BBCWorld/status/2101582383564599772",
+          "observedAt": "2026-09-20T08:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 52.52,
+      "lon": 13.4,
+      "region": "Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/BBCWorld/status/2101582383564599772",
+      "observedAt": "2026-09-20T08:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "evt-002",
@@ -932,8 +1192,8 @@
       "layer": "conflict",
       "severity": 3,
       "confidence": 0.7,
-      "lat": 43.4,
-      "lon": 34,
+      "lat": 44.6,
+      "lon": 33.5,
       "region": "Eastern Europe",
       "source": "GDELT/AP",
       "sourceReliability": "A",
@@ -941,7 +1201,8 @@
       "ingestedAt": "2026-09-20T09:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Drone swarm reported over Black Sea approaches — Multiple UAVs tracked near Odessa maritime corridor; air defenses activated.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-023",
@@ -959,7 +1220,35 @@
       "ingestedAt": "2026-09-20T07:30:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "Missile test reported on peninsula — Short-range ballistic missile launch reported; trajectory toward sea.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
+    },
+    {
+      "id": "curated-x-bbcworld-2101549539396030644",
+      "title": "Why are parakeet numbers on the rise?",
+      "summary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "BBCWorld",
+          "text": "Why are parakeet numbers on the rise?",
+          "url": "https://x.com/BBCWorld/status/2101549539396030644",
+          "observedAt": "2026-09-20T06:19:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/BBCWorld/status/2101549539396030644",
+      "observedAt": "2026-09-20T06:19:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "evt-010",
@@ -977,7 +1266,8 @@
       "ingestedAt": "2026-09-20T07:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Protest escalation in capital square — Large anti-austerity protests; tear gas deployed; transport disrupted.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-ed-sheeran-admits-mistakes-at-first-show-since-m",
@@ -996,7 +1286,8 @@
       "observedAt": "2026-09-20T04:49:11.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy — The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-014",
@@ -1014,7 +1305,8 @@
       "ingestedAt": "2026-09-20T05:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "PLA drills announced near Taiwan Strait — Live-fire windows published; commercial shipping advised to reroute.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-004",
@@ -1023,8 +1315,8 @@
       "layer": "maritime",
       "severity": 3,
       "confidence": 0.65,
-      "lat": 26.57,
-      "lon": 56.25,
+      "lat": 27.18,
+      "lon": 56.28,
       "region": "Persian Gulf",
       "source": "GDELT/Defense News",
       "sourceReliability": "B",
@@ -1032,7 +1324,8 @@
       "ingestedAt": "2026-09-20T03:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Strait of Hormuz transit advisory elevated — Insurance premiums rise after shadow fleet near-miss reports near Hormuz.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-013",
@@ -1050,7 +1343,8 @@
       "ingestedAt": "2026-09-20T02:48:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "Wildfire smoke impacts air corridor — Dense smoke reduces visibility near major cargo hub; diversions issued.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-houthis-say-they-targeted-saudi-capital-with-bal",
@@ -1070,14 +1364,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Houthis say they targeted Saudi capital with ballistic missiles — A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "Reuters",
-          "text": "PODCAST: Houthis target Saudi, Moscow drone attack and Ed Sheeran",
-          "url": "https://x.com/Reuters/status/2101770899753943435",
-          "observedAt": "2026-09-20T20:30:00Z"
-        }
-      ]
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-our-head-teacher-was-an-abuser-we-joined-forces-",
@@ -1087,8 +1374,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 23.52,
-      "lon": -1.9199999999999997,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -1097,20 +1384,7 @@
       "ingestedAt": "2026-09-20T21:12:50.314Z",
       "curatedSummary": "Our head teacher was an abuser. We joined forces to get justice - now we're married — Students spent years collecting evidence against their Indonesian principal, before falling in love.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "German Chancellor Merz vows to stay on despite 'disaster' in state election exit polls",
-          "url": "https://x.com/BBCWorld/status/2101715956959453301",
-          "observedAt": "2026-09-20T17:19:00Z"
-        },
-        {
-          "author": "DefenseOne",
-          "text": "Lockheed’s Skunk Works plans to build four more of its multirole…",
-          "url": "https://x.com/DefenseOne/status/2099579688624455805",
-          "observedAt": "2026-09-14T00:00:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-nato-welcomes-greenland-deal-as-trump-says-it-wi",
@@ -1130,14 +1404,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control' — Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "Burnham hails Greenland deal ahead of first Trump meeting in US",
-          "url": "https://x.com/BBCWorld/status/2101725032598708299",
-          "observedAt": "2026-09-20T18:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "evt-005",
@@ -1155,7 +1422,8 @@
       "ingestedAt": "2026-09-19T23:00:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "Ransomware hits regional energy utility — Operational technology segment isolated after ransomware; no confirmed spillover to SCADA.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-009",
@@ -1173,7 +1441,8 @@
       "ingestedAt": "2026-09-19T19:00:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "IED blast near convoy route in Sahel — IED strikes logistics convoy on Gao–Niamey corridor; casualties unconfirmed.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-019",
@@ -1192,14 +1461,7 @@
       "falloutRisk": "low",
       "curatedSummary": "Sanctions designation list expanded — New entities linked to dual-use procurement networks designated.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "DefenseOne",
-          "text": "The Pentagon must prepare for battles around the moon: Joint Chiefs…",
-          "url": "https://x.com/DefenseOne/status/2100317561338343440",
-          "observedAt": "2026-09-16T00:00:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-converse-pulls-deeply-upsetting-advert-after-bac",
@@ -1209,8 +1471,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 19.84,
-      "lon": 0.9599999999999995,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -1219,14 +1481,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Converse pulls 'deeply upsetting' advert after backlash — Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "AP",
-          "text": "[No post text exposed in the public timeline; video post visible]",
-          "url": "https://x.com/AP/status/2101695389778788391",
-          "observedAt": "2026-09-20T16:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-google-s-gemini-ai-hacked-three-companies-in-sec",
@@ -1236,8 +1491,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 21.84,
-      "lon": -1.8000000000000003,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -1246,14 +1501,7 @@
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Google's Gemini AI hacked three companies in security test — The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "Reuters",
-          "text": "Bryson DeChambeau teases potential PGA Tour return on social media",
-          "url": "https://x.com/Reuters/status/2101775934877483304",
-          "observedAt": "2026-09-20T20:50:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "evt-016",
@@ -1272,14 +1520,7 @@
       "falloutRisk": "medium",
       "curatedSummary": "Border skirmish reports along LoC — Small-arms fire overnight; both sides claim ceasefire violation.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "Aleema Khanum: Sister of Pakistan's ex-PM Imran Khan arrested",
-          "url": "https://x.com/BBCWorld/status/2101749946676363386",
-          "observedAt": "2026-09-20T19:19:00Z"
-        }
-      ]
+      "mapEligible": true
     },
     {
       "id": "evt-006",
@@ -1288,8 +1529,8 @@
       "layer": "cyber",
       "severity": 2,
       "confidence": 0.55,
-      "lat": 52.37,
-      "lon": 4.9,
+      "lat": null,
+      "lon": null,
       "region": "Western Europe",
       "source": "seed/intel note",
       "sourceReliability": "C",
@@ -1297,7 +1538,8 @@
       "ingestedAt": "2026-09-19T13:36:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "APT probing logistics firm VPN — Credential stuffing and MFA fatigue attempts against European freight forwarder.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-011",
@@ -1315,7 +1557,8 @@
       "ingestedAt": "2026-09-19T06:24:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "Port strike threat expands to second terminal — Dockworkers threaten expansion; container backlog risk elevates.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-022",
@@ -1324,22 +1567,50 @@
       "layer": "maritime",
       "severity": 3,
       "confidence": 0.66,
-      "lat": 4,
-      "lon": 5.5,
-      "region": "West Africa",
+      "lat": 6.4,
+      "lon": 3.4,
+      "region": "Africa",
       "source": "GDELT/IMB",
       "sourceReliability": "B",
       "observedAt": "2026-09-19T04:00:00.000Z",
       "ingestedAt": "2026-09-19T05:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Pirate boarding attempt Gulf of Guinea — Armed boarding attempt repelled; vessel resumes transit under naval escort.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
+    },
+    {
+      "id": "curated-x-centcom-2101400206784815543",
+      "title": "CENTCOM photo post",
+      "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "CENTCOM",
+          "text": "[No post text exposed in the public timeline; photo post visible]",
+          "url": "https://x.com/CENTCOM/status/2101400206784815543",
+          "observedAt": "2026-09-19T00:00:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/CENTCOM/status/2101400206784815543",
+      "observedAt": "2026-09-19T00:00:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-centcom-2101292730030669968",
       "title": "CENTCOM video post",
-      "summary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1353,20 +1624,20 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 31.213600000000003,
-      "lon": 49.1788,
-      "region": "Middle East",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2101292730030669968",
       "observedAt": "2026-09-19T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-defencehq-2101234920773353525",
       "title": "DefenceHQ photo post",
-      "summary": "User-generated X post from @DefenceHQ regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @DefenceHQ regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @DefenceHQ regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenceHQ regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1380,20 +1651,20 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 46.971999999999994,
-      "lon": 12.3036,
-      "region": "Europe",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/DefenceHQ/status/2101234920773353525",
       "observedAt": "2026-09-19T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-nato-2101234850133049797",
       "title": "NATO photo carousel",
-      "summary": "User-generated X post from @NATO regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @NATO regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @NATO regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @NATO regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1407,14 +1678,14 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 49.1704,
-      "lon": 10.667200000000001,
-      "region": "Europe",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/NATO/status/2101234850133049797",
       "observedAt": "2026-09-19T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-guardian-world-men-deported-from-us-bound-and-beaten-in-equator",
@@ -1433,7 +1704,8 @@
       "observedAt": "2026-09-18T23:08:49.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Group trapped at Hotel Bamy after US removal as rights groups sound alarm over poor conditions and violenceTwo men that the Trump administration expelled to Equatorial Guinea were bound, fitted with bags over their heads, beaten and pushed down a flight of stairs, all in plain vi",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-survivors-recount-panic-and-struggle-to-breathe-",
@@ -1443,8 +1715,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 15.5,
-      "lon": 0,
+      "lat": 9.08,
+      "lon": 8.68,
       "region": "Africa",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
@@ -1452,7 +1724,8 @@
       "observedAt": "2026-09-18T17:27:39.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Police fire teargas as protests break out in city of Minna after deaths of suspected illegal goldminers, many of whom were childrenSurvivors from a prison cell in Nigeria where 37 suspected illegal goldminers died while in the custody of a paramilitary group this week have recoun",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-brazil-s-lula-announces-higher-welfare-payments-",
@@ -1471,7 +1744,8 @@
       "observedAt": "2026-09-18T17:10:37.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil’s electionsBrazil’s president, Luiz Inácio Lula da Silva, has announced a 15% increase in the country’s main cash-transfer programme for poor families, as well as free weight-los",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-008",
@@ -1489,7 +1763,8 @@
       "ingestedAt": "2026-09-18T18:24:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Secondary sanctions risk on shadow fleet ports — Treasury guidance flags additional ship-to-ship transfer hubs in Mediterranean.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-british-woman-who-was-kidnapped-in-malawi-rescue",
@@ -1508,7 +1783,8 @@
       "observedAt": "2026-09-18T11:21:36.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Four of Nurat Osman’s alleged abductors were killed during rescue after she was taken from outside her home last weekA British woman kidnapped in Malawi last week has been rescued by police after a shootout in which four of her alleged abductors were killed.Nusrat Osman was abduc",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-louisiana-firefighters-find-feline-native-to-sub",
@@ -1518,16 +1794,17 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 23.52,
-      "lon": 0.7200000000000006,
-      "region": "Global",
+      "lat": 30.98,
+      "lon": -91.96,
+      "region": "Americas",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/us-news/2026/sep/18/louisiana-firefighters-sub-saharan-africa-feline",
       "observedAt": "2026-09-18T10:00:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "The African serval, illegally enclosed in the back yard, was subdued and transferred to an animal welfare facility Louisiana firefighters responding to a small house blaze found a wildcat native to sub-Saharan Africa illegally enclosed in the back yard, prompting an animal welfar",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-we-demand-the-truth-olga-tokarczuk-and-jm-coetze",
@@ -1537,8 +1814,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 16.48,
-      "lon": -2.88,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
@@ -1547,20 +1824,7 @@
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "More than 180 writers sign letter renewing calls for information on 12 authors detained incommunicado since 2001 crackdown on free speech by Isaias AfwerkiMore than 180 writers have signed a letter to Eritrean president Isaias Afwerki calling for proof of life for 12 writers arre",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "BBCWorld",
-          "text": "Trump says his triumphal arch will become a military ammunition complex",
-          "url": "https://x.com/BBCWorld/status/2101671281170985037",
-          "observedAt": "2026-09-20T14:19:00Z"
-        },
-        {
-          "author": "BBCWorld",
-          "text": "German elections under way which could decide fate of Chancellor Merz",
-          "url": "https://x.com/BBCWorld/status/2101582383564599772",
-          "observedAt": "2026-09-20T08:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "evt-020",
@@ -1569,8 +1833,8 @@
       "layer": "disaster",
       "severity": 2,
       "confidence": 0.7,
-      "lat": 33.89,
-      "lon": 35.5,
+      "lat": null,
+      "lon": null,
       "region": "Levant",
       "source": "OCHA",
       "sourceReliability": "B",
@@ -1578,13 +1842,14 @@
       "ingestedAt": "2026-09-18T06:24:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "Refugee camp overcrowding warning — OCHA notes acute overcrowding after latest displacement wave.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "curated-x-centcom-2101049264616968431",
       "title": "CENTCOM photo carousel",
-      "summary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1598,20 +1863,47 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 28.5516,
-      "lon": 49.756,
-      "region": "Middle East",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2101049264616968431",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-defencehq-2100912733512163614",
+      "title": "DefenceHQ video post with @NATO",
+      "summary": "User-generated X post from @DefenceHQ regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenceHQ regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "DefenceHQ",
+          "text": "[No post text exposed in the public timeline; video post visible]",
+          "url": "https://x.com/DefenceHQ/status/2100912733512163614",
+          "observedAt": "2026-09-18T00:00:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "A",
+      "url": "https://x.com/DefenceHQ/status/2100912733512163614",
+      "observedAt": "2026-09-18T00:00:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-nato-2100857096791085507",
       "title": "NATO video post",
-      "summary": "User-generated X post from @NATO regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @NATO regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @NATO regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @NATO regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1625,20 +1917,20 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 46.0612,
-      "lon": 8.4824,
-      "region": "Europe",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/NATO/status/2100857096791085507",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-uk_mto-2100898480101175570",
       "title": "UKMTO VRA Overview PDF",
-      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
-      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
+      "summary": "User-generated X post from @UK_MTO regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @UK_MTO regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1652,20 +1944,20 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 17.954,
-      "lon": 38.1808,
-      "region": "Red Sea / Bab el-Mandeb",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/UK_MTO/status/2100898480101175570",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-uk_mto-2100855389034000842",
       "title": "UKMTO Warning 139/26 PDF",
-      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
-      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
+      "summary": "User-generated X post from @UK_MTO regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @UK_MTO regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1679,14 +1971,14 @@
       "severity": 3,
       "falloutRisk": "critical",
       "confidence": 0.55,
-      "lat": 16.4816,
-      "lon": 40.0588,
-      "region": "Red Sea / Bab el-Mandeb",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/UK_MTO/status/2100855389034000842",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "rss-guardian-world-new-cat-species-identified-for-first-time-in-mor",
@@ -1696,9 +1988,9 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 23.84,
-      "lon": -1.9199999999999997,
-      "region": "Global",
+      "lat": -16.5,
+      "lon": -68.15,
+      "region": "Americas",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/17/new-cat-species-identified-bolivia",
@@ -1706,14 +1998,7 @@
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "New species of wild feline was discovered in Bolivia’s Yungas forest that is smaller than the average domestic ⁠catA diminutive wild cat that inhabits Bolivia’s ⁠cloud forest has been identified as a previously unknown species, marking the first time a new living feline species h",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "DefenseOne",
-          "text": "Lockheed’s Skunk Works plans to build four more of its multirole…",
-          "url": "https://x.com/DefenseOne/status/2099579688624455805",
-          "observedAt": "2026-09-14T00:00:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "evt-015",
@@ -1722,8 +2007,8 @@
       "layer": "maritime",
       "severity": 3,
       "confidence": 0.5,
-      "lat": 12,
-      "lon": 114,
+      "lat": 16.5,
+      "lon": 112.5,
       "region": "East / SE Asia",
       "source": "GDELT/wire",
       "sourceReliability": "C",
@@ -1731,7 +2016,8 @@
       "ingestedAt": "2026-09-17T18:24:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "South China Sea collision claim — Conflicting accounts of vessel collision near contested shoal.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-all-smiles-in-strasbourg-but-uncertainty-clouds-",
@@ -1751,14 +2037,7 @@
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Although Mark Carney welcomed offer to become bloc’s first associate member, no one seems to know what that meansEurope live – latest updatesMark Carney received a rapturous reception in the European parliament when he gave his speech on Thursday welcoming a proposal for Canada t",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "DefenceHQ",
-          "text": "[No post text exposed in the public timeline; video post visible]",
-          "url": "https://x.com/DefenceHQ/status/2100912733512163614",
-          "observedAt": "2026-09-18T00:00:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "evt-017",
@@ -1767,8 +2046,8 @@
       "layer": "conflict",
       "severity": 2,
       "confidence": 0.45,
-      "lat": 48.7,
-      "lon": 32.6,
+      "lat": null,
+      "lon": null,
       "region": "Eastern Europe",
       "source": "seed/market note",
       "sourceReliability": "D",
@@ -1777,20 +2056,34 @@
       "falloutRisk": "low",
       "curatedSummary": "Pipeline monitoring anomaly reported — Pressure anomaly on export pipeline; operator says maintenance, markets skeptical.",
       "briefSource": "wire",
+      "mapEligible": false
+    },
+    {
+      "id": "curated-x-defenseone-2100317561338343440",
+      "title": "The Pentagon must prepare for battles around the moon: Joint Chiefs",
+      "summary": "User-generated X post from @DefenseOne regarding Washington — verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenseOne regarding Washington — verify against wires.",
+      "briefSource": "agent",
       "xPosts": [
         {
-          "author": "Ukraine",
-          "text": "[Post text was collapsed behind Show more in the public timeline]",
-          "url": "https://x.com/Ukraine/status/2091611312795070721",
-          "observedAt": "2026-08-23T00:00:00Z"
-        },
-        {
-          "author": "Ukraine",
-          "text": "[No post text exposed in the public timeline; photo post visible]",
-          "url": "https://x.com/Ukraine/status/2088299209984291028",
-          "observedAt": "2026-08-14T00:00:00Z"
+          "author": "DefenseOne",
+          "text": "The Pentagon must prepare for battles around the moon: Joint Chiefs…",
+          "url": "https://x.com/DefenseOne/status/2100317561338343440",
+          "observedAt": "2026-09-16T00:00:00Z"
         }
-      ]
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 38.91,
+      "lon": -77.04,
+      "region": "Americas",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/DefenseOne/status/2100317561338343440",
+      "observedAt": "2026-09-16T00:00:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "evt-021",
@@ -1808,13 +2101,14 @@
       "ingestedAt": "2026-09-15T18:24:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Cyber intrusion into municipal water SCADA (attempt) — Failed intrusion attempt on water utility HMI; ICS CERT advisory published.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "curated-x-nato-2099774771575521610",
       "title": "Link in threaded post for the full video",
-      "summary": "User-generated X post from @NATO regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @NATO regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @NATO regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @NATO regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1828,20 +2122,20 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 53.388000000000005,
-      "lon": 7.466799999999999,
-      "region": "Europe",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/NATO/status/2099774771575521610",
       "observedAt": "2026-09-15T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-ukraine-2099939286472699990",
       "title": "Russisk krigsskib, skrid ad helvede til!",
-      "summary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
+      "summary": "User-generated X post from @Ukraine regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1855,14 +2149,14 @@
       "severity": 1,
       "falloutRisk": "low",
       "confidence": 0.45,
-      "lat": 49.6672,
-      "lon": 34.681200000000004,
-      "region": "Eastern Europe",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "C",
       "url": "https://x.com/Ukraine/status/2099939286472699990",
       "observedAt": "2026-09-15T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "evt-024",
@@ -1881,14 +2175,7 @@
       "falloutRisk": "low",
       "curatedSummary": "Diplomatic spat escalates visa bans — Tit-for-tat diplomat expulsions announced after espionage allegations.",
       "briefSource": "wire",
-      "xPosts": [
-        {
-          "author": "DefenceHQ",
-          "text": "Commemorating 86 years since the Battle of Britain at Westminster Abbey today.",
-          "url": "https://x.com/DefenceHQ/status/2101689147865841715",
-          "observedAt": "2026-09-20T15:19:00Z"
-        }
-      ]
+      "mapEligible": false
     },
     {
       "id": "curated-x-defenseone-2099592782880858238",
@@ -1908,20 +2195,47 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 17.3792,
-      "lon": 5.216000000000001,
+      "lat": 0,
+      "lon": 0,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/DefenseOne/status/2099592782880858238",
       "observedAt": "2026-09-14T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-defenseone-2099579688624455805",
+      "title": "Lockheed’s Skunk Works plans to build four more multirole aircraft",
+      "summary": "User-generated X post from @DefenseOne regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenseOne regarding Global — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "DefenseOne",
+          "text": "Lockheed’s Skunk Works plans to build four more of its multirole…",
+          "url": "https://x.com/DefenseOne/status/2099579688624455805",
+          "observedAt": "2026-09-14T00:00:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/DefenseOne/status/2099579688624455805",
+      "observedAt": "2026-09-14T00:00:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     },
     {
       "id": "curated-x-ukraine-2091915493405823223",
       "title": "Independence is not a choice you make once and for all",
-      "summary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
+      "summary": "User-generated X post from @Ukraine regarding Global — verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1935,14 +2249,68 @@
       "severity": 1,
       "falloutRisk": "low",
       "confidence": 0.45,
-      "lat": 45.3672,
-      "lon": 28.75,
-      "region": "Eastern Europe",
+      "lat": 0,
+      "lon": 0,
+      "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "C",
       "url": "https://x.com/Ukraine/status/2091915493405823223",
       "observedAt": "2026-08-24T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-ukraine-2091611312795070721",
+      "title": "Ukraine post (text collapsed in public timeline)",
+      "summary": "User-generated X post from @Ukraine regarding Ukraine — verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Ukraine — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "Ukraine",
+          "text": "[Post text was collapsed behind Show more in the public timeline]",
+          "url": "https://x.com/Ukraine/status/2091611312795070721",
+          "observedAt": "2026-08-23T00:00:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 1,
+      "falloutRisk": "low",
+      "confidence": 0.45,
+      "lat": 49,
+      "lon": 32,
+      "region": "Eastern Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "C",
+      "url": "https://x.com/Ukraine/status/2091611312795070721",
+      "observedAt": "2026-08-23T00:00:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
+    },
+    {
+      "id": "curated-x-ukraine-2088299209984291028",
+      "title": "Ukraine photo post",
+      "summary": "User-generated X post from @Ukraine regarding Ukraine — verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Ukraine — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "Ukraine",
+          "text": "[No post text exposed in the public timeline; photo post visible]",
+          "url": "https://x.com/Ukraine/status/2088299209984291028",
+          "observedAt": "2026-08-14T00:00:00Z"
+        }
+      ],
+      "layer": "conflict",
+      "severity": 1,
+      "falloutRisk": "low",
+      "confidence": 0.45,
+      "lat": 49,
+      "lon": 32,
+      "region": "Eastern Europe",
+      "source": "x-scroll-curated",
+      "sourceReliability": "C",
+      "url": "https://x.com/Ukraine/status/2088299209984291028",
+      "observedAt": "2026-08-14T00:00:00Z",
+      "ingestedAt": "2026-09-20T22:08:25.278Z"
     }
   ],
   "postures": [
@@ -1957,8 +2325,8 @@
       "inResponseTo": "Elevated shipping risk advisories in Red Sea approaches",
       "precipitatePotential": "medium",
       "confidence": 0.55,
-      "lat": 14.5,
-      "lon": 42.8,
+      "lat": 14.8,
+      "lon": 42.95,
       "region": "Red Sea / Bab el-Mandeb",
       "source": "seed/posture-template",
       "sourceReliability": "C",
@@ -1977,8 +2345,8 @@
       "inResponseTo": "Regional force posture signaling near contested sea lanes",
       "precipitatePotential": "medium",
       "confidence": 0.6,
-      "lat": 23.5,
-      "lon": 122,
+      "lat": 23.97,
+      "lon": 121.61,
       "region": "East Asia",
       "source": "seed/posture-template",
       "sourceReliability": "C",
@@ -2015,8 +2383,8 @@
       "inResponseTo": "Foreign naval escort / presence near littoral waters",
       "precipitatePotential": "high",
       "confidence": 0.45,
-      "lat": 26.5,
-      "lon": 56.3,
+      "lat": 27.18,
+      "lon": 56.28,
       "region": "Persian Gulf",
       "source": "seed/posture-template",
       "sourceReliability": "D",
@@ -2045,7 +2413,7 @@
     {
       "id": "pos-006",
       "title": "Strategic bomber / long-range aviation patrol path extended",
-      "summary": "Illustrative seed: long-range aviation track advertised publicly; classic signaling move with limited immediate kinetic risk but high political temperature.",
+      "summary": "Illustrative seed: long-range aviation track advertised near Kamchatka approaches; classic signaling move with limited immediate kinetic risk but high political temperature.",
       "kind": "deployment",
       "actors": [
         "Strategic aviation"
@@ -2053,9 +2421,9 @@
       "inResponseTo": "Alliance reinforcement and exercise calendar",
       "precipitatePotential": "low",
       "confidence": 0.55,
-      "lat": 55,
-      "lon": 160,
-      "region": "North Pacific",
+      "lat": 53.05,
+      "lon": 158.65,
+      "region": "Kamchatka / NW Pacific",
       "source": "seed/posture-template",
       "sourceReliability": "C",
       "observedAt": "2026-09-18T14:00:00Z",
@@ -2072,8 +2440,8 @@
       "inResponseTo": "Unidentified UAV / vessel harassment reports",
       "precipitatePotential": "medium",
       "confidence": 0.5,
-      "lat": 35.9,
-      "lon": -5.6,
+      "lat": 36.14,
+      "lon": -5.35,
       "region": "Mediterranean",
       "source": "seed/posture-template",
       "sourceReliability": "C",
@@ -2319,7 +2687,7 @@
       "id": "x-scroll",
       "name": "X allowlist scroll",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-20T21:23:42.273Z",
+      "lastEvaluatedAt": "2026-09-20T22:08:25.324Z",
       "detail": "browser: 49 pointers",
       "rule": "allowlist_scroll && merge_by_id",
       "snapshot": "x-scroll@2026-09-20"
@@ -2354,9 +2722,9 @@
   ],
   "hotspots": [
     {
-      "region": "Global",
-      "count": 15,
-      "maxSeverity": 3,
+      "region": "Europe",
+      "count": 10,
+      "maxSeverity": 4,
       "freshestSource": "rss:BBC World",
       "freshestAt": "2026-09-20T21:17:22.000Z",
       "layers": [
@@ -2367,21 +2735,32 @@
     },
     {
       "region": "Middle East",
-      "count": 21,
-      "maxSeverity": 5,
+      "count": 14,
+      "maxSeverity": 4,
       "freshestSource": "rss:Al Jazeera",
       "freshestAt": "2026-09-20T21:00:15.000Z",
       "layers": [
         "conflict",
         "unrest",
-        "sanctions",
         "disaster",
+        "sanctions"
+      ]
+    },
+    {
+      "region": "Global",
+      "count": 37,
+      "maxSeverity": 3,
+      "freshestSource": "x-scroll-curated",
+      "freshestAt": "2026-09-20T21:00:00Z",
+      "layers": [
+        "conflict",
+        "sanctions",
         "maritime"
       ]
     },
     {
       "region": "Americas",
-      "count": 4,
+      "count": 8,
       "maxSeverity": 3,
       "freshestSource": "rss:Al Jazeera",
       "freshestAt": "2026-09-20T20:31:15.000Z",
@@ -2390,36 +2769,15 @@
       ]
     },
     {
-      "region": "Europe",
-      "count": 8,
-      "maxSeverity": 4,
-      "freshestSource": "rss:BBC World",
-      "freshestAt": "2026-09-20T20:21:40.000Z",
-      "layers": [
-        "disaster",
-        "maritime",
-        "conflict"
-      ]
-    },
-    {
       "region": "South Asia",
-      "count": 2,
-      "maxSeverity": 3,
-      "freshestSource": "rss:BBC World",
-      "freshestAt": "2026-09-20T19:04:11.000Z",
-      "layers": [
-        "unrest",
-        "conflict"
-      ]
-    },
-    {
-      "region": "Red Sea / Bab el-Mandeb",
-      "count": 3,
+      "count": 4,
       "maxSeverity": 3,
       "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-20T16:19:00Z",
+      "freshestAt": "2026-09-20T19:19:00Z",
       "layers": [
-        "maritime"
+        "disaster",
+        "conflict",
+        "unrest"
       ]
     },
     {
@@ -2442,6 +2800,16 @@
       "layers": [
         "disaster",
         "conflict"
+      ]
+    },
+    {
+      "region": "Red Sea / Bab el-Mandeb",
+      "count": 1,
+      "maxSeverity": 5,
+      "freshestSource": "UKMTO advisory",
+      "freshestAt": "2026-09-20T11:00:00.000Z",
+      "layers": [
+        "maritime"
       ]
     },
     {
@@ -2500,12 +2868,13 @@
     },
     {
       "region": "Africa",
-      "count": 4,
+      "count": 5,
       "maxSeverity": 4,
       "freshestSource": "GDELT/AFP",
       "freshestAt": "2026-09-19T18:00:00.000Z",
       "layers": [
         "terrorism",
+        "maritime",
         "conflict",
         "unrest"
       ]
@@ -2519,16 +2888,6 @@
       "layers": [
         "cyber",
         "sanctions"
-      ]
-    },
-    {
-      "region": "West Africa",
-      "count": 1,
-      "maxSeverity": 3,
-      "freshestSource": "GDELT/IMB",
-      "freshestAt": "2026-09-19T04:00:00.000Z",
-      "layers": [
-        "maritime"
       ]
     },
     {

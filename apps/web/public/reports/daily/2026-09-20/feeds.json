@@ -21,7 +21,7 @@
     "id": "x-scroll",
     "name": "X allowlist scroll",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-09-20T21:23:42.273Z",
+    "lastEvaluatedAt": "2026-09-20T22:08:25.324Z",
     "detail": "browser: 49 pointers",
     "rule": "allowlist_scroll && merge_by_id",
     "snapshot": "x-scroll@2026-09-20"

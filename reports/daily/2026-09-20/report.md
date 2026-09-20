@@ -1,6 +1,6 @@
 # Global Security Pulse — Daily Report 2026-09-20
 
-Generated: 2026-09-20T21:32:10.375Z
+Generated: 2026-09-20T22:08:26.111Z
 Ingest package: daily-2026-09-20
 
 ## Stress composite
@@ -24,17 +24,17 @@ Ingest package: daily-2026-09-20
 
 ## High / critical fallout events
 
-- **[critical]** Lightning suspends Bucs-Browns at 2-minute warning — Global (x-scroll-curated; [link](https://x.com/Reuters/status/2101778467545096594))
+- **[critical]** UBS CEO Ermotti warns against harsh capital rules ahead of vote — Global (x-scroll-curated; [link](https://x.com/Reuters/status/2101759578471809390))
 - **[high]** Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/20/qatari-pm-warns-against-cycles-of-escalation-in-the-middle-east?traffic_source=rss))
-- **[high]** A look into the daily operations of U.S. Navy Sailors aboard USS John Finn — Middle East (x-scroll-curated; [link](https://x.com/CENTCOM/status/2101752852917968954))
+- **[high]** A look into the daily operations of U.S. Navy Sailors aboard USS John Finn — Global (x-scroll-curated; [link](https://x.com/CENTCOM/status/2101752852917968954))
 - **[high]** Artillery exchanges near Kupiansk — Eastern Europe (GDELT/Reuters; [link](https://example.com/kupiansk))
-- **[critical]** Houthi attack claim on commercial vessel — Middle East (UKMTO advisory)
+- **[critical]** Houthi attack claim on commercial vessel — Red Sea / Bab el-Mandeb (UKMTO advisory)
 - **[high]** Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss))
 - **[high]** Missile test reported on peninsula — East Asia (GDELT/Yonhap)
 - **[high]** Houthis say they targeted Saudi capital with ballistic missiles — Middle East (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss))
 - **[high]** Ransomware hits regional energy utility — Eastern Europe (GDELT/cyber wire)
 - **[high]** IED blast near convoy route in Sahel — Africa (GDELT/AFP)
-- **[critical]** UKMTO Warning 139/26 PDF — Red Sea / Bab el-Mandeb (x-scroll-curated; [link](https://x.com/UK_MTO/status/2100855389034000842))
+- **[critical]** UKMTO Warning 139/26 PDF — Global (x-scroll-curated; [link](https://x.com/UK_MTO/status/2100855389034000842))
 
 ## High / critical postures
 
@@ -50,7 +50,7 @@ _No supply-route metadata._
 
 - GDELT GEO: **Pass** @ 2026-09-20T15:30:00.000Z — Seed + optional live refresh
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
-- X allowlist scroll: **Pass** @ 2026-09-20T21:23:42.273Z — browser: 49 pointers
+- X allowlist scroll: **Pass** @ 2026-09-20T22:08:25.324Z — browser: 49 pointers
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
 - Wire RSS: **Not run** @ n/a — RSS ingest stubbed for v0.1
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired

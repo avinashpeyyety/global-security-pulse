@@ -25,7 +25,51 @@ const publicHotspots = path.join(root, 'apps/web/public/data/hotspots.json');
 
 const PROX_KM_STRONG = 180;
 const PROX_KM_WEAK = 450;
-const MATCH_THRESHOLD = 5;
+/** Place-only matches used to clear this; topic substance required now. */
+const MATCH_THRESHOLD = 7;
+
+/** Security / conflict lexicon — overlap required with curated event tokens. */
+const SECURITY_LEXICON = [
+  'missile', 'missiles', 'ballistic', 'drone', 'drones', 'attack', 'attacks',
+  'strike', 'strikes', 'airstrike', 'artillery', 'war', 'warfare', 'intercept',
+  'intercepted', 'bomb', 'bombs', 'bombing', 'houthi', 'houthis', 'rocket',
+  'rockets', 'shelling', 'invasion', 'combat', 'raid', 'raids', 'swarm',
+  'barrage', 'downed', 'explosion', 'explosions', 'weapon', 'weapons',
+  'naval', 'vessel', 'tanker', 'piracy', 'hostage', 'militia', 'militant',
+  'cyberattack', 'cyberattacks', 'sanctions', 'ceasefire', 'offensive',
+];
+
+/** Canonicalize plural / near-duplicate security tokens. */
+const SECURITY_CANON = {
+  missiles: 'missile',
+  drones: 'drone',
+  attacks: 'attack',
+  strikes: 'strike',
+  airstrike: 'strike',
+  intercepted: 'intercept',
+  bombs: 'bomb',
+  bombing: 'bomb',
+  houthis: 'houthi',
+  rockets: 'rocket',
+  raids: 'raid',
+  explosions: 'explosion',
+  weapons: 'weapon',
+  cyberattacks: 'cyberattack',
+};
+
+/** Ultra-generic security words — weak alone inside multi-topic laundry lists. */
+const GENERIC_SECURITY = new Set(['attack', 'war', 'strike', 'military', 'defense', 'defence']);
+
+/** Celebrity / entertainment noise — reject vs security/conflict curated events. */
+const ENTERTAINMENT_NOISE = [
+  'ed sheeran', 'sheeran', 'macklemore', 'concert', 'album', 'celebrity',
+  'hollywood', 'premier league', 'premier-league', 'nfl', 'nba', 'mlb', 'nhl',
+  'golf', 'oscar', 'oscars', 'grammy', 'grammys', 'spotify', 'billboard',
+  'netflix', 'box office', 'box-office', 'trailer', 'taylor swift', 'beyonce',
+  'kardashian', 'super bowl', 'world cup final', 'eurovision',
+  '2-minute warning', 'touchdown', 'kickoff', 'halftime', 'bucs-browns',
+  'buccaneers', 'red carpet', 'box office',
+];
 
 function isXScrollCurated(e) {
   return String(e.source || '').toLowerCase() === 'x-scroll-curated';
@@ -131,11 +175,48 @@ function primaryPlaceKeys(e) {
   return placeKeywords(e.summary || '');
 }
 
+function securityTokensIn(text) {
+  const hay = String(text || '').toLowerCase();
+  const out = new Set();
+  for (const t of SECURITY_LEXICON) {
+    // Word-boundary match — avoid "war" inside warns/warning/forwarder
+    const re = new RegExp(`\\b${t.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}\\b`, 'i');
+    if (!re.test(hay)) continue;
+    out.add(SECURITY_CANON[t] || t);
+  }
+  return out;
+}
+
+function hasEntertainmentNoise(text) {
+  const hay = String(text || '').toLowerCase();
+  return ENTERTAINMENT_NOISE.some((k) => hay.includes(k));
+}
+
+function isEntertainmentCurated(text) {
+  return hasEntertainmentNoise(text);
+}
+
+/** Multi-topic roundup / podcast laundry list — do not spray across every place named. */
+function isMultiTopicRoundup(xHay, xPlaces) {
+  if (xPlaces.size >= 3) return true;
+  if (/podcast\s*:/i.test(xHay)) return true;
+  if (/\band ed\b/i.test(xHay)) return true;
+  // "A, B and C" topic sandwich (xHay is lowercased)
+  if (/\band [a-z]{3,}\b/.test(xHay) && xPlaces.size >= 2) return true;
+  return false;
+}
+
 function scoreMatch(curated, xEvt) {
   let score = 0;
   const cText = `${curated.title} ${curated.summary}`;
   const xText = `${xEvt.title} ${xEvt.summary}`;
+  const cHay = String(cText).toLowerCase();
   const xHay = String(xText).toLowerCase();
+
+  // 1) Reject celebrity/entertainment noise against security/conflict events
+  if (hasEntertainmentNoise(xHay) && !isEntertainmentCurated(cHay)) {
+    return { score: 0, namedInX: false, strongProx: false, reason: 'entertainment-noise' };
+  }
 
   const dist = haversineKm(
     Number(curated.lat),
@@ -146,32 +227,64 @@ function scoreMatch(curated, xEvt) {
   let strongProx = false;
   if (Number.isFinite(dist)) {
     if (dist <= PROX_KM_STRONG) {
-      score += 6;
+      score += 4;
       strongProx = true;
-    } else if (dist <= PROX_KM_WEAK) score += 2;
+    } else if (dist <= PROX_KM_WEAK) score += 1;
   }
 
   const cPlaces = primaryPlaceKeys(curated);
   const xPlaces = placeKeywords(xText);
-  let shared = 0;
+  let sharedPlaces = 0;
   for (const p of cPlaces) {
-    if (xPlaces.has(p) || xHay.includes(p)) shared++;
+    if (xPlaces.has(p) || xHay.includes(p)) sharedPlaces++;
   }
-  const namedInX = shared > 0;
-  score += Math.min(12, shared * 5);
+  const namedInX = sharedPlaces > 0;
 
-  // Light token overlap only as tie-break when already geo/place linked
-  if (namedInX || strongProx) {
-    const cTok = new Set(significantTokens(cText));
-    let overlap = 0;
-    for (const t of significantTokens(xText)) {
-      if (cTok.has(t)) overlap++;
+  // 2) Topic substance: shared security tokens derived from the curated event
+  const cSec = securityTokensIn(cText);
+  const xSec = securityTokensIn(xText);
+  const sharedSec = [];
+  for (const t of cSec) {
+    if (xSec.has(t)) sharedSec.push(t);
+  }
+  const distinctiveShared = sharedSec.filter((t) => !GENERIC_SECURITY.has(t));
+  const roundup = isMultiTopicRoundup(xHay, xPlaces);
+
+  // Place-only (or prox-only) is not enough — need ≥1 shared security/topic token
+  if (sharedSec.length === 0) {
+    return { score: 0, namedInX, strongProx, reason: 'no-topic-overlap' };
+  }
+
+  // Need a place link OR strong proximity, plus topic overlap
+  if (!namedInX && !strongProx) {
+    return { score: 0, namedInX: false, strongProx: false, reason: 'no-place' };
+  }
+
+  // 3) Roundup / podcast laundry: require strong event-specific tokens (not just "attack")
+  if (roundup) {
+    if (distinctiveShared.length === 0) {
+      return { score: 0, namedInX, strongProx, reason: 'roundup-weak-topic' };
     }
-    score += Math.min(2, overlap);
+    // Prefer ballistic+saudi / drone+moscow style: distinctive topic + named place
+    if (!namedInX) {
+      return { score: 0, namedInX, strongProx, reason: 'roundup-needs-place' };
+    }
+    score += Math.min(12, distinctiveShared.length * 6);
+    score += Math.min(8, sharedPlaces * 4);
+  } else {
+    score += Math.min(10, sharedPlaces * 5);
+    score += Math.min(10, distinctiveShared.length * 5 + sharedSec.length * 2);
   }
 
-  if (!strongProx && !namedInX) return { score: 0, namedInX: false, strongProx: false };
-  return { score, namedInX, strongProx };
+  // Light lexical tie-break
+  const cTok = new Set(significantTokens(cText));
+  let overlap = 0;
+  for (const t of significantTokens(xText)) {
+    if (cTok.has(t)) overlap++;
+  }
+  score += Math.min(2, overlap);
+
+  return { score, namedInX, strongProx, sharedSec, distinctiveShared, roundup };
 }
 
 function toXPost(e) {
@@ -240,12 +353,17 @@ function main() {
   /** @type {Map<string, object>} */
   const curated = new Map();
   for (const e of curatedBase) {
+    // Drop prior x-scroll-curated wrappers — rematch live X fresh each run
+    if (isXScrollCurated(e)) continue;
     const brief = cleanWireBrief(e);
     curated.set(e.id, {
       ...e,
       curatedSummary: e.curatedSummary || brief,
       briefSource: e.briefSource || 'wire',
-      xPosts: Array.isArray(e.xPosts) ? [...e.xPosts] : [],
+      // Always recompute xPosts from live X (do not keep stale place-only matches)
+      xPosts: [],
+      // Primary wire url stays BBC/AJ/etc. — never replace with X
+      url: e.url,
     });
   }
 
@@ -253,28 +371,32 @@ function main() {
   let unmatched = 0;
   const wrappers = [];
 
+  let entertainmentDropped = 0;
   for (const x of liveX) {
+    const xBlob = `${x.title || ''} ${x.summary || ''}`;
+    // Celebrity/sports laundry posts: do not attach to security events OR pin as wrappers
+    if (hasEntertainmentNoise(xBlob)) {
+      entertainmentDropped++;
+      continue;
+    }
     const scores = [...curated.values()]
       .map((c) => {
         const r = scoreMatch(c, x);
         if (!r || typeof r === 'number') return { c, score: r || 0, namedInX: false };
-        return { c, score: r.score, namedInX: r.namedInX, strongProx: r.strongProx };
+        return {
+          c,
+          score: r.score,
+          namedInX: r.namedInX,
+          strongProx: r.strongProx,
+          reason: r.reason,
+        };
       })
       .filter((r) => r.score >= MATCH_THRESHOLD)
-      .sort((a, b) => b.score - a.score);
+      .sort((a, b) => b.score - a.score || String(a.c.id).localeCompare(String(b.c.id)));
 
-    // Prefer all place-named hits + top proximity hits (Saudi+Moscow multi-topic posts)
-    const named = scores.filter((r) => r.namedInX);
-    const prox = scores.filter((r) => r.strongProx && !r.namedInX).slice(0, 2);
-    const rest = scores.filter((r) => !r.namedInX && !r.strongProx).slice(0, 1);
-    const seen = new Set();
-    const targets = [];
-    for (const r of [...named, ...prox, ...rest]) {
-      if (seen.has(r.c.id)) continue;
-      seen.add(r.c.id);
-      targets.push(r);
-    }
-    if (!targets.length) {
+    // One X post → at most one curated event (highest score wins)
+    const best = scores[0];
+    if (!best) {
       unmatched++;
       const post = toXPost(x);
       const brief = agentBriefForX(x);
@@ -303,12 +425,10 @@ function main() {
 
     matched++;
     const post = toXPost(x);
-    for (const { c } of targets) {
-      const row = curated.get(c.id);
-      if (!row.xPosts) row.xPosts = [];
-      const dup = row.xPosts.some((p) => p.url === post.url);
-      if (!dup) row.xPosts.push(post);
-    }
+    const row = curated.get(best.c.id);
+    if (!row.xPosts) row.xPosts = [];
+    const dup = row.xPosts.some((p) => p.url === post.url);
+    if (!dup) row.xPosts.push(post);
   }
 
   // Drop empty xPosts arrays for cleanliness
@@ -342,6 +462,7 @@ function main() {
       `matched ${matched} live X → xPosts; ` +
       `wrappers ${wrappers.length}; ` +
       `dropped ${dryDropped.length} dry-run; ` +
+      `entertainment-dropped ${entertainmentDropped}; ` +
       `map events ${out.length}`,
   );
 }
