@@ -496,18 +496,13 @@ details.x-posts > summary:hover { color: var(--text); }
 }
 .error { color: var(--fail); }
 
-.event-marker { z-index: 1; position: relative; }
-.posture-marker { z-index: 2; position: relative; }
+/* Event/posture pins are MapLibre GeoJSON circle/symbol layers (GPU-projected).
+   Do not use position:relative / transform hacks on HTML markers — they drift at low zoom. */
 
-/* While a popup is open, dim other markers so they can't visually cover the dialog */
-.map-el.popup-open .maplibregl-marker {
-  opacity: 0.35;
-  pointer-events: none;
-}
+/* While a popup is open, keep popups interactive above the map */
 .map-el.popup-open .maplibregl-popup {
   pointer-events: auto;
 }
-/* Keep the active marker's own element usable via popup close button only */
 
 
 /* Daily reports archive picker */
