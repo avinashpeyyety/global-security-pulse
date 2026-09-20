@@ -1,0 +1,10 @@
+{
+  "name": "@gsp/x-scroll",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/dry-run.mjs",
+    "dry-run": "node src/dry-run.mjs"
+  }
+}

@@ -1,0 +1,55 @@
+# accounts:
+#   wire — major news wires
+#   defense — defense / mil outlets
+#   think — think tanks
+#   un — UN / humanitarian
+#   maritime — shipping / threat advisories
+#
+# Budget defaults for live Playwright scroll (not used in dry-run):
+#   maxScrollsPerAccount: 3
+#   maxPostsPerAccount: 15
+#   scheduleMinutes: 45
+
+budget:
+  maxScrollsPerAccount: 3
+  maxPostsPerAccount: 15
+  scheduleMinutes: 45
+  stopAfterAccounts: 20
+
+accounts:
+  - handle: Reuters
+    category: wire
+    reliability: A
+  - handle: AP
+    category: wire
+    reliability: A
+  - handle: AFP
+    category: wire
+    reliability: A
+  - handle: BBCWorld
+    category: wire
+    reliability: A
+  - handle: DefenseOne
+    category: defense
+    reliability: B
+  - handle: USNINews
+    category: defense
+    reliability: B
+  - handle: CENTCOM
+    category: defense
+    reliability: B
+  - handle: IISS_org
+    category: think
+    reliability: B
+  - handle: CSIS
+    category: think
+    reliability: B
+  - handle: CFR_org
+    category: think
+    reliability: B
+  - handle: UNOCHA
+    category: un
+    reliability: B
+  - handle: UK_MTO
+    category: maritime
+    reliability: B
