@@ -1,39 +1,146 @@
 [
   {
+    "region": "Global",
+    "count": 15,
+    "maxSeverity": 3,
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-09-20T21:17:22.000Z",
+    "layers": [
+      "conflict",
+      "disaster",
+      "maritime"
+    ]
+  },
+  {
     "region": "Middle East",
-    "count": 16,
+    "count": 21,
     "maxSeverity": 5,
     "freshestSource": "rss:Al Jazeera",
     "freshestAt": "2026-09-20T21:00:15.000Z",
     "layers": [
-      "maritime",
-      "sanctions",
       "conflict",
+      "unrest",
+      "sanctions",
       "disaster",
-      "unrest"
+      "maritime"
+    ]
+  },
+  {
+    "region": "Americas",
+    "count": 4,
+    "maxSeverity": 3,
+    "freshestSource": "rss:Al Jazeera",
+    "freshestAt": "2026-09-20T20:31:15.000Z",
+    "layers": [
+      "conflict"
     ]
   },
   {
     "region": "Europe",
-    "count": 7,
+    "count": 8,
     "maxSeverity": 4,
     "freshestSource": "rss:BBC World",
     "freshestAt": "2026-09-20T20:21:40.000Z",
     "layers": [
       "disaster",
-      "conflict",
       "maritime",
-      "sanctions"
+      "conflict"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "count": 2,
+    "maxSeverity": 3,
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-09-20T19:04:11.000Z",
+    "layers": [
+      "unrest",
+      "conflict"
+    ]
+  },
+  {
+    "region": "Red Sea / Bab el-Mandeb",
+    "count": 3,
+    "maxSeverity": 3,
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-20T16:19:00Z",
+    "layers": [
+      "maritime"
     ]
   },
   {
     "region": "Eastern Europe",
-    "count": 4,
+    "count": 6,
     "maxSeverity": 4,
     "freshestSource": "GDELT/Reuters",
     "freshestAt": "2026-09-20T13:00:00.000Z",
     "layers": [
       "conflict",
+      "cyber"
+    ]
+  },
+  {
+    "region": "East Asia",
+    "count": 2,
+    "maxSeverity": 4,
+    "freshestSource": "USGS",
+    "freshestAt": "2026-09-20T12:00:00.000Z",
+    "layers": [
+      "disaster",
+      "conflict"
+    ]
+  },
+  {
+    "region": "Northern Europe",
+    "count": 1,
+    "maxSeverity": 1,
+    "freshestSource": "GDELT/DefenseOne",
+    "freshestAt": "2026-09-20T08:48:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "South America",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/Al Jazeera",
+    "freshestAt": "2026-09-20T06:00:00.000Z",
+    "layers": [
+      "unrest"
+    ]
+  },
+  {
+    "region": "East / SE Asia",
+    "count": 2,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/Reuters",
+    "freshestAt": "2026-09-20T04:00:00.000Z",
+    "layers": [
+      "conflict",
+      "maritime"
+    ]
+  },
+  {
+    "region": "Persian Gulf",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/Defense News",
+    "freshestAt": "2026-09-20T02:00:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "North America",
+    "count": 4,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/BBC",
+    "freshestAt": "2026-09-20T01:36:00.000Z",
+    "layers": [
+      "disaster",
+      "sanctions",
+      "unrest",
       "cyber"
     ]
   },
@@ -50,80 +157,22 @@
     ]
   },
   {
-    "region": "East Asia",
+    "region": "Western Europe",
     "count": 2,
-    "maxSeverity": 4,
-    "freshestSource": "USGS",
-    "freshestAt": "2026-09-20T12:00:00.000Z",
+    "maxSeverity": 2,
+    "freshestSource": "seed/intel note",
+    "freshestAt": "2026-09-19T11:12:00.000Z",
     "layers": [
-      "disaster",
-      "conflict"
+      "cyber",
+      "sanctions"
     ]
   },
   {
-    "region": "Global",
-    "count": 15,
-    "maxSeverity": 3,
-    "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-09-20T21:17:22.000Z",
-    "layers": [
-      "conflict",
-      "sanctions",
-      "maritime"
-    ]
-  },
-  {
-    "region": "Americas",
-    "count": 5,
-    "maxSeverity": 3,
-    "freshestSource": "x-scroll",
-    "freshestAt": "2026-09-20T21:00:19.357Z",
-    "layers": [
-      "conflict",
-      "maritime"
-    ]
-  },
-  {
-    "region": "North America",
-    "count": 4,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/BBC",
-    "freshestAt": "2026-09-20T01:36:00.000Z",
-    "layers": [
-      "unrest",
-      "disaster",
-      "sanctions",
-      "cyber"
-    ]
-  },
-  {
-    "region": "East / SE Asia",
-    "count": 2,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/Reuters",
-    "freshestAt": "2026-09-20T04:00:00.000Z",
-    "layers": [
-      "conflict",
-      "maritime"
-    ]
-  },
-  {
-    "region": "South Asia",
-    "count": 2,
-    "maxSeverity": 3,
-    "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-09-20T19:04:11.000Z",
-    "layers": [
-      "conflict",
-      "unrest"
-    ]
-  },
-  {
-    "region": "Persian Gulf",
+    "region": "West Africa",
     "count": 1,
     "maxSeverity": 3,
-    "freshestSource": "GDELT/Defense News",
-    "freshestAt": "2026-09-20T02:00:00.000Z",
+    "freshestSource": "GDELT/IMB",
+    "freshestAt": "2026-09-19T04:00:00.000Z",
     "layers": [
       "maritime"
     ]
@@ -139,37 +188,6 @@
     ]
   },
   {
-    "region": "South America",
-    "count": 1,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/Al Jazeera",
-    "freshestAt": "2026-09-20T06:00:00.000Z",
-    "layers": [
-      "unrest"
-    ]
-  },
-  {
-    "region": "West Africa",
-    "count": 1,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/IMB",
-    "freshestAt": "2026-09-19T04:00:00.000Z",
-    "layers": [
-      "maritime"
-    ]
-  },
-  {
-    "region": "Western Europe",
-    "count": 2,
-    "maxSeverity": 2,
-    "freshestSource": "seed/intel note",
-    "freshestAt": "2026-09-19T11:12:00.000Z",
-    "layers": [
-      "cyber",
-      "sanctions"
-    ]
-  },
-  {
     "region": "Levant",
     "count": 1,
     "maxSeverity": 2,
@@ -177,16 +195,6 @@
     "freshestAt": "2026-09-18T04:00:00.000Z",
     "layers": [
       "disaster"
-    ]
-  },
-  {
-    "region": "Northern Europe",
-    "count": 1,
-    "maxSeverity": 1,
-    "freshestSource": "GDELT/DefenseOne",
-    "freshestAt": "2026-09-20T08:48:00.000Z",
-    "layers": [
-      "maritime"
     ]
   }
 ]

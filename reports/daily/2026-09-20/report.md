@@ -1,6 +1,6 @@
 # Global Security Pulse — Daily Report 2026-09-20
 
-Generated: 2026-09-20T21:23:57.281Z
+Generated: 2026-09-20T21:32:10.375Z
 Ingest package: daily-2026-09-20
 
 ## Stress composite
@@ -24,21 +24,17 @@ Ingest package: daily-2026-09-20
 
 ## High / critical fallout events
 
+- **[critical]** Lightning suspends Bucs-Browns at 2-minute warning — Global (x-scroll-curated; [link](https://x.com/Reuters/status/2101778467545096594))
+- **[high]** Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/20/qatari-pm-warns-against-cycles-of-escalation-in-the-middle-east?traffic_source=rss))
+- **[high]** A look into the daily operations of U.S. Navy Sailors aboard USS John Finn — Middle East (x-scroll-curated; [link](https://x.com/CENTCOM/status/2101752852917968954))
 - **[high]** Artillery exchanges near Kupiansk — Eastern Europe (GDELT/Reuters; [link](https://example.com/kupiansk))
 - **[critical]** Houthi attack claim on commercial vessel — Middle East (UKMTO advisory)
+- **[high]** Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss))
+- **[high]** Missile test reported on peninsula — East Asia (GDELT/Yonhap)
+- **[high]** Houthis say they targeted Saudi capital with ballistic missiles — Middle East (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss))
 - **[high]** Ransomware hits regional energy utility — Eastern Europe (GDELT/cyber wire)
 - **[high]** IED blast near convoy route in Sahel — Africa (GDELT/AFP)
-- **[high]** Missile test reported on peninsula — East Asia (GDELT/Yonhap)
-- **[high]** Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss))
-- **[high]** Houthis say they targeted Saudi capital with ballistic missiles — Middle East (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss))
-- **[high]** Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/20/qatari-pm-warns-against-cycles-of-escalation-in-the-middle-east?traffic_source=rss))
-- **[critical]** Lightning suspends Bucs-Browns at 2-minute warning — Global (x-scroll; [link](https://x.com/Reuters/status/2101778467545096594))
-- **[high]** PODCAST: Houthis target Saudi, Moscow drone attack and Ed Sheeran — Middle East (x-scroll; [link](https://x.com/Reuters/status/2101770899753943435))
-- **[critical]** UBS CEO Ermotti warns against harsh capital rules ahead of vote — Global (x-scroll; [link](https://x.com/Reuters/status/2101759578471809390))
-- **[critical]** Rising gas prices frustrate voters. Trump says it's an 'inexpensive price to pay' for the Iran war. These voters disagree. — Middle East (x-scroll; [link](https://x.com/AP/status/2101765621595636105))
-- **[critical]** Schools and universities are reopening across Iran after months of war — Middle East (x-scroll; [link](https://x.com/AJEnglish/status/2101770875347566975))
-- **[critical]** War impact on Iran's education: students return to class after months of disruption — Middle East (x-scroll; [link](https://x.com/AJEnglish/status/2101763328779399367))
-- **[high]** A look into the daily operations of U.S. Navy Sailors aboard USS John Finn — Middle East (x-scroll; [link](https://x.com/CENTCOM/status/2101752852917968954))
+- **[critical]** UKMTO Warning 139/26 PDF — Red Sea / Bab el-Mandeb (x-scroll-curated; [link](https://x.com/UK_MTO/status/2100855389034000842))
 
 ## High / critical postures
 

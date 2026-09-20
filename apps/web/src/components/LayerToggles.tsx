@@ -90,6 +90,9 @@ export function LayerToggles({
         <div className="risk-hint">
           Circles = event fallout · Triangles = posture precipitate · {FALLOUT_LABELS.low} → {FALLOUT_LABELS.critical}
         </div>
+        <div className="risk-hint" style={{ marginTop: 6 }}>
+          Popup briefs are agent/wire curated · X posts are supporting evidence (collapsible)
+        </div>
       </div>
     </div>
   );

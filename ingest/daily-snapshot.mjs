@@ -204,9 +204,23 @@ function runIngestAll() {
   }
 }
 
+function runCurateBriefs() {
+  console.log('report:daily — running curate-briefs…');
+  const r = spawnSync('node', ['ingest/curate-briefs.mjs'], {
+    cwd: root,
+    stdio: 'inherit',
+    env: process.env,
+  });
+  if (r.status !== 0) {
+    console.warn('report:daily — curate-briefs exited non-zero; continuing with existing events');
+  }
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.withIngest) runIngestAll();
+  // Always refresh agent/wire briefs + fold X into collapsible xPosts before snapshotting
+  runCurateBriefs();
 
   const date = args.date || new Date().toISOString().slice(0, 10);
   const generatedAt = new Date().toISOString();

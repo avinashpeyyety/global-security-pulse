@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import maplibregl from 'maplibre-gl';
-import type { MilitaryPosture, SecurityEvent } from '@gsp/shared';
+import type { MilitaryPosture, SecurityEvent, XPostRef } from '@gsp/shared';
 import {
   PRECIPITATE_LABELS,
   RISK_COLORS,
@@ -17,6 +17,68 @@ function markerRadius(severity: number, confidence: number): number {
   return 4 + severity * 2.2 + confidence * 2;
 }
 
+/** Dry-run x-scroll placeholders must never be primary map markers. */
+function isDryRunXScroll(e: SecurityEvent): boolean {
+  const src = String(e.source || '').toLowerCase();
+  if (!src.startsWith('x-scroll')) return false;
+  if (src === 'x-scroll-curated') return false;
+  const id = String(e.id || '');
+  const summary = String(e.summary || '');
+  return id.includes('dry') || /\[dry-run\]/i.test(summary) || /dry-run/i.test(summary);
+}
+
+/** Standalone raw x-scroll rows (pre-curation) — prefer curated wrappers / attachments. */
+function isRawXScrollMarker(e: SecurityEvent): boolean {
+  const src = String(e.source || '').toLowerCase();
+  return src === 'x-scroll' || (src.startsWith('x-scroll') && src !== 'x-scroll-curated');
+}
+
+function primaryBrief(e: SecurityEvent): string {
+  return (e.curatedSummary || e.summary || '').trim();
+}
+
+function buildEventPopupHtml(e: SecurityEvent, risk: ReturnType<typeof eventFalloutRisk>, color: string): string {
+  const brief = primaryBrief(e);
+  const xPosts: XPostRef[] = Array.isArray(e.xPosts) ? e.xPosts : [];
+  const briefNote =
+    e.briefSource === 'agent'
+      ? 'agent brief'
+      : e.briefSource === 'wire'
+        ? 'wire brief'
+        : '';
+  const link = e.url
+    ? `<div class="popup-link"><a href="${escapeAttr(e.url)}" target="_blank" rel="noopener noreferrer">Primary source</a></div>`
+    : '';
+  const xSection =
+    xPosts.length > 0
+      ? `<details class="x-posts">
+          <summary>X posts (${xPosts.length})</summary>
+          <ul class="x-posts-list">
+            ${xPosts
+              .map(
+                (p) => `<li>
+                  <a class="x-handle" href="${escapeAttr(p.url)}" target="_blank" rel="noopener noreferrer">@${escapeHtml(p.author)}</a>
+                  <span class="x-text">${escapeHtml(p.text)}</span>
+                  ${p.observedAt ? `<span class="x-age">${escapeHtml(ageLabel(p.observedAt))}</span>` : ''}
+                </li>`,
+              )
+              .join('')}
+          </ul>
+        </details>`
+      : '';
+
+  return `<div class="evt-popup">
+    <span style="font-family:monospace;font-size:9px;border:1px solid #2a343f;padding:1px 4px;color:#8b9aab">REL ${e.sourceReliability}</span>
+    <span style="font-family:monospace;font-size:9px;color:${color};margin-left:6px">${escapeHtml(FALLOUT_LABELS[risk])}</span>
+    <span style="font-family:monospace;font-size:9px;color:#8b9aab;margin-left:6px">${e.layer} · sev ${e.severity} · ${ageLabel(e.observedAt)}</span>
+    <div style="font-weight:600;margin:4px 0">${escapeHtml(e.title)}</div>
+    <div class="popup-brief">${escapeHtml(brief)}</div>
+    <div style="font-family:monospace;font-size:9px;color:#6b7c8f;margin-top:4px">${escapeHtml(e.source)}${briefNote ? ` · ${briefNote}` : ''}</div>
+    ${link}
+    ${xSection}
+  </div>`;
+}
+
 export function SecurityMap({
   events,
   postures = [],
@@ -31,6 +93,30 @@ export function SecurityMap({
   const markersRef = useRef<maplibregl.Marker[]>([]);
   const postureMarkersRef = useRef<maplibregl.Marker[]>([]);
   const routesReady = useRef(false);
+  const openPopupCount = useRef(0);
+
+  const setMarkersDimmed = (dimmed: boolean) => {
+    const root = containerRef.current;
+    if (!root) return;
+    root.classList.toggle('popup-open', dimmed);
+  };
+
+  const onPopupOpen = () => {
+    openPopupCount.current += 1;
+    setMarkersDimmed(true);
+    // Ensure the newest popup paints above markers / sibling popups
+    requestAnimationFrame(() => {
+      const pops = containerRef.current?.querySelectorAll('.maplibregl-popup');
+      pops?.forEach((el, i) => {
+        (el as HTMLElement).style.zIndex = String(20 + i);
+      });
+    });
+  };
+
+  const onPopupClose = () => {
+    openPopupCount.current = Math.max(0, openPopupCount.current - 1);
+    if (openPopupCount.current === 0) setMarkersDimmed(false);
+  };
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -125,6 +211,7 @@ export function SecurityMap({
       map.remove();
       mapRef.current = null;
       routesReady.current = false;
+      openPopupCount.current = 0;
     };
   }, []);
 
@@ -146,8 +233,12 @@ export function SecurityMap({
 
     markersRef.current.forEach((m) => m.remove());
     markersRef.current = [];
+    openPopupCount.current = 0;
+    setMarkersDimmed(false);
 
-    for (const e of events) {
+    const mapEvents = events.filter((e) => !isDryRunXScroll(e) && !isRawXScrollMarker(e));
+
+    for (const e of mapEvents) {
       const lat = Number.isFinite(Number(e.lat)) ? Number(e.lat) : 20;
       const lon = Number.isFinite(Number(e.lon)) ? Number(e.lon) : 0;
       const risk = eventFalloutRisk(e);
@@ -165,21 +256,29 @@ export function SecurityMap({
       el.style.cursor = 'pointer';
       el.title = `${e.title} · ${FALLOUT_LABELS[risk]}`;
 
-      const popup = new maplibregl.Popup({ offset: 12, maxWidth: '280px' }).setHTML(
-        `<div>
-          <span style="font-family:monospace;font-size:9px;border:1px solid #2a343f;padding:1px 4px;color:#8b9aab">REL ${e.sourceReliability}</span>
-          <span style="font-family:monospace;font-size:9px;color:${color};margin-left:6px">${escapeHtml(FALLOUT_LABELS[risk])}</span>
-          <span style="font-family:monospace;font-size:9px;color:#8b9aab;margin-left:6px">${e.layer} · sev ${e.severity} · ${ageLabel(e.observedAt)}</span>
-          <div style="font-weight:600;margin:4px 0">${escapeHtml(e.title)}</div>
-          <div style="color:#8b9aab">${escapeHtml(e.summary)}</div>
-          <div style="font-family:monospace;font-size:9px;color:#6b7c8f;margin-top:4px">${escapeHtml(e.source)}</div>
-        </div>`,
-      );
+      const popup = new maplibregl.Popup({
+        offset: 12,
+        maxWidth: '340px',
+        closeOnClick: true,
+        className: 'gsp-event-popup',
+      }).setHTML(buildEventPopupHtml(e, risk, color));
+
+      popup.on('open', onPopupOpen);
+      popup.on('close', onPopupClose);
 
       const marker = new maplibregl.Marker({ element: el })
         .setLngLat([lon, lat])
         .setPopup(popup)
         .addTo(map);
+
+      el.addEventListener('click', () => {
+        // Click brings this marker's popup to front after MapLibre opens it
+        requestAnimationFrame(() => {
+          const popupEl = popup.getElement();
+          if (popupEl) popupEl.style.zIndex = '30';
+        });
+      });
+
       markersRef.current.push(marker);
     }
   }, [events]);
@@ -205,7 +304,11 @@ export function SecurityMap({
       el.style.opacity = String(0.75 + p.confidence * 0.25);
       el.title = `[POSTURE] ${p.title}`;
 
-      const popup = new maplibregl.Popup({ offset: 14, maxWidth: '300px' }).setHTML(
+      const popup = new maplibregl.Popup({
+        offset: 14,
+        maxWidth: '320px',
+        className: 'gsp-event-popup',
+      }).setHTML(
         `<div>
           <span style="font-family:monospace;font-size:9px;border:1px solid ${color};padding:1px 4px;color:${color}">POSTURE · ${escapeHtml(p.kind)}</span>
           <span style="font-family:monospace;font-size:9px;color:${color};margin-left:6px">${escapeHtml(PRECIPITATE_LABELS[p.precipitatePotential])}</span>
@@ -216,6 +319,9 @@ export function SecurityMap({
           <div style="font-family:monospace;font-size:9px;color:#6b7c8f;margin-top:2px">REL ${p.sourceReliability} · ${escapeHtml(p.source)} · ${ageLabel(p.observedAt)}</div>
         </div>`,
       );
+
+      popup.on('open', onPopupOpen);
+      popup.on('close', onPopupClose);
 
       const marker = new maplibregl.Marker({ element: el, anchor: 'bottom' })
         .setLngLat([p.lon, p.lat])
@@ -234,4 +340,8 @@ function escapeHtml(s: string): string {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function escapeAttr(s: string): string {
+  return escapeHtml(s).replace(/'/g, '&#39;');
 }

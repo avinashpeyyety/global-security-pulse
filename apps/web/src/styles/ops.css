@@ -393,6 +393,17 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
   max-width: 200px;
 }
 
+/* Popups must stack above all markers so the curated brief is never covered */
+.maplibregl-popup {
+  z-index: 20 !important;
+  max-width: 340px;
+}
+.maplibregl-popup.gsp-event-popup {
+  z-index: 25 !important;
+}
+.maplibregl-marker {
+  z-index: 1 !important;
+}
 .maplibregl-popup-content {
   background: var(--bg-panel) !important;
   color: var(--text) !important;
@@ -400,9 +411,82 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
   border-radius: 2px !important;
   font-size: 11px;
   padding: 8px 10px !important;
-  box-shadow: none !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55) !important;
+  pointer-events: auto;
 }
 .maplibregl-popup-tip { border-top-color: var(--border) !important; }
+
+.popup-brief {
+  color: var(--muted);
+  line-height: 1.4;
+}
+.popup-link {
+  margin-top: 6px;
+  font-family: var(--font);
+  font-size: 10px;
+}
+.popup-link a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.popup-link a:hover { text-decoration: underline; }
+
+details.x-posts {
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 6px;
+}
+details.x-posts > summary {
+  font-family: var(--font);
+  font-size: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+details.x-posts > summary::-webkit-details-marker { display: none; }
+details.x-posts > summary::before {
+  content: "▸ ";
+  color: var(--notrun);
+}
+details.x-posts[open] > summary::before { content: "▾ "; }
+details.x-posts > summary:hover { color: var(--text); }
+.x-posts-list {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 160px;
+  overflow: auto;
+}
+.x-posts-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 5px 6px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+.x-handle {
+  font-family: var(--font);
+  font-size: 10px;
+  color: var(--accent);
+  text-decoration: none;
+}
+.x-handle:hover { text-decoration: underline; }
+.x-text {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+.x-age {
+  font-family: var(--font);
+  font-size: 9px;
+  color: var(--notrun);
+}
 
 .loading, .error {
   display: flex; align-items: center; justify-content: center;
@@ -412,8 +496,18 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 .error { color: var(--fail); }
 
-.event-marker { z-index: 1; }
-.posture-marker { z-index: 2; }
+.event-marker { z-index: 1; position: relative; }
+.posture-marker { z-index: 2; position: relative; }
+
+/* While a popup is open, dim other markers so they can't visually cover the dialog */
+.map-el.popup-open .maplibregl-marker {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.map-el.popup-open .maplibregl-popup {
+  pointer-events: auto;
+}
+/* Keep the active marker's own element usable via popup close button only */
 
 
 /* Daily reports archive picker */

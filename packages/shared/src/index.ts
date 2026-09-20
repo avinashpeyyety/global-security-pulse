@@ -31,10 +31,27 @@ export type SupplyRouteKind =
   | 'oil-route'
   | 'alt-route';
 
+/** Related X allowlist-scroll post attached as supporting evidence (not primary brief). */
+export interface XPostRef {
+  author: string;
+  text: string;
+  url: string;
+  observedAt?: string;
+}
+
 export interface SecurityEvent {
   id: string;
   title: string;
   summary: string;
+  /**
+   * Agent- or wire-curated brief shown as the primary map popup body.
+   * Prefer this over `summary` in UI; raw / user-generated text belongs in `xPosts`.
+   */
+  curatedSummary?: string;
+  /** Who wrote the primary brief. */
+  briefSource?: 'agent' | 'wire';
+  /** Collapsible supporting X posts (never the primary popup body). */
+  xPosts?: XPostRef[];
   layer: EventLayer;
   severity: Severity;
   /** Fall-out / cascading risk level; colors map markers. Derived from severity if omitted. */
@@ -48,6 +65,8 @@ export interface SecurityEvent {
   url?: string;
   observedAt: string;
   ingestedAt: string;
+  /** Optional author handle for x-scroll rows before curation absorbs them. */
+  author?: string;
 }
 
 /** Military / strategic posture change — not a kinetic "recorded event". */
