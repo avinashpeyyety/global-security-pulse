@@ -21,6 +21,7 @@ export default function App() {
   const [err, setErr] = useState<string | null>(null);
   const [window, setWindow] = useState<TimeWindow>('7d');
   const [layers, setLayers] = useState<Set<EventLayer>>(() => new Set(EVENT_LAYERS));
+  const [showSupplyRoutes, setShowSupplyRoutes] = useState(true);
 
   useEffect(() => {
     loadSnapshot()
@@ -62,7 +63,7 @@ export default function App() {
 
       <div className="main">
         <div className="map-wrap">
-          <SecurityMap events={filtered} />
+          <SecurityMap events={filtered} showSupplyRoutes={showSupplyRoutes} />
           <div className="map-overlay layers">
             <LayerToggles
               layers={EVENT_LAYERS}
@@ -70,6 +71,14 @@ export default function App() {
               active={layers}
               onToggle={toggleLayer}
             />
+            <label>
+              <input
+                type="checkbox"
+                checked={showSupplyRoutes}
+                onChange={() => setShowSupplyRoutes((v) => !v)}
+              />
+              Supply routes
+            </label>
           </div>
           <div className="map-overlay scrubber">
             <TimeScrubber value={window} onChange={setWindow} />

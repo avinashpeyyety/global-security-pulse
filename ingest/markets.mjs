@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Markets ingest via Stooq CSV (no key). Optional FRED if FRED_API_KEY set.
- * On failure, keeps seed series.
+ * Markets ingest via Yahoo Finance chart API (no key).
+ * Stooq is blocked by JS verify from many hosts — Yahoo is primary.
+ * Optional FRED if FRED_API_KEY set. On failure, keeps seed series.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -15,35 +16,45 @@ const publicAnomalies = path.join(root, 'apps/web/public/data/anomalies.json');
 const publicStress = path.join(root, 'apps/web/public/data/stress.json');
 const publicSnapshot = path.join(root, 'apps/web/public/data/snapshot.json');
 
-const STOOQ = [
-  { id: 'spx', name: 'S&P 500', unit: 'index', symbol: '^spx' },
-  { id: 'ndx', name: 'Nasdaq 100', unit: 'index', symbol: '^ndx' },
-  { id: 'dax', name: 'DAX', unit: 'index', symbol: '^dax' },
-  { id: 'nky', name: 'Nikkei 225', unit: 'index', symbol: '^nkx' },
-  { id: 'wti', name: 'WTI Crude', unit: 'USD/bbl', symbol: 'cl.f' },
-  { id: 'brent', name: 'Brent Crude', unit: 'USD/bbl', symbol: 'brent.f' },
-  { id: 'gold', name: 'Gold', unit: 'USD/oz', symbol: 'xauusd' },
-  { id: 'eurusd', name: 'EUR/USD', unit: 'fx', symbol: 'eurusd' },
-  { id: 'usdjpy', name: 'USD/JPY', unit: 'fx', symbol: 'usdjpy' },
+const YAHOO = [
+  { id: 'spx', name: 'S&P 500', unit: 'index', symbol: '^GSPC' },
+  { id: 'ndx', name: 'Nasdaq 100', unit: 'index', symbol: '^NDX' },
+  { id: 'dax', name: 'DAX', unit: 'index', symbol: '^GDAXI' },
+  { id: 'nky', name: 'Nikkei 225', unit: 'index', symbol: '^N225' },
+  { id: 'vix', name: 'VIX', unit: 'index', symbol: '^VIX' },
+  { id: 'wti', name: 'WTI Crude', unit: 'USD/bbl', symbol: 'CL=F' },
+  { id: 'brent', name: 'Brent Crude', unit: 'USD/bbl', symbol: 'BZ=F' },
+  { id: 'gold', name: 'Gold', unit: 'USD/oz', symbol: 'GC=F' },
+  { id: 'eurusd', name: 'EUR/USD', unit: 'fx', symbol: 'EURUSD=X' },
+  { id: 'usdjpy', name: 'USD/JPY', unit: 'fx', symbol: 'USDJPY=X' },
+  { id: 'dxy', name: 'US Dollar Index', unit: 'index', symbol: 'DX-Y.NYB' },
 ];
 
-async function fetchStooq(symbol) {
-  const url = `https://stooq.com/q/d/l/?s=${encodeURIComponent(symbol)}&i=d`;
-  const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
-  if (!res.ok) throw new Error(`stooq ${symbol} HTTP ${res.status}`);
-  const text = await res.text();
-  const lines = text.trim().split('\n').slice(1);
-  const points = lines
-    .map((line) => {
-      const [date, , , , close] = line.split(',');
-      const v = Number(close);
-      if (!date || !Number.isFinite(v)) return null;
-      return { t: date, v };
-    })
-    .filter(Boolean)
-    .slice(-90);
-  if (points.length < 10) throw new Error(`stooq ${symbol} too few points`);
-  return points;
+const UA = 'Mozilla/5.0 (compatible; GlobalSecurityPulse/0.1; +https://github.com/avinashpeyyety/global-security-pulse)';
+
+async function fetchYahoo(symbol) {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=6mo`;
+  const res = await fetch(url, {
+    signal: AbortSignal.timeout(20000),
+    headers: { 'User-Agent': UA, Accept: 'application/json' },
+  });
+  if (!res.ok) throw new Error(`yahoo ${symbol} HTTP ${res.status}`);
+  const data = await res.json();
+  const result = data?.chart?.result?.[0];
+  if (!result) throw new Error(`yahoo ${symbol} empty result`);
+  const ts = result.timestamp ?? [];
+  const close = result.indicators?.quote?.[0]?.close ?? [];
+  const points = [];
+  for (let i = 0; i < ts.length; i++) {
+    const v = close[i];
+    if (v == null || !Number.isFinite(v)) continue;
+    const d = new Date(ts[i] * 1000);
+    const t = d.toISOString().slice(0, 10);
+    points.push({ t, v: Number(v) });
+  }
+  const trimmed = points.slice(-90);
+  if (trimmed.length < 10) throw new Error(`yahoo ${symbol} too few points (${trimmed.length})`);
+  return trimmed;
 }
 
 function mean(arr) {
@@ -113,13 +124,14 @@ async function main() {
   const byId = Object.fromEntries(seed.map((s) => [s.id, s]));
   let liveCount = 0;
 
-  for (const spec of STOOQ) {
+  for (const spec of YAHOO) {
     try {
-      const points = await fetchStooq(spec.symbol);
-      byId[spec.id] = { id: spec.id, name: spec.name, unit: spec.unit, source: 'stooq', points };
+      const points = await fetchYahoo(spec.symbol);
+      byId[spec.id] = { id: spec.id, name: spec.name, unit: spec.unit, source: 'yahoo', points };
       liveCount++;
+      console.log(`  yahoo ${spec.symbol}: ${points.length} pts`);
     } catch (err) {
-      console.warn(`  stooq ${spec.symbol}: ${err.message} (keeping seed)`);
+      console.warn(`  yahoo ${spec.symbol}: ${err.message} (keeping seed)`);
     }
   }
 
@@ -161,7 +173,9 @@ async function main() {
     fs.writeFileSync(publicSnapshot, JSON.stringify(snap, null, 2));
   }
 
-  console.log(`ingest:markets ${liveCount > 0 ? 'Pass' : 'Warn'} — live series ${liveCount}/${STOOQ.length}+; anomalies ${anomalies.length}; stress ${stress.score}`);
+  console.log(
+    `ingest:markets ${liveCount > 0 ? 'Pass' : 'Warn'} — live series ${liveCount}/${YAHOO.length}+; anomalies ${anomalies.length}; stress ${stress.score}`,
+  );
 }
 
 main();

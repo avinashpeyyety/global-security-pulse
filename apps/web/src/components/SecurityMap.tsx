@@ -4,6 +4,7 @@ import type { SecurityEvent } from '@gsp/shared';
 import { ageLabel } from '../lib/time';
 
 const STYLE = 'https://tiles.openfreemap.org/styles/dark';
+const ROUTES_URL = '/data/supply-routes.json';
 
 const LAYER_COLOR: Record<string, string> = {
   conflict: '#ff6b6b',
@@ -19,10 +20,17 @@ function markerRadius(severity: number, confidence: number): number {
   return 4 + severity * 2.2 + confidence * 2;
 }
 
-export function SecurityMap({ events }: { events: SecurityEvent[] }) {
+export function SecurityMap({
+  events,
+  showSupplyRoutes = true,
+}: {
+  events: SecurityEvent[];
+  showSupplyRoutes?: boolean;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<maplibregl.Marker[]>([]);
+  const routesReady = useRef(false);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -30,20 +38,103 @@ export function SecurityMap({ events }: { events: SecurityEvent[] }) {
     const map = new maplibregl.Map({
       container: containerRef.current,
       style: STYLE,
-      center: [20, 20],
-      zoom: 1.4,
+      center: [40, 18],
+      zoom: 1.55,
       attributionControl: { compact: true },
     });
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
     mapRef.current = map;
+
+    map.on('load', async () => {
+      try {
+        const res = await fetch(ROUTES_URL);
+        const geojson = await res.json();
+        if (!map.getSource('supply-routes')) {
+          map.addSource('supply-routes', { type: 'geojson', data: geojson });
+          map.addLayer({
+            id: 'supply-routes-glow',
+            type: 'line',
+            source: 'supply-routes',
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: {
+              'line-color': '#38bdf8',
+              'line-width': 6,
+              'line-opacity': 0.18,
+            },
+          });
+          map.addLayer({
+            id: 'supply-routes-dash',
+            type: 'line',
+            source: 'supply-routes',
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: {
+              'line-color': [
+                'match',
+                ['get', 'kind'],
+                'oil-chokepoint',
+                '#fbbf24',
+                'oil-route',
+                '#f59e0b',
+                'alt-route',
+                '#34d399',
+                '#38bdf8',
+              ],
+              'line-width': 2.6,
+              'line-opacity': 0.95,
+              'line-dasharray': [1.2, 2.2],
+            },
+          });
+          map.on('click', 'supply-routes-dash', (e) => {
+            const f = e.features?.[0];
+            if (!f || f.geometry.type !== 'LineString') return;
+            const p = f.properties as { name?: string; note?: string; kind?: string };
+            new maplibregl.Popup({ offset: 8, maxWidth: '260px' })
+              .setLngLat(e.lngLat)
+              .setHTML(
+                `<div>
+                  <div style="font-family:monospace;font-size:9px;color:#8b9aab">${escapeHtml(p.kind ?? 'route')}</div>
+                  <div style="font-weight:600;margin:2px 0">${escapeHtml(p.name ?? 'Supply route')}</div>
+                  <div style="color:#8b9aab">${escapeHtml(p.note ?? '')}</div>
+                </div>`,
+              )
+              .addTo(map);
+          });
+          map.on('mouseenter', 'supply-routes-dash', () => {
+            map.getCanvas().style.cursor = 'pointer';
+          });
+          map.on('mouseleave', 'supply-routes-dash', () => {
+            map.getCanvas().style.cursor = '';
+          });
+        }
+        routesReady.current = true;
+        const vis = showSupplyRoutes ? 'visible' : 'none';
+        if (map.getLayer('supply-routes-dash')) map.setLayoutProperty('supply-routes-dash', 'visibility', vis);
+        if (map.getLayer('supply-routes-glow')) map.setLayoutProperty('supply-routes-glow', 'visibility', vis);
+      } catch (err) {
+        console.warn('supply routes load failed', err);
+      }
+    });
 
     return () => {
       markersRef.current.forEach((m) => m.remove());
       markersRef.current = [];
       map.remove();
       mapRef.current = null;
+      routesReady.current = false;
     };
   }, []);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    const apply = () => {
+      const vis = showSupplyRoutes ? 'visible' : 'none';
+      if (map.getLayer('supply-routes-dash')) map.setLayoutProperty('supply-routes-dash', 'visibility', vis);
+      if (map.getLayer('supply-routes-glow')) map.setLayoutProperty('supply-routes-glow', 'visibility', vis);
+    };
+    if (map.isStyleLoaded() && map.getLayer('supply-routes-dash')) apply();
+    else map.once('idle', apply);
+  }, [showSupplyRoutes]);
 
   useEffect(() => {
     const map = mapRef.current;
