@@ -60,6 +60,10 @@ Pages serves anything under `apps/web/public/` after build (including `reports/d
 
 No paid Mapbox / Google key is required for v0.1.
 
+### After deploy (hard refresh)
+
+Vite fingerprints built assets (`index-*.js`). After a Pages deploy, do a **hard refresh** (Ctrl/Cmd+Shift+R) or clear cache so the browser does not keep a stale bundle pointing at old `public/data/*.json` pins. `apps/web/public/data/` JSON itself is not hashed; the JS that loads it is.
+
 ## Quick start
 
 ```bash

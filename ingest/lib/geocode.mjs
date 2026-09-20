@@ -2,7 +2,8 @@
  * Impact-first place → lat/lon/region helper for RSS / X-scroll / normalize.
  * Prefer title impact hits over summary; never pin Global [20,0] jitter.
  * Map markers require place coords + kinetic/impact language (mapEligible).
- * Diplomacy, elections, welfare, generic UKMTO/VRA PDFs stay off-map.
+ * Diplomacy, elections, welfare, metaphor 'earthquake', generic UKMTO/VRA PDFs stay off-map.
+ * Maritime basins pin to coastal landfall / chokepoint shore (MARITIME_LANDFALL), not open ocean.
  */
 
 /** @typedef {{ lat: number, lon: number, region: string, place: string }} PlaceHit */
@@ -11,9 +12,9 @@
 /** Longer / more specific phrases first so "Saudi capital" / "Bab el-Mandeb" win. */
 const PLACES = [
   { keys: ['bab el-mandeb', 'bab el mandeb', 'bab-el-mandeb'], lat: 12.58, lon: 43.33, region: 'Red Sea / Bab el-Mandeb', place: 'Bab el-Mandeb' },
-  { keys: ['strait of hormuz', 'hormuz'], lat: 26.57, lon: 56.25, region: 'Persian Gulf', place: 'Strait of Hormuz' },
-  { keys: ['red sea'], lat: 20.0, lon: 38.5, region: 'Red Sea / Bab el-Mandeb', place: 'Red Sea' },
-  { keys: ['black sea'], lat: 43.4, lon: 34.0, region: 'Eastern Europe', place: 'Black Sea' },
+  { keys: ['strait of hormuz', 'hormuz'], lat: 27.18, lon: 56.28, region: 'Persian Gulf', place: 'Strait of Hormuz' },
+  { keys: ['red sea'], lat: 12.6, lon: 43.3, region: 'Red Sea / Bab el-Mandeb', place: 'Red Sea' },
+  { keys: ['black sea'], lat: 44.6, lon: 33.5, region: 'Eastern Europe', place: 'Black Sea' },
   { keys: ['saudi capital', 'riyadh'], lat: 24.71, lon: 46.68, region: 'Middle East', place: 'Riyadh' },
   { keys: ['yanbu'], lat: 24.09, lon: 38.06, region: 'Middle East', place: 'Yanbu' },
   { keys: ['aramco', 'dhahran', 'ras tanura'], lat: 26.3, lon: 50.15, region: 'Middle East', place: 'Aramco / Dhahran' },
@@ -41,7 +42,7 @@ const PLACES = [
   { keys: ['taipei'], lat: 25.03, lon: 121.57, region: 'East / SE Asia', place: 'Taipei' },
   { keys: ['taiwan', 'taiwan strait'], lat: 23.7, lon: 121.0, region: 'East / SE Asia', place: 'Taiwan' },
   { keys: ['beijing', 'peking'], lat: 39.9, lon: 116.4, region: 'East / SE Asia', place: 'Beijing' },
-  { keys: ['south china sea'], lat: 12.0, lon: 114.0, region: 'East / SE Asia', place: 'South China Sea' },
+  { keys: ['south china sea'], lat: 16.5, lon: 112.5, region: 'East / SE Asia', place: 'South China Sea' },
   { keys: ['washington', 'white house', 'pentagon'], lat: 38.91, lon: -77.04, region: 'Americas', place: 'Washington' },
   { keys: ['louisiana', 'new orleans', 'baton rouge'], lat: 30.98, lon: -91.96, region: 'Americas', place: 'Louisiana' },
   { keys: ['greenland'], lat: 72.0, lon: -40.0, region: 'Americas', place: 'Greenland' },
@@ -63,6 +64,7 @@ const PLACES = [
   { keys: ['nigeria', 'nigerian', 'lagos', 'abuja'], lat: 9.08, lon: 8.68, region: 'Africa', place: 'Nigeria' },
   { keys: ['malawi'], lat: -13.25, lon: 34.3, region: 'Africa', place: 'Malawi' },
   { keys: ['equatorial guinea', 'malabo'], lat: 1.65, lon: 10.27, region: 'Africa', place: 'Equatorial Guinea' },
+  { keys: ['gulf of guinea'], lat: 6.4, lon: 3.4, region: 'Africa', place: 'Gulf of Guinea' },
   { keys: ['nepal', 'nepalese', 'nepali', 'kathmandu'], lat: 27.72, lon: 85.32, region: 'South Asia', place: 'Nepal' },
   { keys: ['greece', 'greek', 'athens'], lat: 37.98, lon: 23.73, region: 'Europe', place: 'Greece' },
   { keys: ['haiti', 'port-au-prince', 'haitian'], lat: 18.59, lon: -72.31, region: 'Americas', place: 'Haiti' },
@@ -120,7 +122,7 @@ const MARITIME_INCIDENT =
 
 /** Diplomacy / elections / welfare / legal process / fundraising — never map-pin. */
 const MAP_EXCLUDE =
-  /\b(election|elections|electoral|welfare|weight[- ]?loss|membership|pardons?|pardoned|plans?\s+to\s+build|stronger\s+ties|bilateral\s+talks?|revive\s+[\w\s-]{0,40}talks?|talks?\s+with|working\s+to\s+revive|diplomatic\s+spat|visa\s+bans?|all\s+smiles|associate\s+member|security\s+framework|framework\s+with|UNSC\s+session|ceasefire\s+draft|designation\s+list|secondary\s+sanctions|welcomes?\s+.{0,40}deal|permanent\s+security\s+control|extradit(?:ed|ion|ing|es)?|opens?\s+trial|trial\s+of|arrested\s+in\s+connection|raises?\s+thousands|fundrais(?:e|ing|er)?|how\s+will\b|ahead\s+of\s+election|state\s+election|vows?\s+to\s+stay|announce[sd]?\s+higher\s+welfare|anti-?austerity\s+protest|protest\s+escalation|tear\s*gas|capital\s+square|port\s+strike|labour\s+strike|labor\s+strike)\b/i;
+  /\b(election|elections|electoral|welfare|weight[- ]?loss|membership|pardons?|pardoned|plans?\s+to\s+build|stronger\s+ties|bilateral\s+talks?|revive\s+[\w\s-]{0,40}talks?|talks?\s+with|working\s+to\s+revive|diplomatic\s+spat|visa\s+bans?|all\s+smiles|associate\s+member|security\s+framework|framework\s+with|UNSC\s+session|ceasefire\s+draft|designation\s+list|secondary\s+sanctions|welcomes?\s+.{0,40}deal|permanent\s+security\s+control|extradit(?:ed|ion|ing|es)?|opens?\s+trial|trial\s+of|arrested\s+in\s+connection|raises?\s+thousands|fundrais(?:e|ing|er)?|how\s+will\b|ahead\s+of\s+election|state\s+election|vows?\s+to\s+stay|announce[sd]?\s+higher\s+welfare|anti-?austerity\s+protest|protest\s+escalation|tear\s*gas|capital\s+square|port\s+strike|labour\s+strike|labor\s+strike|describes?\s+fallout|fallout\s+of\s+.{0,80}as\s+[\u2018\u2019'"']?earthquake|as\s+[\u2018\u2019'"']earthquake[\u2018\u2019'"']?|investment\s+strategy)\b/i;
 
 /** Water-basin / chokepoint place labels — pin only when title is a real incident. */
 const WATER_BASIN_PLACES = new Set([
@@ -129,7 +131,21 @@ const WATER_BASIN_PLACES = new Set([
   'South China Sea',
   'Bab el-Mandeb',
   'Strait of Hormuz',
+  'Gulf of Guinea',
 ]);
+
+/**
+ * Coastal landfall / chokepoint shore for maritime basins (never mid-ocean centroids).
+ * Applied whenever a water-basin place is resolved so pins sit on/near land.
+ */
+const MARITIME_LANDFALL = {
+  'Black Sea': { lat: 44.6, lon: 33.5, region: 'Eastern Europe', place: 'Black Sea' },
+  'South China Sea': { lat: 16.5, lon: 112.5, region: 'East / SE Asia', place: 'South China Sea' },
+  'Gulf of Guinea': { lat: 6.4, lon: 3.4, region: 'Africa', place: 'Gulf of Guinea' },
+  'Red Sea': { lat: 12.6, lon: 43.3, region: 'Red Sea / Bab el-Mandeb', place: 'Red Sea' },
+  'Bab el-Mandeb': { lat: 12.58, lon: 43.33, region: 'Red Sea / Bab el-Mandeb', place: 'Bab el-Mandeb' },
+  'Strait of Hormuz': { lat: 27.18, lon: 56.28, region: 'Persian Gulf', place: 'Strait of Hormuz' },
+};
 
 
 function escapeRe(s) {
@@ -302,10 +318,25 @@ export function isWaterOrMidOceanPin(lat, lon, place) {
   if (!Number.isFinite(la) || !Number.isFinite(lo)) return false;
   // Seed North Sea centroid
   if (Math.abs(la - 56.5) < 0.75 && Math.abs(lo - 3.5) < 0.75) return true;
-  // Canonical Red Sea water centroid from PLACES
-  if (Math.abs(la - 20) < 0.75 && Math.abs(lo - 38.5) < 0.75) return true;
+  // Legacy mid-basin centroids (pre-landfall remap)
+  if (Math.abs(la - 20) < 0.75 && Math.abs(lo - 38.5) < 0.75) return true; // Red Sea
+  if (Math.abs(la - 43.4) < 0.75 && Math.abs(lo - 34.0) < 0.75) return true; // Black Sea
+  if (Math.abs(la - 12.0) < 0.75 && Math.abs(lo - 114.0) < 0.75) return true; // South China Sea
+  if (Math.abs(la - 4.0) < 0.75 && Math.abs(lo - 5.5) < 0.75) return true; // Gulf of Guinea
+  if (Math.abs(la - 26.57) < 0.75 && Math.abs(lo - 56.25) < 0.75) return true; // Hormuz water
   return false;
 }
+
+/** Snap a resolved place to coastal landfall when it is a maritime basin label. */
+export function applyMaritimeLandfall(hit) {
+  if (!hit || !hit.place) return hit;
+  const lf = MARITIME_LANDFALL[hit.place];
+  if (!lf) return hit;
+  return { ...hit, lat: lf.lat, lon: lf.lon, region: lf.region || hit.region, place: lf.place };
+}
+
+const VESSEL_OR_MARITIME_CTX =
+  /\b(vessel|tanker|ship|ships|commercial\s+vessel|boarding|pirate|piracy|hijack|collision|collided|drone\s+swarm|swarm)\b/i;
 
 /**
  * Conflict / security / disaster / maritime / cyber-nation-state signals.
@@ -375,8 +406,23 @@ export function resolveEventGeo(opts = {}) {
   const title = opts.title || '';
   const summary = opts.summary || '';
 
-  const titleHit = geocodeFromText(title);
+  let titleHit = geocodeFromText(title);
+  let summaryHit = geocodeFromText(summary);
+
+  // Vessel / boarding / swarm titles: prefer water-basin / chokepoint from summary
+  // over actor-country capitals (e.g. Houthi → Sanaa vs tanker in Red Sea → Bab shore).
+  if (
+    titleHit &&
+    summaryHit &&
+    VESSEL_OR_MARITIME_CTX.test(`${title} ${summary}`) &&
+    !WATER_BASIN_PLACES.has(titleHit.place) &&
+    WATER_BASIN_PLACES.has(summaryHit.place)
+  ) {
+    titleHit = null;
+  }
+
   if (titleHit) {
+    titleHit = applyMaritimeLandfall(titleHit);
     const mapEligible = computeMapEligible({
       title,
       summary,
@@ -398,8 +444,8 @@ export function resolveEventGeo(opts = {}) {
     };
   }
 
-  const summaryHit = geocodeFromText(summary);
   if (summaryHit) {
+    summaryHit = applyMaritimeLandfall(summaryHit);
     const mapEligible = computeMapEligible({
       title,
       summary,
@@ -569,4 +615,4 @@ export function applyMapEligibility(events) {
   return { events: out, fixed, cleared };
 }
 
-export { PLACES, REGION_FALLBACK, IMPACT_CONTEXT, SECURITY_SIGNAL, NON_SECURITY, MAP_IMPACT, MAP_EXCLUDE, MARITIME_INCIDENT, WATER_BASIN_PLACES };
+export { PLACES, REGION_FALLBACK, IMPACT_CONTEXT, SECURITY_SIGNAL, NON_SECURITY, MAP_IMPACT, MAP_EXCLUDE, MARITIME_INCIDENT, WATER_BASIN_PLACES, MARITIME_LANDFALL };
