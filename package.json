@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "npm run build -w @gsp/shared && npm run dev -w @gsp/web",
     "build": "npm run build -w @gsp/shared && npm run build -w @gsp/web",
+    "gen:seed": "node scripts/gen-seed.mjs",
     "ingest:gdelt": "node ingest/gdelt.mjs",
     "ingest:markets": "node ingest/markets.mjs",
     "ingest:all": "npm run ingest:gdelt && npm run ingest:markets",
