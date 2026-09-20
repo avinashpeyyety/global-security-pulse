@@ -1,0 +1,23 @@
+{
+  "name": "global-security-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dense ops dashboard for global security events and economic stress markers",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "agents/*"
+  ],
+  "scripts": {
+    "dev": "npm run build -w @gsp/shared && npm run dev -w @gsp/web",
+    "build": "npm run build -w @gsp/shared && npm run build -w @gsp/web",
+    "ingest:gdelt": "node ingest/gdelt.mjs",
+    "ingest:markets": "node ingest/markets.mjs",
+    "ingest:all": "npm run ingest:gdelt && npm run ingest:markets",
+    "agent:x-scroll": "npm run start -w @gsp/x-scroll",
+    "typecheck": "npm run build -w @gsp/shared && npm run typecheck -w @gsp/web"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
