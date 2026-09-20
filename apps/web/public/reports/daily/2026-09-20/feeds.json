@@ -21,8 +21,8 @@
     "id": "x-scroll",
     "name": "X allowlist scroll",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-09-20T22:08:25.324Z",
-    "detail": "browser: 49 pointers",
+    "lastEvaluatedAt": "2026-09-20T23:32:01.204Z",
+    "detail": "live: 5 pointers merged (no X API search); 13 login-wall profile(s)",
     "rule": "allowlist_scroll && merge_by_id",
     "snapshot": "x-scroll@2026-09-20"
   },
@@ -37,12 +37,12 @@
   },
   {
     "id": "rss",
-    "name": "Wire RSS",
-    "status": "Not run",
-    "lastEvaluatedAt": null,
-    "detail": "RSS ingest stubbed for v0.1",
-    "rule": "feed_parse_ok",
-    "snapshot": null
+    "name": "RSS wires",
+    "status": "Pass",
+    "lastEvaluatedAt": "2026-09-20T23:30:40.812Z",
+    "detail": "merged 30 (added 2); bbc-world:10, guardian-world:10, aljazeera:10",
+    "rule": "http_200 && items>=1",
+    "snapshot": "rss@2026-09-20"
   },
   {
     "id": "baltic",

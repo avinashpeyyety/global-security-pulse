@@ -1,66 +1,19 @@
 [
   {
-    "region": "Europe",
-    "count": 10,
-    "maxSeverity": 4,
-    "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-09-20T21:17:22.000Z",
-    "layers": [
-      "conflict",
-      "disaster",
-      "maritime"
-    ]
-  },
-  {
-    "region": "Middle East",
-    "count": 14,
-    "maxSeverity": 4,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-20T21:00:15.000Z",
-    "layers": [
-      "conflict",
-      "unrest",
-      "disaster",
-      "sanctions"
-    ]
-  },
-  {
     "region": "Global",
-    "count": 37,
+    "count": 5,
     "maxSeverity": 3,
     "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-20T21:00:00Z",
+    "freshestAt": "2026-09-20T23:31:59.620Z",
     "layers": [
+      "cyber",
       "conflict",
-      "sanctions",
       "maritime"
-    ]
-  },
-  {
-    "region": "Americas",
-    "count": 8,
-    "maxSeverity": 3,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-20T20:31:15.000Z",
-    "layers": [
-      "conflict"
-    ]
-  },
-  {
-    "region": "South Asia",
-    "count": 4,
-    "maxSeverity": 3,
-    "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-20T19:19:00Z",
-    "layers": [
-      "disaster",
-      "conflict",
-      "unrest"
     ]
   },
   {
     "region": "Eastern Europe",
-    "count": 6,
+    "count": 4,
     "maxSeverity": 4,
     "freshestSource": "GDELT/Reuters",
     "freshestAt": "2026-09-20T13:00:00.000Z",
@@ -71,7 +24,7 @@
   },
   {
     "region": "East Asia",
-    "count": 2,
+    "count": 3,
     "maxSeverity": 4,
     "freshestSource": "USGS",
     "freshestAt": "2026-09-20T12:00:00.000Z",
@@ -88,6 +41,19 @@
     "freshestAt": "2026-09-20T11:00:00.000Z",
     "layers": [
       "maritime"
+    ]
+  },
+  {
+    "region": "North America",
+    "count": 5,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-20T10:00:00.000Z",
+    "layers": [
+      "sanctions",
+      "disaster",
+      "unrest",
+      "cyber"
     ]
   },
   {
@@ -111,17 +77,6 @@
     ]
   },
   {
-    "region": "East / SE Asia",
-    "count": 2,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/Reuters",
-    "freshestAt": "2026-09-20T04:00:00.000Z",
-    "layers": [
-      "conflict",
-      "maritime"
-    ]
-  },
-  {
     "region": "Persian Gulf",
     "count": 1,
     "maxSeverity": 3,
@@ -132,29 +87,23 @@
     ]
   },
   {
-    "region": "North America",
-    "count": 4,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/BBC",
-    "freshestAt": "2026-09-20T01:36:00.000Z",
-    "layers": [
-      "disaster",
-      "sanctions",
-      "unrest",
-      "cyber"
-    ]
-  },
-  {
-    "region": "Africa",
-    "count": 5,
+    "region": "Sahel",
+    "count": 1,
     "maxSeverity": 4,
     "freshestSource": "GDELT/AFP",
     "freshestAt": "2026-09-19T18:00:00.000Z",
     "layers": [
-      "terrorism",
-      "maritime",
-      "conflict",
-      "unrest"
+      "terrorism"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-19T12:00:00.000Z",
+    "layers": [
+      "conflict"
     ]
   },
   {
@@ -166,6 +115,16 @@
     "layers": [
       "cyber",
       "sanctions"
+    ]
+  },
+  {
+    "region": "Africa",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/IMB",
+    "freshestAt": "2026-09-19T04:00:00.000Z",
+    "layers": [
+      "maritime"
     ]
   },
   {
@@ -186,6 +145,16 @@
     "freshestAt": "2026-09-18T04:00:00.000Z",
     "layers": [
       "disaster"
+    ]
+  },
+  {
+    "region": "Southeast Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/wire",
+    "freshestAt": "2026-09-17T16:00:00.000Z",
+    "layers": [
+      "maritime"
     ]
   }
 ]
