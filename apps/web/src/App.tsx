@@ -22,6 +22,7 @@ export default function App() {
   const [window, setWindow] = useState<TimeWindow>('7d');
   const [layers, setLayers] = useState<Set<EventLayer>>(() => new Set(EVENT_LAYERS));
   const [showSupplyRoutes, setShowSupplyRoutes] = useState(true);
+  const [showPosture, setShowPosture] = useState(true);
 
   useEffect(() => {
     loadSnapshot()
@@ -36,6 +37,12 @@ export default function App() {
       (e) => layers.has(e.layer) && e.observedAt >= cut,
     );
   }, [snap, window, layers]);
+
+  const filteredPostures = useMemo(() => {
+    if (!snap || !showPosture) return [];
+    const cut = windowCutoff(window, snapshotNow(snap)).toISOString();
+    return (snap.postures ?? []).filter((p) => p.observedAt >= cut);
+  }, [snap, window, showPosture]);
 
   const hotspots = useMemo(() => computeHotspots(filtered), [filtered]);
 
@@ -63,7 +70,7 @@ export default function App() {
 
       <div className="main">
         <div className="map-wrap">
-          <SecurityMap events={filtered} showSupplyRoutes={showSupplyRoutes} />
+          <SecurityMap events={filtered} postures={filteredPostures} showSupplyRoutes={showSupplyRoutes} />
           <div className="map-overlay layers">
             <LayerToggles
               layers={EVENT_LAYERS}
@@ -78,6 +85,14 @@ export default function App() {
                 onChange={() => setShowSupplyRoutes((v) => !v)}
               />
               Supply routes
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                checked={showPosture}
+                onChange={() => setShowPosture((v) => !v)}
+              />
+              Military posture
             </label>
           </div>
           <div className="map-overlay scrubber">

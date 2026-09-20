@@ -1,6 +1,7 @@
 import type {
   DashboardSnapshot,
   SecurityEvent,
+  MilitaryPosture,
   EconSeries,
   Anomaly,
   FeedStatus,
@@ -16,19 +17,29 @@ async function getJson<T>(url: string): Promise<T> {
 
 export async function loadSnapshot(): Promise<DashboardSnapshot> {
   try {
-    return await getJson<DashboardSnapshot>('/data/snapshot.json');
+    const snap = await getJson<DashboardSnapshot>('/data/snapshot.json');
+    if (!snap.postures) {
+      try {
+        snap.postures = await getJson<MilitaryPosture[]>('/data/postures.json');
+      } catch {
+        snap.postures = [];
+      }
+    }
+    return snap;
   } catch {
-    const [events, series, anomalies, feeds, stress, hotspots] = await Promise.all([
+    const [events, series, anomalies, feeds, stress, hotspots, postures] = await Promise.all([
       getJson<SecurityEvent[]>('/data/events.json'),
       getJson<EconSeries[]>('/data/series.json'),
       getJson<Anomaly[]>('/data/anomalies.json'),
       getJson<FeedStatus[]>('/data/feeds.json'),
       getJson<StressComposite>('/data/stress.json'),
       getJson<Hotspot[]>('/data/hotspots.json'),
+      getJson<MilitaryPosture[]>('/data/postures.json').catch(() => [] as MilitaryPosture[]),
     ]);
     return {
       generatedAt: new Date().toISOString(),
       events,
+      postures,
       series,
       anomalies,
       feeds,

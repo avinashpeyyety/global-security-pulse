@@ -13,12 +13,43 @@ export type EventLayer =
 
 export type Severity = 1 | 2 | 3 | 4 | 5;
 
+export type PostureKind =
+  | 'deployment'
+  | 'exercise'
+  | 'alert'
+  | 'response'
+  | 'buildup'
+  | 'withdrawal';
+
+export type PrecipitatePotential = 'low' | 'medium' | 'high' | 'critical';
+
 export interface SecurityEvent {
   id: string;
   title: string;
   summary: string;
   layer: EventLayer;
   severity: Severity;
+  confidence: number;
+  lat: number;
+  lon: number;
+  region: string;
+  source: string;
+  sourceReliability: 'A' | 'B' | 'C' | 'D' | 'E';
+  url?: string;
+  observedAt: string;
+  ingestedAt: string;
+}
+
+/** Military / strategic posture change — not a kinetic "recorded event". */
+export interface MilitaryPosture {
+  id: string;
+  title: string;
+  summary: string;
+  kind: PostureKind;
+  actors: string[];
+  /** What this may be responding to, if known */
+  inResponseTo?: string;
+  precipitatePotential: PrecipitatePotential;
   confidence: number;
   lat: number;
   lon: number;
@@ -92,6 +123,7 @@ export interface StressComposite {
 export interface DashboardSnapshot {
   generatedAt: string;
   events: SecurityEvent[];
+  postures?: MilitaryPosture[];
   hotspots: Hotspot[];
   feeds: FeedStatus[];
   series: EconSeries[];
@@ -118,4 +150,11 @@ export const LAYER_LABELS: Record<EventLayer, string> = {
   terrorism: 'Terrorism',
   unrest: 'Unrest',
   disaster: 'Disaster-adjacent',
+};
+
+export const PRECIPITATE_LABELS: Record<PrecipitatePotential, string> = {
+  low: 'Low precipitate potential',
+  medium: 'Medium precipitate potential',
+  high: 'High precipitate potential',
+  critical: 'Critical precipitate potential',
 };

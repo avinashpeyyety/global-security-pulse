@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import maplibregl from 'maplibre-gl';
-import type { SecurityEvent } from '@gsp/shared';
+import type { MilitaryPosture, PrecipitatePotential, SecurityEvent } from '@gsp/shared';
+import { PRECIPITATE_LABELS } from '@gsp/shared';
 import { ageLabel } from '../lib/time';
 
 const STYLE = 'https://tiles.openfreemap.org/styles/dark';
@@ -20,16 +21,26 @@ function markerRadius(severity: number, confidence: number): number {
   return 4 + severity * 2.2 + confidence * 2;
 }
 
+const PRECIP_COLOR: Record<PrecipitatePotential, string> = {
+  low: '#34d399',
+  medium: '#fbbf24',
+  high: '#fb923c',
+  critical: '#ef4444',
+};
+
 export function SecurityMap({
   events,
+  postures = [],
   showSupplyRoutes = true,
 }: {
   events: SecurityEvent[];
+  postures?: MilitaryPosture[];
   showSupplyRoutes?: boolean;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const markersRef = useRef<maplibregl.Marker[]>([]);
+  const postureMarkersRef = useRef<maplibregl.Marker[]>([]);
   const routesReady = useRef(false);
 
   useEffect(() => {
@@ -118,6 +129,8 @@ export function SecurityMap({
     return () => {
       markersRef.current.forEach((m) => m.remove());
       markersRef.current = [];
+      postureMarkersRef.current.forEach((m) => m.remove());
+      postureMarkersRef.current = [];
       map.remove();
       mapRef.current = null;
       routesReady.current = false;
@@ -172,6 +185,48 @@ export function SecurityMap({
       markersRef.current.push(marker);
     }
   }, [events]);
+
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    postureMarkersRef.current.forEach((m) => m.remove());
+    postureMarkersRef.current = [];
+
+    for (const p of postures) {
+      const el = document.createElement('div');
+      el.className = 'posture-marker';
+      const color = PRECIP_COLOR[p.precipitatePotential] ?? '#fbbf24';
+      el.style.width = '0';
+      el.style.height = '0';
+      el.style.borderLeft = '8px solid transparent';
+      el.style.borderRight = '8px solid transparent';
+      el.style.borderBottom = `14px solid ${color}`;
+      el.style.filter = 'drop-shadow(0 0 3px rgba(0,0,0,0.8))';
+      el.style.cursor = 'pointer';
+      el.style.opacity = String(0.75 + p.confidence * 0.25);
+      el.title = `[POSTURE] ${p.title}`;
+
+      const popup = new maplibregl.Popup({ offset: 14, maxWidth: '300px' }).setHTML(
+        `<div>
+          <span style="font-family:monospace;font-size:9px;border:1px solid #fbbf24;padding:1px 4px;color:#fbbf24">POSTURE · ${escapeHtml(p.kind)}</span>
+          <span style="font-family:monospace;font-size:9px;color:${color};margin-left:6px">${escapeHtml(PRECIPITATE_LABELS[p.precipitatePotential])}</span>
+          <div style="font-weight:600;margin:4px 0">${escapeHtml(p.title)}</div>
+          <div style="color:#8b9aab">${escapeHtml(p.summary)}</div>
+          <div style="font-family:monospace;font-size:9px;color:#6b7c8f;margin-top:4px">Actors: ${escapeHtml(p.actors.join(', '))}</div>
+          ${p.inResponseTo ? `<div style="font-family:monospace;font-size:9px;color:#6b7c8f">In response to: ${escapeHtml(p.inResponseTo)}</div>` : ''}
+          <div style="font-family:monospace;font-size:9px;color:#6b7c8f;margin-top:2px">REL ${p.sourceReliability} · ${escapeHtml(p.source)} · ${ageLabel(p.observedAt)}</div>
+        </div>`,
+      );
+
+      const marker = new maplibregl.Marker({ element: el, anchor: 'bottom' })
+        .setLngLat([p.lon, p.lat])
+        .setPopup(popup)
+        .addTo(map);
+      postureMarkersRef.current.push(marker);
+    }
+  }, [postures]);
 
   return <div ref={containerRef} className="map-el" />;
 }

@@ -321,3 +321,6 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
   color: var(--muted);
 }
 .error { color: var(--fail); }
+
+.posture-marker { z-index: 2; }
+
