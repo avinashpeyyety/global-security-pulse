@@ -236,11 +236,18 @@ export function SecurityMap({
     openPopupCount.current = 0;
     setMarkersDimmed(false);
 
-    const mapEvents = events.filter((e) => !isDryRunXScroll(e) && !isRawXScrollMarker(e));
+    const mapEvents = events.filter(
+      (e) =>
+        e.mapEligible !== false &&
+        Number.isFinite(Number(e.lat)) &&
+        Number.isFinite(Number(e.lon)) &&
+        !isDryRunXScroll(e) &&
+        !isRawXScrollMarker(e),
+    );
 
     for (const e of mapEvents) {
-      const lat = Number.isFinite(Number(e.lat)) ? Number(e.lat) : 20;
-      const lon = Number.isFinite(Number(e.lon)) ? Number(e.lon) : 0;
+      const lat = Number(e.lat);
+      const lon = Number(e.lon);
       const risk = eventFalloutRisk(e);
       const color = RISK_COLORS[risk];
       const el = document.createElement('div');

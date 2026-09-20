@@ -57,9 +57,16 @@ export interface SecurityEvent {
   /** Fall-out / cascading risk level; colors map markers. Derived from severity if omitted. */
   falloutRisk?: FalloutRisk;
   confidence: number;
-  lat: number;
-  lon: number;
+  /** Impact lat; null when unknown — never Global [20,0] jitter. */
+  lat: number | null;
+  /** Impact lon; null when unknown — never Global [20,0] jitter. */
+  lon: number | null;
   region: string;
+  /**
+   * When false, SecurityMap must not render a marker (no place hit and/or non-security).
+   * Side lists may still show the event.
+   */
+  mapEligible?: boolean;
   source: string;
   sourceReliability: 'A' | 'B' | 'C' | 'D' | 'E';
   url?: string;

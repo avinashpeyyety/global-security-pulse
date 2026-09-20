@@ -1,9 +1,11 @@
 /**
- * Keyword place → lat/lon/region helper for RSS / X-scroll / light normalize.
- * Prefer title matches over feed.region. Not full NER — ordered keyword scan.
+ * Impact-first place → lat/lon/region helper for RSS / X-scroll / normalize.
+ * Prefer title impact hits over summary; never pin Global [20,0] jitter.
+ * Map markers require place coords + security relevance (mapEligible).
  */
 
 /** @typedef {{ lat: number, lon: number, region: string, place: string }} PlaceHit */
+/** @typedef {PlaceHit & { matchedFrom: string, mapEligible?: boolean }} GeoResolve */
 
 /** Longer / more specific phrases first so "Saudi capital" / "Bab el-Mandeb" win. */
 const PLACES = [
@@ -16,7 +18,8 @@ const PLACES = [
   { keys: ['aramco', 'dhahran', 'ras tanura'], lat: 26.3, lon: 50.15, region: 'Middle East', place: 'Aramco / Dhahran' },
   { keys: ['jeddah', 'jiddah'], lat: 21.49, lon: 39.19, region: 'Middle East', place: 'Jeddah' },
   { keys: ['mecca', 'makkah'], lat: 21.39, lon: 39.86, region: 'Middle East', place: 'Mecca' },
-  { keys: ['saudi arabia', 'saudi'], lat: 24.71, lon: 46.68, region: 'Middle East', place: 'Saudi Arabia' },
+  { keys: ['saudi arabia', 'saudi', 'saudis'], lat: 24.71, lon: 46.68, region: 'Middle East', place: 'Saudi Arabia' },
+  { keys: ['doha', 'qatar', 'qatari'], lat: 25.29, lon: 51.53, region: 'Middle East', place: 'Qatar' },
   { keys: ['moscow', 'moskva'], lat: 55.76, lon: 37.62, region: 'Europe', place: 'Moscow' },
   { keys: ['st petersburg', 'saint petersburg', 'leningrad'], lat: 59.93, lon: 30.33, region: 'Europe', place: 'St Petersburg' },
   { keys: ['kupiansk', 'kupyansk'], lat: 49.71, lon: 37.62, region: 'Eastern Europe', place: 'Kupiansk' },
@@ -33,113 +36,340 @@ const PLACES = [
   { keys: ['jerusalem'], lat: 31.78, lon: 35.22, region: 'Middle East', place: 'Jerusalem' },
   { keys: ['tehran'], lat: 35.69, lon: 51.39, region: 'Middle East', place: 'Tehran' },
   { keys: ['bandar abbas'], lat: 27.18, lon: 56.28, region: 'Persian Gulf', place: 'Bandar Abbas' },
-  { keys: ['iran'], lat: 32.43, lon: 53.69, region: 'Middle East', place: 'Iran' },
+  { keys: ['iran', 'iranian', 'irgc'], lat: 32.43, lon: 53.69, region: 'Middle East', place: 'Iran' },
   { keys: ['taipei'], lat: 25.03, lon: 121.57, region: 'East / SE Asia', place: 'Taipei' },
   { keys: ['taiwan', 'taiwan strait'], lat: 23.7, lon: 121.0, region: 'East / SE Asia', place: 'Taiwan' },
   { keys: ['beijing', 'peking'], lat: 39.9, lon: 116.4, region: 'East / SE Asia', place: 'Beijing' },
   { keys: ['south china sea'], lat: 12.0, lon: 114.0, region: 'East / SE Asia', place: 'South China Sea' },
   { keys: ['washington', 'white house', 'pentagon'], lat: 38.91, lon: -77.04, region: 'Americas', place: 'Washington' },
+  { keys: ['louisiana', 'new orleans', 'baton rouge'], lat: 30.98, lon: -91.96, region: 'Americas', place: 'Louisiana' },
   { keys: ['greenland'], lat: 72.0, lon: -40.0, region: 'Americas', place: 'Greenland' },
   { keys: ['gaza', 'rafah', 'khan younis'], lat: 31.5, lon: 34.47, region: 'Middle East', place: 'Gaza' },
   { keys: ['west bank', 'ramallah'], lat: 31.9, lon: 35.2, region: 'Middle East', place: 'West Bank' },
-  { keys: ['israel'], lat: 31.78, lon: 35.22, region: 'Middle East', place: 'Israel' },
-  { keys: ['beirut', 'lebanon'], lat: 33.89, lon: 35.5, region: 'Middle East', place: 'Lebanon' },
-  { keys: ['damascus', 'syria'], lat: 33.51, lon: 36.29, region: 'Middle East', place: 'Syria' },
+  { keys: ['israel', 'israeli', 'idf'], lat: 31.78, lon: 35.22, region: 'Middle East', place: 'Israel' },
+  { keys: ['beirut', 'lebanon', 'lebanese', 'hezbollah'], lat: 33.89, lon: 35.5, region: 'Middle East', place: 'Lebanon' },
+  { keys: ['damascus', 'syria', 'syrian'], lat: 33.51, lon: 36.29, region: 'Middle East', place: 'Syria' },
   { keys: ['hodeidah', 'hudaydah', 'aden'], lat: 14.8, lon: 42.95, region: 'Red Sea / Bab el-Mandeb', place: 'Yemen coast' },
-  { keys: ['sanaa', "sana'a", 'yemen', 'houthi'], lat: 15.35, lon: 44.21, region: 'Middle East', place: 'Yemen' },
-  { keys: ['baghdad', 'iraq'], lat: 33.31, lon: 44.37, region: 'Middle East', place: 'Iraq' },
-  { keys: ['cairo', 'egypt'], lat: 30.04, lon: 31.24, region: 'Africa', place: 'Egypt' },
-  { keys: ['khartoum', 'sudan'], lat: 15.5, lon: 32.56, region: 'Africa', place: 'Sudan' },
-  { keys: ['sahel', 'mali', 'niger', 'burkina'], lat: 15.5, lon: 0.0, region: 'Africa', place: 'Sahel' },
-  { keys: ['nigeria', 'lagos', 'abuja'], lat: 9.08, lon: 8.68, region: 'Africa', place: 'Nigeria' },
+  { keys: ['sanaa', "sana'a", 'yemen', 'houthi', 'houthis'], lat: 15.35, lon: 44.21, region: 'Middle East', place: 'Yemen' },
+  { keys: ['baghdad', 'iraq', 'iraqi'], lat: 33.31, lon: 44.37, region: 'Middle East', place: 'Iraq' },
+  { keys: ['cairo', 'egypt', 'egyptian'], lat: 30.04, lon: 31.24, region: 'Africa', place: 'Egypt' },
+  { keys: ['khartoum', 'sudan', 'sudanese'], lat: 15.5, lon: 32.56, region: 'Africa', place: 'Sudan' },
+  { keys: ['sahel'], lat: 15.5, lon: 0.0, region: 'Africa', place: 'Sahel' },
+  { keys: ['mali', 'bamako'], lat: 12.64, lon: -8.0, region: 'Africa', place: 'Mali' },
+  // "niger" alone — word-boundary so it does NOT match "nigeria"/"nigerian"
+  { keys: ['niger', 'niamey'], lat: 13.51, lon: 2.11, region: 'Africa', place: 'Niger' },
+  { keys: ['burkina', 'burkina faso', 'ouagadougou'], lat: 12.37, lon: -1.53, region: 'Africa', place: 'Burkina Faso' },
+  { keys: ['nigeria', 'nigerian', 'lagos', 'abuja'], lat: 9.08, lon: 8.68, region: 'Africa', place: 'Nigeria' },
   { keys: ['malawi'], lat: -13.25, lon: 34.3, region: 'Africa', place: 'Malawi' },
   { keys: ['equatorial guinea', 'malabo'], lat: 1.65, lon: 10.27, region: 'Africa', place: 'Equatorial Guinea' },
-  { keys: ['haiti', 'port-au-prince'], lat: 18.59, lon: -72.31, region: 'Americas', place: 'Haiti' },
-  { keys: ['brazil', 'brasilia', 'lula'], lat: -15.79, lon: -47.88, region: 'Americas', place: 'Brazil' },
-  { keys: ['islamabad', 'pakistan'], lat: 33.68, lon: 73.05, region: 'South Asia', place: 'Pakistan' },
-  { keys: ['new delhi', 'delhi', 'india'], lat: 28.61, lon: 77.21, region: 'South Asia', place: 'India' },
+  { keys: ['nepal', 'nepalese', 'nepali', 'kathmandu'], lat: 27.72, lon: 85.32, region: 'South Asia', place: 'Nepal' },
+  { keys: ['greece', 'greek', 'athens'], lat: 37.98, lon: 23.73, region: 'Europe', place: 'Greece' },
+  { keys: ['haiti', 'port-au-prince', 'haitian'], lat: 18.59, lon: -72.31, region: 'Americas', place: 'Haiti' },
+  { keys: ['bolivia', 'bolivian', 'la paz'], lat: -16.5, lon: -68.15, region: 'Americas', place: 'Bolivia' },
+  { keys: ['brazil', 'brasilia', 'brazilian', 'lula'], lat: -15.79, lon: -47.88, region: 'Americas', place: 'Brazil' },
+  { keys: ['islamabad', 'pakistan', 'pakistani'], lat: 33.68, lon: 73.05, region: 'South Asia', place: 'Pakistan' },
+  { keys: ['new delhi', 'delhi', 'india', 'indian'], lat: 28.61, lon: 77.21, region: 'South Asia', place: 'India' },
   { keys: ['pyongyang', 'north korea', 'dprk'], lat: 39.04, lon: 125.76, region: 'East / SE Asia', place: 'North Korea' },
-  { keys: ['seoul', 'south korea'], lat: 37.57, lon: 126.98, region: 'East / SE Asia', place: 'South Korea' },
-  { keys: ['tokyo', 'japan'], lat: 35.68, lon: 139.69, region: 'East / SE Asia', place: 'Japan' },
-  { keys: ['manila', 'philippines'], lat: 14.6, lon: 120.98, region: 'East / SE Asia', place: 'Philippines' },
+  { keys: ['seoul', 'south korea', 'korean peninsula'], lat: 37.57, lon: 126.98, region: 'East / SE Asia', place: 'South Korea' },
+  { keys: ['tokyo', 'japan', 'japanese'], lat: 35.68, lon: 139.69, region: 'East / SE Asia', place: 'Japan' },
+  { keys: ['manila', 'philippines', 'philippine'], lat: 14.6, lon: 120.98, region: 'East / SE Asia', place: 'Philippines' },
   { keys: ['strasbourg'], lat: 48.57, lon: 7.75, region: 'Europe', place: 'Strasbourg' },
-  { keys: ['london', 'united kingdom', 'britain', 'british'], lat: 51.51, lon: -0.13, region: 'Europe', place: 'London' },
-  { keys: ['paris', 'france'], lat: 48.86, lon: 2.35, region: 'Europe', place: 'Paris' },
-  { keys: ['berlin', 'germany'], lat: 52.52, lon: 13.4, region: 'Europe', place: 'Berlin' },
-  { keys: ['warsaw', 'poland'], lat: 52.23, lon: 21.01, region: 'Europe', place: 'Warsaw' },
+  { keys: ['london', 'united kingdom', 'britain', 'british', 'uk '], lat: 51.51, lon: -0.13, region: 'Europe', place: 'London' },
+  { keys: ['paris', 'france', 'french'], lat: 48.86, lon: 2.35, region: 'Europe', place: 'Paris' },
+  { keys: ['berlin', 'germany', 'german', 'bundeswehr'], lat: 52.52, lon: 13.4, region: 'Europe', place: 'Berlin' },
+  { keys: ['warsaw', 'poland', 'polish'], lat: 52.23, lon: 21.01, region: 'Europe', place: 'Warsaw' },
   { keys: ['ukraine', 'ukrainian'], lat: 49.0, lon: 32.0, region: 'Eastern Europe', place: 'Ukraine' },
-  { keys: ['russia', 'russian'], lat: 55.76, lon: 37.62, region: 'Europe', place: 'Russia' },
+  { keys: ['russia', 'russian', 'kremlin'], lat: 55.76, lon: 37.62, region: 'Europe', place: 'Russia' },
 ];
 
+/** Region labels only — NEVER used as map pin coords (no Global [20,0] jitter). */
 const REGION_FALLBACK = {
-  Global: { lat: 20, lon: 0, region: 'Global' },
-  'Middle East': { lat: 29, lon: 45, region: 'Middle East' },
-  Europe: { lat: 50, lon: 10, region: 'Europe' },
-  'Eastern Europe': { lat: 49, lon: 32, region: 'Eastern Europe' },
-  Americas: { lat: 38, lon: -95, region: 'Americas' },
-  Africa: { lat: 5, lon: 20, region: 'Africa' },
-  'East / SE Asia': { lat: 15, lon: 105, region: 'East / SE Asia' },
-  'South Asia': { lat: 22, lon: 78, region: 'South Asia' },
-  'Red Sea / Bab el-Mandeb': { lat: 14.5, lon: 42.5, region: 'Red Sea / Bab el-Mandeb' },
-  'Persian Gulf': { lat: 26.5, lon: 56, region: 'Persian Gulf' },
+  Global: { lat: null, lon: null, region: 'Global' },
+  'Middle East': { lat: null, lon: null, region: 'Middle East' },
+  Europe: { lat: null, lon: null, region: 'Europe' },
+  'Eastern Europe': { lat: null, lon: null, region: 'Eastern Europe' },
+  Americas: { lat: null, lon: null, region: 'Americas' },
+  Africa: { lat: null, lon: null, region: 'Africa' },
+  'East / SE Asia': { lat: null, lon: null, region: 'East / SE Asia' },
+  'South Asia': { lat: null, lon: null, region: 'South Asia' },
+  'Red Sea / Bab el-Mandeb': { lat: null, lon: null, region: 'Red Sea / Bab el-Mandeb' },
+  'Persian Gulf': { lat: null, lon: null, region: 'Persian Gulf' },
 };
 
-/**
- * Scan text for first matching place keyword (case-insensitive).
- * @param {string} text
- * @returns {PlaceHit | null}
- */
-export function geocodeFromText(text) {
-  const hay = String(text || '').toLowerCase();
-  if (!hay.trim()) return null;
-  for (const p of PLACES) {
-    for (const key of p.keys) {
-      if (hay.includes(key)) {
-        return { lat: p.lat, lon: p.lon, region: p.region, place: p.place };
-      }
-    }
-  }
-  return null;
+/** Verbs / context that mark an impact location nearby in text. */
+const IMPACT_CONTEXT =
+  /\b(attack|attacks|attacked|strike|strikes|struck|missile|missiles|drone|drones|bomb|bombs|bombed|bombing|intercept|intercepted|interception|hit|hits|hitting|targeted|targeting|target|explosion|explode|exploded|invasion|invade|invaded|shelling|shelled|killed|killing|deaths?|fire|fires|burning|over|near|above|in|at|from|towards|toward|against|raid|raids|raided|assault|assaulted|bombard|ballistic|rocket|rockets|artillery|airstrike|airstrikes|warhead|clash|clashes|offensive|defensive|flood|floods|flooding|earthquake|quake|tsunami|wildfire|cyclone|hurricane|typhoon|sinking|hijack|hijacked|piracy|blockade|mine|mined|ied)\b/i;
+
+const SECURITY_SIGNAL =
+  /\b(war|warfare|conflict|combat|military|army|navy|air\s*force|troops?|soldier|forces?|militia|insurgent|rebel|coup|junta|nato|pentagon|missile|drone|bomb|airstrike|shelling|artillery|invasion|occupy|occupied|occupation|attack|terror|terrorism|isis|islamic\s*state|al-?qaeda|houthis?|hezbollah|hamas|idf|irgc|nuclear|sanctions?|embargo|blockade|chokepoint|hormuz|bab\s*el-?mandeb|piracy|hijack|maritime|warship|destroyer|frigate|carrier|submarine|cyber\s*(attack|war|espionage|ops)?|ransomware|nation[- ]state|espionage|sabotage|assassination|hostage|kidnap|killed|killing|murder|ied|vbiied|car\s*bomb|suicide\s*bomb|mass\s*casualty|genocide|ethnic\s*cleansing|refugee\s*crisis|humanitarian\s*crisis|famine|earthquake|flood|floods|flooding|tsunami|wildfire|cyclone|hurricane|typhoon|volcano|outbreak|pandemic|chemical\s*weapon|biological\s*weapon|wmd|ballistic|hypersonic|airspace|no[- ]fly|ceasefire|armistice|peacekeeping|un\s*security|security\s*council|gulf\s*security|defense|defence|deterrence|mobilization|mobilisation|conscription|martial\s*law|curfew|riot|uprising|insurrection|separatist|annex|annexation|frontline|front\s*line|trench|drone\s*swarm|air\s*defense|air\s*defence|intercept|radar|satellite\s*weapon|space\s*weapon|on[- ]orbit|extradit|trial|islamic\s*state)\b/i;
+
+const NON_SECURITY =
+  /\b(sunlounger|sunbed|beach\s*fight|parakeet|converse|advert|advertisement|sneaker|fashion|golf|pga|nfl|nba|mlb|nhl|premier\s*league|champions\s*league|super\s*bowl|touchdown|running\s*back|quarterback|wide\s*receiver|bucs|browns|falcons|49ers|workout|sport|sports|football|soccer|basketball|baseball|tennis|olympics?|celebrity|red\s*carpet|hollywood|podcast\s*post|cat\s*species|feline|house\s*fire|firefighter|married|wedding|head\s*teacher|abuser|justice|netflix|hollywood|streaming|box\s*office|album|concert|festival\s*ticket|recipe|restaurant|travel\s*guide|holiday|vacation|lifestyle)\b/i;
+
+function escapeRe(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/** Word-boundary-ish includes (avoids niger⊂nigerian, iran⊂iranian handled via explicit keys). */
+function keyIndex(hay, key) {
+  const k = String(key).toLowerCase();
+  if (!k) return -1;
+  const re = new RegExp(`(?:^|[^a-z0-9])${escapeRe(k)}(?=[^a-z0-9]|$)`, 'i');
+  const m = re.exec(hay);
+  return m ? m.index + (m[0].length > k.length ? m[0].length - k.length : 0) : -1;
 }
 
 /**
- * Prefer title hits, then summary, then feed/default region coords (+ optional jitter).
- * @param {{ title?: string, summary?: string, region?: string, jitterIndex?: number, jitterSalt?: string }} opts
+ * All place hits in text with character index (first key match per place entry).
+ * @param {string} text
+ * @returns {Array<PlaceHit & { index: number, key: string }>}
  */
-export function resolveEventGeo(opts = {}) {
-  const titleHit = geocodeFromText(opts.title || '');
-  if (titleHit) return { ...titleHit, matchedFrom: 'title' };
-  const summaryHit = geocodeFromText(opts.summary || '');
-  if (summaryHit) return { ...summaryHit, matchedFrom: 'summary' };
+export function findPlaceHits(text) {
+  const hay = String(text || '').toLowerCase();
+  if (!hay.trim()) return [];
+  /** @type {Array<PlaceHit & { index: number, key: string }>} */
+  const hits = [];
+  for (const p of PLACES) {
+    let best = -1;
+    let bestKey = '';
+    for (const key of p.keys) {
+      const idx = keyIndex(hay, key);
+      if (idx >= 0 && (best < 0 || idx < best)) {
+        best = idx;
+        bestKey = key;
+      }
+    }
+    if (best >= 0) {
+      hits.push({ lat: p.lat, lon: p.lon, region: p.region, place: p.place, index: best, key: bestKey });
+    }
+  }
+  hits.sort((a, b) => a.index - b.index || b.key.length - a.key.length);
+  return hits;
+}
 
-  const fb = REGION_FALLBACK[opts.region] || REGION_FALLBACK.Global;
-  const salt = String(opts.jitterSalt || opts.title || '');
-  const i = Number(opts.jitterIndex) || 0;
-  let hash = 0;
-  for (let c = 0; c < salt.length; c++) hash = (hash * 31 + salt.charCodeAt(c)) | 0;
-  const jLat = ((((Math.abs(hash) * 17 + i * 13) % 100) / 100) - 0.5) * 8;
-  const jLon = ((((Math.abs(hash) * 29 + i * 7) % 100) / 100) - 0.5) * 12;
+/**
+ * Scan text for best place: prefer impact-context proximity, else first keyword.
+ * @param {string} text
+ * @returns {(PlaceHit & { impact: boolean }) | null}
+ */
+export function geocodeFromText(text) {
+  const hay = String(text || '');
+  const hits = findPlaceHits(hay);
+  if (!hits.length) return null;
+
+  const lower = hay.toLowerCase();
+
+  // Prep + place: "attack on Moscow", "fire in Louisiana", "over Kyiv"
+  const prepRe = /\b(?:on|in|at|over|near|above|towards|toward|against|into|from)\s+/gi;
+  const prepEnds = [];
+  let pm;
+  while ((pm = prepRe.exec(lower)) !== null) {
+    prepEnds.push(pm.index + pm[0].length);
+  }
+
+  const impactRe = new RegExp(IMPACT_CONTEXT.source, 'gi');
+  const impactIdxs = [];
+  let m;
+  while ((m = impactRe.exec(lower)) !== null) {
+    impactIdxs.push({ index: m.index, len: m[0].length, word: m[0].toLowerCase() });
+  }
+
+  function scoreHit(hit) {
+    let score = 0;
+    let impact = false;
+    // Strong: place starts within 0..24 chars after a location prep
+    for (const pe of prepEnds) {
+      const gap = hit.index - pe;
+      if (gap >= 0 && gap <= 24) {
+        score += 100 - gap;
+        impact = true;
+      }
+    }
+    // Strong: place shortly AFTER attack/strike/hit/targeted/bomb/explosion/killed
+    for (const ii of impactIdxs) {
+      const after = hit.index - (ii.index + ii.len);
+      const dist = Math.abs(hit.index - ii.index);
+      if (after >= 0 && after <= 48) {
+        score += 80 - after;
+        impact = true;
+      } else if (dist <= 56) {
+        score += 40 - dist / 2;
+        impact = true;
+      }
+    }
+    // Slight preference for earlier mentions when scores tie
+    score += Math.max(0, 10 - hit.index / 20);
+    // Longer key = more specific
+    score += Math.min(hit.key.length, 20) / 10;
+    return { score, impact };
+  }
+
+  let best = null;
+  for (const hit of hits) {
+    const { score, impact } = scoreHit(hit);
+    if (!best || score > best.score) {
+      best = { hit, score, impact };
+    }
+  }
+  const h = best.hit;
   return {
-    lat: fb.lat + jLat,
-    lon: fb.lon + jLon,
-    region: fb.region,
-    place: null,
-    matchedFrom: 'region-fallback',
+    lat: h.lat,
+    lon: h.lon,
+    region: h.region,
+    place: h.place,
+    impact: best.impact || best.score >= 40,
   };
 }
 
-/** Coords near Global base [20,0] with RSS-style jitter, or region tagged Global. */
+/**
+ * Lifestyle / sports / entertainment — never map-pin.
+ * @param {string} text
+ */
+export function isNonSecurityNoise(text) {
+  return NON_SECURITY.test(String(text || ''));
+}
+
+/**
+ * Conflict / security / disaster / maritime / cyber-nation-state signals.
+ * @param {string} text
+ * @param {string} [layer]
+ * @param {string} [falloutRisk]
+ */
+export function hasSecuritySignal(text, layer, falloutRisk) {
+  const hay = String(text || '');
+  if (isNonSecurityNoise(hay)) return false;
+  if (SECURITY_SIGNAL.test(hay)) return true;
+  const lay = String(layer || '').toLowerCase();
+  if (['terrorism', 'maritime', 'sanctions', 'cyber'].includes(lay) && !isNonSecurityNoise(hay)) {
+    // cyber alone needs nation-state / attack flavour unless fallout elevated
+    if (lay === 'cyber') {
+      return /\b(nation[- ]state|espionage|ransomware|critical\s*infrastructure|grid|pipeline|military|defense|defence|ministry|government)\b/i.test(
+        hay,
+      );
+    }
+    return true;
+  }
+  const risk = String(falloutRisk || '').toLowerCase();
+  if ((risk === 'medium' || risk === 'high' || risk === 'critical') && SECURITY_SIGNAL.test(hay)) return true;
+  return false;
+}
+
+/**
+ * Whether an event with a resolved place should appear on the SecurityMap.
+ * Requires: place hit + (security signal OR falloutRisk medium+ with place).
+ */
+export function computeMapEligible(opts = {}) {
+  const text = `${opts.title || ''} ${opts.summary || ''} ${opts.curatedSummary || ''}`;
+  const hasPlace = opts.hasPlace === true || (opts.place != null && opts.place !== '');
+  const latOk = Number.isFinite(Number(opts.lat));
+  const lonOk = Number.isFinite(Number(opts.lon));
+  if (!hasPlace || !latOk || !lonOk) return false;
+  if (isNonSecurityNoise(text)) return false;
+  if (hasSecuritySignal(text, opts.layer, opts.falloutRisk)) return true;
+  const risk = String(opts.falloutRisk || '').toLowerCase();
+  if ((risk === 'medium' || risk === 'high' || risk === 'critical') && hasPlace) {
+    // medium+ fallout with a real place — still drop pure lifestyle
+    return !isNonSecurityNoise(text);
+  }
+  // disaster layer with place (floods, quakes) even if keyword thin
+  if (String(opts.layer || '').toLowerCase() === 'disaster' && hasPlace) return true;
+  return false;
+}
+
+/**
+ * Prefer title impact hits, then title any place, then summary impact, then summary place.
+ * Never uses feed region "Global" / account regionHint as map coords.
+ * @param {{ title?: string, summary?: string, region?: string, layer?: string, falloutRisk?: string, curatedSummary?: string, jitterIndex?: number, jitterSalt?: string, regionHint?: string }} opts
+ * @returns {GeoResolve}
+ */
+export function resolveEventGeo(opts = {}) {
+  // Explicitly ignore regionHint / feed Global for coordinates
+  const title = opts.title || '';
+  const summary = opts.summary || '';
+
+  const titleHit = geocodeFromText(title);
+  if (titleHit) {
+    const mapEligible = computeMapEligible({
+      title,
+      summary,
+      curatedSummary: opts.curatedSummary,
+      layer: opts.layer,
+      falloutRisk: opts.falloutRisk,
+      lat: titleHit.lat,
+      lon: titleHit.lon,
+      place: titleHit.place,
+      hasPlace: true,
+    });
+    return {
+      lat: titleHit.lat,
+      lon: titleHit.lon,
+      region: titleHit.region,
+      place: titleHit.place,
+      matchedFrom: titleHit.impact ? 'title-impact' : 'title',
+      mapEligible,
+    };
+  }
+
+  const summaryHit = geocodeFromText(summary);
+  if (summaryHit) {
+    const mapEligible = computeMapEligible({
+      title,
+      summary,
+      curatedSummary: opts.curatedSummary,
+      layer: opts.layer,
+      falloutRisk: opts.falloutRisk,
+      lat: summaryHit.lat,
+      lon: summaryHit.lon,
+      place: summaryHit.place,
+      hasPlace: true,
+    });
+    return {
+      lat: summaryHit.lat,
+      lon: summaryHit.lon,
+      region: summaryHit.region,
+      place: summaryHit.place,
+      matchedFrom: summaryHit.impact ? 'summary-impact' : 'summary',
+      mapEligible,
+    };
+  }
+
+  // No place keyword — do NOT jitter Global [20,0]. Keep region label only.
+  const regionLabel =
+    opts.region && opts.region !== 'Global'
+      ? opts.region
+      : REGION_FALLBACK[opts.region]?.region || 'Global';
+  return {
+    lat: null,
+    lon: null,
+    region: regionLabel,
+    place: null,
+    matchedFrom: 'none',
+    mapEligible: false,
+  };
+}
+
+/**
+ * Coords that look like the old Global [20,0] ±jitter cluster (not real Sahel with place).
+ * Sahel true hits are ~[15.5, 0] but carry place/region Africa from keyword — callers
+ * should prefer place-based eligibility over this heuristic alone.
+ */
 export function looksLikeGlobalJitter(lat, lon, region) {
-  if (region === 'Global') return true;
+  // null/undefined coords are "unset", not Global jitter pins
+  if (lat == null || lon == null || lat === '' || lon === '') {
+    return region === 'Global';
+  }
   const la = Number(lat);
   const lo = Number(lon);
-  if (!Number.isFinite(la) || !Number.isFinite(lo)) return true;
-  return la > 12 && la < 28 && lo > -10 && lo < 10;
+  if (!Number.isFinite(la) || !Number.isFinite(lo)) {
+    return region === 'Global';
+  }
+  // Old RSS jitter envelope around [20,0] (excludes Red Sea lon~38, Nigeria lat~9)
+  if (la > 12 && la < 28 && lo > -10 && lo < 10) return true;
+  return region === 'Global' && Math.abs(la - 20) < 8 && Math.abs(lo - 0) < 12;
 }
 
 /**
  * Re-geocode events on wrong Global jitter when title/summary clearly names a place.
- * Title matches preferred.
  * @param {Array<object>} events
  */
 export function regeocodeWrongGlobal(events) {
@@ -147,38 +377,102 @@ export function regeocodeWrongGlobal(events) {
   const out = events.map((e) => {
     if (!looksLikeGlobalJitter(e.lat, e.lon, e.region)) return e;
     const hit = geocodeFromText(e.title || '') || geocodeFromText(e.summary || '');
-    if (!hit) return e;
+    if (!hit) {
+      // Clear bogus Global jitter coords — not map-eligible
+      return { ...e, lat: null, lon: null, region: e.region === 'Global' ? 'Global' : e.region, mapEligible: false };
+    }
     fixed++;
-    return { ...e, lat: hit.lat, lon: hit.lon, region: hit.region };
+    const mapEligible = computeMapEligible({
+      ...e,
+      lat: hit.lat,
+      lon: hit.lon,
+      place: hit.place,
+      hasPlace: true,
+    });
+    return { ...e, lat: hit.lat, lon: hit.lon, region: hit.region, mapEligible };
   });
   return { events: out, fixed };
 }
 
 /**
- * Re-geocode ALL events whose title/summary names a known place (title wins).
- * Also fills missing/non-finite lat/lon from place or Global fallback so markers always render.
+ * Re-geocode ALL events: impact-first place from title/summary; never fill Global jitter.
+ * Sets mapEligible on every row.
  */
 export function regeocodeAllNamed(events) {
   let fixed = 0;
+  let cleared = 0;
   let filled = 0;
-  const out = events.map((e, i) => {
-    const hit = geocodeFromText(e.title || '') || geocodeFromText(e.summary || '');
-    const latOk = Number.isFinite(Number(e.lat));
-    const lonOk = Number.isFinite(Number(e.lon));
-    if (hit) {
-      const same = Number(e.lat) === hit.lat && Number(e.lon) === hit.lon && e.region === hit.region;
+  const out = events.map((e) => {
+    const geo = resolveEventGeo({
+      title: e.title,
+      summary: e.summary,
+      curatedSummary: e.curatedSummary,
+      region: e.region,
+      layer: e.layer,
+      falloutRisk: e.falloutRisk,
+    });
+
+    if (geo.place) {
+      const same =
+        Number(e.lat) === geo.lat &&
+        Number(e.lon) === geo.lon &&
+        e.region === geo.region &&
+        e.mapEligible === geo.mapEligible;
       if (!same) fixed++;
-      return { ...e, lat: hit.lat, lon: hit.lon, region: hit.region };
+      return {
+        ...e,
+        lat: geo.lat,
+        lon: geo.lon,
+        region: geo.region,
+        mapEligible: geo.mapEligible,
+      };
     }
-    if (!latOk || !lonOk) {
-      filled++;
-      const fb = resolveEventGeo({ title: e.title, summary: e.summary, region: e.region || 'Global', jitterIndex: i, jitterSalt: e.id || e.title });
-      return { ...e, lat: fb.lat, lon: fb.lon, region: e.region || fb.region };
+
+    // No place keyword in title/summary — never keep Global jitter or stale pins on the map.
+    // GDELT rows with real instrumented coords may keep them only when source says so AND
+    // coords are finite and outside the Global jitter envelope.
+    const src = String(e.source || '');
+    const la = e.lat == null ? NaN : Number(e.lat);
+    const lo = e.lon == null ? NaN : Number(e.lon);
+    const latOk = Number.isFinite(la);
+    const lonOk = Number.isFinite(lo);
+    const wasJitter = looksLikeGlobalJitter(e.lat, e.lon, e.region);
+    const gdeltKeep =
+      /^GDELT/i.test(src) &&
+      latOk &&
+      lonOk &&
+      !wasJitter &&
+      !(Math.abs(la) < 0.01 && Math.abs(lo) < 0.01);
+
+    if (gdeltKeep) {
+      const mapEligible = computeMapEligible({
+        ...e,
+        hasPlace: true,
+        place: e.region || 'gdelt',
+      });
+      if (e.mapEligible !== mapEligible) fixed++;
+      return { ...e, mapEligible };
     }
-    return e;
+
+    if (latOk || lonOk || e.mapEligible !== false) cleared++;
+    return {
+      ...e,
+      lat: null,
+      lon: null,
+      region: e.region && e.region !== 'Global' ? e.region : geo.region,
+      mapEligible: false,
+    };
   });
-  return { events: out, fixed, filled };
+  return { events: out, fixed, filled, cleared };
 }
 
-export { PLACES, REGION_FALLBACK };
+/**
+ * Apply map eligibility + clear Global-jitter pins across an events array.
+ * Preferred one-shot for events.json refresh (does not wipe non-geo fields).
+ */
+export function applyMapEligibility(events) {
+  const { events: out, fixed, cleared } = regeocodeAllNamed(events);
+  return { events: out, fixed, cleared };
+}
 
+export { PLACES, REGION_FALLBACK, IMPACT_CONTEXT, SECURITY_SIGNAL, NON_SECURITY };

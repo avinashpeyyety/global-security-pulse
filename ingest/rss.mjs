@@ -150,10 +150,14 @@ async function fetchFeed(feed) {
     const observed = it.pub ? new Date(it.pub) : new Date(Date.now() - i * 3600e3);
     const title = it.title.slice(0, 160);
     const summary = (it.desc || it.title).slice(0, 280);
+    const layer = guessLayer(`${it.title} ${it.desc}`);
+    const falloutRisk = severityToFallout(sev);
     const geo = resolveEventGeo({
       title,
       summary,
       region: feed.region,
+      layer,
+      falloutRisk,
       jitterIndex: i,
       jitterSalt: slugId(feed.id, it.title),
     });
@@ -161,13 +165,14 @@ async function fetchFeed(feed) {
       id: slugId(feed.id, it.title),
       title,
       summary,
-      layer: guessLayer(`${it.title} ${it.desc}`),
+      layer,
       severity: sev,
-      falloutRisk: severityToFallout(sev),
+      falloutRisk,
       confidence: feed.reliability === 'A' ? 0.72 : 0.58,
       lat: geo.lat,
       lon: geo.lon,
       region: geo.region,
+      mapEligible: geo.mapEligible === true,
       source: `rss:${feed.name}`,
       sourceReliability: feed.reliability,
       url: it.link || undefined,
@@ -204,8 +209,8 @@ async function main() {
       : [];
   const { events: jitterFixed, fixed: regeoFixed } = regeocodeWrongGlobal(rawExisting);
   if (regeoFixed) console.log(`  re-geocoded ${regeoFixed} Global-jitter event(s) from title/summary places`);
-  const { events: existing, fixed: namedFixed, filled } = regeocodeAllNamed(jitterFixed);
-  if (namedFixed || filled) console.log(`  regeocodeAllNamed: updated ${namedFixed}, filled missing coords ${filled}`);
+  const { events: existing, fixed: namedFixed, cleared } = regeocodeAllNamed(jitterFixed);
+  if (namedFixed || cleared) console.log(`  regeocodeAllNamed: updated ${namedFixed}, cleared Global-jitter ${cleared}`);
 
   const incoming = [];
   const notes = [];

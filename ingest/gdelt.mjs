@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stampMeta } from './lib/stamp-meta.mjs';
-import { geocodeFromText } from './lib/geocode.mjs';
+import { geocodeFromText, computeMapEligible } from './lib/geocode.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -71,24 +71,38 @@ async function fetchGdelt() {
         region = hit.region;
       }
     }
+    const layer = guessLayer(`${title} ${props.url ?? ''}`);
+    const falloutRisk = severityToFallout(severity);
+    const hasPlace = Number.isFinite(la) && Number.isFinite(lo) && !(Math.abs(la) < 0.01 && Math.abs(lo) < 0.01);
+    const mapEligible = computeMapEligible({
+      title,
+      summary,
+      layer,
+      falloutRisk,
+      lat: la,
+      lon: lo,
+      hasPlace,
+      place: hasPlace ? region : null,
+    });
     return {
       id: `gdelt-${Date.now()}-${i}`,
       title,
       summary,
-      layer: guessLayer(`${title} ${props.url ?? ''}`),
+      layer,
       severity,
-      falloutRisk: severityToFallout(severity),
+      falloutRisk,
       confidence: 0.55,
-      lat: la,
-      lon: lo,
+      lat: hasPlace ? la : null,
+      lon: hasPlace ? lo : null,
       region,
+      mapEligible,
       source: 'GDELT GEO',
       sourceReliability: 'B',
       url: props.url || undefined,
       observedAt: now,
       ingestedAt: now,
     };
-  }).filter((e) => Number.isFinite(e.lat) && Number.isFinite(e.lon));
+  });
 }
 
 function severityToFallout(sev) {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T21:32:10.375Z",
+  "generatedAt": "2026-09-20T21:36:34.290Z",
   "events": [
     {
       "id": "rss-bbc-world-man-82-dies-after-beach-fight-with-76-year-old-o",
@@ -9,9 +9,9 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 21.6,
-      "lon": 5.279999999999999,
-      "region": "Global",
+      "lat": 37.98,
+      "lon": 23.73,
+      "region": "Europe",
       "source": "rss:BBC World",
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss",
@@ -32,7 +32,8 @@
           "url": "https://x.com/Reuters/status/2101759578471809390",
           "observedAt": "2026-09-20T20:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-pm-urges-gulf-security-framework-with-iran",
@@ -42,8 +43,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 32.43,
-      "lon": 53.69,
+      "lat": 25.29,
+      "lon": 51.53,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -71,7 +72,8 @@
           "url": "https://x.com/AJEnglish/status/2101763328779399367",
           "observedAt": "2026-09-20T20:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "curated-x-reuters-2101778467545096594",
@@ -91,14 +93,15 @@
       "severity": 3,
       "falloutRisk": "critical",
       "confidence": 0.55,
-      "lat": 17.238,
-      "lon": 0.4180000000000005,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/Reuters/status/2101778467545096594",
       "observedAt": "2026-09-20T21:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-argentina-s-left-stages-march-of-anger-over-mile",
@@ -108,8 +111,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 31.240000000000002,
-      "lon": 40.44,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -131,7 +134,8 @@
           "url": "https://x.com/CENTCOM/status/2101400206784815543",
           "observedAt": "2026-09-19T00:00:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-eighteen-suspects-extradited-to-us-over-haitian-",
@@ -150,7 +154,8 @@
       "observedAt": "2026-09-20T20:31:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Eighteen suspects extradited to US over Haitian president’s 2021 killing — Federal court in Florida to try men accused of orchestrating the transnational plot to kill Jovenel Moise from US soil.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "curated-x-ajenglish-2101771390391042208",
@@ -170,14 +175,15 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.55,
-      "lat": 24.8,
-      "lon": 38.6616,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/AJEnglish/status/2101771390391042208",
       "observedAt": "2026-09-20T20:31:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-german-chancellor-merz-calls-state-election-a-di",
@@ -196,7 +202,8 @@
       "observedAt": "2026-09-20T20:21:40.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on — Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "curated-x-reuters-2101758312152760656",
@@ -223,7 +230,8 @@
       "sourceReliability": "A",
       "url": "https://x.com/Reuters/status/2101758312152760656",
       "observedAt": "2026-09-20T20:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": true
     },
     {
       "id": "curated-x-ajenglish-2101760834170917301",
@@ -243,14 +251,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 27.459600000000002,
-      "lon": 41.55,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/AJEnglish/status/2101760834170917301",
       "observedAt": "2026-09-20T20:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-more-than-a-dozen-arrested-in-connection-with-20",
@@ -269,7 +278,8 @@
       "observedAt": "2026-09-20T20:17:44.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Jovenel Moïse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Moïse, according to US officials.Moïse, 53, was shot dead on 7 July 2021, at his p",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-aljazeera-qatar-pm-describes-fallout-of-us-israel-war-on-i",
@@ -308,7 +318,8 @@
           "url": "https://x.com/AJEnglish/status/2101763328779399367",
           "observedAt": "2026-09-20T20:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "rss-aljazeera-us-china-open-high-level-talks-ahead-of-trump-xi",
@@ -318,8 +329,8 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.58,
-      "lat": 30.04,
-      "lon": 43.2,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -327,7 +338,8 @@
       "observedAt": "2026-09-20T19:42:13.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "US, China open high-level talks ahead of Trump-Xi summit — Scott Bessent and He Lifeng meet in New York for US-China talks ahead of the Trump-Xi meeting later this week.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-says-it-is-working-to-revive-iran-us-talks",
@@ -337,8 +349,8 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.58,
-      "lat": 32.43,
-      "lon": 53.69,
+      "lat": 25.29,
+      "lon": 51.53,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -366,7 +378,8 @@
           "url": "https://x.com/AJEnglish/status/2101763328779399367",
           "observedAt": "2026-09-20T20:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "rss-aljazeera-france-s-macron-and-canada-s-carney-announce-pla",
@@ -393,7 +406,8 @@
           "url": "https://x.com/AJEnglish/status/2101769650941886802",
           "observedAt": "2026-09-20T20:24:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "curated-x-bbcworld-2101752216419750339",
@@ -413,14 +427,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 19.2056,
-      "lon": -5.4148000000000005,
-      "region": "Global",
+      "lat": 27.72,
+      "lon": 85.32,
+      "region": "South Asia",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/BBCWorld/status/2101752216419750339",
       "observedAt": "2026-09-20T19:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": true
     },
     {
       "id": "curated-x-centcom-2101752852917968954",
@@ -440,14 +455,15 @@
       "severity": 3,
       "falloutRisk": "high",
       "confidence": 0.55,
-      "lat": 25.449199999999998,
-      "lon": 42.7336,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2101752852917968954",
       "observedAt": "2026-09-20T19:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-sister-of-pakistan-s-ex-pm-imran-khan-arrested",
@@ -474,7 +490,8 @@
           "url": "https://x.com/BBCWorld/status/2101749946676363386",
           "observedAt": "2026-09-20T19:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-how-will-saudi-arabia-deal-with-the-houthis",
@@ -501,7 +518,8 @@
           "url": "https://x.com/Reuters/status/2101770899753943435",
           "observedAt": "2026-09-20T20:30:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "rss-aljazeera-man-utd-salvage-fulham-draw-as-pressure-mounts-o",
@@ -511,8 +529,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 30.92,
-      "lon": 44.52,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -520,7 +538,8 @@
       "observedAt": "2026-09-20T18:32:03.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Man Utd salvage Fulham draw as pressure mounts on Carrick — Matheus Cunha strikes late as Manchester United seal a 1-1 draw at Fulham, but pressure mounts on Michael Carrick.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "curated-x-ajenglish-2101735768804753752",
@@ -540,14 +559,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 25.842,
-      "lon": 45.2124,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/AJEnglish/status/2101735768804753752",
       "observedAt": "2026-09-20T18:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-gaza-artists-honour-macklemore-for-supporting-pa",
@@ -566,7 +586,8 @@
       "observedAt": "2026-09-20T17:59:10.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
       "curatedSummary": "Gaza artists honour Macklemore for supporting Palestine — Artists in Gaza are painting murals on destroyed walls, honouring US rapper Macklemore for his support for Palestine.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-jerusalem-daily-israel-pardons-soldier-elor-azar",
@@ -585,7 +606,8 @@
       "observedAt": "2026-09-20T17:55:46.000Z",
       "ingestedAt": "2026-09-20T21:00:18.938Z",
       "curatedSummary": "Jerusalem Daily: Israel pardons soldier Elor Azaria",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-aljazeera-trump-tariffs-hit-canada-s-dairy-farmers-as-us-s",
@@ -595,8 +617,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 30.68,
-      "lon": 46.32,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
@@ -612,7 +634,8 @@
           "url": "https://x.com/AJEnglish/status/2101774649516339448",
           "observedAt": "2026-09-20T20:44:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "curated-x-ap-2101708475608809936",
@@ -632,14 +655,15 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.55,
-      "lat": 20.4272,
-      "lon": 2.7552,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/AP/status/2101708475608809936",
       "observedAt": "2026-09-20T17:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-trump-says-triumphal-arch-will-be-military-compl",
@@ -649,8 +673,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 22.8,
-      "lon": -3.24,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -666,7 +690,8 @@
           "url": "https://x.com/BBCWorld/status/2101715956959453301",
           "observedAt": "2026-09-20T17:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "curated-x-ap-2101702184354160723",
@@ -686,14 +711,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 18.538,
-      "lon": 5.1544,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/AP/status/2101702184354160723",
       "observedAt": "2026-09-20T16:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-uk_mto-2101700772211671278",
@@ -713,14 +739,15 @@
       "severity": 3,
       "falloutRisk": "medium",
       "confidence": 0.55,
-      "lat": 13.9528,
-      "lon": 40.054,
+      "lat": 20,
+      "lon": 38.5,
       "region": "Red Sea / Bab el-Mandeb",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/UK_MTO/status/2101700772211671278",
       "observedAt": "2026-09-20T16:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": true
     },
     {
       "id": "curated-x-ap-2101685400657936744",
@@ -740,14 +767,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 23.5104,
-      "lon": -5.644,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/AP/status/2101685400657936744",
       "observedAt": "2026-09-20T15:19:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "evt-001",
@@ -766,7 +794,8 @@
       "ingestedAt": "2026-09-20T13:30:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "Artillery exchanges near Kupiansk — Ukrainian and Russian forces exchange artillery fire northeast of Kupiansk; civilian infrastructure damaged.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-michelle-bachelet-withdraws-from-race-to-become-",
@@ -776,8 +805,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 17.12,
-      "lon": 2.88,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
@@ -799,7 +828,8 @@
           "url": "https://x.com/Reuters/status/2101757052229980325",
           "observedAt": "2026-09-20T20:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "evt-012",
@@ -808,8 +838,8 @@
       "layer": "disaster",
       "severity": 3,
       "confidence": 0.95,
-      "lat": 35.6,
-      "lon": 140.1,
+      "lat": null,
+      "lon": null,
       "region": "East Asia",
       "source": "USGS",
       "sourceReliability": "A",
@@ -817,7 +847,8 @@
       "ingestedAt": "2026-09-20T12:12:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Major earthquake M6.8 offshore — USGS reports M6.8 quake; tsunami watch briefly issued then cancelled.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-003",
@@ -843,7 +874,8 @@
           "url": "https://x.com/Reuters/status/2101770899753943435",
           "observedAt": "2026-09-20T20:30:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-largest-attack-on-moscow-sees-ukraine-fire-hundr",
@@ -882,7 +914,8 @@
           "url": "https://x.com/Ukraine/status/2101612308787053053",
           "observedAt": "2026-09-20T10:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "evt-007",
@@ -900,7 +933,8 @@
       "ingestedAt": "2026-09-20T10:30:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "UNSC session on Gaza ceasefire draft — Draft resolution circulated; abstention math unclear; markets watch oil risk premium.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-018",
@@ -918,7 +952,8 @@
       "ingestedAt": "2026-09-20T10:00:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "NATO maritime exercise begins — Standing naval group begins scheduled exercise in North Sea.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-002",
@@ -936,7 +971,8 @@
       "ingestedAt": "2026-09-20T09:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Drone swarm reported over Black Sea approaches — Multiple UAVs tracked near Odessa maritime corridor; air defenses activated.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-023",
@@ -954,7 +990,8 @@
       "ingestedAt": "2026-09-20T07:30:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "Missile test reported on peninsula — Short-range ballistic missile launch reported; trajectory toward sea.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-010",
@@ -972,7 +1009,8 @@
       "ingestedAt": "2026-09-20T07:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Protest escalation in capital square — Large anti-austerity protests; tear gas deployed; transport disrupted.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-ed-sheeran-admits-mistakes-at-first-show-since-m",
@@ -991,7 +1029,8 @@
       "observedAt": "2026-09-20T04:49:11.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
       "curatedSummary": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy — The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-014",
@@ -1009,7 +1048,8 @@
       "ingestedAt": "2026-09-20T05:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "PLA drills announced near Taiwan Strait — Live-fire windows published; commercial shipping advised to reroute.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-004",
@@ -1027,7 +1067,8 @@
       "ingestedAt": "2026-09-20T03:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Strait of Hormuz transit advisory elevated — Insurance premiums rise after shadow fleet near-miss reports near Hormuz.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-013",
@@ -1045,7 +1086,8 @@
       "ingestedAt": "2026-09-20T02:48:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "Wildfire smoke impacts air corridor — Dense smoke reduces visibility near major cargo hub; diversions issued.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-houthis-say-they-targeted-saudi-capital-with-bal",
@@ -1072,7 +1114,8 @@
           "url": "https://x.com/Reuters/status/2101770899753943435",
           "observedAt": "2026-09-20T20:30:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-our-head-teacher-was-an-abuser-we-joined-forces-",
@@ -1082,8 +1125,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 23.52,
-      "lon": -1.9199999999999997,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -1105,7 +1148,8 @@
           "url": "https://x.com/DefenseOne/status/2099579688624455805",
           "observedAt": "2026-09-14T00:00:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-nato-welcomes-greenland-deal-as-trump-says-it-wi",
@@ -1132,7 +1176,8 @@
           "url": "https://x.com/BBCWorld/status/2101725032598708299",
           "observedAt": "2026-09-20T18:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "evt-005",
@@ -1150,7 +1195,8 @@
       "ingestedAt": "2026-09-19T23:00:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "Ransomware hits regional energy utility — Operational technology segment isolated after ransomware; no confirmed spillover to SCADA.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-009",
@@ -1168,7 +1214,8 @@
       "ingestedAt": "2026-09-19T19:00:00.000Z",
       "falloutRisk": "high",
       "curatedSummary": "IED blast near convoy route in Sahel — IED strikes logistics convoy on Gao–Niamey corridor; casualties unconfirmed.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-019",
@@ -1194,7 +1241,8 @@
           "url": "https://x.com/DefenseOne/status/2100317561338343440",
           "observedAt": "2026-09-16T00:00:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "rss-bbc-world-converse-pulls-deeply-upsetting-advert-after-bac",
@@ -1204,8 +1252,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 19.84,
-      "lon": 0.9599999999999995,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -1221,7 +1269,8 @@
           "url": "https://x.com/AP/status/2101695389778788391",
           "observedAt": "2026-09-20T16:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-google-s-gemini-ai-hacked-three-companies-in-sec",
@@ -1231,8 +1280,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 21.84,
-      "lon": -1.8000000000000003,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:BBC World",
       "sourceReliability": "A",
@@ -1248,7 +1297,8 @@
           "url": "https://x.com/Reuters/status/2101775934877483304",
           "observedAt": "2026-09-20T20:50:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "evt-016",
@@ -1274,7 +1324,8 @@
           "url": "https://x.com/BBCWorld/status/2101749946676363386",
           "observedAt": "2026-09-20T19:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "evt-006",
@@ -1283,8 +1334,8 @@
       "layer": "cyber",
       "severity": 2,
       "confidence": 0.55,
-      "lat": 52.37,
-      "lon": 4.9,
+      "lat": null,
+      "lon": null,
       "region": "Western Europe",
       "source": "seed/intel note",
       "sourceReliability": "C",
@@ -1292,7 +1343,8 @@
       "ingestedAt": "2026-09-19T13:36:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "APT probing logistics firm VPN — Credential stuffing and MFA fatigue attempts against European freight forwarder.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-011",
@@ -1310,7 +1362,8 @@
       "ingestedAt": "2026-09-19T06:24:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "Port strike threat expands to second terminal — Dockworkers threaten expansion; container backlog risk elevates.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "evt-022",
@@ -1328,7 +1381,8 @@
       "ingestedAt": "2026-09-19T05:00:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Pirate boarding attempt Gulf of Guinea — Armed boarding attempt repelled; vessel resumes transit under naval escort.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "curated-x-centcom-2101292730030669968",
@@ -1348,14 +1402,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 31.213600000000003,
-      "lon": 49.1788,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2101292730030669968",
       "observedAt": "2026-09-19T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-defencehq-2101234920773353525",
@@ -1375,14 +1430,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 46.971999999999994,
-      "lon": 12.3036,
+      "lat": null,
+      "lon": null,
       "region": "Europe",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/DefenceHQ/status/2101234920773353525",
       "observedAt": "2026-09-19T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-nato-2101234850133049797",
@@ -1402,14 +1458,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 49.1704,
-      "lon": 10.667200000000001,
+      "lat": null,
+      "lon": null,
       "region": "Europe",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/NATO/status/2101234850133049797",
       "observedAt": "2026-09-19T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-men-deported-from-us-bound-and-beaten-in-equator",
@@ -1428,7 +1485,8 @@
       "observedAt": "2026-09-18T23:08:49.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Group trapped at Hotel Bamy after US removal as rights groups sound alarm over poor conditions and violenceTwo men that the Trump administration expelled to Equatorial Guinea were bound, fitted with bags over their heads, beaten and pushed down a flight of stairs, all in plain vi",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-survivors-recount-panic-and-struggle-to-breathe-",
@@ -1438,8 +1496,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 15.5,
-      "lon": 0,
+      "lat": 9.08,
+      "lon": 8.68,
       "region": "Africa",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
@@ -1447,7 +1505,8 @@
       "observedAt": "2026-09-18T17:27:39.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Police fire teargas as protests break out in city of Minna after deaths of suspected illegal goldminers, many of whom were childrenSurvivors from a prison cell in Nigeria where 37 suspected illegal goldminers died while in the custody of a paramilitary group this week have recoun",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-brazil-s-lula-announces-higher-welfare-payments-",
@@ -1466,7 +1525,8 @@
       "observedAt": "2026-09-18T17:10:37.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil’s electionsBrazil’s president, Luiz Inácio Lula da Silva, has announced a 15% increase in the country’s main cash-transfer programme for poor families, as well as free weight-los",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "evt-008",
@@ -1484,7 +1544,8 @@
       "ingestedAt": "2026-09-18T18:24:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Secondary sanctions risk on shadow fleet ports — Treasury guidance flags additional ship-to-ship transfer hubs in Mediterranean.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-british-woman-who-was-kidnapped-in-malawi-rescue",
@@ -1503,7 +1564,8 @@
       "observedAt": "2026-09-18T11:21:36.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "Four of Nurat Osman’s alleged abductors were killed during rescue after she was taken from outside her home last weekA British woman kidnapped in Malawi last week has been rescued by police after a shootout in which four of her alleged abductors were killed.Nusrat Osman was abduc",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-louisiana-firefighters-find-feline-native-to-sub",
@@ -1513,16 +1575,17 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 23.52,
-      "lon": 0.7200000000000006,
-      "region": "Global",
+      "lat": 30.98,
+      "lon": -91.96,
+      "region": "Americas",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/us-news/2026/sep/18/louisiana-firefighters-sub-saharan-africa-feline",
       "observedAt": "2026-09-18T10:00:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
       "curatedSummary": "The African serval, illegally enclosed in the back yard, was subdued and transferred to an animal welfare facility Louisiana firefighters responding to a small house blaze found a wildcat native to sub-Saharan Africa illegally enclosed in the back yard, prompting an animal welfar",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-we-demand-the-truth-olga-tokarczuk-and-jm-coetze",
@@ -1532,8 +1595,8 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 16.48,
-      "lon": -2.88,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
@@ -1555,7 +1618,8 @@
           "url": "https://x.com/BBCWorld/status/2101582383564599772",
           "observedAt": "2026-09-20T08:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "evt-020",
@@ -1564,8 +1628,8 @@
       "layer": "disaster",
       "severity": 2,
       "confidence": 0.7,
-      "lat": 33.89,
-      "lon": 35.5,
+      "lat": null,
+      "lon": null,
       "region": "Levant",
       "source": "OCHA",
       "sourceReliability": "B",
@@ -1573,7 +1637,8 @@
       "ingestedAt": "2026-09-18T06:24:00.000Z",
       "falloutRisk": "low",
       "curatedSummary": "Refugee camp overcrowding warning — OCHA notes acute overcrowding after latest displacement wave.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": false
     },
     {
       "id": "curated-x-centcom-2101049264616968431",
@@ -1593,14 +1658,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 28.5516,
-      "lon": 49.756,
+      "lat": null,
+      "lon": null,
       "region": "Middle East",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2101049264616968431",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-nato-2100857096791085507",
@@ -1620,14 +1686,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 46.0612,
-      "lon": 8.4824,
+      "lat": null,
+      "lon": null,
       "region": "Europe",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/NATO/status/2100857096791085507",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-uk_mto-2100898480101175570",
@@ -1647,14 +1714,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 17.954,
-      "lon": 38.1808,
+      "lat": 20,
+      "lon": 38.5,
       "region": "Red Sea / Bab el-Mandeb",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/UK_MTO/status/2100898480101175570",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": true
     },
     {
       "id": "curated-x-uk_mto-2100855389034000842",
@@ -1674,14 +1742,15 @@
       "severity": 3,
       "falloutRisk": "critical",
       "confidence": 0.55,
-      "lat": 16.4816,
-      "lon": 40.0588,
+      "lat": 20,
+      "lon": 38.5,
       "region": "Red Sea / Bab el-Mandeb",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/UK_MTO/status/2100855389034000842",
       "observedAt": "2026-09-18T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-new-cat-species-identified-for-first-time-in-mor",
@@ -1691,9 +1760,9 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 23.84,
-      "lon": -1.9199999999999997,
-      "region": "Global",
+      "lat": -16.5,
+      "lon": -68.15,
+      "region": "Americas",
       "source": "rss:Guardian World",
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/17/new-cat-species-identified-bolivia",
@@ -1708,7 +1777,8 @@
           "url": "https://x.com/DefenseOne/status/2099579688624455805",
           "observedAt": "2026-09-14T00:00:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "evt-015",
@@ -1726,7 +1796,8 @@
       "ingestedAt": "2026-09-17T18:24:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "South China Sea collision claim — Conflicting accounts of vessel collision near contested shoal.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "rss-guardian-world-all-smiles-in-strasbourg-but-uncertainty-clouds-",
@@ -1753,7 +1824,8 @@
           "url": "https://x.com/DefenceHQ/status/2100912733512163614",
           "observedAt": "2026-09-18T00:00:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "evt-017",
@@ -1762,8 +1834,8 @@
       "layer": "conflict",
       "severity": 2,
       "confidence": 0.45,
-      "lat": 48.7,
-      "lon": 32.6,
+      "lat": null,
+      "lon": null,
       "region": "Eastern Europe",
       "source": "seed/market note",
       "sourceReliability": "D",
@@ -1785,7 +1857,8 @@
           "url": "https://x.com/Ukraine/status/2088299209984291028",
           "observedAt": "2026-08-14T00:00:00Z"
         }
-      ]
+      ],
+      "mapEligible": false
     },
     {
       "id": "evt-021",
@@ -1803,7 +1876,8 @@
       "ingestedAt": "2026-09-15T18:24:00.000Z",
       "falloutRisk": "medium",
       "curatedSummary": "Cyber intrusion into municipal water SCADA (attempt) — Failed intrusion attempt on water utility HMI; ICS CERT advisory published.",
-      "briefSource": "wire"
+      "briefSource": "wire",
+      "mapEligible": true
     },
     {
       "id": "curated-x-nato-2099774771575521610",
@@ -1823,14 +1897,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 53.388000000000005,
-      "lon": 7.466799999999999,
+      "lat": null,
+      "lon": null,
       "region": "Europe",
       "source": "x-scroll-curated",
       "sourceReliability": "A",
       "url": "https://x.com/NATO/status/2099774771575521610",
       "observedAt": "2026-09-15T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-ukraine-2099939286472699990",
@@ -1850,14 +1925,15 @@
       "severity": 1,
       "falloutRisk": "low",
       "confidence": 0.45,
-      "lat": 49.6672,
-      "lon": 34.681200000000004,
+      "lat": 49,
+      "lon": 32,
       "region": "Eastern Europe",
       "source": "x-scroll-curated",
       "sourceReliability": "C",
       "url": "https://x.com/Ukraine/status/2099939286472699990",
       "observedAt": "2026-09-15T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "evt-024",
@@ -1883,7 +1959,8 @@
           "url": "https://x.com/DefenceHQ/status/2101689147865841715",
           "observedAt": "2026-09-20T15:19:00Z"
         }
-      ]
+      ],
+      "mapEligible": true
     },
     {
       "id": "curated-x-defenseone-2099592782880858238",
@@ -1903,14 +1980,15 @@
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.55,
-      "lat": 17.3792,
-      "lon": 5.216000000000001,
+      "lat": null,
+      "lon": null,
       "region": "Global",
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/DefenseOne/status/2099592782880858238",
       "observedAt": "2026-09-14T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     },
     {
       "id": "curated-x-ukraine-2091915493405823223",
@@ -1930,14 +2008,15 @@
       "severity": 1,
       "falloutRisk": "low",
       "confidence": 0.45,
-      "lat": 45.3672,
-      "lon": 28.75,
+      "lat": 49,
+      "lon": 32,
       "region": "Eastern Europe",
       "source": "x-scroll-curated",
       "sourceReliability": "C",
       "url": "https://x.com/Ukraine/status/2091915493405823223",
       "observedAt": "2026-08-24T00:00:00Z",
-      "ingestedAt": "2026-09-20T21:23:42.262Z"
+      "ingestedAt": "2026-09-20T21:23:42.262Z",
+      "mapEligible": false
     }
   ],
   "postures": [
@@ -7763,7 +7842,7 @@
     "7d",
     "30d"
   ],
-  "updatedAt": "2026-09-20T21:32:10.375Z",
+  "updatedAt": "2026-09-20T21:36:34.290Z",
   "nextUpdateAt": "2026-09-20T23:20:00.000Z",
   "nextUpdateHint": "Next update ~6:20 PM CT"
 }

@@ -94,42 +94,29 @@ export function pointerToEvent(ptr) {
   const { severity, falloutRisk } = falloutHeuristic(ptr.text || ptr.title || '', ptr.reliability);
   const title = String(ptr.title || ptr.text || `Update from @${ptr.author}`).slice(0, 160);
   const summary = String(ptr.text || title).slice(0, 280);
-  let lat;
-  let lon;
-  let region;
-  if (ptr.lat != null && ptr.lon != null) {
-    lat = Number(ptr.lat);
-    lon = Number(ptr.lon);
-    region = ptr.regionHint || 'Global';
-  } else {
-    const geo = resolveEventGeo({
-      title,
-      summary,
-      region: ptr.regionHint || 'Global',
-      jitterIndex: 0,
-      jitterSalt: ptr.id,
-    });
-    lat = geo.lat;
-    lon = geo.lon;
-    region = geo.region;
-    if (geo.matchedFrom === 'region-fallback') {
-      let hash = 0;
-      for (let i = 0; i < ptr.id.length; i++) hash = (hash * 31 + ptr.id.charCodeAt(i)) | 0;
-      lat += ((hash % 1000) / 1000 - 0.5) * 0.4;
-      lon += ((((hash / 1000) | 0) % 1000) / 1000 - 0.5) * 0.4;
-    }
-  }
+  const layer = guessLayer(`${title} ${ptr.text || ''}`);
+  // Impact-first from title/summary only — never account regionHint / home coords as map pin.
+  const geo = resolveEventGeo({
+    title,
+    summary,
+    region: 'Global',
+    layer,
+    falloutRisk,
+    jitterIndex: 0,
+    jitterSalt: ptr.id,
+  });
   return {
     id: ptr.id,
     title,
     summary,
-    layer: guessLayer(`${title} ${ptr.text || ''}`),
+    layer,
     severity,
     falloutRisk,
     confidence: ptr.reliability === 'A' ? 0.7 : ptr.reliability === 'B' ? 0.6 : 0.45,
-    lat,
-    lon,
-    region,
+    lat: geo.lat,
+    lon: geo.lon,
+    region: geo.region,
+    mapEligible: geo.mapEligible === true,
     source: 'x-scroll',
     sourceReliability: ptr.reliability || 'C',
     url: ptr.url,
