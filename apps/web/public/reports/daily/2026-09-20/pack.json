@@ -1,7 +1,10 @@
 {
-  "generatedAt": "2026-09-20T21:00:33.966Z",
+  "generatedAt": "2026-09-20T21:02:36.653Z",
   "date": "2026-09-20",
   "packageId": "daily-2026-09-20",
+  "updatedAt": "2026-09-20T21:02:36.653Z",
+  "nextUpdateAt": "2026-09-21T13:20:00.000Z",
+  "nextUpdateHint": "Next update ~8:20 AM CT Mon",
   "events": [
     {
       "id": "evt-001",

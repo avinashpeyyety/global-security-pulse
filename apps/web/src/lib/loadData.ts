@@ -29,6 +29,18 @@ function ensureFallout(events: SecurityEvent[]): SecurityEvent[] {
   }));
 }
 
+export async function loadMeta(): Promise<{
+  updatedAt?: string;
+  nextUpdateAt?: string;
+  nextUpdateHint?: string;
+} | null> {
+  try {
+    return await getJson(dataUrl('data/meta.json'));
+  } catch {
+    return null;
+  }
+}
+
 export function normalizeSnapshot(snap: DashboardSnapshot): DashboardSnapshot {
   return {
     ...snap,
@@ -51,6 +63,12 @@ export async function loadSnapshot(): Promise<DashboardSnapshot> {
       } catch {
         snap.postures = [];
       }
+    }
+    const meta = await loadMeta();
+    if (meta) {
+      snap.updatedAt = snap.updatedAt ?? meta.updatedAt;
+      snap.nextUpdateAt = snap.nextUpdateAt ?? meta.nextUpdateAt;
+      snap.nextUpdateHint = snap.nextUpdateHint ?? meta.nextUpdateHint;
     }
     return normalizeSnapshot(snap);
   } catch {

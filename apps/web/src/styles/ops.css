@@ -484,3 +484,26 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; }
   padding: 6px;
 }
 .daily-reports-err { color: var(--fail); }
+
+/* Data update status — always visible in topbar */
+.update-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  font-family: var(--font);
+  font-size: 10px;
+  padding: 3px 9px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--bg-elev);
+  color: var(--text);
+  white-space: nowrap;
+}
+.update-status-updated { color: var(--pass); font-weight: 500; }
+.update-status-sep { color: var(--notrun); }
+.update-status-next { color: var(--accent); }
+@media (max-width: 900px) {
+  .update-status { font-size: 9px; padding: 2px 6px; }
+  .brand span { display: none; }
+}

@@ -1,0 +1,17 @@
+{
+  "updatedAt": "2026-09-20T21:02:36.653Z",
+  "updatedAtLabel": "Updated 4:02 PM CT Sep 20",
+  "nextUpdateAt": "2026-09-21T13:20:00.000Z",
+  "nextUpdateHint": "Next update ~8:20 AM CT Mon",
+  "timezone": "America/Chicago",
+  "schedule": {
+    "weekdays": [
+      "08:20",
+      "13:20",
+      "18:20"
+    ],
+    "weekendPolicy": "next-monday-08:20"
+  },
+  "date": "2026-09-20",
+  "packageId": "daily-2026-09-20"
+}

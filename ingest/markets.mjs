@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampMeta } from './lib/stamp-meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -173,9 +174,11 @@ async function main() {
     fs.writeFileSync(publicSnapshot, JSON.stringify(snap, null, 2));
   }
 
+  const um = stampMeta();
   console.log(
     `ingest:markets ${liveCount > 0 ? 'Pass' : 'Warn'} — live series ${liveCount}/${YAHOO.length}+; anomalies ${anomalies.length}; stress ${stress.score}`,
   );
+  console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
 }
 
 main();

@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampMeta } from './lib/stamp-meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -105,11 +106,15 @@ async function main() {
     const events = await fetchGdelt();
     if (!events.length) throw new Error('empty GDELT payload');
     writeEvents(events);
+    const um = stampMeta();
     console.log(`ingest:gdelt Pass — wrote ${events.length} live events`);
+    console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
   } catch (err) {
     const seed = loadSeed();
     writeEvents(seed);
+    const um = stampMeta();
     console.warn(`ingest:gdelt Warn — network/API failed (${err.message}); kept seed (${seed.length} events)`);
+    console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
   }
 }
 

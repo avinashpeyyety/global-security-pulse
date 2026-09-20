@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+import { stampMeta } from './lib/stamp-meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -32,6 +33,7 @@ const FILES = [
   'hotspots.json',
   'supply-routes.json',
   'snapshot.json',
+  'meta.json',
 ];
 
 function parseArgs(argv) {
@@ -209,6 +211,8 @@ function main() {
   const date = args.date || new Date().toISOString().slice(0, 10);
   const generatedAt = new Date().toISOString();
   const packageId = `daily-${date}`;
+  // Stamp public/data/meta.json + snapshot updatedAt / nextUpdate* for Pages header
+  const updateMeta = stampMeta(new Date(generatedAt), { date, packageId });
 
   const events = readJson('events.json', []);
   const postures = readJson('postures.json', []);
@@ -223,6 +227,12 @@ function main() {
     date,
     generatedAt,
     packageId,
+    updatedAt: updateMeta.updatedAt,
+    updatedAtLabel: updateMeta.updatedAtLabel,
+    nextUpdateAt: updateMeta.nextUpdateAt,
+    nextUpdateHint: updateMeta.nextUpdateHint,
+    timezone: updateMeta.timezone,
+    schedule: updateMeta.schedule,
     stressScore: stress?.score ?? null,
     eventCount: Array.isArray(events) ? events.length : 0,
     postureCount: Array.isArray(postures) ? postures.length : 0,
@@ -250,6 +260,9 @@ function main() {
     generatedAt,
     date,
     packageId,
+    updatedAt: updateMeta.updatedAt,
+    nextUpdateAt: updateMeta.nextUpdateAt,
+    nextUpdateHint: updateMeta.nextUpdateHint,
     events,
     postures,
     anomalies,
@@ -269,6 +282,7 @@ function main() {
   console.log(`  archive: reports/daily/${date}/ (${copied.length} data files + report.md + meta.json + pack.json)`);
   console.log(`  public:  apps/web/public/reports/daily/${date}/`);
   console.log(`  index:   ${index.dates.length} dates (latest ${index.latest})`);
+  console.log(`  status:  ${updateMeta.updatedAtLabel} · ${updateMeta.nextUpdateHint}`);
 }
 
 main();

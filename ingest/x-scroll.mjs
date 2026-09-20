@@ -13,6 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampMeta } from './lib/stamp-meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -307,10 +308,12 @@ async function main() {
   }
   updateFeedStatus(mode, incoming.length);
 
+  const um = stampMeta();
   console.log(
     `ingest:x-scroll ${mode} — ${incoming.length} pointers (added ${added}, updated ${updated}); raw → ${path.relative(root, rawPath)}`,
   );
   console.log('No X API credits used. Allowlist:', path.relative(root, allowlistPath));
+  console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
 }
 
 main().catch((err) => {

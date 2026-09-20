@@ -3,7 +3,7 @@ import type { DashboardSnapshot, EventLayer } from '@gsp/shared';
 import { EVENT_LAYERS, LAYER_LABELS } from '@gsp/shared';
 import { loadSnapshot, normalizeSnapshot } from './lib/loadData';
 import { computeHotspots } from './lib/hotspots';
-import { windowCutoff, type TimeWindow, fmtTs } from './lib/time';
+import { windowCutoff, type TimeWindow } from './lib/time';
 import { SecurityMap } from './components/SecurityMap';
 import { LayerToggles } from './components/LayerToggles';
 import { TimeScrubber } from './components/TimeScrubber';
@@ -11,6 +11,7 @@ import { HotspotRail } from './components/HotspotRail';
 import { FeedChips } from './components/FeedChips';
 import { EconPanel } from './components/EconPanel';
 import { DailyReports } from './components/DailyReports';
+import { UpdateStatus } from './components/UpdateStatus';
 
 /** Anchor "now" to snapshot generation so seed windows stay populated. */
 function snapshotNow(snap: DashboardSnapshot): number {
@@ -79,10 +80,14 @@ export default function App() {
         <div className="brand">
           Global Security Pulse
           <span>
-            v0.1 · evaluated {fmtTs(snap.generatedAt)}
-            {archiveDate ? ` · archive ${archiveDate}` : ''}
+            v0.1{archiveDate ? ` · archive ${archiveDate}` : ''}
           </span>
         </div>
+        <UpdateStatus
+          updatedAt={snap.updatedAt ?? snap.generatedAt}
+          nextUpdateHint={snap.nextUpdateHint}
+          archiveMode={Boolean(archiveDate)}
+        />
         <DailyReports
           selectedDate={archiveDate}
           onSelectLive={onSelectLive}

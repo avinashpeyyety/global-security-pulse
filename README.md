@@ -14,6 +14,15 @@ Dense dark ops dashboard for global **security events** (map + hotspots) and **e
 
 Layer toggles include a visible legend (swatch/shape) and a Low → Critical risk-scale strip.
 
+## Update status (header)
+
+The top bar always shows:
+
+- **Updated … CT …** — latest data inject (`meta.json` / `snapshot.updatedAt`, America/Chicago)
+- **Next update ~… CT** — next weekday slot **8:20 AM / 1:20 PM / 6:20 PM** CT; weekends → next Monday **8:20 AM** CT
+
+`npm run report:daily` (and each ingest) stamps `apps/web/public/data/meta.json`.
+
 ## Dynamic updates (GitHub Pages)
 
 The dashboard is hosted on **GitHub Pages** from the Actions workflow (`.github/workflows/pages.yml`).

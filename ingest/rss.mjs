@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampMeta } from './lib/stamp-meta.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -229,7 +230,9 @@ async function main() {
     fs.writeFileSync(publicSnapshot, JSON.stringify(snap, null, 2));
   }
   updateFeedStatus(true, `merged ${incoming.length} (added ${added}); ${notes.join(', ')}`);
+  const um = stampMeta();
   console.log(`ingest:rss Pass — merged ${incoming.length} items (added ${added})`);
+  console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
 }
 
 main().catch((err) => {

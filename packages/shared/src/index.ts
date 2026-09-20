@@ -132,6 +132,10 @@ export interface StressComposite {
 
 export interface DashboardSnapshot {
   generatedAt: string;
+  /** ISO timestamp of latest data inject (preferred over generatedAt for UI). */
+  updatedAt?: string;
+  nextUpdateAt?: string;
+  nextUpdateHint?: string;
   events: SecurityEvent[];
   postures?: MilitaryPosture[];
   hotspots: Hotspot[];
@@ -212,3 +216,15 @@ export function severityToFallout(severity: number): FalloutRisk {
 export function eventFalloutRisk(e: Pick<SecurityEvent, 'severity' | 'falloutRisk'>): FalloutRisk {
   return e.falloutRisk ?? severityToFallout(e.severity);
 }
+
+
+export {
+  GSP_TZ,
+  GSP_WEEKDAY_SLOTS,
+  computeNextUpdate,
+  formatUpdatedAtLabel,
+  formatNextUpdateHint,
+  buildDataUpdateMeta,
+  chicagoWallToUtc,
+} from './schedule';
+export type { DataUpdateMeta } from './schedule';
