@@ -71,7 +71,7 @@
         "observedAt": "2026-09-20T20:19:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-reuters-2101778467545096594",
@@ -153,7 +153,7 @@
     "ingestedAt": "2026-09-20T21:23:27.338Z",
     "curatedSummary": "Eighteen suspects extradited to US over Haitian president’s 2021 killing — Federal court in Florida to try men accused of orchestrating the transnational plot to kill Jovenel Moise from US soil.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-ajenglish-2101771390391042208",
@@ -201,7 +201,7 @@
     "ingestedAt": "2026-09-20T21:23:26.656Z",
     "curatedSummary": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on — Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-reuters-2101758312152760656",
@@ -229,7 +229,7 @@
     "url": "https://x.com/Reuters/status/2101758312152760656",
     "observedAt": "2026-09-20T20:19:00Z",
     "ingestedAt": "2026-09-20T21:23:42.262Z",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-ajenglish-2101760834170917301",
@@ -277,7 +277,7 @@
     "ingestedAt": "2026-09-20T21:23:27.069Z",
     "curatedSummary": "Jovenel Moïse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Moïse, according to US officials.Moïse, 53, was shot dead on 7 July 2021, at his p",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-aljazeera-qatar-pm-describes-fallout-of-us-israel-war-on-i",
@@ -377,7 +377,7 @@
         "observedAt": "2026-09-20T20:19:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-aljazeera-france-s-macron-and-canada-s-carney-announce-pla",
@@ -405,7 +405,7 @@
         "observedAt": "2026-09-20T20:24:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-bbcworld-2101752216419750339",
@@ -433,7 +433,7 @@
     "url": "https://x.com/BBCWorld/status/2101752216419750339",
     "observedAt": "2026-09-20T19:19:00Z",
     "ingestedAt": "2026-09-20T21:23:42.262Z",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-centcom-2101752852917968954",
@@ -517,7 +517,7 @@
         "observedAt": "2026-09-20T20:30:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-aljazeera-man-utd-salvage-fulham-draw-as-pressure-mounts-o",
@@ -605,7 +605,7 @@
     "ingestedAt": "2026-09-20T21:00:18.938Z",
     "curatedSummary": "Jerusalem Daily: Israel pardons soldier Elor Azaria",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-aljazeera-trump-tariffs-hit-canada-s-dairy-farmers-as-us-s",
@@ -745,7 +745,7 @@
     "url": "https://x.com/UK_MTO/status/2101700772211671278",
     "observedAt": "2026-09-20T16:19:00Z",
     "ingestedAt": "2026-09-20T21:23:42.262Z",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-ap-2101685400657936744",
@@ -932,7 +932,7 @@
     "falloutRisk": "low",
     "curatedSummary": "UNSC session on Gaza ceasefire draft — Draft resolution circulated; abstention math unclear; markets watch oil risk premium.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "evt-018",
@@ -951,7 +951,7 @@
     "falloutRisk": "low",
     "curatedSummary": "NATO maritime exercise begins — Standing naval group begins scheduled exercise in North Sea.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "evt-002",
@@ -1008,7 +1008,7 @@
     "falloutRisk": "medium",
     "curatedSummary": "Protest escalation in capital square — Large anti-austerity protests; tear gas deployed; transport disrupted.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-bbc-world-ed-sheeran-admits-mistakes-at-first-show-since-m",
@@ -1066,7 +1066,7 @@
     "falloutRisk": "medium",
     "curatedSummary": "Strait of Hormuz transit advisory elevated — Insurance premiums rise after shadow fleet near-miss reports near Hormuz.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "evt-013",
@@ -1175,7 +1175,7 @@
         "observedAt": "2026-09-20T18:19:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "evt-005",
@@ -1240,7 +1240,7 @@
         "observedAt": "2026-09-16T00:00:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-bbc-world-converse-pulls-deeply-upsetting-advert-after-bac",
@@ -1524,7 +1524,7 @@
     "ingestedAt": "2026-09-20T21:23:27.069Z",
     "curatedSummary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil’s electionsBrazil’s president, Luiz Inácio Lula da Silva, has announced a 15% increase in the country’s main cash-transfer programme for poor families, as well as free weight-los",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "evt-008",
@@ -1543,7 +1543,7 @@
     "falloutRisk": "medium",
     "curatedSummary": "Secondary sanctions risk on shadow fleet ports — Treasury guidance flags additional ship-to-ship transfer hubs in Mediterranean.",
     "briefSource": "wire",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-guardian-world-british-woman-who-was-kidnapped-in-malawi-rescue",
@@ -1720,7 +1720,7 @@
     "url": "https://x.com/UK_MTO/status/2100898480101175570",
     "observedAt": "2026-09-18T00:00:00Z",
     "ingestedAt": "2026-09-20T21:23:42.262Z",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-uk_mto-2100855389034000842",
@@ -1748,7 +1748,7 @@
     "url": "https://x.com/UK_MTO/status/2100855389034000842",
     "observedAt": "2026-09-18T00:00:00Z",
     "ingestedAt": "2026-09-20T21:23:42.262Z",
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "rss-guardian-world-new-cat-species-identified-for-first-time-in-mor",
@@ -1823,7 +1823,7 @@
         "observedAt": "2026-09-18T00:00:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "evt-017",
@@ -1958,7 +1958,7 @@
         "observedAt": "2026-09-20T15:19:00Z"
       }
     ],
-    "mapEligible": true
+    "mapEligible": false
   },
   {
     "id": "curated-x-defenseone-2099592782880858238",

@@ -133,7 +133,7 @@
     {
       "id": "evt-009",
       "title": "IED blast near convoy route in Sahel",
-      "summary": "IED strikes logistics convoy on Gao–Niamey corridor; casualties unconfirmed.",
+      "summary": "IED strikes logistics convoy on Gao\u2013Niamey corridor; casualties unconfirmed.",
       "layer": "terrorism",
       "severity": 4,
       "confidence": 0.68,
@@ -409,7 +409,7 @@
     },
     {
       "id": "pos-002",
-      "title": "Combined air–sea exercise announced in Western Pacific",
+      "title": "Combined air\u2013sea exercise announced in Western Pacific",
       "summary": "Illustrative seed: multi-day bilateral exercise with live-fire windows; messaging emphasizes deterrence and interoperability.",
       "kind": "exercise",
       "actors": [
@@ -430,7 +430,7 @@
     {
       "id": "pos-003",
       "title": "Air-defense readiness raised along forward corridor",
-      "summary": "Illustrative seed: alert state / intercept posture increased along a land–air corridor; potential for miscalculation if paired with GPS/EW disruptions.",
+      "summary": "Illustrative seed: alert state / intercept posture increased along a land\u2013air corridor; potential for miscalculation if paired with GPS/EW disruptions.",
       "kind": "alert",
       "actors": [
         "Regional air force"
@@ -495,9 +495,9 @@
       "inResponseTo": "Alliance reinforcement and exercise calendar",
       "precipitatePotential": "low",
       "confidence": 0.55,
-      "lat": 55,
-      "lon": 160,
-      "region": "North Pacific",
+      "lat": 53.05,
+      "lon": 158.65,
+      "region": "Kamchatka / NW Pacific",
       "source": "seed/posture-template",
       "sourceReliability": "C",
       "observedAt": "2026-09-18T14:00:00Z",

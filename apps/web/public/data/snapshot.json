@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T21:36:34.290Z",
+  "generatedAt": "2026-09-20T21:52:26Z",
   "events": [
     {
       "id": "rss-bbc-world-man-82-dies-after-beach-fight-with-76-year-old-o",
@@ -17,7 +17,7 @@
       "url": "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-20T21:17:22.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece — One eyewitness said the scene was so chaotic that screaming could be heard from the other end of the beach.",
+      "curatedSummary": "Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece \u2014 One eyewitness said the scene was so chaotic that screaming could be heard from the other end of the beach.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -38,7 +38,7 @@
     {
       "id": "rss-aljazeera-qatar-pm-urges-gulf-security-framework-with-iran",
       "title": "Qatar PM urges Gulf security framework with Iran",
-      "summary": "Qatar’s PM says, the Gulf won&#039;t be the same unless there&#039;s a framework ensuring no one is a threat to each other.",
+      "summary": "Qatar\u2019s PM says, the Gulf won&#039;t be the same unless there&#039;s a framework ensuring no one is a threat to each other.",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
@@ -51,7 +51,7 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/9/20/qatar-pm-urges-gulf-security-framework-with-iran?traffic_source=rss",
       "observedAt": "2026-09-20T21:00:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Qatar PM urges Gulf security framework with Iran — Qatar’s PM says, the Gulf won&#039;t be the same unless there&#039;s a framework ensuring no one is a threat to each other.",
+      "curatedSummary": "Qatar PM urges Gulf security framework with Iran \u2014 Qatar\u2019s PM says, the Gulf won&#039;t be the same unless there&#039;s a framework ensuring no one is a threat to each other.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -73,13 +73,13 @@
           "observedAt": "2026-09-20T20:19:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-reuters-2101778467545096594",
       "title": "Lightning suspends Bucs-Browns at 2-minute warning",
-      "summary": "User-generated X post from @Reuters regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @Reuters regarding Global — verify against wires.",
+      "summary": "User-generated X post from @Reuters regarding Global \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @Reuters regarding Global \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -105,8 +105,8 @@
     },
     {
       "id": "rss-aljazeera-argentina-s-left-stages-march-of-anger-over-mile",
-      "title": "Argentina’s Left stages ‘March of Anger’ over Milei’s austerity measures",
-      "summary": "Thousands of protesters took to the streets of Buenos Aires for the ‘March of Anger’.",
+      "title": "Argentina\u2019s Left stages \u2018March of Anger\u2019 over Milei\u2019s austerity measures",
+      "summary": "Thousands of protesters took to the streets of Buenos Aires for the \u2018March of Anger\u2019.",
       "layer": "unrest",
       "severity": 2,
       "falloutRisk": "low",
@@ -119,7 +119,7 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/9/20/argentinas-left-stages-march-of-anger-over-mileis-austerity-measures?traffic_source=rss",
       "observedAt": "2026-09-20T20:58:01.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Argentina’s Left stages ‘March of Anger’ over Milei’s austerity measures — Thousands of protesters took to the streets of Buenos Aires for the ‘March of Anger’.",
+      "curatedSummary": "Argentina\u2019s Left stages \u2018March of Anger\u2019 over Milei\u2019s austerity measures \u2014 Thousands of protesters took to the streets of Buenos Aires for the \u2018March of Anger\u2019.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -139,7 +139,7 @@
     },
     {
       "id": "rss-aljazeera-eighteen-suspects-extradited-to-us-over-haitian-",
-      "title": "Eighteen suspects extradited to US over Haitian president’s 2021 killing",
+      "title": "Eighteen suspects extradited to US over Haitian president\u2019s 2021 killing",
       "summary": "Federal court in Florida to try men accused of orchestrating the transnational plot to kill Jovenel Moise from US soil.",
       "layer": "conflict",
       "severity": 2,
@@ -153,15 +153,15 @@
       "url": "https://www.aljazeera.com/news/2026/9/20/eighteen-suspects-extradited-to-us-over-haitian-presidents-2021-killing?traffic_source=rss",
       "observedAt": "2026-09-20T20:31:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Eighteen suspects extradited to US over Haitian president’s 2021 killing — Federal court in Florida to try men accused of orchestrating the transnational plot to kill Jovenel Moise from US soil.",
+      "curatedSummary": "Eighteen suspects extradited to US over Haitian president\u2019s 2021 killing \u2014 Federal court in Florida to try men accused of orchestrating the transnational plot to kill Jovenel Moise from US soil.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-ajenglish-2101771390391042208",
       "title": "US, China open high-level talks ahead of Trump-Xi summit",
-      "summary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @AJEnglish regarding Middle East \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -201,15 +201,15 @@
       "url": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-20T20:21:40.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on — Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
+      "curatedSummary": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on \u2014 Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-reuters-2101758312152760656",
       "title": "Iraqi court opens trial of six French Islamic State suspects",
-      "summary": "User-generated X post from @Reuters regarding Iraq — verify against wires.",
-      "curatedSummary": "User-generated X post from @Reuters regarding Iraq — verify against wires.",
+      "summary": "User-generated X post from @Reuters regarding Iraq \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @Reuters regarding Iraq \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -231,13 +231,13 @@
       "url": "https://x.com/Reuters/status/2101758312152760656",
       "observedAt": "2026-09-20T20:19:00Z",
       "ingestedAt": "2026-09-20T21:23:42.262Z",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-ajenglish-2101760834170917301",
       "title": "AJ English video post",
-      "summary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @AJEnglish regarding Middle East \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -264,7 +264,7 @@
     {
       "id": "rss-guardian-world-more-than-a-dozen-arrested-in-connection-with-20",
       "title": "More than a dozen arrested in connection with 2021 assassination of Haitian president",
-      "summary": "Jovenel Moïse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Moïse, according to US officials.Moïse, 53, was shot dead on 7 July 2021, at his p",
+      "summary": "Jovenel Mo\u00efse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Mo\u00efse, according to US officials.Mo\u00efse, 53, was shot dead on 7 July 2021, at his p",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
@@ -277,13 +277,13 @@
       "url": "https://www.theguardian.com/world/2026/sep/20/more-than-a-dozen-arrested-in-connection-with-assassination-of-haitian-president",
       "observedAt": "2026-09-20T20:17:44.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
-      "curatedSummary": "Jovenel Moïse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Moïse, according to US officials.Moïse, 53, was shot dead on 7 July 2021, at his p",
+      "curatedSummary": "Jovenel Mo\u00efse, 53, was shot dead in July 2021 in a killing which sparked chaos in HaitiEighteen people have been arrested in association with the 2021 assassination of the Haitian president Jovenel Mo\u00efse, according to US officials.Mo\u00efse, 53, was shot dead on 7 July 2021, at his p",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-pm-describes-fallout-of-us-israel-war-on-i",
-      "title": "Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’",
+      "title": "Qatar PM describes fallout of US-Israel war on Iran as \u2018earthquake\u2019",
       "summary": "Speaking before the UN General Assembly, Sheikh Mohammed also announces a key shift in Qatar&#039;s investment strategy.",
       "layer": "disaster",
       "severity": 4,
@@ -297,7 +297,7 @@
       "url": "https://www.aljazeera.com/news/2026/9/20/qatari-pm-warns-against-cycles-of-escalation-in-the-middle-east?traffic_source=rss",
       "observedAt": "2026-09-20T20:13:18.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Qatar PM describes fallout of US-Israel war on Iran as ‘earthquake’ — Speaking before the UN General Assembly, Sheikh Mohammed also announces a key shift in Qatar&#039;s investment strategy.",
+      "curatedSummary": "Qatar PM describes fallout of US-Israel war on Iran as \u2018earthquake\u2019 \u2014 Speaking before the UN General Assembly, Sheikh Mohammed also announces a key shift in Qatar&#039;s investment strategy.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -337,14 +337,14 @@
       "url": "https://www.aljazeera.com/economy/2026/9/20/us-china-open-high-level-talks-ahead-of-trump-xi-summit?traffic_source=rss",
       "observedAt": "2026-09-20T19:42:13.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "US, China open high-level talks ahead of Trump-Xi summit — Scott Bessent and He Lifeng meet in New York for US-China talks ahead of the Trump-Xi meeting later this week.",
+      "curatedSummary": "US, China open high-level talks ahead of Trump-Xi summit \u2014 Scott Bessent and He Lifeng meet in New York for US-China talks ahead of the Trump-Xi meeting later this week.",
       "briefSource": "wire",
       "mapEligible": false
     },
     {
       "id": "rss-aljazeera-qatar-says-it-is-working-to-revive-iran-us-talks",
       "title": "Qatar says it is working to revive Iran-US talks",
-      "summary": "Qatar’s Foreign Ministry spokesperson tells Bloomberg that mediators are shuttling between Iran and US to revive talks.",
+      "summary": "Qatar\u2019s Foreign Ministry spokesperson tells Bloomberg that mediators are shuttling between Iran and US to revive talks.",
       "layer": "conflict",
       "severity": 3,
       "falloutRisk": "medium",
@@ -357,7 +357,7 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/9/20/qatar-says-it-is-working-to-revive-iran-us-talks?traffic_source=rss",
       "observedAt": "2026-09-20T19:36:12.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Qatar says it is working to revive Iran-US talks — Qatar’s Foreign Ministry spokesperson tells Bloomberg that mediators are shuttling between Iran and US to revive talks.",
+      "curatedSummary": "Qatar says it is working to revive Iran-US talks \u2014 Qatar\u2019s Foreign Ministry spokesperson tells Bloomberg that mediators are shuttling between Iran and US to revive talks.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -379,11 +379,11 @@
           "observedAt": "2026-09-20T20:19:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-france-s-macron-and-canada-s-carney-announce-pla",
-      "title": "France’s Macron and Canada’s Carney announce plans to build stronger ties",
+      "title": "France\u2019s Macron and Canada\u2019s Carney announce plans to build stronger ties",
       "summary": "Announcement comes as Canada seeks a closer relationship with the EU amid a trade war with the US.",
       "layer": "maritime",
       "severity": 2,
@@ -397,7 +397,7 @@
       "url": "https://www.aljazeera.com/news/2026/9/20/frances-macron-and-canadas-carney-announce-plans-to-build-stronger-ties?traffic_source=rss",
       "observedAt": "2026-09-20T19:28:43.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "France’s Macron and Canada’s Carney announce plans to build stronger ties — Announcement comes as Canada seeks a closer relationship with the EU amid a trade war with the US.",
+      "curatedSummary": "France\u2019s Macron and Canada\u2019s Carney announce plans to build stronger ties \u2014 Announcement comes as Canada seeks a closer relationship with the EU amid a trade war with the US.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -407,13 +407,13 @@
           "observedAt": "2026-09-20T20:24:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-bbcworld-2101752216419750339",
       "title": "West raises thousands for Nepalese flood victims",
-      "summary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @BBCWorld regarding Global — verify against wires.",
+      "summary": "User-generated X post from @BBCWorld regarding Global \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @BBCWorld regarding Global \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -435,13 +435,13 @@
       "url": "https://x.com/BBCWorld/status/2101752216419750339",
       "observedAt": "2026-09-20T19:19:00Z",
       "ingestedAt": "2026-09-20T21:23:42.262Z",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-centcom-2101752852917968954",
       "title": "A look into the daily operations of U.S. Navy Sailors aboard USS John Finn",
-      "summary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @CENTCOM regarding Middle East \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -468,7 +468,7 @@
     {
       "id": "rss-bbc-world-sister-of-pakistan-s-ex-pm-imran-khan-arrested",
       "title": "Sister of Pakistan's ex-PM Imran Khan arrested",
-      "summary": "Aleema Khanum is accused of mobilising her brother’s supporters ahead of country-wide protests.",
+      "summary": "Aleema Khanum is accused of mobilising her brother\u2019s supporters ahead of country-wide protests.",
       "layer": "unrest",
       "severity": 2,
       "falloutRisk": "low",
@@ -481,7 +481,7 @@
       "url": "https://www.bbc.co.uk/news/articles/cm36l2pye2kwo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-20T19:04:11.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Sister of Pakistan's ex-PM Imran Khan arrested — Aleema Khanum is accused of mobilising her brother’s supporters ahead of country-wide protests.",
+      "curatedSummary": "Sister of Pakistan's ex-PM Imran Khan arrested \u2014 Aleema Khanum is accused of mobilising her brother\u2019s supporters ahead of country-wide protests.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -509,7 +509,7 @@
       "url": "https://www.aljazeera.com/video/inside-story/2026/9/20/how-will-saudi-arabia-deal-with-the-houthis?traffic_source=rss",
       "observedAt": "2026-09-20T18:34:36.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "How will Saudi Arabia deal with the Houthis? — Yemeni group warns of further attacks on the kingdom.",
+      "curatedSummary": "How will Saudi Arabia deal with the Houthis? \u2014 Yemeni group warns of further attacks on the kingdom.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -519,7 +519,7 @@
           "observedAt": "2026-09-20T20:30:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-man-utd-salvage-fulham-draw-as-pressure-mounts-o",
@@ -537,15 +537,15 @@
       "url": "https://www.aljazeera.com/sports/2026/9/20/man-utd-salvage-fulham-draw-as-pressure-mounts-on-carrick?traffic_source=rss",
       "observedAt": "2026-09-20T18:32:03.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Man Utd salvage Fulham draw as pressure mounts on Carrick — Matheus Cunha strikes late as Manchester United seal a 1-1 draw at Fulham, but pressure mounts on Michael Carrick.",
+      "curatedSummary": "Man Utd salvage Fulham draw as pressure mounts on Carrick \u2014 Matheus Cunha strikes late as Manchester United seal a 1-1 draw at Fulham, but pressure mounts on Michael Carrick.",
       "briefSource": "wire",
       "mapEligible": false
     },
     {
       "id": "curated-x-ajenglish-2101735768804753752",
       "title": "AJ English video post",
-      "summary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @AJEnglish regarding Middle East \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @AJEnglish regarding Middle East \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -585,7 +585,7 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/9/20/gaza-artists-honour-macklemore-for-supporting-palestine?traffic_source=rss",
       "observedAt": "2026-09-20T17:59:10.000Z",
       "ingestedAt": "2026-09-20T21:23:27.338Z",
-      "curatedSummary": "Gaza artists honour Macklemore for supporting Palestine — Artists in Gaza are painting murals on destroyed walls, honouring US rapper Macklemore for his support for Palestine.",
+      "curatedSummary": "Gaza artists honour Macklemore for supporting Palestine \u2014 Artists in Gaza are painting murals on destroyed walls, honouring US rapper Macklemore for his support for Palestine.",
       "briefSource": "wire",
       "mapEligible": false
     },
@@ -607,11 +607,11 @@
       "ingestedAt": "2026-09-20T21:00:18.938Z",
       "curatedSummary": "Jerusalem Daily: Israel pardons soldier Elor Azaria",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-aljazeera-trump-tariffs-hit-canada-s-dairy-farmers-as-us-s",
-      "title": "Trump tariffs hit Canada’s dairy farmers as US sales stall",
+      "title": "Trump tariffs hit Canada\u2019s dairy farmers as US sales stall",
       "summary": "A 50 percent tariff has disrupted dairy exports, leaving Canadian farmers with milk that cannot be redirected overnight.",
       "layer": "conflict",
       "severity": 2,
@@ -625,7 +625,7 @@
       "url": "https://www.aljazeera.com/features/2026/9/20/trump-tariffs-hit-canadas-dairy-farmers-as-us-sales-stall?traffic_source=rss",
       "observedAt": "2026-09-20T17:35:12.000Z",
       "ingestedAt": "2026-09-20T21:00:18.938Z",
-      "curatedSummary": "Trump tariffs hit Canada’s dairy farmers as US sales stall — A 50 percent tariff has disrupted dairy exports, leaving Canadian farmers with milk that cannot be redirected overnight.",
+      "curatedSummary": "Trump tariffs hit Canada\u2019s dairy farmers as US sales stall \u2014 A 50 percent tariff has disrupted dairy exports, leaving Canadian farmers with milk that cannot be redirected overnight.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -640,8 +640,8 @@
     {
       "id": "curated-x-ap-2101708475608809936",
       "title": "Falcons All-Pro running back Bijan Robinson talks about working out with 49ers star Christian McCaffrey and more",
-      "summary": "User-generated X post from @AP regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @AP regarding Global — verify against wires.",
+      "summary": "User-generated X post from @AP regarding Global \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @AP regarding Global \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -681,7 +681,7 @@
       "url": "https://www.bbc.co.uk/news/articles/cqdj4pez00dzo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-20T16:36:43.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Trump says triumphal arch will be military complex with drones and snipers — Trump said the updated plans were at the request of the US military and for national security purposes.",
+      "curatedSummary": "Trump says triumphal arch will be military complex with drones and snipers \u2014 Trump said the updated plans were at the request of the US military and for national security purposes.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -696,8 +696,8 @@
     {
       "id": "curated-x-ap-2101702184354160723",
       "title": "AP video/podcast post",
-      "summary": "User-generated X post from @AP regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @AP regarding Global — verify against wires.",
+      "summary": "User-generated X post from @AP regarding Global \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @AP regarding Global \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -724,8 +724,8 @@
     {
       "id": "curated-x-uk_mto-2101700772211671278",
       "title": "UPDATE 098-JMIC ADVISORY NOTE (20 September)",
-      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
-      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
+      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -747,13 +747,13 @@
       "url": "https://x.com/UK_MTO/status/2101700772211671278",
       "observedAt": "2026-09-20T16:19:00Z",
       "ingestedAt": "2026-09-20T21:23:42.262Z",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-ap-2101685400657936744",
       "title": "AP video/podcast post",
-      "summary": "User-generated X post from @AP regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @AP regarding Global — verify against wires.",
+      "summary": "User-generated X post from @AP regarding Global \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @AP regarding Global \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -793,14 +793,14 @@
       "observedAt": "2026-09-20T13:00:00.000Z",
       "ingestedAt": "2026-09-20T13:30:00.000Z",
       "falloutRisk": "high",
-      "curatedSummary": "Artillery exchanges near Kupiansk — Ukrainian and Russian forces exchange artillery fire northeast of Kupiansk; civilian infrastructure damaged.",
+      "curatedSummary": "Artillery exchanges near Kupiansk \u2014 Ukrainian and Russian forces exchange artillery fire northeast of Kupiansk; civilian infrastructure damaged.",
       "briefSource": "wire",
       "mapEligible": true
     },
     {
       "id": "rss-guardian-world-michelle-bachelet-withdraws-from-race-to-become-",
       "title": "Michelle Bachelet withdraws from race to become UN secretary general",
-      "summary": "Former president of Chile drops out after support collapsed in security council straw poll, leaving seven candidates in contestMichelle Bachelet, a former president of Chile, has withdrawn her candidacy to become the next secretary general of the ⁠UN, ending an attempt ​that had ",
+      "summary": "Former president of Chile drops out after support collapsed in security council straw poll, leaving seven candidates in contestMichelle Bachelet, a former president of Chile, has withdrawn her candidacy to become the next secretary general of the \u2060UN, ending an attempt \u200bthat had ",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
@@ -813,7 +813,7 @@
       "url": "https://www.theguardian.com/world/2026/sep/20/former-president-of-chile-withdraws-from-race-to-become-un-secretary-general",
       "observedAt": "2026-09-20T12:04:08.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
-      "curatedSummary": "Former president of Chile drops out after support collapsed in security council straw poll, leaving seven candidates in contestMichelle Bachelet, a former president of Chile, has withdrawn her candidacy to become the next secretary general of the ⁠UN, ending an attempt ​that had",
+      "curatedSummary": "Former president of Chile drops out after support collapsed in security council straw poll, leaving seven candidates in contestMichelle Bachelet, a former president of Chile, has withdrawn her candidacy to become the next secretary general of the \u2060UN, ending an attempt \u200bthat had",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -846,7 +846,7 @@
       "observedAt": "2026-09-20T12:00:00.000Z",
       "ingestedAt": "2026-09-20T12:12:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Major earthquake M6.8 offshore — USGS reports M6.8 quake; tsunami watch briefly issued then cancelled.",
+      "curatedSummary": "Major earthquake M6.8 offshore \u2014 USGS reports M6.8 quake; tsunami watch briefly issued then cancelled.",
       "briefSource": "wire",
       "mapEligible": false
     },
@@ -865,7 +865,7 @@
       "observedAt": "2026-09-20T11:00:00.000Z",
       "ingestedAt": "2026-09-20T11:30:00.000Z",
       "falloutRisk": "critical",
-      "curatedSummary": "Houthi attack claim on commercial vessel — Attack claimed against Liberia-flagged tanker in southern Red Sea; crew status unknown.",
+      "curatedSummary": "Houthi attack claim on commercial vessel \u2014 Attack claimed against Liberia-flagged tanker in southern Red Sea; crew status unknown.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -893,7 +893,7 @@
       "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-20T10:45:39.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says — Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
+      "curatedSummary": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says \u2014 Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -904,13 +904,13 @@
         },
         {
           "author": "DefenseOne",
-          "text": "Russia is weaponizing US-built AI to make killer drones, cyberattacks…",
+          "text": "Russia is weaponizing US-built AI to make killer drones, cyberattacks\u2026",
           "url": "https://x.com/DefenseOne/status/2099609383491527020",
           "observedAt": "2026-09-14T00:00:00Z"
         },
         {
           "author": "Ukraine",
-          "text": "Good morning and happy Moscow burning day 🔥",
+          "text": "Good morning and happy Moscow burning day \ud83d\udd25",
           "url": "https://x.com/Ukraine/status/2101612308787053053",
           "observedAt": "2026-09-20T10:19:00Z"
         }
@@ -932,9 +932,9 @@
       "observedAt": "2026-09-20T10:00:00.000Z",
       "ingestedAt": "2026-09-20T10:30:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "UNSC session on Gaza ceasefire draft — Draft resolution circulated; abstention math unclear; markets watch oil risk premium.",
+      "curatedSummary": "UNSC session on Gaza ceasefire draft \u2014 Draft resolution circulated; abstention math unclear; markets watch oil risk premium.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "evt-018",
@@ -951,9 +951,9 @@
       "observedAt": "2026-09-20T08:48:00.000Z",
       "ingestedAt": "2026-09-20T10:00:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "NATO maritime exercise begins — Standing naval group begins scheduled exercise in North Sea.",
+      "curatedSummary": "NATO maritime exercise begins \u2014 Standing naval group begins scheduled exercise in North Sea.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "evt-002",
@@ -970,7 +970,7 @@
       "observedAt": "2026-09-20T08:00:00.000Z",
       "ingestedAt": "2026-09-20T09:00:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Drone swarm reported over Black Sea approaches — Multiple UAVs tracked near Odessa maritime corridor; air defenses activated.",
+      "curatedSummary": "Drone swarm reported over Black Sea approaches \u2014 Multiple UAVs tracked near Odessa maritime corridor; air defenses activated.",
       "briefSource": "wire",
       "mapEligible": true
     },
@@ -989,7 +989,7 @@
       "observedAt": "2026-09-20T07:00:00.000Z",
       "ingestedAt": "2026-09-20T07:30:00.000Z",
       "falloutRisk": "high",
-      "curatedSummary": "Missile test reported on peninsula — Short-range ballistic missile launch reported; trajectory toward sea.",
+      "curatedSummary": "Missile test reported on peninsula \u2014 Short-range ballistic missile launch reported; trajectory toward sea.",
       "briefSource": "wire",
       "mapEligible": true
     },
@@ -1008,9 +1008,9 @@
       "observedAt": "2026-09-20T06:00:00.000Z",
       "ingestedAt": "2026-09-20T07:00:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Protest escalation in capital square — Large anti-austerity protests; tear gas deployed; transport disrupted.",
+      "curatedSummary": "Protest escalation in capital square \u2014 Large anti-austerity protests; tear gas deployed; transport disrupted.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-ed-sheeran-admits-mistakes-at-first-show-since-m",
@@ -1028,7 +1028,7 @@
       "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-20T04:49:11.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy — The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
+      "curatedSummary": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy \u2014 The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
       "briefSource": "wire",
       "mapEligible": false
     },
@@ -1047,7 +1047,7 @@
       "observedAt": "2026-09-20T04:00:00.000Z",
       "ingestedAt": "2026-09-20T05:00:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "PLA drills announced near Taiwan Strait — Live-fire windows published; commercial shipping advised to reroute.",
+      "curatedSummary": "PLA drills announced near Taiwan Strait \u2014 Live-fire windows published; commercial shipping advised to reroute.",
       "briefSource": "wire",
       "mapEligible": true
     },
@@ -1066,9 +1066,9 @@
       "observedAt": "2026-09-20T02:00:00.000Z",
       "ingestedAt": "2026-09-20T03:00:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Strait of Hormuz transit advisory elevated — Insurance premiums rise after shadow fleet near-miss reports near Hormuz.",
+      "curatedSummary": "Strait of Hormuz transit advisory elevated \u2014 Insurance premiums rise after shadow fleet near-miss reports near Hormuz.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "evt-013",
@@ -1085,7 +1085,7 @@
       "observedAt": "2026-09-20T01:36:00.000Z",
       "ingestedAt": "2026-09-20T02:48:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "Wildfire smoke impacts air corridor — Dense smoke reduces visibility near major cargo hub; diversions issued.",
+      "curatedSummary": "Wildfire smoke impacts air corridor \u2014 Dense smoke reduces visibility near major cargo hub; diversions issued.",
       "briefSource": "wire",
       "mapEligible": true
     },
@@ -1105,7 +1105,7 @@
       "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-19T23:49:26.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Houthis say they targeted Saudi capital with ballistic missiles — A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
+      "curatedSummary": "Houthis say they targeted Saudi capital with ballistic missiles \u2014 A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1133,7 +1133,7 @@
       "url": "https://www.bbc.co.uk/news/articles/cg4d9vly636o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-19T23:01:38.000Z",
       "ingestedAt": "2026-09-20T21:12:50.314Z",
-      "curatedSummary": "Our head teacher was an abuser. We joined forces to get justice - now we're married — Students spent years collecting evidence against their Indonesian principal, before falling in love.",
+      "curatedSummary": "Our head teacher was an abuser. We joined forces to get justice - now we're married \u2014 Students spent years collecting evidence against their Indonesian principal, before falling in love.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1144,7 +1144,7 @@
         },
         {
           "author": "DefenseOne",
-          "text": "Lockheed’s Skunk Works plans to build four more of its multirole…",
+          "text": "Lockheed\u2019s Skunk Works plans to build four more of its multirole\u2026",
           "url": "https://x.com/DefenseOne/status/2099579688624455805",
           "observedAt": "2026-09-14T00:00:00Z"
         }
@@ -1167,7 +1167,7 @@
       "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-19T23:00:27.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control' — Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
+      "curatedSummary": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control' \u2014 Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1177,7 +1177,7 @@
           "observedAt": "2026-09-20T18:19:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "evt-005",
@@ -1194,14 +1194,14 @@
       "observedAt": "2026-09-19T22:00:00.000Z",
       "ingestedAt": "2026-09-19T23:00:00.000Z",
       "falloutRisk": "high",
-      "curatedSummary": "Ransomware hits regional energy utility — Operational technology segment isolated after ransomware; no confirmed spillover to SCADA.",
+      "curatedSummary": "Ransomware hits regional energy utility \u2014 Operational technology segment isolated after ransomware; no confirmed spillover to SCADA.",
       "briefSource": "wire",
       "mapEligible": true
     },
     {
       "id": "evt-009",
       "title": "IED blast near convoy route in Sahel",
-      "summary": "IED strikes logistics convoy on Gao–Niamey corridor; casualties unconfirmed.",
+      "summary": "IED strikes logistics convoy on Gao\u2013Niamey corridor; casualties unconfirmed.",
       "layer": "terrorism",
       "severity": 4,
       "confidence": 0.68,
@@ -1213,7 +1213,7 @@
       "observedAt": "2026-09-19T18:00:00.000Z",
       "ingestedAt": "2026-09-19T19:00:00.000Z",
       "falloutRisk": "high",
-      "curatedSummary": "IED blast near convoy route in Sahel — IED strikes logistics convoy on Gao–Niamey corridor; casualties unconfirmed.",
+      "curatedSummary": "IED blast near convoy route in Sahel \u2014 IED strikes logistics convoy on Gao\u2013Niamey corridor; casualties unconfirmed.",
       "briefSource": "wire",
       "mapEligible": true
     },
@@ -1232,17 +1232,17 @@
       "observedAt": "2026-09-19T16:00:00.000Z",
       "ingestedAt": "2026-09-19T17:12:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "Sanctions designation list expanded — New entities linked to dual-use procurement networks designated.",
+      "curatedSummary": "Sanctions designation list expanded \u2014 New entities linked to dual-use procurement networks designated.",
       "briefSource": "wire",
       "xPosts": [
         {
           "author": "DefenseOne",
-          "text": "The Pentagon must prepare for battles around the moon: Joint Chiefs…",
+          "text": "The Pentagon must prepare for battles around the moon: Joint Chiefs\u2026",
           "url": "https://x.com/DefenseOne/status/2100317561338343440",
           "observedAt": "2026-09-16T00:00:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-bbc-world-converse-pulls-deeply-upsetting-advert-after-bac",
@@ -1260,7 +1260,7 @@
       "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-19T14:05:01.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Converse pulls 'deeply upsetting' advert after backlash — Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
+      "curatedSummary": "Converse pulls 'deeply upsetting' advert after backlash \u2014 Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1288,7 +1288,7 @@
       "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-19T13:39:32.000Z",
       "ingestedAt": "2026-09-20T21:23:26.656Z",
-      "curatedSummary": "Google's Gemini AI hacked three companies in security test — The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
+      "curatedSummary": "Google's Gemini AI hacked three companies in security test \u2014 The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1315,7 +1315,7 @@
       "observedAt": "2026-09-19T12:00:00.000Z",
       "ingestedAt": "2026-09-19T13:00:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Border skirmish reports along LoC — Small-arms fire overnight; both sides claim ceasefire violation.",
+      "curatedSummary": "Border skirmish reports along LoC \u2014 Small-arms fire overnight; both sides claim ceasefire violation.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1342,7 +1342,7 @@
       "observedAt": "2026-09-19T11:12:00.000Z",
       "ingestedAt": "2026-09-19T13:36:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "APT probing logistics firm VPN — Credential stuffing and MFA fatigue attempts against European freight forwarder.",
+      "curatedSummary": "APT probing logistics firm VPN \u2014 Credential stuffing and MFA fatigue attempts against European freight forwarder.",
       "briefSource": "wire",
       "mapEligible": false
     },
@@ -1361,7 +1361,7 @@
       "observedAt": "2026-09-19T04:00:00.000Z",
       "ingestedAt": "2026-09-19T06:24:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "Port strike threat expands to second terminal — Dockworkers threaten expansion; container backlog risk elevates.",
+      "curatedSummary": "Port strike threat expands to second terminal \u2014 Dockworkers threaten expansion; container backlog risk elevates.",
       "briefSource": "wire",
       "mapEligible": false
     },
@@ -1380,15 +1380,15 @@
       "observedAt": "2026-09-19T04:00:00.000Z",
       "ingestedAt": "2026-09-19T05:00:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Pirate boarding attempt Gulf of Guinea — Armed boarding attempt repelled; vessel resumes transit under naval escort.",
+      "curatedSummary": "Pirate boarding attempt Gulf of Guinea \u2014 Armed boarding attempt repelled; vessel resumes transit under naval escort.",
       "briefSource": "wire",
       "mapEligible": true
     },
     {
       "id": "curated-x-centcom-2101292730030669968",
       "title": "CENTCOM video post",
-      "summary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @CENTCOM regarding Middle East \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1415,8 +1415,8 @@
     {
       "id": "curated-x-defencehq-2101234920773353525",
       "title": "DefenceHQ photo post",
-      "summary": "User-generated X post from @DefenceHQ regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @DefenceHQ regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @DefenceHQ regarding Europe \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenceHQ regarding Europe \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1443,8 +1443,8 @@
     {
       "id": "curated-x-nato-2101234850133049797",
       "title": "NATO photo carousel",
-      "summary": "User-generated X post from @NATO regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @NATO regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @NATO regarding Europe \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @NATO regarding Europe \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1510,8 +1510,8 @@
     },
     {
       "id": "rss-guardian-world-brazil-s-lula-announces-higher-welfare-payments-",
-      "title": "Brazil’s Lula announces higher welfare payments and free weight-loss jabs ahead of election",
-      "summary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil’s electionsBrazil’s president, Luiz Inácio Lula da Silva, has announced a 15% increase in the country’s main cash-transfer programme for poor families, as well as free weight-los",
+      "title": "Brazil\u2019s Lula announces higher welfare payments and free weight-loss jabs ahead of election",
+      "summary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil\u2019s electionsBrazil\u2019s president, Luiz In\u00e1cio Lula da Silva, has announced a 15% increase in the country\u2019s main cash-transfer programme for poor families, as well as free weight-los",
       "layer": "conflict",
       "severity": 3,
       "falloutRisk": "medium",
@@ -1524,9 +1524,9 @@
       "url": "https://www.theguardian.com/world/2026/sep/18/brazil-lula-welfare-payments-weight-loss-jabs-election",
       "observedAt": "2026-09-18T17:10:37.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
-      "curatedSummary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil’s electionsBrazil’s president, Luiz Inácio Lula da Silva, has announced a 15% increase in the country’s main cash-transfer programme for poor families, as well as free weight-los",
+      "curatedSummary": "Critics say moves from leftwing incumbent president are electorally motivated two weeks before Brazil\u2019s electionsBrazil\u2019s president, Luiz In\u00e1cio Lula da Silva, has announced a 15% increase in the country\u2019s main cash-transfer programme for poor families, as well as free weight-los",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "evt-008",
@@ -1543,14 +1543,14 @@
       "observedAt": "2026-09-18T16:00:00.000Z",
       "ingestedAt": "2026-09-18T18:24:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Secondary sanctions risk on shadow fleet ports — Treasury guidance flags additional ship-to-ship transfer hubs in Mediterranean.",
+      "curatedSummary": "Secondary sanctions risk on shadow fleet ports \u2014 Treasury guidance flags additional ship-to-ship transfer hubs in Mediterranean.",
       "briefSource": "wire",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-british-woman-who-was-kidnapped-in-malawi-rescue",
       "title": "British woman who was kidnapped in Malawi rescued by police after shootout",
-      "summary": "Four of Nurat Osman’s alleged abductors were killed during rescue after she was taken from outside her home last weekA British woman kidnapped in Malawi last week has been rescued by police after a shootout in which four of her alleged abductors were killed.Nusrat Osman was abduc",
+      "summary": "Four of Nurat Osman\u2019s alleged abductors were killed during rescue after she was taken from outside her home last weekA British woman kidnapped in Malawi last week has been rescued by police after a shootout in which four of her alleged abductors were killed.Nusrat Osman was abduc",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
@@ -1563,7 +1563,7 @@
       "url": "https://www.theguardian.com/world/2026/sep/18/british-woman-kidnapped-malawi-police-shootout",
       "observedAt": "2026-09-18T11:21:36.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
-      "curatedSummary": "Four of Nurat Osman’s alleged abductors were killed during rescue after she was taken from outside her home last weekA British woman kidnapped in Malawi last week has been rescued by police after a shootout in which four of her alleged abductors were killed.Nusrat Osman was abduc",
+      "curatedSummary": "Four of Nurat Osman\u2019s alleged abductors were killed during rescue after she was taken from outside her home last weekA British woman kidnapped in Malawi last week has been rescued by police after a shootout in which four of her alleged abductors were killed.Nusrat Osman was abduc",
       "briefSource": "wire",
       "mapEligible": true
     },
@@ -1589,7 +1589,7 @@
     },
     {
       "id": "rss-guardian-world-we-demand-the-truth-olga-tokarczuk-and-jm-coetze",
-      "title": "‘We demand the truth’: Olga Tokarczuk and JM Coetzee lead calls for proof of life of disappeared Eritrean writers",
+      "title": "\u2018We demand the truth\u2019: Olga Tokarczuk and JM Coetzee lead calls for proof of life of disappeared Eritrean writers",
       "summary": "More than 180 writers sign letter renewing calls for information on 12 authors detained incommunicado since 2001 crackdown on free speech by Isaias AfwerkiMore than 180 writers have signed a letter to Eritrean president Isaias Afwerki calling for proof of life for 12 writers arre",
       "layer": "conflict",
       "severity": 2,
@@ -1636,15 +1636,15 @@
       "observedAt": "2026-09-18T04:00:00.000Z",
       "ingestedAt": "2026-09-18T06:24:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "Refugee camp overcrowding warning — OCHA notes acute overcrowding after latest displacement wave.",
+      "curatedSummary": "Refugee camp overcrowding warning \u2014 OCHA notes acute overcrowding after latest displacement wave.",
       "briefSource": "wire",
       "mapEligible": false
     },
     {
       "id": "curated-x-centcom-2101049264616968431",
       "title": "CENTCOM photo carousel",
-      "summary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East — verify against wires.",
+      "summary": "User-generated X post from @CENTCOM regarding Middle East \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Middle East \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1671,8 +1671,8 @@
     {
       "id": "curated-x-nato-2100857096791085507",
       "title": "NATO video post",
-      "summary": "User-generated X post from @NATO regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @NATO regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @NATO regarding Europe \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @NATO regarding Europe \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1699,8 +1699,8 @@
     {
       "id": "curated-x-uk_mto-2100898480101175570",
       "title": "UKMTO VRA Overview PDF",
-      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
-      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
+      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1722,13 +1722,13 @@
       "url": "https://x.com/UK_MTO/status/2100898480101175570",
       "observedAt": "2026-09-18T00:00:00Z",
       "ingestedAt": "2026-09-20T21:23:42.262Z",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-uk_mto-2100855389034000842",
       "title": "UKMTO Warning 139/26 PDF",
-      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
-      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb — verify against wires.",
+      "summary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @UK_MTO regarding Red Sea / Bab el-Mandeb \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -1750,12 +1750,12 @@
       "url": "https://x.com/UK_MTO/status/2100855389034000842",
       "observedAt": "2026-09-18T00:00:00Z",
       "ingestedAt": "2026-09-20T21:23:42.262Z",
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "rss-guardian-world-new-cat-species-identified-for-first-time-in-mor",
       "title": "New cat species identified for first time in more than a century in Bolivia",
-      "summary": "New species of wild feline was discovered in Bolivia’s Yungas forest that is smaller than the average domestic ⁠catA diminutive wild cat that inhabits Bolivia’s ⁠cloud forest has been identified as a previously unknown species, marking the first time a new living feline species h",
+      "summary": "New species of wild feline was discovered in Bolivia\u2019s Yungas forest that is smaller than the average domestic \u2060catA diminutive wild cat that inhabits Bolivia\u2019s \u2060cloud forest has been identified as a previously unknown species, marking the first time a new living feline species h",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
@@ -1768,12 +1768,12 @@
       "url": "https://www.theguardian.com/world/2026/sep/17/new-cat-species-identified-bolivia",
       "observedAt": "2026-09-17T20:43:38.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
-      "curatedSummary": "New species of wild feline was discovered in Bolivia’s Yungas forest that is smaller than the average domestic ⁠catA diminutive wild cat that inhabits Bolivia’s ⁠cloud forest has been identified as a previously unknown species, marking the first time a new living feline species h",
+      "curatedSummary": "New species of wild feline was discovered in Bolivia\u2019s Yungas forest that is smaller than the average domestic \u2060catA diminutive wild cat that inhabits Bolivia\u2019s \u2060cloud forest has been identified as a previously unknown species, marking the first time a new living feline species h",
       "briefSource": "wire",
       "xPosts": [
         {
           "author": "DefenseOne",
-          "text": "Lockheed’s Skunk Works plans to build four more of its multirole…",
+          "text": "Lockheed\u2019s Skunk Works plans to build four more of its multirole\u2026",
           "url": "https://x.com/DefenseOne/status/2099579688624455805",
           "observedAt": "2026-09-14T00:00:00Z"
         }
@@ -1795,14 +1795,14 @@
       "observedAt": "2026-09-17T16:00:00.000Z",
       "ingestedAt": "2026-09-17T18:24:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "South China Sea collision claim — Conflicting accounts of vessel collision near contested shoal.",
+      "curatedSummary": "South China Sea collision claim \u2014 Conflicting accounts of vessel collision near contested shoal.",
       "briefSource": "wire",
       "mapEligible": true
     },
     {
       "id": "rss-guardian-world-all-smiles-in-strasbourg-but-uncertainty-clouds-",
-      "title": "All smiles in Strasbourg but uncertainty clouds Canada’s EU membership plan",
-      "summary": "Although Mark Carney welcomed offer to become bloc’s first associate member, no one seems to know what that meansEurope live – latest updatesMark Carney received a rapturous reception in the European parliament when he gave his speech on Thursday welcoming a proposal for Canada t",
+      "title": "All smiles in Strasbourg but uncertainty clouds Canada\u2019s EU membership plan",
+      "summary": "Although Mark Carney welcomed offer to become bloc\u2019s first associate member, no one seems to know what that meansEurope live \u2013 latest updatesMark Carney received a rapturous reception in the European parliament when he gave his speech on Thursday welcoming a proposal for Canada t",
       "layer": "maritime",
       "severity": 2,
       "falloutRisk": "low",
@@ -1815,7 +1815,7 @@
       "url": "https://www.theguardian.com/world/2026/sep/17/smiles-strasbourg-uncertainty-canada-eu-membership-plan-mark-carney",
       "observedAt": "2026-09-17T15:46:15.000Z",
       "ingestedAt": "2026-09-20T21:23:27.069Z",
-      "curatedSummary": "Although Mark Carney welcomed offer to become bloc’s first associate member, no one seems to know what that meansEurope live – latest updatesMark Carney received a rapturous reception in the European parliament when he gave his speech on Thursday welcoming a proposal for Canada t",
+      "curatedSummary": "Although Mark Carney welcomed offer to become bloc\u2019s first associate member, no one seems to know what that meansEurope live \u2013 latest updatesMark Carney received a rapturous reception in the European parliament when he gave his speech on Thursday welcoming a proposal for Canada t",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1825,7 +1825,7 @@
           "observedAt": "2026-09-18T00:00:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "evt-017",
@@ -1842,7 +1842,7 @@
       "observedAt": "2026-09-16T16:00:00.000Z",
       "ingestedAt": "2026-09-16T18:24:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "Pipeline monitoring anomaly reported — Pressure anomaly on export pipeline; operator says maintenance, markets skeptical.",
+      "curatedSummary": "Pipeline monitoring anomaly reported \u2014 Pressure anomaly on export pipeline; operator says maintenance, markets skeptical.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1875,20 +1875,20 @@
       "observedAt": "2026-09-15T16:00:00.000Z",
       "ingestedAt": "2026-09-15T18:24:00.000Z",
       "falloutRisk": "medium",
-      "curatedSummary": "Cyber intrusion into municipal water SCADA (attempt) — Failed intrusion attempt on water utility HMI; ICS CERT advisory published.",
+      "curatedSummary": "Cyber intrusion into municipal water SCADA (attempt) \u2014 Failed intrusion attempt on water utility HMI; ICS CERT advisory published.",
       "briefSource": "wire",
       "mapEligible": true
     },
     {
       "id": "curated-x-nato-2099774771575521610",
       "title": "Link in threaded post for the full video",
-      "summary": "User-generated X post from @NATO regarding Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @NATO regarding Europe — verify against wires.",
+      "summary": "User-generated X post from @NATO regarding Europe \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @NATO regarding Europe \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "NATO",
-          "text": "Link in threaded post for the full video ↓",
+          "text": "Link in threaded post for the full video \u2193",
           "url": "https://x.com/NATO/status/2099774771575521610",
           "observedAt": "2026-09-15T00:00:00Z"
         }
@@ -1910,13 +1910,13 @@
     {
       "id": "curated-x-ukraine-2099939286472699990",
       "title": "Russisk krigsskib, skrid ad helvede til!",
-      "summary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
+      "summary": "User-generated X post from @Ukraine regarding Eastern Europe \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Eastern Europe \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "Ukraine",
-          "text": "Russisk krigsskib, skrid ad helvede til! 🇺🇦⚓🇩🇰",
+          "text": "Russisk krigsskib, skrid ad helvede til! \ud83c\uddfa\ud83c\udde6\u2693\ud83c\udde9\ud83c\uddf0",
           "url": "https://x.com/Ukraine/status/2099939286472699990",
           "observedAt": "2026-09-15T00:00:00Z"
         }
@@ -1950,7 +1950,7 @@
       "observedAt": "2026-09-14T16:00:00.000Z",
       "ingestedAt": "2026-09-14T18:24:00.000Z",
       "falloutRisk": "low",
-      "curatedSummary": "Diplomatic spat escalates visa bans — Tit-for-tat diplomat expulsions announced after espionage allegations.",
+      "curatedSummary": "Diplomatic spat escalates visa bans \u2014 Tit-for-tat diplomat expulsions announced after espionage allegations.",
       "briefSource": "wire",
       "xPosts": [
         {
@@ -1960,18 +1960,18 @@
           "observedAt": "2026-09-20T15:19:00Z"
         }
       ],
-      "mapEligible": true
+      "mapEligible": false
     },
     {
       "id": "curated-x-defenseone-2099592782880858238",
-      "title": "US military has ‘on-orbit’ space weapons, Air Force Secretary reveals",
-      "summary": "User-generated X post from @DefenseOne regarding Global — verify against wires.",
-      "curatedSummary": "User-generated X post from @DefenseOne regarding Global — verify against wires.",
+      "title": "US military has \u2018on-orbit\u2019 space weapons, Air Force Secretary reveals",
+      "summary": "User-generated X post from @DefenseOne regarding Global \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @DefenseOne regarding Global \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "DefenseOne",
-          "text": "US military has ‘on-orbit’ space weapons, Air Force Secretary reveals…",
+          "text": "US military has \u2018on-orbit\u2019 space weapons, Air Force Secretary reveals\u2026",
           "url": "https://x.com/DefenseOne/status/2099592782880858238",
           "observedAt": "2026-09-14T00:00:00Z"
         }
@@ -1993,8 +1993,8 @@
     {
       "id": "curated-x-ukraine-2091915493405823223",
       "title": "Independence is not a choice you make once and for all",
-      "summary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
-      "curatedSummary": "User-generated X post from @Ukraine regarding Eastern Europe — verify against wires.",
+      "summary": "User-generated X post from @Ukraine regarding Eastern Europe \u2014 verify against wires.",
+      "curatedSummary": "User-generated X post from @Ukraine regarding Eastern Europe \u2014 verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
@@ -2041,7 +2041,7 @@
     },
     {
       "id": "pos-002",
-      "title": "Combined air–sea exercise announced in Western Pacific",
+      "title": "Combined air\u2013sea exercise announced in Western Pacific",
       "summary": "Illustrative seed: multi-day bilateral exercise with live-fire windows; messaging emphasizes deterrence and interoperability.",
       "kind": "exercise",
       "actors": [
@@ -2062,7 +2062,7 @@
     {
       "id": "pos-003",
       "title": "Air-defense readiness raised along forward corridor",
-      "summary": "Illustrative seed: alert state / intercept posture increased along a land–air corridor; potential for miscalculation if paired with GPS/EW disruptions.",
+      "summary": "Illustrative seed: alert state / intercept posture increased along a land\u2013air corridor; potential for miscalculation if paired with GPS/EW disruptions.",
       "kind": "alert",
       "actors": [
         "Regional air force"
@@ -2119,7 +2119,7 @@
     {
       "id": "pos-006",
       "title": "Strategic bomber / long-range aviation patrol path extended",
-      "summary": "Illustrative seed: long-range aviation track advertised publicly; classic signaling move with limited immediate kinetic risk but high political temperature.",
+      "summary": "Illustrative seed: long-range aviation track advertised near Kamchatka approaches; classic signaling move with limited immediate kinetic risk but high political temperature.",
       "kind": "deployment",
       "actors": [
         "Strategic aviation"
@@ -2127,9 +2127,9 @@
       "inResponseTo": "Alliance reinforcement and exercise calendar",
       "precipitatePotential": "low",
       "confidence": 0.55,
-      "lat": 55,
-      "lon": 160,
-      "region": "North Pacific",
+      "lat": 53.05,
+      "lon": 158.65,
+      "region": "Kamchatka / NW Pacific",
       "source": "seed/posture-template",
       "sourceReliability": "C",
       "observedAt": "2026-09-18T14:00:00Z",
@@ -7842,7 +7842,7 @@
     "7d",
     "30d"
   ],
-  "updatedAt": "2026-09-20T21:36:34.290Z",
+  "updatedAt": "2026-09-20T21:52:26Z",
   "nextUpdateAt": "2026-09-20T23:20:00.000Z",
   "nextUpdateHint": "Next update ~6:20 PM CT"
 }

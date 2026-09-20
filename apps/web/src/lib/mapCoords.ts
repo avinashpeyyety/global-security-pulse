@@ -30,7 +30,25 @@ export function isEventMapPlottable(e: LatLonLike & { mapEligible?: boolean }): 
   return e.mapEligible === true && hasPlottableCoords(e.lat, e.lon);
 }
 
+/**
+ * Reject deep open-ocean posture triangles (legacy seed sat mid-North-Pacific).
+ * Allow coastal / chokepoint / near-land signaling positions only.
+ */
+export function looksLikeOpenOceanPosture(lat: unknown, lon: unknown): boolean {
+  if (!hasPlottableCoords(lat, lon)) return false;
+  const la = Number(lat);
+  const lo = Number(lon);
+  // Mid North Pacific basin (old 55,160 seed) — west of Aleutians/Kamchatka shelf
+  if (la > 40 && la < 60 && lo > 170 && lo < 210) return true;
+  if (la > 40 && la < 60 && lo > -180 && lo < -150) return true;
+  // Open South Pacific / South Atlantic / open Indian Ocean basins
+  if (la < -20 && la > -50 && lo > 60 && lo < 100) return true; // mid Indian
+  if (la < -15 && la > -50 && lo > -30 && lo < 10) return true; // mid S Atlantic
+  if (la < -20 && la > -50 && ((lo > 160 && lo <= 180) || (lo >= -180 && lo < -120))) return true;
+  return false;
+}
+
 /** Postures are typed with required numbers; still guard at runtime. */
 export function isPostureMapPlottable(p: LatLonLike): boolean {
-  return hasPlottableCoords(p.lat, p.lon);
+  return hasPlottableCoords(p.lat, p.lon) && !looksLikeOpenOceanPosture(p.lat, p.lon);
 }

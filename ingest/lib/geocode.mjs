@@ -1,7 +1,8 @@
 /**
  * Impact-first place → lat/lon/region helper for RSS / X-scroll / normalize.
  * Prefer title impact hits over summary; never pin Global [20,0] jitter.
- * Map markers require place coords + security relevance (mapEligible).
+ * Map markers require place coords + kinetic/impact language (mapEligible).
+ * Diplomacy, elections, welfare, generic UKMTO/VRA PDFs stay off-map.
  */
 
 /** @typedef {{ lat: number, lon: number, region: string, place: string }} PlaceHit */
@@ -105,6 +106,31 @@ const SECURITY_SIGNAL =
 
 const NON_SECURITY =
   /\b(sunlounger|sunbed|beach\s*fight|parakeet|converse|advert|advertisement|sneaker|fashion|golf|pga|nfl|nba|mlb|nhl|premier\s*league|champions\s*league|super\s*bowl|touchdown|running\s*back|quarterback|wide\s*receiver|bucs|browns|falcons|49ers|workout|sport|sports|football|soccer|basketball|baseball|tennis|olympics?|celebrity|red\s*carpet|hollywood|podcast\s*post|cat\s*species|feline|house\s*fire|firefighter|married|wedding|head\s*teacher|abuser|justice|netflix|hollywood|streaming|box\s*office|album|concert|festival\s*ticket|recipe|restaurant|travel\s*guide|holiday|vacation|lifestyle)\b/i;
+
+/**
+ * Kinetic / physical impact / named-area military activity required for map pins.
+ * Deliberately narrower than SECURITY_SIGNAL (no bare nato/military/sanctions/talks).
+ */
+const MAP_IMPACT =
+  /\b(attack|attacks|attacked|strike|strikes|struck|missile|missiles|drone|drones|bomb|bombs|bombed|bombing|ied|vbiied|car\s*bomb|shelling|shelled|artillery|airstrike|airstrikes|rocket|rockets|ballistic|invasion|invade|invaded|combat|clash|clashes|skirmish|offensive|raid|raids|raided|assault|intercept|intercepted|interception|explosion|explode|exploded|blast|blasts|killed|killing|wounded|casualt(?:y|ies)|shootout|shot\s*dead|gunfire|firefight|mortar|pirate|piracy|boarding|hijack|hijacked|collision|collided|sinking|sunk|mine|mined|blockade|drone\s*swarm|live[- ]?fire|drill|drills|military\s*exercise|war\s*game|war\s*games|earthquake|quake|tsunami|flood|floods|flooding|wildfire|cyclone|hurricane|typhoon|volcano|kidnap|kidnapped|hostage|assassination|assassinated|ransomware|cyber\s*intrusion|scada|war\s+on\s+iran|war\s+with\s+iran|war\s+on\s+israel)\b/i;
+
+/** Maritime incident language — required to pin water/chokepoint centroids. */
+const MARITIME_INCIDENT =
+  /\b(attack|attacks|attacked|boarding|collision|collided|missile|missiles|drone|drones|swarm|hijack|hijacked|piracy|pirate|struck|strike|strikes|explosion|explode|exploded|sinking|sunk|intercept|intercepted|shelling|bomb|bombed|ied|raid)\b/i;
+
+/** Diplomacy / elections / welfare / legal process / fundraising — never map-pin. */
+const MAP_EXCLUDE =
+  /\b(election|elections|electoral|welfare|weight[- ]?loss|membership|pardons?|pardoned|plans?\s+to\s+build|stronger\s+ties|bilateral\s+talks?|revive\s+[\w\s-]{0,40}talks?|talks?\s+with|working\s+to\s+revive|diplomatic\s+spat|visa\s+bans?|all\s+smiles|associate\s+member|security\s+framework|framework\s+with|UNSC\s+session|ceasefire\s+draft|designation\s+list|secondary\s+sanctions|welcomes?\s+.{0,40}deal|permanent\s+security\s+control|extradit(?:ed|ion|ing|es)?|opens?\s+trial|trial\s+of|arrested\s+in\s+connection|raises?\s+thousands|fundrais(?:e|ing|er)?|how\s+will\b|ahead\s+of\s+election|state\s+election|vows?\s+to\s+stay|announce[sd]?\s+higher\s+welfare|anti-?austerity\s+protest|protest\s+escalation|tear\s*gas|capital\s+square|port\s+strike|labour\s+strike|labor\s+strike)\b/i;
+
+/** Water-basin / chokepoint place labels — pin only when title is a real incident. */
+const WATER_BASIN_PLACES = new Set([
+  'Red Sea',
+  'Black Sea',
+  'South China Sea',
+  'Bab el-Mandeb',
+  'Strait of Hormuz',
+]);
+
 
 function escapeRe(s) {
   return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -230,7 +256,60 @@ export function isNonSecurityNoise(text) {
 }
 
 /**
+ * Diplomacy / elections / welfare / pure talks — never map-pin.
+ * @param {string} text
+ */
+export function isMapExcluded(text) {
+  return MAP_EXCLUDE.test(String(text || ''));
+}
+
+/**
+ * Kinetic / disaster / drill impact language for map pins.
+ * @param {string} text
+ */
+export function hasMapImpactLanguage(text) {
+  return MAP_IMPACT.test(String(text || ''));
+}
+
+/**
+ * Generic UKMTO/JMIC/VRA PDF or transit advisory without an incident in the title.
+ * @param {string} title
+ * @param {string} [summary]
+ */
+export function isGenericMaritimeAdvisory(title, summary = '') {
+  const t = String(title || '');
+  const hay = `${t} ${summary || ''}`;
+  const looks =
+    /\b(UKMTO|JMIC|VRA\s*Overview|ADVISORY\s*NOTE|Warning\s+\d{1,4}\/\d{2}|transit\s+advisory)\b/i.test(
+      hay,
+    ) || /\bPDF\b/i.test(t);
+  if (!looks) return false;
+  // Title must name a real maritime incident to stay on the map.
+  if (MARITIME_INCIDENT.test(t)) return false;
+  return true;
+}
+
+/**
+ * Mid-ocean / basin centroid pins (Red Sea, North Sea seed, named water basins).
+ * @param {unknown} lat
+ * @param {unknown} lon
+ * @param {string|null|undefined} place
+ */
+export function isWaterOrMidOceanPin(lat, lon, place) {
+  if (place && WATER_BASIN_PLACES.has(String(place))) return true;
+  const la = Number(lat);
+  const lo = Number(lon);
+  if (!Number.isFinite(la) || !Number.isFinite(lo)) return false;
+  // Seed North Sea centroid
+  if (Math.abs(la - 56.5) < 0.75 && Math.abs(lo - 3.5) < 0.75) return true;
+  // Canonical Red Sea water centroid from PLACES
+  if (Math.abs(la - 20) < 0.75 && Math.abs(lo - 38.5) < 0.75) return true;
+  return false;
+}
+
+/**
  * Conflict / security / disaster / maritime / cyber-nation-state signals.
+ * Used for feed tagging — NOT alone sufficient for map pins (see computeMapEligible).
  * @param {string} text
  * @param {string} [layer]
  * @param {string} [falloutRisk]
@@ -255,25 +334,34 @@ export function hasSecuritySignal(text, layer, falloutRisk) {
 }
 
 /**
- * Whether an event with a resolved place should appear on the SecurityMap.
- * Requires: place hit + (security signal OR falloutRisk medium+ with place).
+ * Whether an event with resolved place coords should appear on the SecurityMap.
+ * Strict: place/coords + kinetic/impact language; never pure diplomacy / generic PDFs.
+ * Layer alone or falloutRisk alone is NOT enough.
  */
 export function computeMapEligible(opts = {}) {
-  const text = `${opts.title || ''} ${opts.summary || ''} ${opts.curatedSummary || ''}`;
-  const hasPlace = opts.hasPlace === true || (opts.place != null && opts.place !== '');
+  const title = String(opts.title || '');
+  const summary = String(opts.summary || '');
+  const text = `${title} ${summary} ${opts.curatedSummary || ''}`;
+  const place = opts.place != null && opts.place !== '' && opts.place !== 'gdelt' ? opts.place : null;
+  const hasPlace = opts.hasPlace === true || place != null;
   const latOk = Number.isFinite(Number(opts.lat));
   const lonOk = Number.isFinite(Number(opts.lon));
   if (!hasPlace || !latOk || !lonOk) return false;
   if (isNonSecurityNoise(text)) return false;
-  if (hasSecuritySignal(text, opts.layer, opts.falloutRisk)) return true;
-  const risk = String(opts.falloutRisk || '').toLowerCase();
-  if ((risk === 'medium' || risk === 'high' || risk === 'critical') && hasPlace) {
-    // medium+ fallout with a real place — still drop pure lifestyle
-    return !isNonSecurityNoise(text);
+  if (isMapExcluded(text)) return false;
+  if (isGenericMaritimeAdvisory(title, summary)) return false;
+  // Require kinetic / disaster / drill / cyber-intrusion language (not bare "nato"/"security").
+  if (!hasMapImpactLanguage(text)) return false;
+  // Water / mid-ocean centroids: title must indicate a real maritime incident.
+  if (isWaterOrMidOceanPin(opts.lat, opts.lon, place)) {
+    if (!MARITIME_INCIDENT.test(title)) return false;
   }
-  // disaster layer with place (floods, quakes) even if keyword thin
-  if (String(opts.layer || '').toLowerCase() === 'disaster' && hasPlace) return true;
-  return false;
+  // Drop pure sanctions layer unless kinetic verbs present (prefer drop designation lists).
+  const lay = String(opts.layer || '').toLowerCase();
+  if (lay === 'sanctions' && !/\b(attack|strike|missile|drone|bomb|shelling|invasion|boarding|collision|ied|artillery|airstrike)\b/i.test(text)) {
+    return false;
+  }
+  return true;
 }
 
 /**
@@ -445,10 +533,16 @@ export function regeocodeAllNamed(events) {
       !(Math.abs(la) < 0.01 && Math.abs(lo) < 0.01);
 
     if (gdeltKeep) {
+      // Instrumented GDELT coords may stay on the row, but map pins need impact language
+      // and must not treat mid-ocean centroids as a "place" without a keyword hit.
+      const textPlace = geocodeFromText(e.title || '') || geocodeFromText(e.summary || '');
+      const kinetic = hasMapImpactLanguage(`${e.title || ''} ${e.summary || ''}`);
       const mapEligible = computeMapEligible({
         ...e,
-        hasPlace: true,
-        place: e.region || 'gdelt',
+        hasPlace: Boolean(textPlace?.place) || kinetic,
+        place: textPlace?.place || null,
+        lat: e.lat,
+        lon: e.lon,
       });
       if (e.mapEligible !== mapEligible) fixed++;
       return { ...e, mapEligible };
@@ -475,4 +569,4 @@ export function applyMapEligibility(events) {
   return { events: out, fixed, cleared };
 }
 
-export { PLACES, REGION_FALLBACK, IMPACT_CONTEXT, SECURITY_SIGNAL, NON_SECURITY };
+export { PLACES, REGION_FALLBACK, IMPACT_CONTEXT, SECURITY_SIGNAL, NON_SECURITY, MAP_IMPACT, MAP_EXCLUDE, MARITIME_INCIDENT, WATER_BASIN_PLACES };
