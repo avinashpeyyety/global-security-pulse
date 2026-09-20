@@ -220,6 +220,7 @@ export function eventFalloutRisk(e: Pick<SecurityEvent, 'severity' | 'falloutRis
 
 export {
   GSP_TZ,
+  GSP_DAILY_SLOTS,
   GSP_WEEKDAY_SLOTS,
   computeNextUpdate,
   formatUpdatedAtLabel,

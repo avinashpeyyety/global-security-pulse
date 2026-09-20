@@ -1,19 +1,19 @@
 {
   "date": "2026-09-20",
-  "generatedAt": "2026-09-20T21:02:36.653Z",
+  "generatedAt": "2026-09-20T21:04:55.530Z",
   "packageId": "daily-2026-09-20",
-  "updatedAt": "2026-09-20T21:02:36.653Z",
-  "updatedAtLabel": "Updated 4:02 PM CT Sep 20",
-  "nextUpdateAt": "2026-09-21T13:20:00.000Z",
-  "nextUpdateHint": "Next update ~8:20 AM CT Mon",
+  "updatedAt": "2026-09-20T21:04:55.530Z",
+  "updatedAtLabel": "Updated 4:04 PM CT Sep 20",
+  "nextUpdateAt": "2026-09-20T23:20:00.000Z",
+  "nextUpdateHint": "Next update ~6:20 PM CT",
   "timezone": "America/Chicago",
   "schedule": {
-    "weekdays": [
+    "daily": [
       "08:20",
       "13:20",
       "18:20"
     ],
-    "weekendPolicy": "next-monday-08:20"
+    "weekendPolicy": "daily"
   },
   "stressScore": 34.2,
   "eventCount": 66,
@@ -51,7 +51,7 @@
       "at": null
     }
   ],
-  "snapshotGeneratedAt": "2026-09-20T21:02:36.653Z",
+  "snapshotGeneratedAt": "2026-09-20T21:04:55.530Z",
   "files": [
     "events.json",
     "postures.json",

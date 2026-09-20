@@ -1,6 +1,6 @@
 # Global Security Pulse — Daily Report 2026-09-20
 
-Generated: 2026-09-20T21:02:36.653Z
+Generated: 2026-09-20T21:04:55.530Z
 Ingest package: daily-2026-09-20
 
 ## Stress composite
@@ -55,4 +55,4 @@ _No supply-route metadata._
 ## Notes
 
 - Snapshot archived under `reports/daily/` (git history) and mirrored to `apps/web/public/reports/daily/` for Pages.
-- Weekday / evening routine should run `npm run report:daily` (optionally after `npm run ingest:all`) and commit.
+- Daily routine should run `npm run report:daily` (optionally after `npm run ingest:all`) and commit.

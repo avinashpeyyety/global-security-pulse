@@ -7,9 +7,9 @@ Cheap, open-source-first cadence for Global Security Pulse. **No paid X API sear
 | When | What | Notes |
 |------|------|-------|
 | On demand / CI | `npm run ingest:all` | Markets → GDELT → RSS → X-scroll dry → daily snapshot |
-| Weekdays 8:20 AM / 1:20 PM / 6:20 PM CT | Data inject + commit | Header shows Updated / Next update from `meta.json` |
-| Weekday evening | Same + commit | Refreshes `apps/web/public/data/*` and archives `reports/daily/YYYY-MM-DD/` |
-| Weekends | No inject | UI shows next Monday 8:20 AM CT |
+| Every day 8:20 AM / 1:20 PM / 6:20 PM CT | Data inject + commit | Header shows Updated / Next update from `meta.json` |
+| Daily evening | Same + commit | Refreshes `apps/web/public/data/*` and archives `reports/daily/YYYY-MM-DD/` |
+| Weekends | Same daily inject schedule | UI advances to the next daily slot, including Sat → Sun and Sun → Mon |
 | Ad-hoc | `npm run report:daily` | Snapshot only (current public data) |
 | Ad-hoc live X | `npm run ingest:x-scroll -- --live` | Only if Playwright + browser available; still allowlist-only |
 

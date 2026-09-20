@@ -19,7 +19,7 @@ Layer toggles include a visible legend (swatch/shape) and a Low → Critical ris
 The top bar always shows:
 
 - **Updated … CT …** — latest data inject (`meta.json` / `snapshot.updatedAt`, America/Chicago)
-- **Next update ~… CT** — next weekday slot **8:20 AM / 1:20 PM / 6:20 PM** CT; weekends → next Monday **8:20 AM** CT
+- **Next update ~… CT** — next daily slot **8:20 AM / 1:20 PM / 6:20 PM** CT
 
 `npm run report:daily` (and each ingest) stamps `apps/web/public/data/meta.json`.
 
@@ -27,7 +27,7 @@ The top bar always shows:
 
 The dashboard is hosted on **GitHub Pages** from the Actions workflow (`.github/workflows/pages.yml`).
 
-Routine data inject (weekday / evening):
+Routine data inject (every day):
 
 1. `npm run ingest:all` — markets + GDELT + RSS + X-scroll dry + **daily snapshot**
 2. Commit refreshed `apps/web/public/data/*`, `apps/web/public/reports/daily/*`, and `reports/daily/*`

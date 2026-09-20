@@ -58,7 +58,7 @@ export function UpdateStatus({ updatedAt }: Props) {
   return (
     <div
       className="update-status"
-      title="Weekday injects 8:20 AM / 1:20 PM / 6:20 PM America/Chicago; weekends → next Monday 8:20 AM CT"
+      title="Daily injects 8:20 AM / 1:20 PM / 6:20 PM America/Chicago"
     >
       <span className="update-status-updated">{display.updatedLabel}</span>
       <span className="update-status-sep">·</span>

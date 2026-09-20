@@ -1,13 +1,14 @@
-/** GSP weekday data-inject cadence (America/Chicago). Mirrors packages/shared/src/schedule.ts */
+/** GSP daily data-inject cadence (America/Chicago). Mirrors packages/shared/src/schedule.ts */
 
 export const GSP_TZ = 'America/Chicago';
-export const GSP_WEEKDAY_SLOTS = [
+export const GSP_DAILY_SLOTS = [
   { hour: 8, minute: 20 },
   { hour: 13, minute: 20 },
   { hour: 18, minute: 20 },
 ];
 
-const WEEKDAY_SHORT = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+/** @deprecated Use GSP_DAILY_SLOTS. */
+export const GSP_WEEKDAY_SLOTS = GSP_DAILY_SLOTS;
 
 function zonedParts(date, timeZone) {
   const fmt = new Intl.DateTimeFormat('en-US', {
@@ -58,39 +59,19 @@ function addCalendarDays(year, month, day, delta) {
   return { year: dt.getUTCFullYear(), month: dt.getUTCMonth() + 1, day: dt.getUTCDate() };
 }
 
-function weekdayIndex(short) {
-  const i = WEEKDAY_SHORT.indexOf(short);
-  return i >= 0 ? i : 0;
-}
 
 export function computeNextUpdate(from = new Date()) {
   const p = zonedParts(from, GSP_TZ);
-  const dow = weekdayIndex(p.weekday);
   const nowMin = p.hour * 60 + p.minute;
 
-  if (dow === 0 || dow === 6) {
-    const daysUntilMon = dow === 0 ? 1 : 2;
-    const d = addCalendarDays(p.year, p.month, p.day, daysUntilMon);
-    return chicagoWallToUtc(d.year, d.month, d.day, 8, 20);
-  }
-
-  for (const slot of GSP_WEEKDAY_SLOTS) {
+  for (const slot of GSP_DAILY_SLOTS) {
     const slotMin = slot.hour * 60 + slot.minute;
     if (slotMin > nowMin) {
       return chicagoWallToUtc(p.year, p.month, p.day, slot.hour, slot.minute);
     }
   }
 
-  let d = addCalendarDays(p.year, p.month, p.day, 1);
-  let probe = chicagoWallToUtc(d.year, d.month, d.day, 12, 0);
-  let probeParts = zonedParts(probe, GSP_TZ);
-  let probeDow = weekdayIndex(probeParts.weekday);
-  while (probeDow === 0 || probeDow === 6) {
-    d = addCalendarDays(d.year, d.month, d.day, 1);
-    probe = chicagoWallToUtc(d.year, d.month, d.day, 12, 0);
-    probeParts = zonedParts(probe, GSP_TZ);
-    probeDow = weekdayIndex(probeParts.weekday);
-  }
+  const d = addCalendarDays(p.year, p.month, p.day, 1);
   return chicagoWallToUtc(d.year, d.month, d.day, 8, 20);
 }
 
@@ -136,10 +117,10 @@ export function buildDataUpdateMeta(updatedAt = new Date()) {
     nextUpdateHint: formatNextUpdateHint(next, updatedAt),
     timezone: GSP_TZ,
     schedule: {
-      weekdays: GSP_WEEKDAY_SLOTS.map(
+      daily: GSP_DAILY_SLOTS.map(
         (s) => `${String(s.hour).padStart(2, '0')}:${String(s.minute).padStart(2, '0')}`,
       ),
-      weekendPolicy: 'next-monday-08:20',
+      weekendPolicy: 'daily',
     },
   };
 }

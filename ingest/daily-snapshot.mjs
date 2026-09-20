@@ -134,7 +134,7 @@ function buildMarkdown({ date, events, postures, anomalies, stress, feeds, suppl
     '## Notes',
     '',
     '- Snapshot archived under `reports/daily/` (git history) and mirrored to `apps/web/public/reports/daily/` for Pages.',
-    '- Weekday / evening routine should run `npm run report:daily` (optionally after `npm run ingest:all`) and commit.',
+    '- Daily routine should run `npm run report:daily` (optionally after `npm run ingest:all`) and commit.',
     '',
   );
 

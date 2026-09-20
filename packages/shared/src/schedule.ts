@@ -1,9 +1,9 @@
-/** GSP weekday data-inject cadence (America/Chicago). */
+/** GSP daily data-inject cadence (America/Chicago). */
 
 export const GSP_TZ = 'America/Chicago';
 
-/** Local wall-clock inject times on weekdays Mon–Fri. */
-export const GSP_WEEKDAY_SLOTS: ReadonlyArray<{ hour: number; minute: number }> = [
+/** Local wall-clock inject times on every day. */
+export const GSP_DAILY_SLOTS: ReadonlyArray<{ hour: number; minute: number }> = [
   { hour: 8, minute: 20 },
   { hour: 13, minute: 20 },
   { hour: 18, minute: 20 },
@@ -16,12 +16,13 @@ export interface DataUpdateMeta {
   nextUpdateHint: string;
   timezone: typeof GSP_TZ;
   schedule: {
-    weekdays: string[];
+    daily: string[];
     weekendPolicy: string;
   };
 }
 
-const WEEKDAY_SHORT = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as const;
+/** @deprecated Use GSP_DAILY_SLOTS. */
+export const GSP_WEEKDAY_SLOTS = GSP_DAILY_SLOTS;
 
 function zonedParts(date: Date, timeZone: string) {
   const fmt = new Intl.DateTimeFormat('en-US', {
@@ -86,45 +87,24 @@ function addCalendarDays(
   return { year: dt.getUTCFullYear(), month: dt.getUTCMonth() + 1, day: dt.getUTCDate() };
 }
 
-function weekdayIndex(short: string): number {
-  const i = WEEKDAY_SHORT.indexOf(short as (typeof WEEKDAY_SHORT)[number]);
-  return i >= 0 ? i : 0;
-}
 
 /**
  * Next scheduled inject from `from` (default now).
- * Weekdays: 8:20 / 13:20 / 18:20 CT. Weekends → next Monday 8:20 CT.
+ * Every day: 8:20 / 13:20 / 18:20 CT.
  */
 export function computeNextUpdate(from: Date = new Date()): Date {
   const p = zonedParts(from, GSP_TZ);
-  const dow = weekdayIndex(p.weekday); // 0=Sun … 6=Sat
   const nowMin = p.hour * 60 + p.minute;
 
-  // Weekend → next Monday 8:20
-  if (dow === 0 || dow === 6) {
-    const daysUntilMon = dow === 0 ? 1 : 2;
-    const d = addCalendarDays(p.year, p.month, p.day, daysUntilMon);
-    return chicagoWallToUtc(d.year, d.month, d.day, 8, 20);
-  }
-
-  for (const slot of GSP_WEEKDAY_SLOTS) {
+  for (const slot of GSP_DAILY_SLOTS) {
     const slotMin = slot.hour * 60 + slot.minute;
     if (slotMin > nowMin) {
       return chicagoWallToUtc(p.year, p.month, p.day, slot.hour, slot.minute);
     }
   }
 
-  // Past last slot — roll to next weekday 8:20 (skip weekend)
-  let d = addCalendarDays(p.year, p.month, p.day, 1);
-  let probe = chicagoWallToUtc(d.year, d.month, d.day, 12, 0);
-  let probeParts = zonedParts(probe, GSP_TZ);
-  let probeDow = weekdayIndex(probeParts.weekday);
-  while (probeDow === 0 || probeDow === 6) {
-    d = addCalendarDays(d.year, d.month, d.day, 1);
-    probe = chicagoWallToUtc(d.year, d.month, d.day, 12, 0);
-    probeParts = zonedParts(probe, GSP_TZ);
-    probeDow = weekdayIndex(probeParts.weekday);
-  }
+  // Past last slot — roll to tomorrow 8:20, including weekends.
+  const d = addCalendarDays(p.year, p.month, p.day, 1);
   return chicagoWallToUtc(d.year, d.month, d.day, 8, 20);
 }
 
@@ -172,10 +152,10 @@ export function buildDataUpdateMeta(updatedAt: Date = new Date()): DataUpdateMet
     nextUpdateHint: formatNextUpdateHint(next, updatedAt),
     timezone: GSP_TZ,
     schedule: {
-      weekdays: GSP_WEEKDAY_SLOTS.map(
+      daily: GSP_DAILY_SLOTS.map(
         (s) => `${String(s.hour).padStart(2, '0')}:${String(s.minute).padStart(2, '0')}`,
       ),
-      weekendPolicy: 'next-monday-08:20',
+      weekendPolicy: 'daily',
     },
   };
 }
