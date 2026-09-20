@@ -16,7 +16,12 @@ data/raw/*.json
 
 # Playwright / X session — never commit cookies or storageState
 *.storage-state.json
+*.storageState.json
 .auth/
 data/x-storage-state.json
+data/**/cookies*.json
+data/**/*cookie*
 GSP_X_STORAGE_STATE*
 playwright/.auth/
+**/storage-state.json
+**/cookies.json

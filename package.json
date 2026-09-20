@@ -17,10 +17,11 @@
     "ingest:rss": "node ingest/rss.mjs",
     "ingest:x-scroll": "node ingest/x-scroll.mjs",
     "ingest:x-scroll:live": "node ingest/x-scroll.mjs --live",
-    "ingest:all": "npm run ingest:markets && npm run ingest:gdelt && npm run ingest:rss && node ingest/x-scroll.mjs --live && npm run report:daily",
+    "ingest:all": "npm run ingest:markets && npm run ingest:gdelt && npm run ingest:rss && npm run ingest:x-scroll && npm run report:daily",
     "report:daily": "node ingest/daily-snapshot.mjs",
     "agent:x-scroll": "npm run start -w @gsp/x-scroll",
-    "typecheck": "npm run build -w @gsp/shared && npm run typecheck -w @gsp/web"
+    "typecheck": "npm run build -w @gsp/shared && npm run typecheck -w @gsp/web",
+    "ingest:x-scroll:browser": "node ingest/x-scroll-browser-handoff.mjs"
   },
   "engines": {
     "node": ">=18"

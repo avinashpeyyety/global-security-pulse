@@ -1,0 +1,19 @@
+{
+  "mode": "browser",
+  "generatedAt": "2026-09-20T21:00:00.000Z",
+  "pointers": [
+    {
+      "author": "BBCWorld",
+      "title": "Example headline from a public profile scroll (replace with real text)",
+      "text": "Example post body observed in computerUse Chrome — no login wall on public profiles.",
+      "url": "https://x.com/BBCWorld/status/1234567890123456789",
+      "observedAt": "2026-09-20T20:55:00.000Z",
+      "postId": "1234567890123456789"
+    },
+    {
+      "author": "Reuters",
+      "title": "Second example pointer; postId optional when url contains /status/",
+      "url": "https://x.com/Reuters/status/9876543210987654321"
+    }
+  ]
+}

@@ -1,162 +1,56 @@
 #!/usr/bin/env node
 /**
- * X allowlist scroll ingest — NO paid X API / no search_posts_all.
+ * X allowlist scroll ingest — NO paid X API / no search_posts_all / no user-X MCP.
  *
  * Modes:
  *   --dry-run (default when --live not passed)
  *                        Synthesize structured event pointers from allowlist.
  *   --live               Budgeted Playwright timeline scroll if playwright is installed.
+ *                        OPTIONAL. On Grok box, headless Playwright often gets HTTP 403
+ *                        from x.com. Prefer browser handoff instead:
+ *                          computerUse Chrome scroll → data/raw/x-scroll-browser-latest.json
+ *                          → npm run ingest:x-scroll:browser
+ *                        See ingest/x-scroll-browser-handoff.mjs and agents/x-scroll/README.md.
  *
- * Env (optional):
+ * Env (optional, Playwright --live only):
  *   GSP_X_STORAGE_STATE  Path to Playwright storageState JSON (logged-in session).
  *                        Never commit this file. See agents/x-scroll/README.md.
  *   GSP_X_MAX_PROFILES   Override max profiles per session (smoke / CI).
  *   GSP_X_MAX_POSTS      Override max posts per profile.
  *   GSP_X_STOP_AFTER_MS  Override hard stop budget.
  *   GSP_X_MIN_DELAY_MS / GSP_X_MAX_DELAY_MS
+ *   GSP_X_HANDLES        Comma-separated handle filter for smoke.
+ *   GSP_X_CHROME_PATH    Optional system Chrome binary for channel launch.
  *
  * Merges into apps/web/public/data/events.json by id (does not wipe seed blindly).
  * Raw session dump: data/raw/x-scroll-YYYYMMDD.json
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { stampMeta } from './lib/stamp-meta.mjs';
-import { resolveEventGeo } from './lib/geocode.mjs';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, '..');
-const allowlistPath = path.join(root, 'ingest/allowlists/x-security.json');
-const publicEvents = path.join(root, 'apps/web/public/data/events.json');
-const publicFeeds = path.join(root, 'apps/web/public/data/feeds.json');
-const publicSnapshot = path.join(root, 'apps/web/public/data/snapshot.json');
-const seedEvents = path.join(root, 'data/seed/events.json');
-const rawDir = path.join(root, 'data/raw');
+import {
+  root,
+  allowlistPath,
+  loadAllowlist,
+  loadExistingEvents,
+  mergeById,
+  pointerToEvent,
+  updateFeedStatus,
+  writeRaw,
+  writeEventsAndSnapshot,
+} from './lib/x-scroll-shared.mjs';
 
 const args = new Set(process.argv.slice(2));
 const wantLive = args.has('--live');
 
-const LAYER_GUESS = [
-  [/cyber|ransomware|malware|phishing/i, 'cyber'],
-  [/ship|vessel|maritime|red sea|hormuz|piracy|tanker|strait/i, 'maritime'],
-  [/sanction|diplomacy|embassy|visa|ceasefire|talks/i, 'sanctions'],
-  [/terror|isis|al-qaeda|ied|hostage/i, 'terrorism'],
-  [/protest|riot|strike|unrest/i, 'unrest'],
-  [/earthquake|flood|wildfire|disaster|quake/i, 'disaster'],
-  [/.*/, 'conflict'],
-];
-
 const LOGIN_WALL_RE =
   /sign in to x|log in to x|\bsign in\b|\blog in\b|something went wrong|rate limit|try again later|this account doesn.t exist|account suspended|to view this profile/i;
-
-function guessLayer(text) {
-  for (const [re, layer] of LAYER_GUESS) {
-    if (re.test(text)) return layer;
-  }
-  return 'conflict';
-}
-
-function severityToFallout(sev) {
-  if (sev >= 5) return 'critical';
-  if (sev >= 4) return 'high';
-  if (sev >= 3) return 'medium';
-  return 'low';
-}
-
-function falloutHeuristic(text, reliability) {
-  let sev = 2;
-  if (/critical|massacre|invasion|nuclear|strike|attack|missile|drone swarm/i.test(text)) sev = 4;
-  if (/war|invasion|nuclear|genocide|catastrophic/i.test(text)) sev = 5;
-  if (/advisory|exercise|talks|sanction|diplomacy/i.test(text)) sev = Math.max(sev, 3);
-  if (reliability === 'C' || reliability === 'D') sev = Math.max(1, sev - 1);
-  return { severity: sev, falloutRisk: severityToFallout(sev) };
-}
 
 function envInt(name, fallback) {
   const v = process.env[name];
   if (v == null || v === '') return fallback;
   const n = Number(v);
   return Number.isFinite(n) ? n : fallback;
-}
-
-function loadAllowlist() {
-  return JSON.parse(fs.readFileSync(allowlistPath, 'utf8'));
-}
-
-function loadExistingEvents() {
-  if (fs.existsSync(publicEvents)) {
-    return JSON.parse(fs.readFileSync(publicEvents, 'utf8'));
-  }
-  if (fs.existsSync(seedEvents)) {
-    return JSON.parse(fs.readFileSync(seedEvents, 'utf8'));
-  }
-  return [];
-}
-
-function mergeById(existing, incoming) {
-  const map = new Map(existing.map((e) => [e.id, e]));
-  let added = 0;
-  let updated = 0;
-  for (const e of incoming) {
-    if (map.has(e.id)) {
-      map.set(e.id, { ...map.get(e.id), ...e });
-      updated++;
-    } else {
-      map.set(e.id, e);
-      added++;
-    }
-  }
-  return { events: [...map.values()], added, updated };
-}
-
-function pointerToEvent(ptr) {
-  const { severity, falloutRisk } = falloutHeuristic(ptr.text || ptr.title || '', ptr.reliability);
-  const title = String(ptr.title || ptr.text || `Update from @${ptr.author}`).slice(0, 160);
-  const summary = String(ptr.text || title).slice(0, 280);
-  let lat;
-  let lon;
-  let region;
-  if (ptr.lat != null && ptr.lon != null) {
-    lat = Number(ptr.lat);
-    lon = Number(ptr.lon);
-    region = ptr.regionHint || 'Global';
-  } else {
-    const geo = resolveEventGeo({
-      title,
-      summary,
-      region: ptr.regionHint || 'Global',
-      jitterIndex: 0,
-      jitterSalt: ptr.id,
-    });
-    lat = geo.lat;
-    lon = geo.lon;
-    region = geo.region;
-    // Micro-jitter only for region-fallback (place hits stay pinned)
-    if (geo.matchedFrom === 'region-fallback') {
-      let hash = 0;
-      for (let i = 0; i < ptr.id.length; i++) hash = (hash * 31 + ptr.id.charCodeAt(i)) | 0;
-      lat += ((hash % 1000) / 1000 - 0.5) * 0.4;
-      lon += ((((hash / 1000) | 0) % 1000) / 1000 - 0.5) * 0.4;
-    }
-  }
-  return {
-    id: ptr.id,
-    title,
-    summary,
-    layer: guessLayer(`${title} ${ptr.text || ''}`),
-    severity,
-    falloutRisk,
-    confidence: ptr.reliability === 'A' ? 0.7 : ptr.reliability === 'B' ? 0.6 : 0.45,
-    lat,
-    lon,
-    region,
-    source: 'x-scroll',
-    sourceReliability: ptr.reliability || 'C',
-    url: ptr.url,
-    observedAt: ptr.observedAt,
-    ingestedAt: ptr.ingestedAt || new Date().toISOString(),
-    author: ptr.author,
-  };
 }
 
 function dryRunPointers(allowlist) {
@@ -177,7 +71,7 @@ function dryRunPointers(allowlist) {
   return accounts.map((a, i) => {
     const observed = new Date(now.getTime() - i * 45 * 60e3);
     const theme = themes[i % themes.length];
-    const text = `[dry-run] ${theme} via @${a.handle} (${a.category}). Live Playwright scroll replaces this placeholder.`;
+    const text = `[dry-run] ${theme} via @${a.handle} (${a.category}). Live Playwright scroll replaces this placeholder — on Grok box prefer browser handoff (ingest:x-scroll:browser).`;
     return {
       id: `xscroll-dry-${a.handle.toLowerCase()}-${observed.toISOString().slice(0, 10)}`,
       postId: `dry_${a.handle}_${i}`,
@@ -217,6 +111,7 @@ async function tryLiveScroll(allowlist) {
   } catch {
     console.warn('x-scroll: Playwright not installed — falling back to dry-run');
     console.warn('  Install: npm i -D playwright && npx playwright install chromium');
+    console.warn('  On Grok box prefer: npm run ingest:x-scroll:browser (computerUse handoff)');
     return { pointers: null, meta: { playwright: false, loginWalls: 0, profilesTried: 0 } };
   }
 
@@ -248,7 +143,7 @@ async function tryLiveScroll(allowlist) {
     }
   } else {
     console.log(
-      'x-scroll: no GSP_X_STORAGE_STATE — anonymous Chromium (login walls likely). See agents/x-scroll/README.md',
+      'x-scroll: no GSP_X_STORAGE_STATE — anonymous Chromium (login walls / 403 likely on box). Prefer ingest:x-scroll:browser.',
     );
   }
 
@@ -434,8 +329,8 @@ async function tryLiveScroll(allowlist) {
     if (loginWalls > 0) {
       console.warn(
         `x-scroll: LIVE scraped 0 posts across ${profilesTried} profiles; login/consent/HTTP walls on ${loginWalls}. ` +
-          `Set GSP_X_STORAGE_STATE to a Playwright storageState JSON from a logged-in session on a network that can reach x.com ` +
-          `(datacenter IPs often get HTTP 403 with an empty body). Falling back to dry-run.`,
+          `On Grok box prefer computerUse Chrome → npm run ingest:x-scroll:browser. ` +
+          `Optional: GSP_X_STORAGE_STATE on a residential network. Falling back to dry-run.`,
       );
     } else {
       console.warn(
@@ -452,40 +347,6 @@ async function tryLiveScroll(allowlist) {
   return { pointers, meta };
 }
 
-function updateFeedStatus(mode, count, extra = '') {
-  if (!fs.existsSync(publicFeeds)) return;
-  const feeds = JSON.parse(fs.readFileSync(publicFeeds, 'utf8'));
-  const now = new Date().toISOString();
-  const idx = feeds.findIndex((f) => f.id === 'x-scroll');
-  const entry = {
-    id: 'x-scroll',
-    name: 'X allowlist scroll',
-    status: count > 0 ? 'Pass' : 'Warn',
-    lastEvaluatedAt: now,
-    detail: `${mode}: ${count} pointers merged (no X API search)${extra ? `; ${extra}` : ''}`,
-    rule: 'allowlist_scroll && merge_by_id',
-    snapshot: `x-scroll@${now.slice(0, 10)}`,
-  };
-  if (idx >= 0) feeds[idx] = entry;
-  else feeds.push(entry);
-  fs.writeFileSync(publicFeeds, JSON.stringify(feeds, null, 2));
-}
-
-function writeRaw(pointers, mode, meta = {}) {
-  fs.mkdirSync(rawDir, { recursive: true });
-  const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  const out = path.join(rawDir, `x-scroll-${day}.json`);
-  fs.writeFileSync(
-    out,
-    JSON.stringify(
-      { mode, generatedAt: new Date().toISOString(), count: pointers.length, meta, pointers },
-      null,
-      2,
-    ),
-  );
-  return out;
-}
-
 async function main() {
   if (!fs.existsSync(allowlistPath)) {
     console.error('Missing allowlist at', allowlistPath);
@@ -498,17 +359,23 @@ async function main() {
     .filter(Boolean);
   if (requestedHandles.length) {
     const requested = new Set(requestedHandles);
-    allowlist.accounts = allowlist.accounts.filter((account) => requested.has(account.handle.toLowerCase()));
-    console.log(`x-scroll: handle filter → ${allowlist.accounts.map((account) => `@${account.handle}`).join(', ') || '(none)'}`);
+    allowlist.accounts = allowlist.accounts.filter((account) =>
+      requested.has(account.handle.toLowerCase()),
+    );
+    console.log(
+      `x-scroll: handle filter → ${allowlist.accounts.map((account) => `@${account.handle}`).join(', ') || '(none)'}`,
+    );
   }
   let pointers = null;
   let mode = 'dry-run';
   let liveMeta = null;
 
   if (wantLive && !args.has('--dry-run')) {
+    console.warn(
+      'x-scroll: --live is optional; on Grok box Playwright often 403s — prefer ingest:x-scroll:browser',
+    );
     const result = await tryLiveScroll(allowlist);
     liveMeta = result.meta;
-    // Fall back to dry-run ONLY if zero posts scraped across all profiles
     if (result.pointers && result.pointers.length) {
       pointers = result.pointers;
       mode = 'live';
@@ -526,18 +393,8 @@ async function main() {
   const incoming = pointers.map(pointerToEvent);
   const existing = loadExistingEvents();
   const { events, added, updated } = mergeById(existing, incoming);
+  writeEventsAndSnapshot(events);
 
-  fs.mkdirSync(path.dirname(publicEvents), { recursive: true });
-  fs.writeFileSync(publicEvents, JSON.stringify(events, null, 2));
-  if (fs.existsSync(publicSnapshot)) {
-    const snap = JSON.parse(fs.readFileSync(publicSnapshot, 'utf8'));
-    snap.events = events;
-    snap.generatedAt = new Date().toISOString();
-    if (fs.existsSync(publicFeeds)) {
-      snap.feeds = JSON.parse(fs.readFileSync(publicFeeds, 'utf8'));
-    }
-    fs.writeFileSync(publicSnapshot, JSON.stringify(snap, null, 2));
-  }
   const wallNote =
     liveMeta && liveMeta.loginWalls
       ? `${liveMeta.loginWalls} login-wall profile(s)`
