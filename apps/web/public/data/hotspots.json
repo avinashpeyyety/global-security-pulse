@@ -1,80 +1,24 @@
 [
   {
-    "region": "Middle East",
-    "count": 9,
-    "maxSeverity": 4,
-    "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-21T18:44:49.595Z",
-    "layers": [
-      "conflict",
-      "terrorism",
-      "sanctions"
-    ]
-  },
-  {
     "region": "Global",
-    "count": 12,
-    "maxSeverity": 5,
-    "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-21T18:44:49.595Z",
-    "layers": [
-      "cyber",
-      "conflict",
-      "maritime",
-      "disaster"
-    ]
-  },
-  {
-    "region": "South Asia",
-    "count": 2,
-    "maxSeverity": 3,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-21T17:48:51.000Z",
-    "layers": [
-      "unrest",
-      "conflict"
-    ]
-  },
-  {
-    "region": "Europe",
-    "count": 5,
-    "maxSeverity": 4,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-21T17:38:07.000Z",
-    "layers": [
-      "unrest",
-      "conflict"
-    ]
-  },
-  {
-    "region": "East / SE Asia",
     "count": 4,
     "maxSeverity": 3,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-21T17:32:34.000Z",
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-21T23:38:18.784Z",
     "layers": [
       "conflict",
+      "cyber",
       "maritime"
     ]
   },
   {
-    "region": "Americas",
-    "count": 3,
-    "maxSeverity": 2,
-    "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-09-21T15:58:53.000Z",
+    "region": "Middle East",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-21T23:38:18.784Z",
     "layers": [
       "conflict"
-    ]
-  },
-  {
-    "region": "Red Sea / Bab el-Mandeb",
-    "count": 2,
-    "maxSeverity": 5,
-    "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-09-21T14:14:16.000Z",
-    "layers": [
-      "maritime"
     ]
   },
   {
@@ -90,13 +34,36 @@
   },
   {
     "region": "East Asia",
-    "count": 2,
+    "count": 3,
     "maxSeverity": 4,
     "freshestSource": "USGS",
     "freshestAt": "2026-09-20T12:00:00.000Z",
     "layers": [
       "disaster",
       "conflict"
+    ]
+  },
+  {
+    "region": "Red Sea / Bab el-Mandeb",
+    "count": 1,
+    "maxSeverity": 5,
+    "freshestSource": "UKMTO advisory",
+    "freshestAt": "2026-09-20T11:00:00.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "North America",
+    "count": 5,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-20T10:00:00.000Z",
+    "layers": [
+      "sanctions",
+      "disaster",
+      "unrest",
+      "cyber"
     ]
   },
   {
@@ -130,29 +97,23 @@
     ]
   },
   {
-    "region": "North America",
-    "count": 4,
-    "maxSeverity": 3,
-    "freshestSource": "GDELT/BBC",
-    "freshestAt": "2026-09-20T01:36:00.000Z",
-    "layers": [
-      "disaster",
-      "sanctions",
-      "unrest",
-      "cyber"
-    ]
-  },
-  {
-    "region": "Africa",
-    "count": 5,
+    "region": "Sahel",
+    "count": 1,
     "maxSeverity": 4,
     "freshestSource": "GDELT/AFP",
     "freshestAt": "2026-09-19T18:00:00.000Z",
     "layers": [
-      "terrorism",
-      "maritime",
-      "conflict",
-      "unrest"
+      "terrorism"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-19T12:00:00.000Z",
+    "layers": [
+      "conflict"
     ]
   },
   {
@@ -164,6 +125,16 @@
     "layers": [
       "cyber",
       "sanctions"
+    ]
+  },
+  {
+    "region": "Africa",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/IMB",
+    "freshestAt": "2026-09-19T04:00:00.000Z",
+    "layers": [
+      "maritime"
     ]
   },
   {
@@ -184,6 +155,16 @@
     "freshestAt": "2026-09-18T04:00:00.000Z",
     "layers": [
       "disaster"
+    ]
+  },
+  {
+    "region": "Southeast Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/wire",
+    "freshestAt": "2026-09-17T16:00:00.000Z",
+    "layers": [
+      "maritime"
     ]
   }
 ]
