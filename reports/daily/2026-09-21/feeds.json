@@ -21,7 +21,7 @@
     "id": "x-scroll",
     "name": "X allowlist scroll",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-09-21T14:07:49.140Z",
+    "lastEvaluatedAt": "2026-09-21T18:44:51.206Z",
     "detail": "live: 5 pointers merged (no X API search); 13 login-wall profile(s)",
     "rule": "allowlist_scroll && merge_by_id",
     "snapshot": "x-scroll@2026-09-21"
@@ -39,7 +39,7 @@
     "id": "rss",
     "name": "RSS wires",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-09-21T14:06:40.908Z",
+    "lastEvaluatedAt": "2026-09-21T18:43:44.999Z",
     "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
     "rule": "http_200 && items>=1",
     "snapshot": "rss@2026-09-21"
