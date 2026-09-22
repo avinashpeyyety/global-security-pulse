@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-22T14:00:45.870Z",
-  "updatedAtLabel": "Updated 9:00 AM CT Sep 22",
-  "nextUpdateAt": "2026-09-22T18:20:00.000Z",
-  "nextUpdateHint": "Next update ~1:20 PM CT",
+  "updatedAt": "2026-09-22T18:42:23.471Z",
+  "updatedAtLabel": "Updated 1:42 PM CT Sep 22",
+  "nextUpdateAt": "2026-09-22T23:20:00.000Z",
+  "nextUpdateHint": "Next update ~6:20 PM CT",
   "timezone": "America/Chicago",
   "schedule": {
     "daily": [
