@@ -1,5 +1,10 @@
 {
   "generatedAt": "2026-09-22T14:00:45.870Z",
+  "date": "2026-09-22",
+  "packageId": "daily-2026-09-22",
+  "updatedAt": "2026-09-22T14:00:45.870Z",
+  "nextUpdateAt": "2026-09-22T18:20:00.000Z",
+  "nextUpdateHint": "Next update ~1:20 PM CT",
   "events": [
     {
       "id": "curated-x-centcom-2102131151733158360",
@@ -725,6 +730,258 @@
       "ingestedAt": "2026-09-20T14:00:00Z"
     }
   ],
+  "anomalies": [
+    {
+      "seriesId": "ndx",
+      "seriesName": "Nasdaq 100",
+      "zScore": 2.17,
+      "pctChange1d": 0.49,
+      "pctChange5d": 5.86,
+      "pctChange20d": 5.55,
+      "adverseStreak": 0,
+      "latestValue": 30632.75,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "shcomp",
+      "seriesName": "Shanghai Composite",
+      "zScore": -2.03,
+      "pctChange1d": -0.22,
+      "pctChange5d": -0.3,
+      "pctChange20d": -1.33,
+      "adverseStreak": 1,
+      "latestValue": 3029.45,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "spx",
+      "seriesName": "S&P 500",
+      "zScore": 1.37,
+      "pctChange1d": 0.05,
+      "pctChange5d": 2.41,
+      "pctChange20d": 1.51,
+      "adverseStreak": 0,
+      "latestValue": 7768.7099609375,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "vix",
+      "seriesName": "VIX",
+      "zScore": -1.03,
+      "pctChange1d": -0.94,
+      "pctChange5d": -14.36,
+      "pctChange20d": -4.66,
+      "adverseStreak": 0,
+      "latestValue": 14.729999542236328,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "brent",
+      "seriesName": "Brent Crude",
+      "zScore": 1,
+      "pctChange1d": -1.23,
+      "pctChange5d": -8.86,
+      "pctChange20d": 7.53,
+      "adverseStreak": 0,
+      "latestValue": 99.11000061035156,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "copper",
+      "seriesName": "Copper",
+      "zScore": 0.92,
+      "pctChange1d": -0.24,
+      "pctChange5d": -1.18,
+      "pctChange20d": -0.24,
+      "adverseStreak": 5,
+      "latestValue": 4.2,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "usdjpy",
+      "seriesName": "USD/JPY",
+      "zScore": -0.76,
+      "pctChange1d": 0.13,
+      "pctChange5d": 1.86,
+      "pctChange20d": -1.18,
+      "adverseStreak": 6,
+      "latestValue": 157.2550048828125,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "wti",
+      "seriesName": "WTI Crude",
+      "zScore": 0.68,
+      "pctChange1d": -5.28,
+      "pctChange5d": -14.28,
+      "pctChange20d": 6.72,
+      "adverseStreak": 0,
+      "latestValue": 90.72000122070312,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "eurusd",
+      "seriesName": "EUR/USD",
+      "zScore": -0.65,
+      "pctChange1d": -0.19,
+      "pctChange5d": -0.79,
+      "pctChange20d": -1.81,
+      "adverseStreak": 1,
+      "latestValue": 1.145737886428833,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "nky",
+      "seriesName": "Nikkei 225",
+      "zScore": -0.58,
+      "pctChange1d": 1.38,
+      "pctChange5d": 1.57,
+      "pctChange20d": -1.51,
+      "adverseStreak": 0,
+      "latestValue": 65018.94921875,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "dxy",
+      "seriesName": "US Dollar Index",
+      "zScore": 0.39,
+      "pctChange1d": 0.01,
+      "pctChange5d": 0.8,
+      "pctChange20d": 1.46,
+      "adverseStreak": 2,
+      "latestValue": 100.44499969482422,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "gold",
+      "seriesName": "Gold",
+      "zScore": 0.37,
+      "pctChange1d": -0.18,
+      "pctChange5d": 1,
+      "pctChange20d": -6.85,
+      "adverseStreak": 0,
+      "latestValue": 4376.10009765625,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "fedfunds",
+      "seriesName": "Fed Funds (proxy)",
+      "zScore": 0.28,
+      "pctChange1d": -0.19,
+      "pctChange5d": 0,
+      "pctChange20d": 0.19,
+      "adverseStreak": 3,
+      "latestValue": 5.32,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    },
+    {
+      "seriesId": "dax",
+      "seriesName": "DAX",
+      "zScore": -0.04,
+      "pctChange1d": 0.42,
+      "pctChange5d": 1.11,
+      "pctChange20d": -2.22,
+      "adverseStreak": 0,
+      "latestValue": 25683.150390625,
+      "evaluatedAt": "2026-09-22T13:59:17.955Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-22"
+    }
+  ],
+  "stress": {
+    "score": 26.3,
+    "components": {
+      "equities": 21,
+      "usd": 36,
+      "vix": 20,
+      "oil": 35
+    },
+    "evaluatedAt": "2026-09-22T13:59:17.955Z",
+    "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
+    "snapshot": "live@2026-09-22"
+  },
+  "feeds": [
+    {
+      "id": "gdelt",
+      "name": "GDELT GEO",
+      "status": "Pass",
+      "lastEvaluatedAt": "2026-09-20T15:30:00.000Z",
+      "detail": "Seed + optional live refresh",
+      "rule": "http_200 && events>=1",
+      "snapshot": "seed-v0.1"
+    },
+    {
+      "id": "markets",
+      "name": "Markets (Stooq/Yahoo)",
+      "status": "Pass",
+      "lastEvaluatedAt": "2026-09-20T15:36:00.000Z",
+      "detail": "Seed series loaded",
+      "rule": "series_count>=10",
+      "snapshot": "seed-v0.1"
+    },
+    {
+      "id": "x-scroll",
+      "name": "X allowlist scroll",
+      "status": "Pass",
+      "lastEvaluatedAt": "2026-09-22T14:00:39.640Z",
+      "detail": "live: 5 pointers merged (no X API search); 13 login-wall profile(s)",
+      "rule": "allowlist_scroll && merge_by_id",
+      "snapshot": "x-scroll@2026-09-22"
+    },
+    {
+      "id": "fred",
+      "name": "FRED macros",
+      "status": "Warn",
+      "lastEvaluatedAt": "2026-09-20T15:00:00.000Z",
+      "detail": "No FRED_API_KEY; using seed proxy for fed funds",
+      "rule": "api_key_present || seed_fallback",
+      "snapshot": "seed-proxy"
+    },
+    {
+      "id": "rss",
+      "name": "RSS wires",
+      "status": "Pass",
+      "lastEvaluatedAt": "2026-09-22T13:59:17.239Z",
+      "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
+      "rule": "http_200 && items>=1",
+      "snapshot": "rss@2026-09-22"
+    },
+    {
+      "id": "baltic",
+      "name": "Baltic Dry",
+      "status": "Not run",
+      "lastEvaluatedAt": null,
+      "detail": "No free reliable source wired",
+      "rule": "source_available",
+      "snapshot": null
+    }
+  ],
   "hotspots": [
     {
       "region": "Global",
@@ -895,62 +1152,371 @@
       ]
     }
   ],
-  "feeds": [
-    {
-      "id": "gdelt",
-      "name": "GDELT GEO",
-      "status": "Pass",
-      "lastEvaluatedAt": "2026-09-20T15:30:00.000Z",
-      "detail": "Seed + optional live refresh",
-      "rule": "http_200 && events>=1",
-      "snapshot": "seed-v0.1"
-    },
-    {
-      "id": "markets",
-      "name": "Markets (Stooq/Yahoo)",
-      "status": "Pass",
-      "lastEvaluatedAt": "2026-09-20T15:36:00.000Z",
-      "detail": "Seed series loaded",
-      "rule": "series_count>=10",
-      "snapshot": "seed-v0.1"
-    },
-    {
-      "id": "x-scroll",
-      "name": "X allowlist scroll",
-      "status": "Pass",
-      "lastEvaluatedAt": "2026-09-22T14:00:39.640Z",
-      "detail": "live: 5 pointers merged (no X API search); 13 login-wall profile(s)",
-      "rule": "allowlist_scroll && merge_by_id",
-      "snapshot": "x-scroll@2026-09-22"
-    },
-    {
-      "id": "fred",
-      "name": "FRED macros",
-      "status": "Warn",
-      "lastEvaluatedAt": "2026-09-20T15:00:00.000Z",
-      "detail": "No FRED_API_KEY; using seed proxy for fed funds",
-      "rule": "api_key_present || seed_fallback",
-      "snapshot": "seed-proxy"
-    },
-    {
-      "id": "rss",
-      "name": "RSS wires",
-      "status": "Pass",
-      "lastEvaluatedAt": "2026-09-22T13:59:17.239Z",
-      "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
-      "rule": "http_200 && items>=1",
-      "snapshot": "rss@2026-09-22"
-    },
-    {
-      "id": "baltic",
-      "name": "Baltic Dry",
-      "status": "Not run",
-      "lastEvaluatedAt": null,
-      "detail": "No free reliable source wired",
-      "rule": "source_available",
-      "snapshot": null
-    }
-  ],
+  "supplyRoutes": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "hormuz",
+          "name": "Strait of Hormuz",
+          "kind": "oil-chokepoint",
+          "note": "Persian Gulf crude egress"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              55.2,
+              26
+            ],
+            [
+              56.2,
+              26.4
+            ],
+            [
+              56.6,
+              26.55
+            ],
+            [
+              57,
+              25.2
+            ],
+            [
+              57.5,
+              24
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "bab-suez",
+          "name": "Bab el-Mandeb → Red Sea → Suez",
+          "kind": "trade-chokepoint",
+          "note": "Asia–Europe via Red Sea"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              48.5,
+              12.5
+            ],
+            [
+              43.3,
+              12.6
+            ],
+            [
+              42.5,
+              14
+            ],
+            [
+              38,
+              20
+            ],
+            [
+              34,
+              27
+            ],
+            [
+              32.5,
+              29.9
+            ],
+            [
+              32.3,
+              31.2
+            ],
+            [
+              32,
+              31.8
+            ],
+            [
+              29.5,
+              31.4
+            ],
+            [
+              25,
+              34
+            ],
+            [
+              18,
+              36
+            ],
+            [
+              10,
+              38
+            ],
+            [
+              5,
+              36
+            ],
+            [
+              -5.5,
+              36
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "malacca",
+          "name": "Strait of Malacca",
+          "kind": "trade-chokepoint",
+          "note": "Indian Ocean ↔ South China Sea"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              95,
+              5.5
+            ],
+            [
+              98,
+              4
+            ],
+            [
+              100.5,
+              2.5
+            ],
+            [
+              103.5,
+              1.2
+            ],
+            [
+              104.5,
+              1.3
+            ],
+            [
+              106,
+              3
+            ],
+            [
+              108,
+              6
+            ],
+            [
+              112,
+              10
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "taiwan",
+          "name": "Taiwan Strait / East Asia lane",
+          "kind": "trade-chokepoint",
+          "note": "NE Asia trade corridor"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              118,
+              22
+            ],
+            [
+              119.5,
+              24
+            ],
+            [
+              120.5,
+              25.5
+            ],
+            [
+              122,
+              27
+            ],
+            [
+              124,
+              30
+            ],
+            [
+              126,
+              33
+            ],
+            [
+              129,
+              35
+            ],
+            [
+              135,
+              34.5
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "panama",
+          "name": "Panama Canal",
+          "kind": "trade-chokepoint",
+          "note": "Atlantic ↔ Pacific"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -79.9,
+              9.35
+            ],
+            [
+              -79.7,
+              9.1
+            ],
+            [
+              -79.55,
+              8.95
+            ],
+            [
+              -79.4,
+              8.85
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "cape",
+          "name": "Cape of Good Hope lane",
+          "kind": "alt-route",
+          "note": "Africa alternative when Red Sea disrupted"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              40,
+              -5
+            ],
+            [
+              35,
+              -20
+            ],
+            [
+              25,
+              -34
+            ],
+            [
+              18.5,
+              -34.5
+            ],
+            [
+              10,
+              -30
+            ],
+            [
+              0,
+              -20
+            ],
+            [
+              -10,
+              -5
+            ],
+            [
+              -20,
+              5
+            ],
+            [
+              -40,
+              10
+            ],
+            [
+              -60,
+              15
+            ],
+            [
+              -75,
+              20
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "gibraltar",
+          "name": "Strait of Gibraltar",
+          "kind": "trade-chokepoint",
+          "note": "Med ↔ Atlantic"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -2,
+              36
+            ],
+            [
+              -4,
+              36
+            ],
+            [
+              -5.6,
+              36
+            ],
+            [
+              -7,
+              36.2
+            ],
+            [
+              -9,
+              37
+            ]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": "hormuz-asia",
+          "name": "Gulf → Asia energy lane",
+          "kind": "oil-route",
+          "note": "Crude toward South / East Asia"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              57.5,
+              24
+            ],
+            [
+              60,
+              20
+            ],
+            [
+              65,
+              15
+            ],
+            [
+              72,
+              10
+            ],
+            [
+              80,
+              6
+            ],
+            [
+              90,
+              5
+            ],
+            [
+              95,
+              5.5
+            ]
+          ]
+        }
+      }
+    ]
+  },
   "series": [
     {
       "id": "spx",
@@ -6117,209 +6683,10 @@
       ]
     }
   ],
-  "anomalies": [
-    {
-      "seriesId": "ndx",
-      "seriesName": "Nasdaq 100",
-      "zScore": 2.17,
-      "pctChange1d": 0.49,
-      "pctChange5d": 5.86,
-      "pctChange20d": 5.55,
-      "adverseStreak": 0,
-      "latestValue": 30632.75,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "shcomp",
-      "seriesName": "Shanghai Composite",
-      "zScore": -2.03,
-      "pctChange1d": -0.22,
-      "pctChange5d": -0.3,
-      "pctChange20d": -1.33,
-      "adverseStreak": 1,
-      "latestValue": 3029.45,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "spx",
-      "seriesName": "S&P 500",
-      "zScore": 1.37,
-      "pctChange1d": 0.05,
-      "pctChange5d": 2.41,
-      "pctChange20d": 1.51,
-      "adverseStreak": 0,
-      "latestValue": 7768.7099609375,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "vix",
-      "seriesName": "VIX",
-      "zScore": -1.03,
-      "pctChange1d": -0.94,
-      "pctChange5d": -14.36,
-      "pctChange20d": -4.66,
-      "adverseStreak": 0,
-      "latestValue": 14.729999542236328,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "brent",
-      "seriesName": "Brent Crude",
-      "zScore": 1,
-      "pctChange1d": -1.23,
-      "pctChange5d": -8.86,
-      "pctChange20d": 7.53,
-      "adverseStreak": 0,
-      "latestValue": 99.11000061035156,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "copper",
-      "seriesName": "Copper",
-      "zScore": 0.92,
-      "pctChange1d": -0.24,
-      "pctChange5d": -1.18,
-      "pctChange20d": -0.24,
-      "adverseStreak": 5,
-      "latestValue": 4.2,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "usdjpy",
-      "seriesName": "USD/JPY",
-      "zScore": -0.76,
-      "pctChange1d": 0.13,
-      "pctChange5d": 1.86,
-      "pctChange20d": -1.18,
-      "adverseStreak": 6,
-      "latestValue": 157.2550048828125,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "wti",
-      "seriesName": "WTI Crude",
-      "zScore": 0.68,
-      "pctChange1d": -5.28,
-      "pctChange5d": -14.28,
-      "pctChange20d": 6.72,
-      "adverseStreak": 0,
-      "latestValue": 90.72000122070312,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "eurusd",
-      "seriesName": "EUR/USD",
-      "zScore": -0.65,
-      "pctChange1d": -0.19,
-      "pctChange5d": -0.79,
-      "pctChange20d": -1.81,
-      "adverseStreak": 1,
-      "latestValue": 1.145737886428833,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "nky",
-      "seriesName": "Nikkei 225",
-      "zScore": -0.58,
-      "pctChange1d": 1.38,
-      "pctChange5d": 1.57,
-      "pctChange20d": -1.51,
-      "adverseStreak": 0,
-      "latestValue": 65018.94921875,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "dxy",
-      "seriesName": "US Dollar Index",
-      "zScore": 0.39,
-      "pctChange1d": 0.01,
-      "pctChange5d": 0.8,
-      "pctChange20d": 1.46,
-      "adverseStreak": 2,
-      "latestValue": 100.44499969482422,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "gold",
-      "seriesName": "Gold",
-      "zScore": 0.37,
-      "pctChange1d": -0.18,
-      "pctChange5d": 1,
-      "pctChange20d": -6.85,
-      "adverseStreak": 0,
-      "latestValue": 4376.10009765625,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "fedfunds",
-      "seriesName": "Fed Funds (proxy)",
-      "zScore": 0.28,
-      "pctChange1d": -0.19,
-      "pctChange5d": 0,
-      "pctChange20d": 0.19,
-      "adverseStreak": 3,
-      "latestValue": 5.32,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    },
-    {
-      "seriesId": "dax",
-      "seriesName": "DAX",
-      "zScore": -0.04,
-      "pctChange1d": 0.42,
-      "pctChange5d": 1.11,
-      "pctChange20d": -2.22,
-      "adverseStreak": 0,
-      "latestValue": 25683.150390625,
-      "evaluatedAt": "2026-09-22T13:59:17.955Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-22"
-    }
-  ],
-  "stress": {
-    "score": 26.3,
-    "components": {
-      "equities": 21,
-      "usd": 36,
-      "vix": 20,
-      "oil": 35
-    },
-    "evaluatedAt": "2026-09-22T13:59:17.955Z",
-    "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
-    "snapshot": "live@2026-09-22"
-  },
   "timeWindows": [
     "6h",
     "24h",
     "7d",
     "30d"
-  ],
-  "updatedAt": "2026-09-22T14:00:45.870Z",
-  "nextUpdateAt": "2026-09-22T18:20:00.000Z",
-  "nextUpdateHint": "Next update ~1:20 PM CT"
+  ]
 }
