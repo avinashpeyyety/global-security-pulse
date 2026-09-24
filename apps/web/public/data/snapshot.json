@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T18:25:41.608Z",
+  "generatedAt": "2026-09-24T23:24:59.503Z",
   "events": [
     {
       "id": "curated-x-centcom-2102821866859573647",
@@ -10,9 +10,9 @@
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain strict enforcement of America's 🇺🇸 steel wall blockade. 00:09 144",
+          "text": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain strict enforcement of America's 🇺🇸 steel wall blockade. 00:09 147",
           "url": "https://x.com/CENTCOM/status/2102821866859573647",
-          "observedAt": "2026-09-24T18:25:35.581Z"
+          "observedAt": "2026-09-24T23:24:53.042Z"
         }
       ],
       "layer": "maritime",
@@ -25,21 +25,21 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102821866859573647",
-      "observedAt": "2026-09-24T18:25:35.581Z",
-      "ingestedAt": "2026-09-24T18:25:35.581Z"
+      "observedAt": "2026-09-24T23:24:53.042Z",
+      "ingestedAt": "2026-09-24T23:24:53.042Z"
     },
     {
       "id": "curated-x-centcom-2102740345507258656",
-      "title": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 579",
+      "title": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 583",
       "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 579",
+          "text": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 583",
           "url": "https://x.com/CENTCOM/status/2102740345507258656",
-          "observedAt": "2026-09-24T18:25:35.581Z"
+          "observedAt": "2026-09-24T23:24:53.042Z"
         }
       ],
       "layer": "conflict",
@@ -52,8 +52,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102740345507258656",
-      "observedAt": "2026-09-24T18:25:35.581Z",
-      "ingestedAt": "2026-09-24T18:25:35.581Z"
+      "observedAt": "2026-09-24T23:24:53.042Z",
+      "ingestedAt": "2026-09-24T23:24:53.042Z"
     },
     {
       "id": "curated-x-centcom-2102453129014890686",
@@ -64,9 +64,9 @@
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 22 U.S. Army Soldiers reload a Land-based Phalanx Weapon System (LPWS) in the Middle East. The LPWS is a mobile air defense system that can eliminate aerial threats. 105 383",
+          "text": "U.S. Central Command @CENTCOM Sep 22 U.S. Army Soldiers reload a Land-based Phalanx Weapon System (LPWS) in the Middle East. The LPWS is a mobile air defense system that can eliminate aerial threats. 105 385",
           "url": "https://x.com/CENTCOM/status/2102453129014890686",
-          "observedAt": "2026-09-24T18:25:35.581Z"
+          "observedAt": "2026-09-24T23:24:53.042Z"
         }
       ],
       "layer": "conflict",
@@ -79,8 +79,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102453129014890686",
-      "observedAt": "2026-09-24T18:25:35.581Z",
-      "ingestedAt": "2026-09-24T18:25:35.581Z"
+      "observedAt": "2026-09-24T23:24:53.042Z",
+      "ingestedAt": "2026-09-24T23:24:53.042Z"
     },
     {
       "id": "curated-x-centcom-2102131151733158360",
@@ -93,7 +93,7 @@
           "author": "CENTCOM",
           "text": "U.S. Central Command @CENTCOM Sep 21 Different platforms, same team. U.S. military air power across the CENTCOM theater promotes regional security and stability. 00:00 / 00:33 109",
           "url": "https://x.com/CENTCOM/status/2102131151733158360",
-          "observedAt": "2026-09-24T18:25:35.581Z"
+          "observedAt": "2026-09-24T23:24:53.042Z"
         }
       ],
       "layer": "conflict",
@@ -106,8 +106,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102131151733158360",
-      "observedAt": "2026-09-24T18:25:35.581Z",
-      "ingestedAt": "2026-09-24T18:25:35.581Z"
+      "observedAt": "2026-09-24T23:24:53.042Z",
+      "ingestedAt": "2026-09-24T23:24:53.042Z"
     },
     {
       "id": "curated-x-centcom-2102058017625723237",
@@ -120,7 +120,7 @@
           "author": "CENTCOM",
           "text": "U.S. Central Command @CENTCOM Sep 21 USS Rafael Peralta (DDG 115) sails in regional waters as the guided-missile destroyer continues strict enforcement of the U.S. blockade against Iran, preventing commerce from entering or departing Iranian ports and coastal areas. As of Sept. 2",
           "url": "https://x.com/CENTCOM/status/2102058017625723237",
-          "observedAt": "2026-09-24T18:25:35.581Z"
+          "observedAt": "2026-09-24T23:24:53.042Z"
         }
       ],
       "layer": "conflict",
@@ -133,27 +133,307 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102058017625723237",
-      "observedAt": "2026-09-24T18:25:35.581Z",
-      "ingestedAt": "2026-09-24T18:25:35.581Z"
+      "observedAt": "2026-09-24T23:24:53.042Z",
+      "ingestedAt": "2026-09-24T23:24:53.042Z"
     },
     {
-      "id": "rss-aljazeera-nigeria-vs-madagascar-afcon-2027-qualifier-previ",
-      "title": "Nigeria vs: Madagascar AFCON 2027 qualifier – preview, teams, prediction",
-      "summary": "Madagascar will attempt to emulate their last shock win over the Super Eagles - a 2-0 victory at AFCON 2019.",
+      "id": "rss-bbc-world-hundreds-of-thousands-expected-in-paris-for-pope",
+      "title": "Hundreds of thousands expected in Paris for Pope's visit",
+      "summary": "The highpoint of his time in Paris will be a giant Mass attended by more than half a million people.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 48.86,
+      "lon": 2.35,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T23:17:00.000Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
+      "curatedSummary": "Hundreds of thousands expected in Paris for Pope's visit — The highpoint of his time in Paris will be a giant Mass attended by more than half a million people.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-turkiye-vs-france-uefa-nations-league-teams-kick",
+      "title": "Turkiye vs France: UEFA Nations League – teams, kickoff time, lineups",
+      "summary": "Zinedine Zidane brings &#039;aura&#039; to his first France game as coach, against Turkiye in Nations League",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 9.08,
-      "lon": 8.68,
+      "lat": 48.86,
+      "lon": 2.35,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/sports/2026/9/24/turkiye-vs-france-uefa-nations-league-teams-kickoff-time-lineups?traffic_source=rss",
+      "observedAt": "2026-09-24T22:55:03.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Turkiye vs France: UEFA Nations League – teams, kickoff time, lineups — Zinedine Zidane brings &#039;aura&#039; to his first France game as coach, against Turkiye in Nations League",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-benjamin-netanyahu-attacks-israel-s-enemies-and-",
+      "title": "Benjamin Netanyahu attacks Israel’s enemies and allies in UN speech",
+      "summary": "Israeli prime minister denounces Iran, NYC Mayor Mamdani and critics accusing Israel of crimes against Palestinians.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.58,
+      "lat": 31.78,
+      "lon": 35.22,
+      "region": "Middle East",
+      "mapEligible": true,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/24/benjamin-netanyahu-attacks-israels-enemies-and-allies-in-un-speech?traffic_source=rss",
+      "observedAt": "2026-09-24T22:32:39.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Benjamin Netanyahu attacks Israel’s enemies and allies in UN speech — Israeli prime minister denounces Iran, NYC Mayor Mamdani and critics accusing Israel of crimes against Palestinians.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-dr-congo-and-ivory-coast-top-africa-cup-of-natio",
+      "title": "DR Congo and Ivory Coast top Africa Cup of Nations qualifying opening wins",
+      "summary": "DR Congo beat Equatorial Guinea, while Ivory Coast cruise by Ghana and Cameroon beat Comoros as AFCON qualifiers begin.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 1.65,
+      "lon": 10.27,
       "region": "Africa",
       "mapEligible": false,
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/sports/2026/9/24/nigeria-vs-madagascar-afcon-2027-qualifier-preview-teams?traffic_source=rss",
-      "observedAt": "2026-09-24T18:13:32.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Nigeria vs: Madagascar AFCON 2027 qualifier – preview, teams, prediction — Madagascar will attempt to emulate their last shock win over the Super Eagles - a 2-0 victory at AFCON 2019.",
+      "url": "https://www.aljazeera.com/sports/2026/9/24/dr-congo-and-ivory-coast-top-africa-cup-of-nations-qualifying-opening-wins?traffic_source=rss",
+      "observedAt": "2026-09-24T21:56:15.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "DR Congo and Ivory Coast top Africa Cup of Nations qualifying opening wins — DR Congo beat Equatorial Guinea, while Ivory Coast cruise by Ghana and Cameroon beat Comoros as AFCON qualifiers begin.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-croatian-court-approves-extradition-in-nord-stre",
+      "title": "Croatian court approves extradition in Nord Stream bombing case",
+      "summary": "Nord Stream sabotage suspect to be extradited from Croatia; court ruling faces appeal with final decision still pending.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/24/croatian-court-approves-extradition-in-nord-stream-bombing-case?traffic_source=rss",
+      "observedAt": "2026-09-24T21:47:44.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Croatian court approves extradition in Nord Stream bombing case — Nord Stream sabotage suspect to be extradited from Croatia; court ruling faces appeal with final decision still pending.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-trump-and-xi-hold-critical-talks-at-white-house-",
+      "title": "Trump and Xi hold critical talks at White House summit",
+      "summary": "US President Donald Trump welcomed Chinese President Xi Jinping to Washington for talks on trade, AI, Taiwan and Iran.",
+      "layer": "conflict",
+      "severity": 3,
+      "falloutRisk": "medium",
+      "confidence": 0.58,
+      "lat": 38.91,
+      "lon": -77.04,
+      "region": "Americas",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/trump-and-xi-hold-critical-talks-at-white-house-summit?traffic_source=rss",
+      "observedAt": "2026-09-24T21:41:40.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Trump and Xi hold critical talks at White House summit — US President Donald Trump welcomed Chinese President Xi Jinping to Washington for talks on trade, AI, Taiwan and Iran.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-netanyahu-defends-israeli-military-action-as-del",
+      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
+      "summary": "The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 31.78,
+      "lon": 35.22,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T21:21:47.000Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
+      "curatedSummary": "Netanyahu defends Israeli military action as delegates walk out before UN speech — The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-susan-sarandon-hannah-einbinder-arrested-at-neta",
+      "title": "Susan Sarandon, Hannah Einbinder arrested at Netanyahu UN protest",
+      "summary": "Susan Sarandon and Hannah Einbinder were among about 100 protesters arrested outside the UN ahead of Netanyahu’s speech.",
+      "layer": "unrest",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/actors-arrested-bibi-protest-unga?traffic_source=rss",
+      "observedAt": "2026-09-24T21:15:56.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Susan Sarandon, Hannah Einbinder arrested at Netanyahu UN protest — Susan Sarandon and Hannah Einbinder were among about 100 protesters arrested outside the UN ahead of Netanyahu’s speech.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-dutch-pm-s-contrasting-stance-on-icc-wanted-puti",
+      "title": "Dutch PM’s contrasting stance on ICC-wanted Putin, Netanyahu",
+      "summary": "Dutch PM Rob Jetten says Israeli Prime Minister Benjamin Netanyahu should be at the UNGA despite an ICC arrest warrant.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 31.78,
+      "lon": 35.22,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/dutch-pms-contrasting-stance-on-icc-wanted-putin-netanyahu?traffic_source=rss",
+      "observedAt": "2026-09-24T21:08:30.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Dutch PM’s contrasting stance on ICC-wanted Putin, Netanyahu — Dutch PM Rob Jetten says Israeli Prime Minister Benjamin Netanyahu should be at the UNGA despite an ICC arrest warrant.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-portugal-beat-wales-1-0-with-felix-goal-as-natio",
+      "title": "Portugal beat Wales 1-0 with Felix goal as Nations League defence begins",
+      "summary": "Joao Felix nets the only goal of the game, while Cristiano Ronaldo has an effort ruled out, as Portugal beat Wales 1-0.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/sports/2026/9/24/portugal-beat-wales-1-0-as-nations-league-defence-begins?traffic_source=rss",
+      "observedAt": "2026-09-24T21:07:33.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Portugal beat Wales 1-0 with Felix goal as Nations League defence begins — Joao Felix nets the only goal of the game, while Cristiano Ronaldo has an effort ruled out, as Portugal beat Wales 1-0.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-netanyahu-blames-juvenile-delinquents-for-violen",
+      "title": "Netanyahu blames ‘juvenile delinquents’ for violence in occupied West Bank",
+      "summary": "As spoke at the UN, Israeli Prime Minister Benjamin Netanyahu downplayed settler violence in the occupied West Bank.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 31.9,
+      "lon": 35.2,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/netanyahu-blames-juvenile-delinquents-for-violence-in-occupied-west-bank?traffic_source=rss",
+      "observedAt": "2026-09-24T20:54:28.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "Netanyahu blames ‘juvenile delinquents’ for violence in occupied West Bank — As spoke at the UN, Israeli Prime Minister Benjamin Netanyahu downplayed settler violence in the occupied West Bank.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-us-citizen-injured-after-wrongly-arrested-by-ice",
+      "title": "US citizen injured after wrongly arrested by ICE in Illinois",
+      "summary": "US citizen injured after wrongly arrested by ICE in Illinois",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/us-citizen-injured-after-wrongly-arrested-by-ice-in-illinois?traffic_source=rss",
+      "observedAt": "2026-09-24T20:23:06.000Z",
+      "ingestedAt": "2026-09-24T23:24:37.019Z",
+      "curatedSummary": "US citizen injured after wrongly arrested by ICE in Illinois",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-italy-ministers-agree-to-ban-burqa-and-niqab-in-",
+      "title": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class",
+      "summary": "Prime Minister Giorgia Meloni described the measures as \"common-sense tools that do not divide but really help to integrate\".",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T19:32:59.000Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
+      "curatedSummary": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class — Prime Minister Giorgia Meloni described the measures as \"common-sense tools that do not divide but really help to integrate\".",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-priest-killed-and-four-injured-in-knife-attack-a",
+      "title": "Priest killed and four injured in knife attack at Polish abbey",
+      "summary": "A male suspect from Ukraine was arrested after the stabbings in the town of Jarosław, police say.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": 52.23,
+      "lon": 21.01,
+      "region": "Europe",
+      "mapEligible": true,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/c607lrvm41l3o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T19:18:12.000Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
+      "curatedSummary": "Priest killed and four injured in knife attack at Polish abbey — A male suspect from Ukraine was arrested after the stabbings in the town of Jarosław, police say.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-four-civilians-killed-in-pakistani-strikes-in-af",
+      "title": "Four civilians killed in Pakistani strikes in Afghanistan, Taliban says",
+      "summary": "Pakistan says it struck 10 targets, adding the strikes were \"strictly limited to identified military objectives\".",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": 33.68,
+      "lon": 73.05,
+      "region": "South Asia",
+      "mapEligible": true,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cm86xn0nnw58o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T19:02:36.000Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
+      "curatedSummary": "Four civilians killed in Pakistani strikes in Afghanistan, Taliban says — Pakistan says it struck 10 targets, adding the strikes were \"strictly limited to identified military objectives\".",
       "briefSource": "wire"
     },
     {
@@ -172,7 +452,7 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-24T18:06:40.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
       "curatedSummary": "Why Australia chose the world's biggest political stage to reveal OpenAI hack — Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
       "briefSource": "wire"
     },
@@ -192,7 +472,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/24/trump-brazil-election-interference",
       "observedAt": "2026-09-24T17:56:06.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Legislators sent letter to Marco Rubio saying US interference is weakening  Brazil’s democratic institutionsUS politics live – latest updatesA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump adminis",
       "briefSource": "wire"
     },
@@ -212,7 +492,7 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cqzjzlve8jg7o?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-24T17:55:44.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
       "curatedSummary": "Rapper Macklemore announces 'Free Palestine' tour after Ed Sheeran fallout — Proceeds from the tour, which begins in Dublin next month, will go to organisations supporting Palestinians, he says.",
       "briefSource": "wire"
     },
@@ -232,248 +512,8 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-24T17:49:20.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
       "curatedSummary": "White House restores access to media outlets banned by Trump after judge's order — CNN, Politico and MS NOW were allowed back into the White House after some of their staff were earlier turned away.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-iranian-american-group-sues-trump-over-war",
-      "title": "Iranian-American group sues Trump over war",
-      "summary": "Plaintiffs have families in Iran who have been harmed by the US war, they say.",
-      "layer": "conflict",
-      "severity": 4,
-      "falloutRisk": "high",
-      "confidence": 0.58,
-      "lat": 32.43,
-      "lon": 53.69,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/24/iranian-american-group-sues-trump-over-war?traffic_source=rss",
-      "observedAt": "2026-09-24T17:45:52.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Iranian-American group sues Trump over war — Plaintiffs have families in Iran who have been harmed by the US war, they say.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-ukrainian-knifeman-kills-one-wounds-four-at-abbe",
-      "title": "Ukrainian knifeman kills one, wounds four at abbey in Poland",
-      "summary": "Ukraine&#039;s President Zelenskyy denounces &#039;horrific crime&#039; after 31-year-old attacks clergy, worshippers in border town.",
-      "layer": "maritime",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 52.23,
-      "lon": 21.01,
-      "region": "Europe",
-      "mapEligible": true,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/24/ukrainian-knifeman-kills-one-wounds-four-at-abbey-in-poland?traffic_source=rss",
-      "observedAt": "2026-09-24T17:15:31.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Ukrainian knifeman kills one, wounds four at abbey in Poland — Ukraine&#039;s President Zelenskyy denounces &#039;horrific crime&#039; after 31-year-old attacks clergy, worshippers in border town.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-jerusalem-daily-ben-gvir-sets-out-bid-to-become-",
-      "title": "Jerusalem Daily: Ben-Gvir sets out bid to become defence minister",
-      "summary": "In October elections, Israel’s national security minister Itamar Ben-Gvir is hoping to become defence minister.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 31.78,
-      "lon": 35.22,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/jerusalem-daily-ben-gvir-sets-out-bid-to-become-defence-minister?traffic_source=rss",
-      "observedAt": "2026-09-24T17:08:50.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Jerusalem Daily: Ben-Gvir sets out bid to become defence minister — In October elections, Israel’s national security minister Itamar Ben-Gvir is hoping to become defence minister.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-collapsing-currency-and-inflation-leave-families",
-      "title": "Collapsing currency and inflation leave families struggling in Sudan",
-      "summary": "Rising bread, sugar and meat prices strain Sudanese households already grappling with war and economic instability.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 15.5,
-      "lon": 32.56,
-      "region": "Africa",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/features/2026/9/24/collapsing-currency-and-inflation-leave-families-struggling-in-sudan?traffic_source=rss",
-      "observedAt": "2026-09-24T17:03:55.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Collapsing currency and inflation leave families struggling in Sudan — Rising bread, sugar and meat prices strain Sudanese households already grappling with war and economic instability.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-gaza-s-recovery-needs-reach-71-5bn-amid-most-sev",
-      "title": "Gaza’s recovery needs reach $71.5bn amid ‘most severe economic crisis’: UN",
-      "summary": "UN trade body report says consequences of Israeli occupation have &#039;skyrocketed&#039; with 90% unemployed in Gaza.",
-      "layer": "terrorism",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 31.5,
-      "lon": 34.47,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/24/gazas-recovery-needs-reach-71-5bn-amid-most-severe-economic-crisis-un?traffic_source=rss",
-      "observedAt": "2026-09-24T17:03:31.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Gaza’s recovery needs reach $71.5bn amid ‘most severe economic crisis’: UN — UN trade body report says consequences of Israeli occupation have &#039;skyrocketed&#039; with 90% unemployed in Gaza.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-africa-s-bid-for-a-seat-on-the-security-council",
-      "title": "Africa’s bid for a seat on the Security Council",
-      "summary": "Africa has 54 countries at the United Nations, but not one has a permanent seat on the powerful UN Security Council.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": null,
-      "lon": null,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/africas-bid-for-a-seat-on-the-security-council?traffic_source=rss",
-      "observedAt": "2026-09-24T16:58:49.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Africa’s bid for a seat on the Security Council — Africa has 54 countries at the United Nations, but not one has a permanent seat on the powerful UN Security Council.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-hostile-but-hooked-what-s-behind-the-us-china-tr",
-      "title": "‘Hostile, but hooked’: What’s behind the US-China trade truce extension?",
-      "summary": "Some analysts say extending the truce is pure optics - others say it&#039;s a useful step towards a more durable deal.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": null,
-      "lon": null,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news-analysis/2026/9/24/hostile-but-hooked-whats-behind-the-us-china-trade-truce-extension?traffic_source=rss",
-      "observedAt": "2026-09-24T16:53:29.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "‘Hostile, but hooked’: What’s behind the US-China trade truce extension? — Some analysts say extending the truce is pure optics - others say it&#039;s a useful step towards a more durable deal.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-four-civilians-killed-in-pakistani-airstrikes-in",
-      "title": "Four civilians killed in Pakistani airstrikes in Afghanistan",
-      "summary": "Four civilians have been killed in the latest Pakistani airstrikes in Afghanistan.",
-      "layer": "conflict",
-      "severity": 4,
-      "falloutRisk": "high",
-      "confidence": 0.58,
-      "lat": 33.68,
-      "lon": 73.05,
-      "region": "South Asia",
-      "mapEligible": true,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/four-civilians-killed-in-pakistani-airstrikes-in-afghanistan?traffic_source=rss",
-      "observedAt": "2026-09-24T16:51:30.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Four civilians killed in Pakistani airstrikes in Afghanistan — Four civilians have been killed in the latest Pakistani airstrikes in Afghanistan.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-media-outlets-access-to-white-house-restored-aft",
-      "title": "Media outlets access to White House restored after a chaotic few hours",
-      "summary": "A US federal judge had ordered the White House to &#039;immediately return, reinstate and restore&#039; the three outlets&#039; access.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 38.91,
-      "lon": -77.04,
-      "region": "Americas",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/economy/2026/9/24/media-outlets-still-denied-access-to-white-house-despite-judges-order?traffic_source=rss",
-      "observedAt": "2026-09-24T16:45:39.000Z",
-      "ingestedAt": "2026-09-24T18:25:10.293Z",
-      "curatedSummary": "Media outlets access to White House restored after a chaotic few hours — A US federal judge had ordered the White House to &#039;immediately return, reinstate and restore&#039; the three outlets&#039; access.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-greek-pm-urges-uk-pm-to-return-elgin-marbles-per",
-      "title": "Greek PM urges UK PM to return Elgin Marbles permanently",
-      "summary": "Andy Burnham said in 2023 the sculptures should be returned to Greece with \"no strings attached\".",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": 37.98,
-      "lon": 23.73,
-      "region": "Europe",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cqm2mgk6mlddo?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T16:36:33.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
-      "curatedSummary": "Greek PM urges UK PM to return Elgin Marbles permanently — Andy Burnham said in 2023 the sculptures should be returned to Greece with \"no strings attached\".",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-poland-says-fire-at-starlink-station-is-sabotage",
-      "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
-      "summary": "The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
-      "layer": "conflict",
-      "severity": 4,
-      "falloutRisk": "high",
-      "confidence": 0.72,
-      "lat": 52.23,
-      "lon": 21.01,
-      "region": "Europe",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T16:00:29.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
-      "curatedSummary": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat — The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-rogue-openai-agent-infiltrated-australian-govern",
-      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
-      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": null,
-      "lon": null,
-      "region": "Global",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T15:42:07.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
-      "curatedSummary": "Rogue OpenAI agent 'infiltrated' Australian government website in world first — Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
       "briefSource": "wire"
     },
     {
@@ -492,7 +532,7 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cqevwm09w4xmo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-24T15:37:45.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
       "curatedSummary": "Ethiopia's army says it has repelled attacks in first comment on fresh fighting — The military says its soldiers inflicted casualties as fears grow of a resumption of a full-blown civil war.",
       "briefSource": "wire"
     },
@@ -512,7 +552,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army",
       "observedAt": "2026-09-24T15:29:42.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Fighting escalates after Tigrayan rebels form new coalition aimed at overthrowing Abiy Ahmed governmentThere are growing fears of a return to civil war in Ethiopia after an offensive by fighters from Tigray into the neighbouring states of Afar and Amhara and the formation of a ne",
       "briefSource": "wire"
     },
@@ -532,48 +572,8 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cwzrzjy3pynvo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-24T14:37:34.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "ingestedAt": "2026-09-24T23:24:36.474Z",
       "curatedSummary": "105-year-old investigated for crimes at Nazi PoW camp in Germany — The suspect is alleged to have been an accessory to murder at the Stalag 326 camp, where tens of thousands of Soviet PoWs died.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-trump-s-board-of-peace-unveils-2-45bn-gaza-recov",
-      "title": "Trump's Board of Peace unveils $2.45bn Gaza recovery plan",
-      "summary": "The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": 31.5,
-      "lon": 34.47,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T10:11:15.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
-      "curatedSummary": "Trump's Board of Peace unveils $2.45bn Gaza recovery plan — The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-teen-rocker-nene-royal-becomes-first-thai-to-win",
-      "title": "Teen rocker Nene Royal becomes first Thai to win America's Got Talent",
-      "summary": "Her heavy metal performance trumped nine other finalists, including magicians and even a robot crew.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": null,
-      "lon": null,
-      "region": "Global",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cqzjzl3d1409o?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T06:47:12.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.619Z",
-      "curatedSummary": "Teen rocker Nene Royal becomes first Thai to win America's Got Talent — Her heavy metal performance trumped nine other finalists, including magicians and even a robot crew.",
       "briefSource": "wire"
     },
     {
@@ -592,7 +592,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/uk-news/2026/sep/23/argentina-president-attacks-un-over-inaction-on-falkland-islands-sovereignty",
       "observedAt": "2026-09-23T18:50:43.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Argentinian president accuses United Nations of being filled with ‘parasites’ in bellicose general assembly speechJavier Milei has condemned the UN as he warned that Argentina would take “matters into our own hands” in its dispute with Britain over the sovereignty of the Falkland",
       "briefSource": "wire"
     },
@@ -612,7 +612,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/23/venezuela-delcy-rodriguez-meeting-donald-trump-new-york",
       "observedAt": "2026-09-23T12:54:07.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Venezuela’s interim president hails ‘historic meeting’ and does not say whether she will visit snatched predecessorVenezuela’s interim president, Delcy Rodríguez, has celebrated a “historic” meeting with Donald Trump in New York, posing for a smiley photo with the US president, l",
       "briefSource": "wire"
     },
@@ -632,7 +632,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/business/2026/sep/23/indian-billionaire-payments-firm-london-flotation-airtel-money",
       "observedAt": "2026-09-23T11:08:01.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Sunil Bharti Mittal’s Airtel Money targets $9bn IPO in boost for ailing UK stock marketNils Pratley: Does this mark the end of London’s listing drought? Not yetA payments business that operates across Africa and is ultimately controlled by an Indian billionaire has announced its",
       "briefSource": "wire"
     },
@@ -652,7 +652,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/23/south-africa-top-police-officer-shadrack-sibiya-charged-rape-grooming",
       "observedAt": "2026-09-23T09:38:06.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Arrest of Shadrack Sibiya comes as country reels from cases of femicide and alleged police corruption and criminalityOne of South Africa’s most senior police officers has been charged with raping an 18-year-old woman and grooming a 16-year-old girl, as the country’s police face a",
       "briefSource": "wire"
     },
@@ -672,7 +672,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/23/jamaica-king-charles-to-refer-slavery-reparations-petition-to-privy-council",
       "observedAt": "2026-09-23T01:15:26.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "The move comes after Jamaica’s culture minister Olivia Grange travelled to the UK earlier this month to lodge the historic petitionKing Charles has referred a landmark slavery reparations petition from Jamaica to a high-level UK appeals court for legal advice, Jamaica’s culture m",
       "briefSource": "wire"
     },
@@ -692,7 +692,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/22/hurricane-polo-mexico",
       "observedAt": "2026-09-22T19:09:29.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Polo, with sustained winds of 165mph, is churning 215 miles south of Zihuatanejo but is unlikely to directly hit MexicoA tropical storm off the south-west coast of Mexico has intensified into a category 5 monster in fewer than 24 hours, fueled by stronger than usual El Niño weath",
       "briefSource": "wire"
     },
@@ -712,7 +712,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/us-news/2026/sep/21/africa-healthcare-aid-program-withdrawl",
       "observedAt": "2026-09-21T22:33:40.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "Accra Reset’s report states countries in the region and global south should take greater control of their health development after USAID debacleThe United States’ withdrawal from key aid programs has put healthcare in Africa and the global south “under growing strain” a new repor",
       "briefSource": "wire"
     },
@@ -732,7 +732,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/us-news/ng-interactive/2026/sep/21/trump-deportation-deals",
       "observedAt": "2026-09-21T05:00:38.000Z",
-      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "ingestedAt": "2026-09-24T23:24:36.784Z",
       "curatedSummary": "After a plane journey in shackles, an Iranian woman found herself in the middle of Africa in a country she did not know existed. She is one of thousands deported from the US on the back of shadowy deals made with dozens of countries. An in-depth investigation reveals the ‘show of",
       "briefSource": "wire"
     },
@@ -1352,10 +1352,10 @@
   "hotspots": [
     {
       "region": "Global",
-      "count": 15,
+      "count": 14,
       "maxSeverity": 4,
       "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-24T18:25:35.581Z",
+      "freshestAt": "2026-09-24T23:24:53.042Z",
       "layers": [
         "maritime",
         "conflict"
@@ -1363,22 +1363,32 @@
     },
     {
       "region": "Middle East",
-      "count": 9,
+      "count": 11,
       "maxSeverity": 4,
       "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-24T18:25:35.581Z",
+      "freshestAt": "2026-09-24T23:24:53.042Z",
       "layers": [
         "conflict",
-        "terrorism",
+        "unrest",
         "sanctions"
       ]
     },
     {
+      "region": "Europe",
+      "count": 6,
+      "maxSeverity": 4,
+      "freshestSource": "rss:BBC World",
+      "freshestAt": "2026-09-24T23:17:00.000Z",
+      "layers": [
+        "conflict"
+      ]
+    },
+    {
       "region": "Africa",
-      "count": 4,
+      "count": 3,
       "maxSeverity": 4,
       "freshestSource": "rss:Al Jazeera",
-      "freshestAt": "2026-09-24T18:13:32.000Z",
+      "freshestAt": "2026-09-24T21:56:15.000Z",
       "layers": [
         "conflict",
         "terrorism",
@@ -1389,20 +1399,9 @@
       "region": "Americas",
       "count": 3,
       "maxSeverity": 3,
-      "freshestSource": "rss:Guardian World",
-      "freshestAt": "2026-09-24T17:56:06.000Z",
-      "layers": [
-        "conflict"
-      ]
-    },
-    {
-      "region": "Europe",
-      "count": 6,
-      "maxSeverity": 4,
       "freshestSource": "rss:Al Jazeera",
-      "freshestAt": "2026-09-24T17:15:31.000Z",
+      "freshestAt": "2026-09-24T21:41:40.000Z",
       "layers": [
-        "maritime",
         "conflict"
       ]
     },
@@ -1410,8 +1409,8 @@
       "region": "South Asia",
       "count": 2,
       "maxSeverity": 4,
-      "freshestSource": "rss:Al Jazeera",
-      "freshestAt": "2026-09-24T16:51:30.000Z",
+      "freshestSource": "rss:BBC World",
+      "freshestAt": "2026-09-24T19:02:36.000Z",
       "layers": [
         "conflict"
       ]
@@ -1557,7 +1556,7 @@
       "id": "x-scroll",
       "name": "X allowlist scroll",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-24T18:25:37.183Z",
+      "lastEvaluatedAt": "2026-09-24T23:24:54.649Z",
       "detail": "live: 5 pointers merged (no X API search); 1 login-wall profile(s)",
       "rule": "allowlist_scroll && merge_by_id",
       "snapshot": "x-scroll@2026-09-24"
@@ -1575,7 +1574,7 @@
       "id": "rss",
       "name": "RSS wires",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-24T18:25:10.303Z",
+      "lastEvaluatedAt": "2026-09-24T23:24:37.028Z",
       "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
       "rule": "http_200 && items>=1",
       "snapshot": "rss@2026-09-24"
@@ -1955,7 +1954,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 7701.72998046875
+          "v": 7704.1298828125
         }
       ]
     },
@@ -2323,7 +2322,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 30425.365234375
+          "v": 30478.85546875
         }
       ]
     },
@@ -2333,6 +2332,10 @@
       "unit": "index",
       "source": "yahoo",
       "points": [
+        {
+          "t": "2026-05-20",
+          "v": 24737.240234375
+        },
         {
           "t": "2026-05-21",
           "v": 24606.76953125
@@ -2688,10 +2691,6 @@
         {
           "t": "2026-09-23",
           "v": 25410.630859375
-        },
-        {
-          "t": "2026-09-24",
-          "v": 25266.529296875
         }
       ]
     },
@@ -3442,10 +3441,6 @@
       "source": "yahoo",
       "points": [
         {
-          "t": "2026-05-21",
-          "v": 1.1621150970458984
-        },
-        {
           "t": "2026-05-24",
           "v": 1.164225697517395
         },
@@ -3798,8 +3793,12 @@
           "v": 1.1447935104370117
         },
         {
+          "t": "2026-09-23",
+          "v": 1.138187289237976
+        },
+        {
           "t": "2026-09-24",
-          "v": 1.137268304824829
+          "v": 1.138044834136963
         }
       ]
     },
@@ -3809,10 +3808,6 @@
       "unit": "fx",
       "source": "yahoo",
       "points": [
-        {
-          "t": "2026-05-21",
-          "v": 159.01800537109375
-        },
         {
           "t": "2026-05-24",
           "v": 158.9459991455078
@@ -4166,8 +4161,12 @@
           "v": 157.46400451660156
         },
         {
+          "t": "2026-09-23",
+          "v": 158.26499938964844
+        },
+        {
           "t": "2026-09-24",
-          "v": 158.85899353027344
+          "v": 158.80999755859375
         }
       ]
     },
@@ -4535,7 +4534,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 101.3010025024414
+          "v": 101.24800109863281
         }
       ]
     },
@@ -4903,7 +4902,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 94.56999969482422
+          "v": 94.20999908447266
         }
       ]
     },
@@ -5271,7 +5270,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 106.41000366210938
+          "v": 106.44999694824219
         }
       ]
     },
@@ -5639,7 +5638,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 4305
+          "v": 4309.5
         }
       ]
     },
@@ -6379,7 +6378,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 15.729999542236328
+          "v": 15.670000076293945
         }
       ]
     },
@@ -6766,72 +6765,72 @@
       "pctChange20d": -1.33,
       "adverseStreak": 1,
       "latestValue": 3029.45,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "ndx",
       "seriesName": "Nasdaq 100",
-      "zScore": 1.8,
-      "pctChange1d": -0.15,
-      "pctChange5d": 5.11,
-      "pctChange20d": 4.16,
-      "adverseStreak": 2,
-      "latestValue": 30425.365234375,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "zScore": 1.88,
+      "pctChange1d": 0.03,
+      "pctChange5d": 5.3,
+      "pctChange20d": 4.35,
+      "adverseStreak": 0,
+      "latestValue": 30478.85546875,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "brent",
       "seriesName": "Brent Crude",
-      "zScore": 1.68,
-      "pctChange1d": 3.23,
-      "pctChange5d": 1.52,
-      "pctChange20d": 21.14,
+      "zScore": 1.69,
+      "pctChange1d": 3.27,
+      "pctChange5d": 1.56,
+      "pctChange20d": 21.19,
       "adverseStreak": 2,
-      "latestValue": 106.41000366210938,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "latestValue": 106.44999694824219,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "eurusd",
       "seriesName": "EUR/USD",
-      "zScore": -1.56,
-      "pctChange1d": -0.66,
-      "pctChange5d": -0.85,
-      "pctChange20d": -2.42,
-      "adverseStreak": 3,
-      "latestValue": 1.137268304824829,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "zScore": -1.46,
+      "pctChange1d": -0.01,
+      "pctChange5d": -0.83,
+      "pctChange20d": -2.37,
+      "adverseStreak": 4,
+      "latestValue": 1.138044834136963,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "dxy",
       "seriesName": "US Dollar Index",
-      "zScore": 1.38,
-      "pctChange1d": 0.2,
-      "pctChange5d": 0.99,
-      "pctChange20d": 2.41,
+      "zScore": 1.32,
+      "pctChange1d": 0.15,
+      "pctChange5d": 0.94,
+      "pctChange20d": 2.35,
       "adverseStreak": 3,
-      "latestValue": 101.3010025024414,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "latestValue": 101.24800109863281,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "wti",
       "seriesName": "WTI Crude",
-      "zScore": 1.03,
-      "pctChange1d": 2.62,
-      "pctChange5d": -7.2,
-      "pctChange20d": 15.01,
+      "zScore": 0.99,
+      "pctChange1d": 2.22,
+      "pctChange5d": -7.56,
+      "pctChange20d": 14.57,
       "adverseStreak": 1,
-      "latestValue": 94.56999969482422,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "latestValue": 94.20999908447266,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6844,33 +6843,33 @@
       "pctChange20d": -0.24,
       "adverseStreak": 5,
       "latestValue": 4.2,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-24"
-    },
-    {
-      "seriesId": "dax",
-      "seriesName": "DAX",
-      "zScore": -0.88,
-      "pctChange1d": -0.57,
-      "pctChange5d": -1.06,
-      "pctChange20d": -3.88,
-      "adverseStreak": 2,
-      "latestValue": 25266.529296875,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "spx",
       "seriesName": "S&P 500",
-      "zScore": 0.79,
-      "pctChange1d": -0.06,
-      "pctChange5d": 1.99,
-      "pctChange20d": 0.32,
+      "zScore": 0.81,
+      "pctChange1d": -0.02,
+      "pctChange5d": 2.02,
+      "pctChange20d": 0.35,
       "adverseStreak": 2,
-      "latestValue": 7701.72998046875,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "latestValue": 7704.1298828125,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-24"
+    },
+    {
+      "seriesId": "dax",
+      "seriesName": "DAX",
+      "zScore": -0.58,
+      "pctChange1d": -0.64,
+      "pctChange5d": 0.03,
+      "pctChange20d": -3.26,
+      "adverseStreak": 1,
+      "latestValue": 25410.630859375,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6883,20 +6882,20 @@
       "pctChange20d": -1.51,
       "adverseStreak": 0,
       "latestValue": 65018.94921875,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "vix",
       "seriesName": "VIX",
-      "zScore": -0.28,
-      "pctChange1d": 3.62,
-      "pctChange5d": -11.18,
-      "pctChange20d": 3.42,
+      "zScore": -0.33,
+      "pctChange1d": 3.23,
+      "pctChange5d": -11.52,
+      "pctChange20d": 3.02,
       "adverseStreak": 3,
-      "latestValue": 15.729999542236328,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "latestValue": 15.670000076293945,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6909,7 +6908,7 @@
       "pctChange20d": 0.19,
       "adverseStreak": 3,
       "latestValue": 5.32,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6917,38 +6916,38 @@
       "seriesId": "usdjpy",
       "seriesName": "USD/JPY",
       "zScore": -0.16,
-      "pctChange1d": 0.89,
-      "pctChange5d": 1.82,
-      "pctChange20d": -0.25,
-      "adverseStreak": 8,
-      "latestValue": 158.85899353027344,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "pctChange1d": 0.34,
+      "pctChange5d": 1.72,
+      "pctChange20d": -0.32,
+      "adverseStreak": 9,
+      "latestValue": 158.80999755859375,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "gold",
       "seriesName": "Gold",
-      "zScore": -0.01,
-      "pctChange1d": -0.31,
-      "pctChange5d": -2.15,
-      "pctChange20d": -7.49,
+      "zScore": 0.01,
+      "pctChange1d": -0.21,
+      "pctChange5d": -2.05,
+      "pctChange20d": -7.39,
       "adverseStreak": 0,
-      "latestValue": 4305,
-      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "latestValue": 4309.5,
+      "evaluatedAt": "2026-09-24T23:24:24.579Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     }
   ],
   "stress": {
-    "score": 31.5,
+    "score": 31.1,
     "components": {
       "equities": 24,
-      "usd": 51,
+      "usd": 50,
       "vix": 20,
       "oil": 39
     },
-    "evaluatedAt": "2026-09-24T18:24:58.742Z",
+    "evaluatedAt": "2026-09-24T23:24:24.580Z",
     "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
     "snapshot": "live@2026-09-24"
   },
@@ -6958,7 +6957,7 @@
     "7d",
     "30d"
   ],
-  "updatedAt": "2026-09-24T18:25:41.608Z",
-  "nextUpdateAt": "2026-09-24T23:20:00.000Z",
-  "nextUpdateHint": "Next update ~6:20 PM CT"
+  "updatedAt": "2026-09-24T23:24:59.503Z",
+  "nextUpdateAt": "2026-09-25T13:20:00.000Z",
+  "nextUpdateHint": "Next update ~8:20 AM CT Fri"
 }

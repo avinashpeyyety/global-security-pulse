@@ -1,10 +1,10 @@
 [
   {
     "region": "Global",
-    "count": 15,
+    "count": 14,
     "maxSeverity": 4,
     "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-24T18:25:35.581Z",
+    "freshestAt": "2026-09-24T23:24:53.042Z",
     "layers": [
       "maritime",
       "conflict"
@@ -12,22 +12,32 @@
   },
   {
     "region": "Middle East",
-    "count": 9,
+    "count": 11,
     "maxSeverity": 4,
     "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-24T18:25:35.581Z",
+    "freshestAt": "2026-09-24T23:24:53.042Z",
     "layers": [
       "conflict",
-      "terrorism",
+      "unrest",
       "sanctions"
     ]
   },
   {
+    "region": "Europe",
+    "count": 6,
+    "maxSeverity": 4,
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-09-24T23:17:00.000Z",
+    "layers": [
+      "conflict"
+    ]
+  },
+  {
     "region": "Africa",
-    "count": 4,
+    "count": 3,
     "maxSeverity": 4,
     "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-24T18:13:32.000Z",
+    "freshestAt": "2026-09-24T21:56:15.000Z",
     "layers": [
       "conflict",
       "terrorism",
@@ -38,20 +48,9 @@
     "region": "Americas",
     "count": 3,
     "maxSeverity": 3,
-    "freshestSource": "rss:Guardian World",
-    "freshestAt": "2026-09-24T17:56:06.000Z",
-    "layers": [
-      "conflict"
-    ]
-  },
-  {
-    "region": "Europe",
-    "count": 6,
-    "maxSeverity": 4,
     "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-24T17:15:31.000Z",
+    "freshestAt": "2026-09-24T21:41:40.000Z",
     "layers": [
-      "maritime",
       "conflict"
     ]
   },
@@ -59,8 +58,8 @@
     "region": "South Asia",
     "count": 2,
     "maxSeverity": 4,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-24T16:51:30.000Z",
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-09-24T19:02:36.000Z",
     "layers": [
       "conflict"
     ]
