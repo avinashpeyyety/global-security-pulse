@@ -1,12 +1,12 @@
 {
-  "score": 32.2,
+  "score": 31.5,
   "components": {
-    "equities": 26,
+    "equities": 24,
     "usd": 51,
     "vix": 20,
     "oil": 39
   },
-  "evaluatedAt": "2026-09-24T13:52:57.545Z",
+  "evaluatedAt": "2026-09-24T18:24:58.742Z",
   "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
   "snapshot": "live@2026-09-24"
 }

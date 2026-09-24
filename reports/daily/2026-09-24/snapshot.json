@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-24T13:53:29.817Z",
+  "generatedAt": "2026-09-24T18:25:41.608Z",
   "events": [
     {
       "id": "curated-x-centcom-2102821866859573647",
-      "title": "U.S. Central Command @CENTCOM 19h As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain stri",
+      "title": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain s",
       "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM 19h As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain strict enforcement of America's 🇺🇸 steel wall blockade. 00:10 130",
+          "text": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain strict enforcement of America's 🇺🇸 steel wall blockade. 00:09 144",
           "url": "https://x.com/CENTCOM/status/2102821866859573647",
-          "observedAt": "2026-09-24T13:53:23.180Z"
+          "observedAt": "2026-09-24T18:25:35.581Z"
         }
       ],
       "layer": "maritime",
@@ -25,21 +25,21 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102821866859573647",
-      "observedAt": "2026-09-24T13:53:23.180Z",
-      "ingestedAt": "2026-09-24T13:53:23.180Z"
+      "observedAt": "2026-09-24T18:25:35.581Z",
+      "ingestedAt": "2026-09-24T18:25:35.581Z"
     },
     {
       "id": "curated-x-centcom-2102740345507258656",
-      "title": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 568",
+      "title": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 579",
       "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 568",
+          "text": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 113 579",
           "url": "https://x.com/CENTCOM/status/2102740345507258656",
-          "observedAt": "2026-09-24T13:53:23.180Z"
+          "observedAt": "2026-09-24T18:25:35.581Z"
         }
       ],
       "layer": "conflict",
@@ -52,8 +52,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102740345507258656",
-      "observedAt": "2026-09-24T13:53:23.180Z",
-      "ingestedAt": "2026-09-24T13:53:23.180Z"
+      "observedAt": "2026-09-24T18:25:35.581Z",
+      "ingestedAt": "2026-09-24T18:25:35.581Z"
     },
     {
       "id": "curated-x-centcom-2102453129014890686",
@@ -64,9 +64,9 @@
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 22 U.S. Army Soldiers reload a Land-based Phalanx Weapon System (LPWS) in the Middle East. The LPWS is a mobile air defense system that can eliminate aerial threats. 102 380",
+          "text": "U.S. Central Command @CENTCOM Sep 22 U.S. Army Soldiers reload a Land-based Phalanx Weapon System (LPWS) in the Middle East. The LPWS is a mobile air defense system that can eliminate aerial threats. 105 383",
           "url": "https://x.com/CENTCOM/status/2102453129014890686",
-          "observedAt": "2026-09-24T13:53:23.180Z"
+          "observedAt": "2026-09-24T18:25:35.581Z"
         }
       ],
       "layer": "conflict",
@@ -79,8 +79,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102453129014890686",
-      "observedAt": "2026-09-24T13:53:23.180Z",
-      "ingestedAt": "2026-09-24T13:53:23.180Z"
+      "observedAt": "2026-09-24T18:25:35.581Z",
+      "ingestedAt": "2026-09-24T18:25:35.581Z"
     },
     {
       "id": "curated-x-centcom-2102131151733158360",
@@ -93,7 +93,7 @@
           "author": "CENTCOM",
           "text": "U.S. Central Command @CENTCOM Sep 21 Different platforms, same team. U.S. military air power across the CENTCOM theater promotes regional security and stability. 00:00 / 00:33 109",
           "url": "https://x.com/CENTCOM/status/2102131151733158360",
-          "observedAt": "2026-09-24T13:53:23.180Z"
+          "observedAt": "2026-09-24T18:25:35.581Z"
         }
       ],
       "layer": "conflict",
@@ -106,8 +106,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102131151733158360",
-      "observedAt": "2026-09-24T13:53:23.180Z",
-      "ingestedAt": "2026-09-24T13:53:23.180Z"
+      "observedAt": "2026-09-24T18:25:35.581Z",
+      "ingestedAt": "2026-09-24T18:25:35.581Z"
     },
     {
       "id": "curated-x-centcom-2102058017625723237",
@@ -120,7 +120,7 @@
           "author": "CENTCOM",
           "text": "U.S. Central Command @CENTCOM Sep 21 USS Rafael Peralta (DDG 115) sails in regional waters as the guided-missile destroyer continues strict enforcement of the U.S. blockade against Iran, preventing commerce from entering or departing Iranian ports and coastal areas. As of Sept. 2",
           "url": "https://x.com/CENTCOM/status/2102058017625723237",
-          "observedAt": "2026-09-24T13:53:23.180Z"
+          "observedAt": "2026-09-24T18:25:35.581Z"
         }
       ],
       "layer": "conflict",
@@ -133,8 +133,608 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102058017625723237",
-      "observedAt": "2026-09-24T13:53:23.180Z",
-      "ingestedAt": "2026-09-24T13:53:23.180Z"
+      "observedAt": "2026-09-24T18:25:35.581Z",
+      "ingestedAt": "2026-09-24T18:25:35.581Z"
+    },
+    {
+      "id": "rss-aljazeera-nigeria-vs-madagascar-afcon-2027-qualifier-previ",
+      "title": "Nigeria vs: Madagascar AFCON 2027 qualifier – preview, teams, prediction",
+      "summary": "Madagascar will attempt to emulate their last shock win over the Super Eagles - a 2-0 victory at AFCON 2019.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 9.08,
+      "lon": 8.68,
+      "region": "Africa",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/sports/2026/9/24/nigeria-vs-madagascar-afcon-2027-qualifier-preview-teams?traffic_source=rss",
+      "observedAt": "2026-09-24T18:13:32.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Nigeria vs: Madagascar AFCON 2027 qualifier – preview, teams, prediction — Madagascar will attempt to emulate their last shock win over the Super Eagles - a 2-0 victory at AFCON 2019.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-why-australia-chose-the-world-s-biggest-politica",
+      "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
+      "summary": "Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T18:06:40.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Why Australia chose the world's biggest political stage to reveal OpenAI hack — Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-democratic-lawmakers-accuse-trump-administration",
+      "title": "Democratic lawmakers accuse Trump administration of interference in Brazilian elections",
+      "summary": "Legislators sent letter to Marco Rubio saying US interference is weakening  Brazil’s democratic institutionsUS politics live – latest updatesA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump adminis",
+      "layer": "conflict",
+      "severity": 3,
+      "falloutRisk": "medium",
+      "confidence": 0.72,
+      "lat": -15.79,
+      "lon": -47.88,
+      "region": "Americas",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/24/trump-brazil-election-interference",
+      "observedAt": "2026-09-24T17:56:06.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Legislators sent letter to Marco Rubio saying US interference is weakening  Brazil’s democratic institutionsUS politics live – latest updatesA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump adminis",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-rapper-macklemore-announces-free-palestine-tour-",
+      "title": "Rapper Macklemore announces 'Free Palestine' tour after Ed Sheeran fallout",
+      "summary": "Proceeds from the tour, which begins in Dublin next month, will go to organisations supporting Palestinians, he says.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cqzjzlve8jg7o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T17:55:44.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Rapper Macklemore announces 'Free Palestine' tour after Ed Sheeran fallout — Proceeds from the tour, which begins in Dublin next month, will go to organisations supporting Palestinians, he says.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-white-house-restores-access-to-media-outlets-ban",
+      "title": "White House restores access to media outlets banned by Trump after judge's order",
+      "summary": "CNN, Politico and MS NOW were allowed back into the White House after some of their staff were earlier turned away.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 38.91,
+      "lon": -77.04,
+      "region": "Americas",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T17:49:20.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "White House restores access to media outlets banned by Trump after judge's order — CNN, Politico and MS NOW were allowed back into the White House after some of their staff were earlier turned away.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-iranian-american-group-sues-trump-over-war",
+      "title": "Iranian-American group sues Trump over war",
+      "summary": "Plaintiffs have families in Iran who have been harmed by the US war, they say.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.58,
+      "lat": 32.43,
+      "lon": 53.69,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/24/iranian-american-group-sues-trump-over-war?traffic_source=rss",
+      "observedAt": "2026-09-24T17:45:52.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Iranian-American group sues Trump over war — Plaintiffs have families in Iran who have been harmed by the US war, they say.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-ukrainian-knifeman-kills-one-wounds-four-at-abbe",
+      "title": "Ukrainian knifeman kills one, wounds four at abbey in Poland",
+      "summary": "Ukraine&#039;s President Zelenskyy denounces &#039;horrific crime&#039; after 31-year-old attacks clergy, worshippers in border town.",
+      "layer": "maritime",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 52.23,
+      "lon": 21.01,
+      "region": "Europe",
+      "mapEligible": true,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/24/ukrainian-knifeman-kills-one-wounds-four-at-abbey-in-poland?traffic_source=rss",
+      "observedAt": "2026-09-24T17:15:31.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Ukrainian knifeman kills one, wounds four at abbey in Poland — Ukraine&#039;s President Zelenskyy denounces &#039;horrific crime&#039; after 31-year-old attacks clergy, worshippers in border town.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-jerusalem-daily-ben-gvir-sets-out-bid-to-become-",
+      "title": "Jerusalem Daily: Ben-Gvir sets out bid to become defence minister",
+      "summary": "In October elections, Israel’s national security minister Itamar Ben-Gvir is hoping to become defence minister.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 31.78,
+      "lon": 35.22,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/jerusalem-daily-ben-gvir-sets-out-bid-to-become-defence-minister?traffic_source=rss",
+      "observedAt": "2026-09-24T17:08:50.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Jerusalem Daily: Ben-Gvir sets out bid to become defence minister — In October elections, Israel’s national security minister Itamar Ben-Gvir is hoping to become defence minister.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-collapsing-currency-and-inflation-leave-families",
+      "title": "Collapsing currency and inflation leave families struggling in Sudan",
+      "summary": "Rising bread, sugar and meat prices strain Sudanese households already grappling with war and economic instability.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 15.5,
+      "lon": 32.56,
+      "region": "Africa",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/features/2026/9/24/collapsing-currency-and-inflation-leave-families-struggling-in-sudan?traffic_source=rss",
+      "observedAt": "2026-09-24T17:03:55.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Collapsing currency and inflation leave families struggling in Sudan — Rising bread, sugar and meat prices strain Sudanese households already grappling with war and economic instability.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-gaza-s-recovery-needs-reach-71-5bn-amid-most-sev",
+      "title": "Gaza’s recovery needs reach $71.5bn amid ‘most severe economic crisis’: UN",
+      "summary": "UN trade body report says consequences of Israeli occupation have &#039;skyrocketed&#039; with 90% unemployed in Gaza.",
+      "layer": "terrorism",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 31.5,
+      "lon": 34.47,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/24/gazas-recovery-needs-reach-71-5bn-amid-most-severe-economic-crisis-un?traffic_source=rss",
+      "observedAt": "2026-09-24T17:03:31.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Gaza’s recovery needs reach $71.5bn amid ‘most severe economic crisis’: UN — UN trade body report says consequences of Israeli occupation have &#039;skyrocketed&#039; with 90% unemployed in Gaza.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-africa-s-bid-for-a-seat-on-the-security-council",
+      "title": "Africa’s bid for a seat on the Security Council",
+      "summary": "Africa has 54 countries at the United Nations, but not one has a permanent seat on the powerful UN Security Council.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/africas-bid-for-a-seat-on-the-security-council?traffic_source=rss",
+      "observedAt": "2026-09-24T16:58:49.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Africa’s bid for a seat on the Security Council — Africa has 54 countries at the United Nations, but not one has a permanent seat on the powerful UN Security Council.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-hostile-but-hooked-what-s-behind-the-us-china-tr",
+      "title": "‘Hostile, but hooked’: What’s behind the US-China trade truce extension?",
+      "summary": "Some analysts say extending the truce is pure optics - others say it&#039;s a useful step towards a more durable deal.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news-analysis/2026/9/24/hostile-but-hooked-whats-behind-the-us-china-trade-truce-extension?traffic_source=rss",
+      "observedAt": "2026-09-24T16:53:29.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "‘Hostile, but hooked’: What’s behind the US-China trade truce extension? — Some analysts say extending the truce is pure optics - others say it&#039;s a useful step towards a more durable deal.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-four-civilians-killed-in-pakistani-airstrikes-in",
+      "title": "Four civilians killed in Pakistani airstrikes in Afghanistan",
+      "summary": "Four civilians have been killed in the latest Pakistani airstrikes in Afghanistan.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.58,
+      "lat": 33.68,
+      "lon": 73.05,
+      "region": "South Asia",
+      "mapEligible": true,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/24/four-civilians-killed-in-pakistani-airstrikes-in-afghanistan?traffic_source=rss",
+      "observedAt": "2026-09-24T16:51:30.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Four civilians killed in Pakistani airstrikes in Afghanistan — Four civilians have been killed in the latest Pakistani airstrikes in Afghanistan.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-media-outlets-access-to-white-house-restored-aft",
+      "title": "Media outlets access to White House restored after a chaotic few hours",
+      "summary": "A US federal judge had ordered the White House to &#039;immediately return, reinstate and restore&#039; the three outlets&#039; access.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 38.91,
+      "lon": -77.04,
+      "region": "Americas",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/economy/2026/9/24/media-outlets-still-denied-access-to-white-house-despite-judges-order?traffic_source=rss",
+      "observedAt": "2026-09-24T16:45:39.000Z",
+      "ingestedAt": "2026-09-24T18:25:10.293Z",
+      "curatedSummary": "Media outlets access to White House restored after a chaotic few hours — A US federal judge had ordered the White House to &#039;immediately return, reinstate and restore&#039; the three outlets&#039; access.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-greek-pm-urges-uk-pm-to-return-elgin-marbles-per",
+      "title": "Greek PM urges UK PM to return Elgin Marbles permanently",
+      "summary": "Andy Burnham said in 2023 the sculptures should be returned to Greece with \"no strings attached\".",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 37.98,
+      "lon": 23.73,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cqm2mgk6mlddo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T16:36:33.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Greek PM urges UK PM to return Elgin Marbles permanently — Andy Burnham said in 2023 the sculptures should be returned to Greece with \"no strings attached\".",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-poland-says-fire-at-starlink-station-is-sabotage",
+      "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
+      "summary": "The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": 52.23,
+      "lon": 21.01,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T16:00:29.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat — The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-rogue-openai-agent-infiltrated-australian-govern",
+      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T15:42:07.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Rogue OpenAI agent 'infiltrated' Australian government website in world first — Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-ethiopia-s-army-says-it-has-repelled-attacks-in-",
+      "title": "Ethiopia's army says it has repelled attacks in first comment on fresh fighting",
+      "summary": "The military says its soldiers inflicted casualties as fears grow of a resumption of a full-blown civil war.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cqevwm09w4xmo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T15:37:45.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Ethiopia's army says it has repelled attacks in first comment on fresh fighting — The military says its soldiers inflicted casualties as fears grow of a resumption of a full-blown civil war.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-rebel-offensive-against-ethiopian-army-stokes-fe",
+      "title": "Rebel offensive against Ethiopian army stokes fears of return to civil war",
+      "summary": "Fighting escalates after Tigrayan rebels form new coalition aimed at overthrowing Abiy Ahmed governmentThere are growing fears of a return to civil war in Ethiopia after an offensive by fighters from Tigray into the neighbouring states of Afar and Amhara and the formation of a ne",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army",
+      "observedAt": "2026-09-24T15:29:42.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Fighting escalates after Tigrayan rebels form new coalition aimed at overthrowing Abiy Ahmed governmentThere are growing fears of a return to civil war in Ethiopia after an offensive by fighters from Tigray into the neighbouring states of Afar and Amhara and the formation of a ne",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-105-year-old-investigated-for-crimes-at-nazi-pow",
+      "title": "105-year-old investigated for crimes at Nazi PoW camp in Germany",
+      "summary": "The suspect is alleged to have been an accessory to murder at the Stalag 326 camp, where tens of thousands of Soviet PoWs died.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 52.52,
+      "lon": 13.4,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cwzrzjy3pynvo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T14:37:34.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "105-year-old investigated for crimes at Nazi PoW camp in Germany — The suspect is alleged to have been an accessory to murder at the Stalag 326 camp, where tens of thousands of Soviet PoWs died.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-trump-s-board-of-peace-unveils-2-45bn-gaza-recov",
+      "title": "Trump's Board of Peace unveils $2.45bn Gaza recovery plan",
+      "summary": "The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 31.5,
+      "lon": 34.47,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T10:11:15.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Trump's Board of Peace unveils $2.45bn Gaza recovery plan — The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-teen-rocker-nene-royal-becomes-first-thai-to-win",
+      "title": "Teen rocker Nene Royal becomes first Thai to win America's Got Talent",
+      "summary": "Her heavy metal performance trumped nine other finalists, including magicians and even a robot crew.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cqzjzl3d1409o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-24T06:47:12.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.619Z",
+      "curatedSummary": "Teen rocker Nene Royal becomes first Thai to win America's Got Talent — Her heavy metal performance trumped nine other finalists, including magicians and even a robot crew.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-milei-threatens-at-un-that-argentina-will-take-m",
+      "title": "Milei threatens at UN that Argentina will take ‘matters into our own hands’ on Falklands",
+      "summary": "Argentinian president accuses United Nations of being filled with ‘parasites’ in bellicose general assembly speechJavier Milei has condemned the UN as he warned that Argentina would take “matters into our own hands” in its dispute with Britain over the sovereignty of the Falkland",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 51.51,
+      "lon": -0.13,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/uk-news/2026/sep/23/argentina-president-attacks-un-over-inaction-on-falkland-islands-sovereignty",
+      "observedAt": "2026-09-23T18:50:43.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Argentinian president accuses United Nations of being filled with ‘parasites’ in bellicose general assembly speechJavier Milei has condemned the UN as he warned that Argentina would take “matters into our own hands” in its dispute with Britain over the sovereignty of the Falkland",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-delcy-rodr-guez-poses-with-trump-in-new-york-as-",
+      "title": "Delcy Rodríguez poses with Trump in New York as Maduro languishes in jail nearby",
+      "summary": "Venezuela’s interim president hails ‘historic meeting’ and does not say whether she will visit snatched predecessorVenezuela’s interim president, Delcy Rodríguez, has celebrated a “historic” meeting with Donald Trump in New York, posing for a smiley photo with the US president, l",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/23/venezuela-delcy-rodriguez-meeting-donald-trump-new-york",
+      "observedAt": "2026-09-23T12:54:07.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Venezuela’s interim president hails ‘historic meeting’ and does not say whether she will visit snatched predecessorVenezuela’s interim president, Delcy Rodríguez, has celebrated a “historic” meeting with Donald Trump in New York, posing for a smiley photo with the US president, l",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-indian-billionaire-s-payments-firm-plots-biggest",
+      "title": "Indian billionaire’s payments firm plots biggest London flotation in years",
+      "summary": "Sunil Bharti Mittal’s Airtel Money targets $9bn IPO in boost for ailing UK stock marketNils Pratley: Does this mark the end of London’s listing drought? Not yetA payments business that operates across Africa and is ultimately controlled by an Indian billionaire has announced its ",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 51.51,
+      "lon": -0.13,
+      "region": "Europe",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/business/2026/sep/23/indian-billionaire-payments-firm-london-flotation-airtel-money",
+      "observedAt": "2026-09-23T11:08:01.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Sunil Bharti Mittal’s Airtel Money targets $9bn IPO in boost for ailing UK stock marketNils Pratley: Does this mark the end of London’s listing drought? Not yetA payments business that operates across Africa and is ultimately controlled by an Indian billionaire has announced its",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-top-south-african-police-officer-charged-with-ra",
+      "title": "Top South African police officer charged with raping woman, 18, and grooming 16-year-old girl",
+      "summary": "Arrest of Shadrack Sibiya comes as country reels from cases of femicide and alleged police corruption and criminalityOne of South Africa’s most senior police officers has been charged with raping an 18-year-old woman and grooming a 16-year-old girl, as the country’s police face a",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/23/south-africa-top-police-officer-shadrack-sibiya-charged-rape-grooming",
+      "observedAt": "2026-09-23T09:38:06.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Arrest of Shadrack Sibiya comes as country reels from cases of femicide and alleged police corruption and criminalityOne of South Africa’s most senior police officers has been charged with raping an 18-year-old woman and grooming a 16-year-old girl, as the country’s police face a",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-jamaica-hails-king-s-decision-to-refer-slavery-r",
+      "title": "Jamaica hails King’s decision to refer slavery reparations petition to privy council as ‘really big deal’",
+      "summary": "The move comes after Jamaica’s culture minister Olivia Grange travelled to the UK earlier this month to lodge the historic petitionKing Charles has referred a landmark slavery reparations petition from Jamaica to a high-level UK appeals court for legal advice, Jamaica’s culture m",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/23/jamaica-king-charles-to-refer-slavery-reparations-petition-to-privy-council",
+      "observedAt": "2026-09-23T01:15:26.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "The move comes after Jamaica’s culture minister Olivia Grange travelled to the UK earlier this month to lodge the historic petitionKing Charles has referred a landmark slavery reparations petition from Jamaica to a high-level UK appeals court for legal advice, Jamaica’s culture m",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-hurricane-polo-rapidly-intensifying-from-strong-",
+      "title": "Hurricane Polo, rapidly intensifying from strong El Niño patterns, rages off coast of Mexico",
+      "summary": "Polo, with sustained winds of 165mph, is churning 215 miles south of Zihuatanejo but is unlikely to directly hit MexicoA tropical storm off the south-west coast of Mexico has intensified into a category 5 monster in fewer than 24 hours, fueled by stronger than usual El Niño weath",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/22/hurricane-polo-mexico",
+      "observedAt": "2026-09-22T19:09:29.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Polo, with sustained winds of 165mph, is churning 215 miles south of Zihuatanejo but is unlikely to directly hit MexicoA tropical storm off the south-west coast of Mexico has intensified into a category 5 monster in fewer than 24 hours, fueled by stronger than usual El Niño weath",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-healthcare-in-africa-under-growing-strain-after-",
+      "title": "Healthcare in Africa ‘under growing strain’ after US withdrawal from aid programs, report warns",
+      "summary": "Accra Reset’s report states countries in the region and global south should take greater control of their health development after USAID debacleThe United States’ withdrawal from key aid programs has put healthcare in Africa and the global south “under growing strain” a new repor",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/us-news/2026/sep/21/africa-healthcare-aid-program-withdrawl",
+      "observedAt": "2026-09-21T22:33:40.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "Accra Reset’s report states countries in the region and global south should take greater control of their health development after USAID debacleThe United States’ withdrawal from key aid programs has put healthcare in Africa and the global south “under growing strain” a new repor",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-banished-to-alien-lands-trump-s-secret-deportati",
+      "title": "Banished to alien lands: Trump’s secret deportation deals",
+      "summary": "After a plane journey in shackles, an Iranian woman found herself in the middle of Africa in a country she did not know existed. She is one of thousands deported from the US on the back of shadowy deals made with dozens of countries. An in-depth investigation reveals the ‘show of",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": 32.43,
+      "lon": 53.69,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/us-news/ng-interactive/2026/sep/21/trump-deportation-deals",
+      "observedAt": "2026-09-21T05:00:38.000Z",
+      "ingestedAt": "2026-09-24T18:25:09.986Z",
+      "curatedSummary": "After a plane journey in shackles, an Iranian woman found herself in the middle of Africa in a country she did not know existed. She is one of thousands deported from the US on the back of shadowy deals made with dozens of countries. An in-depth investigation reveals the ‘show of",
+      "briefSource": "wire"
     },
     {
       "id": "evt-001",
@@ -152,6 +752,7 @@
       "observedAt": "2026-09-20T13:00:00.000Z",
       "ingestedAt": "2026-09-20T13:30:00.000Z",
       "falloutRisk": "high",
+      "mapEligible": true,
       "curatedSummary": "Artillery exchanges near Kupiansk — Ukrainian and Russian forces exchange artillery fire northeast of Kupiansk; civilian infrastructure damaged.",
       "briefSource": "wire"
     },
@@ -162,14 +763,15 @@
       "layer": "disaster",
       "severity": 3,
       "confidence": 0.95,
-      "lat": 35.6,
-      "lon": 140.1,
+      "lat": null,
+      "lon": null,
       "region": "East Asia",
       "source": "USGS",
       "sourceReliability": "A",
       "observedAt": "2026-09-20T12:00:00.000Z",
       "ingestedAt": "2026-09-20T12:12:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": false,
       "curatedSummary": "Major earthquake M6.8 offshore — USGS reports M6.8 quake; tsunami watch briefly issued then cancelled.",
       "briefSource": "wire"
     },
@@ -188,6 +790,7 @@
       "observedAt": "2026-09-20T11:00:00.000Z",
       "ingestedAt": "2026-09-20T11:30:00.000Z",
       "falloutRisk": "critical",
+      "mapEligible": true,
       "curatedSummary": "Houthi attack claim on commercial vessel — Attack claimed against Liberia-flagged tanker in southern Red Sea; crew status unknown.",
       "briefSource": "wire"
     },
@@ -198,14 +801,15 @@
       "layer": "sanctions",
       "severity": 2,
       "confidence": 0.85,
-      "lat": 40.75,
-      "lon": -73.97,
-      "region": "North America",
+      "lat": 31.5,
+      "lon": 34.47,
+      "region": "Middle East",
       "source": "GDELT/AFP",
       "sourceReliability": "A",
       "observedAt": "2026-09-20T10:00:00.000Z",
       "ingestedAt": "2026-09-20T10:30:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "UNSC session on Gaza ceasefire draft — Draft resolution circulated; abstention math unclear; markets watch oil risk premium.",
       "briefSource": "wire"
     },
@@ -224,6 +828,7 @@
       "observedAt": "2026-09-20T08:48:00.000Z",
       "ingestedAt": "2026-09-20T10:00:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "NATO maritime exercise begins — Standing naval group begins scheduled exercise in North Sea.",
       "briefSource": "wire"
     },
@@ -242,6 +847,7 @@
       "observedAt": "2026-09-20T08:00:00.000Z",
       "ingestedAt": "2026-09-20T09:00:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": true,
       "curatedSummary": "Drone swarm reported over Black Sea approaches — Multiple UAVs tracked near Odessa maritime corridor; air defenses activated.",
       "briefSource": "wire"
     },
@@ -260,6 +866,7 @@
       "observedAt": "2026-09-20T07:00:00.000Z",
       "ingestedAt": "2026-09-20T07:30:00.000Z",
       "falloutRisk": "high",
+      "mapEligible": true,
       "curatedSummary": "Missile test reported on peninsula — Short-range ballistic missile launch reported; trajectory toward sea.",
       "briefSource": "wire"
     },
@@ -278,6 +885,7 @@
       "observedAt": "2026-09-20T06:00:00.000Z",
       "ingestedAt": "2026-09-20T07:00:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": false,
       "curatedSummary": "Protest escalation in capital square — Large anti-austerity protests; tear gas deployed; transport disrupted.",
       "briefSource": "wire"
     },
@@ -288,14 +896,15 @@
       "layer": "conflict",
       "severity": 3,
       "confidence": 0.88,
-      "lat": 24.5,
-      "lon": 119.5,
-      "region": "East Asia",
+      "lat": 23.7,
+      "lon": 121,
+      "region": "East / SE Asia",
       "source": "GDELT/Reuters",
       "sourceReliability": "A",
       "observedAt": "2026-09-20T04:00:00.000Z",
       "ingestedAt": "2026-09-20T05:00:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": true,
       "curatedSummary": "PLA drills announced near Taiwan Strait — Live-fire windows published; commercial shipping advised to reroute.",
       "briefSource": "wire"
     },
@@ -314,6 +923,7 @@
       "observedAt": "2026-09-20T02:00:00.000Z",
       "ingestedAt": "2026-09-20T03:00:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": false,
       "curatedSummary": "Strait of Hormuz transit advisory elevated — Insurance premiums rise after shadow fleet near-miss reports near Hormuz.",
       "briefSource": "wire"
     },
@@ -332,6 +942,7 @@
       "observedAt": "2026-09-20T01:36:00.000Z",
       "ingestedAt": "2026-09-20T02:48:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": true,
       "curatedSummary": "Wildfire smoke impacts air corridor — Dense smoke reduces visibility near major cargo hub; diversions issued.",
       "briefSource": "wire"
     },
@@ -350,6 +961,7 @@
       "observedAt": "2026-09-19T22:00:00.000Z",
       "ingestedAt": "2026-09-19T23:00:00.000Z",
       "falloutRisk": "high",
+      "mapEligible": true,
       "curatedSummary": "Ransomware hits regional energy utility — Operational technology segment isolated after ransomware; no confirmed spillover to SCADA.",
       "briefSource": "wire"
     },
@@ -360,14 +972,15 @@
       "layer": "terrorism",
       "severity": 4,
       "confidence": 0.68,
-      "lat": 16.27,
-      "lon": -0.04,
-      "region": "Sahel",
+      "lat": 15.5,
+      "lon": 0,
+      "region": "Africa",
       "source": "GDELT/AFP",
       "sourceReliability": "B",
       "observedAt": "2026-09-19T18:00:00.000Z",
       "ingestedAt": "2026-09-19T19:00:00.000Z",
       "falloutRisk": "high",
+      "mapEligible": true,
       "curatedSummary": "IED blast near convoy route in Sahel — IED strikes logistics convoy on Gao–Niamey corridor; casualties unconfirmed.",
       "briefSource": "wire"
     },
@@ -386,6 +999,7 @@
       "observedAt": "2026-09-19T16:00:00.000Z",
       "ingestedAt": "2026-09-19T17:12:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "Sanctions designation list expanded — New entities linked to dual-use procurement networks designated.",
       "briefSource": "wire"
     },
@@ -404,6 +1018,7 @@
       "observedAt": "2026-09-19T12:00:00.000Z",
       "ingestedAt": "2026-09-19T13:00:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": true,
       "curatedSummary": "Border skirmish reports along LoC — Small-arms fire overnight; both sides claim ceasefire violation.",
       "briefSource": "wire"
     },
@@ -414,14 +1029,15 @@
       "layer": "cyber",
       "severity": 2,
       "confidence": 0.55,
-      "lat": 52.37,
-      "lon": 4.9,
+      "lat": null,
+      "lon": null,
       "region": "Western Europe",
       "source": "seed/intel note",
       "sourceReliability": "C",
       "observedAt": "2026-09-19T11:12:00.000Z",
       "ingestedAt": "2026-09-19T13:36:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "APT probing logistics firm VPN — Credential stuffing and MFA fatigue attempts against European freight forwarder.",
       "briefSource": "wire"
     },
@@ -440,6 +1056,7 @@
       "observedAt": "2026-09-19T04:00:00.000Z",
       "ingestedAt": "2026-09-19T06:24:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "Port strike threat expands to second terminal — Dockworkers threaten expansion; container backlog risk elevates.",
       "briefSource": "wire"
     },
@@ -458,6 +1075,7 @@
       "observedAt": "2026-09-19T04:00:00.000Z",
       "ingestedAt": "2026-09-19T05:00:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": true,
       "curatedSummary": "Pirate boarding attempt Gulf of Guinea — Armed boarding attempt repelled; vessel resumes transit under naval escort.",
       "briefSource": "wire"
     },
@@ -476,6 +1094,7 @@
       "observedAt": "2026-09-18T16:00:00.000Z",
       "ingestedAt": "2026-09-18T18:24:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": false,
       "curatedSummary": "Secondary sanctions risk on shadow fleet ports — Treasury guidance flags additional ship-to-ship transfer hubs in Mediterranean.",
       "briefSource": "wire"
     },
@@ -486,14 +1105,15 @@
       "layer": "disaster",
       "severity": 2,
       "confidence": 0.7,
-      "lat": 33.89,
-      "lon": 35.5,
+      "lat": null,
+      "lon": null,
       "region": "Levant",
       "source": "OCHA",
       "sourceReliability": "B",
       "observedAt": "2026-09-18T04:00:00.000Z",
       "ingestedAt": "2026-09-18T06:24:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "Refugee camp overcrowding warning — OCHA notes acute overcrowding after latest displacement wave.",
       "briefSource": "wire"
     },
@@ -506,12 +1126,13 @@
       "confidence": 0.5,
       "lat": 16.5,
       "lon": 112.5,
-      "region": "Southeast Asia",
+      "region": "East / SE Asia",
       "source": "GDELT/wire",
       "sourceReliability": "C",
       "observedAt": "2026-09-17T16:00:00.000Z",
       "ingestedAt": "2026-09-17T18:24:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": true,
       "curatedSummary": "South China Sea collision claim — Conflicting accounts of vessel collision near contested shoal.",
       "briefSource": "wire"
     },
@@ -522,14 +1143,15 @@
       "layer": "conflict",
       "severity": 2,
       "confidence": 0.45,
-      "lat": 48.7,
-      "lon": 32.6,
+      "lat": null,
+      "lon": null,
       "region": "Eastern Europe",
       "source": "seed/market note",
       "sourceReliability": "D",
       "observedAt": "2026-09-16T16:00:00.000Z",
       "ingestedAt": "2026-09-16T18:24:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "Pipeline monitoring anomaly reported — Pressure anomaly on export pipeline; operator says maintenance, markets skeptical.",
       "briefSource": "wire"
     },
@@ -548,6 +1170,7 @@
       "observedAt": "2026-09-15T16:00:00.000Z",
       "ingestedAt": "2026-09-15T18:24:00.000Z",
       "falloutRisk": "medium",
+      "mapEligible": true,
       "curatedSummary": "Cyber intrusion into municipal water SCADA (attempt) — Failed intrusion attempt on water utility HMI; ICS CERT advisory published.",
       "briefSource": "wire"
     },
@@ -566,6 +1189,7 @@
       "observedAt": "2026-09-14T16:00:00.000Z",
       "ingestedAt": "2026-09-14T18:24:00.000Z",
       "falloutRisk": "low",
+      "mapEligible": false,
       "curatedSummary": "Diplomatic spat escalates visa bans — Tit-for-tat diplomat expulsions announced after espionage allegations.",
       "briefSource": "wire"
     }
@@ -728,10 +1352,10 @@
   "hotspots": [
     {
       "region": "Global",
-      "count": 4,
-      "maxSeverity": 2,
+      "count": 15,
+      "maxSeverity": 4,
       "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-24T13:53:23.180Z",
+      "freshestAt": "2026-09-24T18:25:35.581Z",
       "layers": [
         "maritime",
         "conflict"
@@ -739,10 +1363,55 @@
     },
     {
       "region": "Middle East",
-      "count": 1,
-      "maxSeverity": 3,
+      "count": 9,
+      "maxSeverity": 4,
       "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-24T13:53:23.180Z",
+      "freshestAt": "2026-09-24T18:25:35.581Z",
+      "layers": [
+        "conflict",
+        "terrorism",
+        "sanctions"
+      ]
+    },
+    {
+      "region": "Africa",
+      "count": 4,
+      "maxSeverity": 4,
+      "freshestSource": "rss:Al Jazeera",
+      "freshestAt": "2026-09-24T18:13:32.000Z",
+      "layers": [
+        "conflict",
+        "terrorism",
+        "maritime"
+      ]
+    },
+    {
+      "region": "Americas",
+      "count": 3,
+      "maxSeverity": 3,
+      "freshestSource": "rss:Guardian World",
+      "freshestAt": "2026-09-24T17:56:06.000Z",
+      "layers": [
+        "conflict"
+      ]
+    },
+    {
+      "region": "Europe",
+      "count": 6,
+      "maxSeverity": 4,
+      "freshestSource": "rss:Al Jazeera",
+      "freshestAt": "2026-09-24T17:15:31.000Z",
+      "layers": [
+        "maritime",
+        "conflict"
+      ]
+    },
+    {
+      "region": "South Asia",
+      "count": 2,
+      "maxSeverity": 4,
+      "freshestSource": "rss:Al Jazeera",
+      "freshestAt": "2026-09-24T16:51:30.000Z",
       "layers": [
         "conflict"
       ]
@@ -760,7 +1429,7 @@
     },
     {
       "region": "East Asia",
-      "count": 3,
+      "count": 2,
       "maxSeverity": 4,
       "freshestSource": "USGS",
       "freshestAt": "2026-09-20T12:00:00.000Z",
@@ -777,19 +1446,6 @@
       "freshestAt": "2026-09-20T11:00:00.000Z",
       "layers": [
         "maritime"
-      ]
-    },
-    {
-      "region": "North America",
-      "count": 5,
-      "maxSeverity": 3,
-      "freshestSource": "GDELT/AFP",
-      "freshestAt": "2026-09-20T10:00:00.000Z",
-      "layers": [
-        "sanctions",
-        "disaster",
-        "unrest",
-        "cyber"
       ]
     },
     {
@@ -813,6 +1469,17 @@
       ]
     },
     {
+      "region": "East / SE Asia",
+      "count": 2,
+      "maxSeverity": 3,
+      "freshestSource": "GDELT/Reuters",
+      "freshestAt": "2026-09-20T04:00:00.000Z",
+      "layers": [
+        "conflict",
+        "maritime"
+      ]
+    },
+    {
       "region": "Persian Gulf",
       "count": 1,
       "maxSeverity": 3,
@@ -823,23 +1490,16 @@
       ]
     },
     {
-      "region": "Sahel",
-      "count": 1,
-      "maxSeverity": 4,
-      "freshestSource": "GDELT/AFP",
-      "freshestAt": "2026-09-19T18:00:00.000Z",
-      "layers": [
-        "terrorism"
-      ]
-    },
-    {
-      "region": "South Asia",
-      "count": 1,
+      "region": "North America",
+      "count": 4,
       "maxSeverity": 3,
-      "freshestSource": "GDELT/AFP",
-      "freshestAt": "2026-09-19T12:00:00.000Z",
+      "freshestSource": "GDELT/BBC",
+      "freshestAt": "2026-09-20T01:36:00.000Z",
       "layers": [
-        "conflict"
+        "disaster",
+        "sanctions",
+        "unrest",
+        "cyber"
       ]
     },
     {
@@ -851,16 +1511,6 @@
       "layers": [
         "cyber",
         "sanctions"
-      ]
-    },
-    {
-      "region": "Africa",
-      "count": 1,
-      "maxSeverity": 3,
-      "freshestSource": "GDELT/IMB",
-      "freshestAt": "2026-09-19T04:00:00.000Z",
-      "layers": [
-        "maritime"
       ]
     },
     {
@@ -881,16 +1531,6 @@
       "freshestAt": "2026-09-18T04:00:00.000Z",
       "layers": [
         "disaster"
-      ]
-    },
-    {
-      "region": "Southeast Asia",
-      "count": 1,
-      "maxSeverity": 3,
-      "freshestSource": "GDELT/wire",
-      "freshestAt": "2026-09-17T16:00:00.000Z",
-      "layers": [
-        "maritime"
       ]
     }
   ],
@@ -917,7 +1557,7 @@
       "id": "x-scroll",
       "name": "X allowlist scroll",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-24T13:53:24.773Z",
+      "lastEvaluatedAt": "2026-09-24T18:25:37.183Z",
       "detail": "live: 5 pointers merged (no X API search); 1 login-wall profile(s)",
       "rule": "allowlist_scroll && merge_by_id",
       "snapshot": "x-scroll@2026-09-24"
@@ -935,8 +1575,8 @@
       "id": "rss",
       "name": "RSS wires",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-24T13:53:02.210Z",
-      "detail": "merged 30 (added 17); bbc-world:10, guardian-world:10, aljazeera:10",
+      "lastEvaluatedAt": "2026-09-24T18:25:10.303Z",
+      "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
       "rule": "http_200 && items>=1",
       "snapshot": "rss@2026-09-24"
     },
@@ -1315,7 +1955,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 7680.5498046875
+          "v": 7701.72998046875
         }
       ]
     },
@@ -1683,7 +2323,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 30287.23828125
+          "v": 30425.365234375
         }
       ]
     },
@@ -2051,7 +2691,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 25385.830078125
+          "v": 25266.529296875
         }
       ]
     },
@@ -2061,6 +2701,10 @@
       "unit": "index",
       "source": "yahoo",
       "points": [
+        {
+          "t": "2026-05-14",
+          "v": 62654.05078125
+        },
         {
           "t": "2026-05-15",
           "v": 61409.2890625
@@ -2416,10 +3060,6 @@
         {
           "t": "2026-09-18",
           "v": 65018.94921875
-        },
-        {
-          "t": "2026-09-24",
-          "v": 65513.98828125
         }
       ]
     },
@@ -3159,7 +3799,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 1.1373976469039917
+          "v": 1.137268304824829
         }
       ]
     },
@@ -3527,7 +4167,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 158.83999633789062
+          "v": 158.85899353027344
         }
       ]
     },
@@ -3895,7 +4535,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 101.30699920654297
+          "v": 101.3010025024414
         }
       ]
     },
@@ -4263,7 +4903,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 94.30999755859375
+          "v": 94.56999969482422
         }
       ]
     },
@@ -4631,7 +5271,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 100.01000213623047
+          "v": 106.41000366210938
         }
       ]
     },
@@ -4999,7 +5639,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 4306.7998046875
+          "v": 4305
         }
       ]
     },
@@ -5739,7 +6379,7 @@
         },
         {
           "t": "2026-09-24",
-          "v": 15.779999732971191
+          "v": 15.729999542236328
         }
       ]
     },
@@ -6126,33 +6766,46 @@
       "pctChange20d": -1.33,
       "adverseStreak": 1,
       "latestValue": 3029.45,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "ndx",
       "seriesName": "Nasdaq 100",
-      "zScore": 1.6,
-      "pctChange1d": -0.6,
-      "pctChange5d": 4.64,
-      "pctChange20d": 3.69,
+      "zScore": 1.8,
+      "pctChange1d": -0.15,
+      "pctChange5d": 5.11,
+      "pctChange20d": 4.16,
       "adverseStreak": 2,
-      "latestValue": 30287.23828125,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 30425.365234375,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-24"
+    },
+    {
+      "seriesId": "brent",
+      "seriesName": "Brent Crude",
+      "zScore": 1.68,
+      "pctChange1d": 3.23,
+      "pctChange5d": 1.52,
+      "pctChange20d": 21.14,
+      "adverseStreak": 2,
+      "latestValue": 106.41000366210938,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "eurusd",
       "seriesName": "EUR/USD",
-      "zScore": -1.55,
-      "pctChange1d": -0.65,
-      "pctChange5d": -0.84,
-      "pctChange20d": -2.41,
+      "zScore": -1.56,
+      "pctChange1d": -0.66,
+      "pctChange5d": -0.85,
+      "pctChange20d": -2.42,
       "adverseStreak": 3,
-      "latestValue": 1.1373976469039917,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 1.137268304824829,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6164,34 +6817,21 @@
       "pctChange5d": 0.99,
       "pctChange20d": 2.41,
       "adverseStreak": 3,
-      "latestValue": 101.30699920654297,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-24"
-    },
-    {
-      "seriesId": "brent",
-      "seriesName": "Brent Crude",
-      "zScore": 1.02,
-      "pctChange1d": -2.98,
-      "pctChange5d": -4.59,
-      "pctChange20d": 13.85,
-      "adverseStreak": 0,
-      "latestValue": 100.01000213623047,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 101.3010025024414,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "wti",
       "seriesName": "WTI Crude",
-      "zScore": 1,
-      "pctChange1d": 2.33,
-      "pctChange5d": -7.46,
-      "pctChange20d": 14.69,
+      "zScore": 1.03,
+      "pctChange1d": 2.62,
+      "pctChange5d": -7.2,
+      "pctChange20d": 15.01,
       "adverseStreak": 1,
-      "latestValue": 94.30999755859375,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 94.56999969482422,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6204,46 +6844,59 @@
       "pctChange20d": -0.24,
       "adverseStreak": 5,
       "latestValue": 4.2,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "dax",
       "seriesName": "DAX",
-      "zScore": -0.65,
-      "pctChange1d": -0.1,
-      "pctChange5d": -0.59,
-      "pctChange20d": -3.42,
+      "zScore": -0.88,
+      "pctChange1d": -0.57,
+      "pctChange5d": -1.06,
+      "pctChange20d": -3.88,
       "adverseStreak": 2,
-      "latestValue": 25385.830078125,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 25266.529296875,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "spx",
       "seriesName": "S&P 500",
-      "zScore": 0.62,
-      "pctChange1d": -0.33,
-      "pctChange5d": 1.7,
-      "pctChange20d": 0.04,
+      "zScore": 0.79,
+      "pctChange1d": -0.06,
+      "pctChange5d": 1.99,
+      "pctChange20d": 0.32,
       "adverseStreak": 2,
-      "latestValue": 7680.5498046875,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 7701.72998046875,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "nky",
       "seriesName": "Nikkei 225",
-      "zScore": -0.32,
-      "pctChange1d": 0.76,
-      "pctChange5d": 3.18,
-      "pctChange20d": -0.02,
+      "zScore": -0.58,
+      "pctChange1d": 1.38,
+      "pctChange5d": 1.57,
+      "pctChange20d": -1.51,
       "adverseStreak": 0,
-      "latestValue": 65513.98828125,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 65018.94921875,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-24"
+    },
+    {
+      "seriesId": "vix",
+      "seriesName": "VIX",
+      "zScore": -0.28,
+      "pctChange1d": 3.62,
+      "pctChange5d": -11.18,
+      "pctChange20d": 3.42,
+      "adverseStreak": 3,
+      "latestValue": 15.729999542236328,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
@@ -6256,59 +6909,46 @@
       "pctChange20d": 0.19,
       "adverseStreak": 3,
       "latestValue": 5.32,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-24"
-    },
-    {
-      "seriesId": "vix",
-      "seriesName": "VIX",
-      "zScore": -0.25,
-      "pctChange1d": 3.95,
-      "pctChange5d": -10.9,
-      "pctChange20d": 3.75,
-      "adverseStreak": 3,
-      "latestValue": 15.779999732971191,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "usdjpy",
       "seriesName": "USD/JPY",
-      "zScore": -0.17,
-      "pctChange1d": 0.87,
-      "pctChange5d": 1.81,
-      "pctChange20d": -0.26,
+      "zScore": -0.16,
+      "pctChange1d": 0.89,
+      "pctChange5d": 1.82,
+      "pctChange20d": -0.25,
       "adverseStreak": 8,
-      "latestValue": 158.83999633789062,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 158.85899353027344,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     },
     {
       "seriesId": "gold",
       "seriesName": "Gold",
-      "zScore": 0,
-      "pctChange1d": -0.27,
-      "pctChange5d": -2.11,
-      "pctChange20d": -7.45,
+      "zScore": -0.01,
+      "pctChange1d": -0.31,
+      "pctChange5d": -2.15,
+      "pctChange20d": -7.49,
       "adverseStreak": 0,
-      "latestValue": 4306.7998046875,
-      "evaluatedAt": "2026-09-24T13:52:57.544Z",
+      "latestValue": 4305,
+      "evaluatedAt": "2026-09-24T18:24:58.741Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-24"
     }
   ],
   "stress": {
-    "score": 32.2,
+    "score": 31.5,
     "components": {
-      "equities": 26,
+      "equities": 24,
       "usd": 51,
       "vix": 20,
       "oil": 39
     },
-    "evaluatedAt": "2026-09-24T13:52:57.545Z",
+    "evaluatedAt": "2026-09-24T18:24:58.742Z",
     "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
     "snapshot": "live@2026-09-24"
   },
@@ -6318,7 +6958,7 @@
     "7d",
     "30d"
   ],
-  "updatedAt": "2026-09-24T13:53:29.817Z",
-  "nextUpdateAt": "2026-09-24T18:20:00.000Z",
-  "nextUpdateHint": "Next update ~1:20 PM CT"
+  "updatedAt": "2026-09-24T18:25:41.608Z",
+  "nextUpdateAt": "2026-09-24T23:20:00.000Z",
+  "nextUpdateHint": "Next update ~6:20 PM CT"
 }
