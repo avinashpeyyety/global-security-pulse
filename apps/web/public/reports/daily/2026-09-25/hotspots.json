@@ -1,49 +1,46 @@
 [
   {
-    "region": "Global",
-    "count": 15,
-    "maxSeverity": 4,
-    "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-25T13:34:20.217Z",
-    "layers": [
-      "maritime",
-      "conflict"
-    ]
-  },
-  {
     "region": "Middle East",
-    "count": 12,
+    "count": 10,
     "maxSeverity": 4,
     "freshestSource": "x-scroll-curated",
-    "freshestAt": "2026-09-25T13:34:20.217Z",
+    "freshestAt": "2026-09-25T18:25:49.967Z",
     "layers": [
-      "conflict",
-      "unrest",
-      "terrorism",
       "maritime",
+      "conflict",
       "sanctions"
     ]
   },
   {
-    "region": "South Asia",
-    "count": 2,
-    "maxSeverity": 3,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-25T12:59:16.000Z",
+    "region": "Global",
+    "count": 16,
+    "maxSeverity": 4,
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-25T18:25:49.967Z",
     "layers": [
-      "unrest",
+      "maritime",
       "conflict"
     ]
   },
   {
     "region": "Europe",
-    "count": 4,
+    "count": 5,
     "maxSeverity": 4,
-    "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-09-25T12:44:08.000Z",
+    "freshestSource": "rss:Al Jazeera",
+    "freshestAt": "2026-09-25T18:05:32.000Z",
     "layers": [
       "conflict",
-      "sanctions"
+      "unrest"
+    ]
+  },
+  {
+    "region": "Americas",
+    "count": 4,
+    "maxSeverity": 3,
+    "freshestSource": "rss:Al Jazeera",
+    "freshestAt": "2026-09-25T17:44:39.000Z",
+    "layers": [
+      "conflict"
     ]
   },
   {
@@ -55,16 +52,6 @@
     "layers": [
       "conflict",
       "maritime"
-    ]
-  },
-  {
-    "region": "Americas",
-    "count": 3,
-    "maxSeverity": 3,
-    "freshestSource": "rss:Guardian World",
-    "freshestAt": "2026-09-25T03:33:48.000Z",
-    "layers": [
-      "conflict"
     ]
   },
   {
@@ -151,6 +138,16 @@
     "layers": [
       "terrorism",
       "maritime"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "count": 1,
+    "maxSeverity": 3,
+    "freshestSource": "GDELT/AFP",
+    "freshestAt": "2026-09-19T12:00:00.000Z",
+    "layers": [
+      "conflict"
     ]
   },
   {

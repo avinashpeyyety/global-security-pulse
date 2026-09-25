@@ -1,11 +1,38 @@
 {
-  "generatedAt": "2026-09-25T13:34:28.425Z",
+  "generatedAt": "2026-09-25T18:25:56.230Z",
   "date": "2026-09-25",
   "packageId": "daily-2026-09-25",
-  "updatedAt": "2026-09-25T13:34:28.425Z",
-  "nextUpdateAt": "2026-09-25T18:20:00.000Z",
-  "nextUpdateHint": "Next update ~1:20 PM CT",
+  "updatedAt": "2026-09-25T18:25:56.230Z",
+  "nextUpdateAt": "2026-09-25T23:20:00.000Z",
+  "nextUpdateHint": "Next update ~6:20 PM CT",
   "events": [
+    {
+      "id": "curated-x-centcom-2103526758834110482",
+      "title": "U.S. Central Command @CENTCOM 1h U.S. Marines assigned to the 11th Marine Expeditionary Unit train aboard USS Boxer (LHD",
+      "summary": "User-generated X post from @CENTCOM regarding Iran — verify against wires.",
+      "curatedSummary": "User-generated X post from @CENTCOM regarding Iran — verify against wires.",
+      "briefSource": "agent",
+      "xPosts": [
+        {
+          "author": "CENTCOM",
+          "text": "U.S. Central Command @CENTCOM 1h U.S. Marines assigned to the 11th Marine Expeditionary Unit train aboard USS Boxer (LHD 4) as the ship sails in regional waters and continues to support enforcement of the U.S. blockade against Iran. As of Sept. 25, CENTCOM forces have redirected ",
+          "url": "https://x.com/CENTCOM/status/2103526758834110482",
+          "observedAt": "2026-09-25T18:25:49.967Z"
+        }
+      ],
+      "layer": "maritime",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.55,
+      "lat": 32.43,
+      "lon": 53.69,
+      "region": "Middle East",
+      "source": "x-scroll-curated",
+      "sourceReliability": "B",
+      "url": "https://x.com/CENTCOM/status/2103526758834110482",
+      "observedAt": "2026-09-25T18:25:49.967Z",
+      "ingestedAt": "2026-09-25T18:25:49.967Z"
+    },
     {
       "id": "curated-x-centcom-2102821866859573647",
       "title": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain s",
@@ -15,9 +42,9 @@
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain strict enforcement of America's 🇺🇸 steel wall blockade. 00:11 154",
+          "text": "U.S. Central Command @CENTCOM Sep 23 As of Sept. 23, CENTCOM forces have redirected 115 commercial vessels to maintain strict enforcement of America's 🇺🇸 steel wall blockade. 00:11 157",
           "url": "https://x.com/CENTCOM/status/2102821866859573647",
-          "observedAt": "2026-09-25T13:34:20.217Z"
+          "observedAt": "2026-09-25T18:25:49.967Z"
         }
       ],
       "layer": "maritime",
@@ -30,21 +57,21 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102821866859573647",
-      "observedAt": "2026-09-25T13:34:20.217Z",
-      "ingestedAt": "2026-09-25T13:34:20.217Z"
+      "observedAt": "2026-09-25T18:25:49.967Z",
+      "ingestedAt": "2026-09-25T18:25:49.967Z"
     },
     {
       "id": "curated-x-centcom-2102740345507258656",
-      "title": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 118 593",
+      "title": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 118 594",
       "summary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "curatedSummary": "User-generated X post from @CENTCOM regarding Global — verify against wires.",
       "briefSource": "agent",
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 118 593",
+          "text": "U.S. Central Command @CENTCOM Sep 23 Statement from Adm. Brad Cooper, CENTCOM commander: 118 594",
           "url": "https://x.com/CENTCOM/status/2102740345507258656",
-          "observedAt": "2026-09-25T13:34:20.217Z"
+          "observedAt": "2026-09-25T18:25:49.967Z"
         }
       ],
       "layer": "conflict",
@@ -57,8 +84,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102740345507258656",
-      "observedAt": "2026-09-25T13:34:20.217Z",
-      "ingestedAt": "2026-09-25T13:34:20.217Z"
+      "observedAt": "2026-09-25T18:25:49.967Z",
+      "ingestedAt": "2026-09-25T18:25:49.967Z"
     },
     {
       "id": "curated-x-centcom-2102453129014890686",
@@ -69,9 +96,9 @@
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 22 U.S. Army Soldiers reload a Land-based Phalanx Weapon System (LPWS) in the Middle East. The LPWS is a mobile air defense system that can eliminate aerial threats. 104 387",
+          "text": "U.S. Central Command @CENTCOM Sep 22 U.S. Army Soldiers reload a Land-based Phalanx Weapon System (LPWS) in the Middle East. The LPWS is a mobile air defense system that can eliminate aerial threats. 104 388",
           "url": "https://x.com/CENTCOM/status/2102453129014890686",
-          "observedAt": "2026-09-25T13:34:20.217Z"
+          "observedAt": "2026-09-25T18:25:49.967Z"
         }
       ],
       "layer": "conflict",
@@ -84,8 +111,8 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102453129014890686",
-      "observedAt": "2026-09-25T13:34:20.217Z",
-      "ingestedAt": "2026-09-25T13:34:20.217Z"
+      "observedAt": "2026-09-25T18:25:49.967Z",
+      "ingestedAt": "2026-09-25T18:25:49.967Z"
     },
     {
       "id": "curated-x-centcom-2102131151733158360",
@@ -96,9 +123,9 @@
       "xPosts": [
         {
           "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 21 Different platforms, same team. U.S. military air power across the CENTCOM theater promotes regional security and stability. 00:00 / 00:33 110",
+          "text": "U.S. Central Command @CENTCOM Sep 21 Different platforms, same team. U.S. military air power across the CENTCOM theater promotes regional security and stability. 00:00 / 00:33 111",
           "url": "https://x.com/CENTCOM/status/2102131151733158360",
-          "observedAt": "2026-09-25T13:34:20.217Z"
+          "observedAt": "2026-09-25T18:25:49.967Z"
         }
       ],
       "layer": "conflict",
@@ -111,35 +138,148 @@
       "source": "x-scroll-curated",
       "sourceReliability": "B",
       "url": "https://x.com/CENTCOM/status/2102131151733158360",
-      "observedAt": "2026-09-25T13:34:20.217Z",
-      "ingestedAt": "2026-09-25T13:34:20.217Z"
+      "observedAt": "2026-09-25T18:25:49.967Z",
+      "ingestedAt": "2026-09-25T18:25:49.967Z"
     },
     {
-      "id": "curated-x-centcom-2102058017625723237",
-      "title": "U.S. Central Command @CENTCOM Sep 21 USS Rafael Peralta (DDG 115) sails in regional waters as the guided-missile destroy",
-      "summary": "User-generated X post from @CENTCOM regarding Iran — verify against wires.",
-      "curatedSummary": "User-generated X post from @CENTCOM regarding Iran — verify against wires.",
-      "briefSource": "agent",
-      "xPosts": [
-        {
-          "author": "CENTCOM",
-          "text": "U.S. Central Command @CENTCOM Sep 21 USS Rafael Peralta (DDG 115) sails in regional waters as the guided-missile destroyer continues strict enforcement of the U.S. blockade against Iran, preventing commerce from entering or departing Iranian ports and coastal areas. As of Sept. 2",
-          "url": "https://x.com/CENTCOM/status/2102058017625723237",
-          "observedAt": "2026-09-25T13:34:20.217Z"
-        }
-      ],
+      "id": "rss-aljazeera-poland-boosts-air-defence-after-russian-provocat",
+      "title": "Poland boosts air defence after ‘Russian provocations’ amid Ukraine war",
+      "summary": "Alleged incursions put NATO nations on alert as Ukraine launches strikes on Russia during parliamentary voting.",
       "layer": "conflict",
-      "severity": 3,
+      "severity": 4,
       "falloutRisk": "high",
-      "confidence": 0.55,
-      "lat": 32.43,
-      "lon": 53.69,
-      "region": "Middle East",
-      "source": "x-scroll-curated",
+      "confidence": 0.58,
+      "lat": 52.23,
+      "lon": 21.01,
+      "region": "Europe",
+      "mapEligible": true,
+      "source": "rss:Al Jazeera",
       "sourceReliability": "B",
-      "url": "https://x.com/CENTCOM/status/2102058017625723237",
-      "observedAt": "2026-09-25T13:34:20.217Z",
-      "ingestedAt": "2026-09-25T13:34:20.217Z"
+      "url": "https://www.aljazeera.com/news/2026/9/25/poland-boosts-air-defence-after-russian-provocations-amid-ukraine-war?traffic_source=rss",
+      "observedAt": "2026-09-25T18:05:32.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Poland boosts air defence after ‘Russian provocations’ amid Ukraine war — Alleged incursions put NATO nations on alert as Ukraine launches strikes on Russia during parliamentary voting.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-us-top-court-allows-trump-to-use-controversial-v",
+      "title": "US top court allows Trump to use controversial voter verification system",
+      "summary": "Voting rights groups have warned system may falsely identify voters as non-citizens, leading to disenfranchisement.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/25/us-top-court-allows-trump-to-use-controversial-voter-verification-system?traffic_source=rss",
+      "observedAt": "2026-09-25T17:45:24.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "US top court allows Trump to use controversial voter verification system — Voting rights groups have warned system may falsely identify voters as non-citizens, leading to disenfranchisement.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-lebanese-in-brazil-brazilian-in-lebanon",
+      "title": "Lebanese in Brazil, Brazilian in Lebanon",
+      "summary": "Their families left Lebanon generations ago. For some Lebanese Brazilians, Lebanon’s pull never disappeared.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": -15.79,
+      "lon": -47.88,
+      "region": "Americas",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/features/longform/2026/9/25/lebanese-in-brazil-brazilian-in-lebanon?traffic_source=rss",
+      "observedAt": "2026-09-25T17:44:39.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Lebanese in Brazil, Brazilian in Lebanon — Their families left Lebanon generations ago. For some Lebanese Brazilians, Lebanon’s pull never disappeared.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-al-jazeera-rejects-netanyahu-s-attack-on-journal",
+      "title": "Al Jazeera rejects Netanyahu’s attack on journalists in UN speech",
+      "summary": "Israeli PM&#039;s criticism of Al Jazeera during UNGA address threatens safety of journalists, the media network says.",
+      "layer": "conflict",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.58,
+      "lat": 31.78,
+      "lon": 35.22,
+      "region": "Middle East",
+      "mapEligible": true,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/25/al-jazeera-rejects-netanyahus-attack-on-journalists-in-un-speech?traffic_source=rss",
+      "observedAt": "2026-09-25T17:34:16.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Al Jazeera rejects Netanyahu’s attack on journalists in UN speech — Israeli PM&#039;s criticism of Al Jazeera during UNGA address threatens safety of journalists, the media network says.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-supreme-court-allows-trump-to-use-controversial-",
+      "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
+      "summary": "Critics have questioned the reliability of the data, warning it could  result in US citizens being wrongly removed from electoral rolls.",
+      "layer": "maritime",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-25T17:32:15.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
+      "curatedSummary": "Supreme Court allows Trump to use controversial database to check voter citizenship — Critics have questioned the reliability of the data, warning it could  result in US citizens being wrongly removed from electoral rolls.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-timeline-man-city-s-premier-league-financial-cha",
+      "title": "Timeline: Man City’s Premier League financial charges to reported verdict",
+      "summary": "City reportedly found guilty of all but one of the 115 charges that were first brought in February 2023.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/sports/2026/9/25/timeline-man-citys-premier-league-financial-charges-to-reported-verdict?traffic_source=rss",
+      "observedAt": "2026-09-25T17:20:58.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Timeline: Man City’s Premier League financial charges to reported verdict — City reportedly found guilty of all but one of the 115 charges that were first brought in February 2023.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-ed-sheeran-concerts-at-robert-kraft-stadiums-can",
+      "title": "Ed Sheeran concerts at Robert Kraft stadiums cancelled over weather",
+      "summary": "Singer&#039;s tour has faced numerous setbacks after expulsion of rapper Macklemore over support for Palestine drew backlash.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/25/ed-sheeran-concerts-at-robert-kraft-stadiums-cancelled-over-weather?traffic_source=rss",
+      "observedAt": "2026-09-25T17:18:35.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Ed Sheeran concerts at Robert Kraft stadiums cancelled over weather — Singer&#039;s tour has faced numerous setbacks after expulsion of rapper Macklemore over support for Palestine drew backlash.",
+      "briefSource": "wire"
     },
     {
       "id": "rss-bbc-world-internet-restricted-after-fighting-breaks-out-in",
@@ -156,29 +296,149 @@
       "source": "rss:BBC World",
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cqp8dxxg325no?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-25T13:28:35.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
+      "observedAt": "2026-09-25T17:13:55.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
       "curatedSummary": "Internet restricted after fighting breaks out in Ethiopia's Tigray region — During the two-year civil war in Tigray, the region was totally cut off from the outside world.",
       "briefSource": "wire"
     },
     {
-      "id": "rss-aljazeera-india-s-cockroach-movement-demands-election-chie",
-      "title": "India’s ‘cockroach’ movement demands election chief’s resignation",
-      "summary": "Youth group threatens return to mass protests, sets deadline for Gyanesh Kumar to quit over reports of meddling.",
-      "layer": "unrest",
-      "severity": 3,
-      "falloutRisk": "medium",
+      "id": "rss-aljazeera-us-court-upholds-pentagon-s-blacklisting-of-anth",
+      "title": "US court upholds Pentagon’s blacklisting of Anthropic",
+      "summary": "Conflict began in February when Anthropic refused to remove restrictions on use of Claude for fully autonomous weapons.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
       "confidence": 0.58,
-      "lat": 28.61,
-      "lon": 77.21,
-      "region": "South Asia",
+      "lat": 38.91,
+      "lon": -77.04,
+      "region": "Americas",
       "mapEligible": false,
       "source": "rss:Al Jazeera",
       "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/25/indias-cockroach-movement-demands-election-chiefs-resignation?traffic_source=rss",
-      "observedAt": "2026-09-25T12:59:16.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "India’s ‘cockroach’ movement demands election chief’s resignation — Youth group threatens return to mass protests, sets deadline for Gyanesh Kumar to quit over reports of meddling.",
+      "url": "https://www.aljazeera.com/economy/2026/9/25/us-court-upholds-pentagons-blacklisting-of-anthropic?traffic_source=rss",
+      "observedAt": "2026-09-25T17:03:52.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "US court upholds Pentagon’s blacklisting of Anthropic — Conflict began in February when Anthropic refused to remove restrictions on use of Claude for fully autonomous weapons.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-netanyahu-s-un-belligerence-wins-cheers-at-home-",
+      "title": "Netanyahu’s UN belligerence wins cheers at home as world walks out",
+      "summary": "Israeli PM&#039;s defiant UN speech alienated critics abroad but delighted his base as elections draw near.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 31.78,
+      "lon": 35.22,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news-analysis/2026/9/25/netanyahus-un-belligerence-wins-cheers-at-home-as-world-walks-out?traffic_source=rss",
+      "observedAt": "2026-09-25T17:03:03.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Netanyahu’s UN belligerence wins cheers at home as world walks out — Israeli PM&#039;s defiant UN speech alienated critics abroad but delighted his base as elections draw near.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-israeli-shelling-continues-as-lebanon-s-pm-deman",
+      "title": "Israeli shelling continues as Lebanon’s PM demands withdrawal in UN speech",
+      "summary": "Lebanese Prime Minister Nawaf Salam wants a US-brokered ceasefire to be consolidated and for Israel to retreat.",
+      "layer": "sanctions",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": 33.89,
+      "lon": 35.5,
+      "region": "Middle East",
+      "mapEligible": true,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/news/2026/9/25/israeli-shelling-continues-as-lebanons-pm-demands-withdrawal-in-un-speech?traffic_source=rss",
+      "observedAt": "2026-09-25T16:57:39.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Israeli shelling continues as Lebanon’s PM demands withdrawal in UN speech — Lebanese Prime Minister Nawaf Salam wants a US-brokered ceasefire to be consolidated and for Israel to retreat.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-guardian-world-alberta-s-self-image-as-world-s-only-rat-free-re",
+      "title": "Alberta’s self-image as world’s only rat-free region shattered by discovery of rat",
+      "summary": "Province’s rat patrol called in to investigate as town of Bowden announces discovery of dead verminFor more than seven decades, residents of Alberta have shared something in common with Antarctica and the high Arctic: all locations are officially free of rats.But on Thursday the ",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:Guardian World",
+      "sourceReliability": "A",
+      "url": "https://www.theguardian.com/world/2026/sep/25/alberta-canada-rat-patrol",
+      "observedAt": "2026-09-25T16:34:05.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
+      "curatedSummary": "Province’s rat patrol called in to investigate as town of Bowden announces discovery of dead verminFor more than seven decades, residents of Alberta have shared something in common with Antarctica and the high Arctic: all locations are officially free of rats.But on Thursday the",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-aljazeera-ethiopia-s-new-rebel-alliance-faces-an-old-probl",
+      "title": "Ethiopia’s new rebel alliance faces an old problem",
+      "summary": "Former enemies have united against Abiy Ahmed, but disputes over territory, power and command could pull them apart.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.58,
+      "lat": null,
+      "lon": null,
+      "region": "Middle East",
+      "mapEligible": false,
+      "source": "rss:Al Jazeera",
+      "sourceReliability": "B",
+      "url": "https://www.aljazeera.com/opinions/2026/9/25/ethiopias-new-rebel-alliance-faces-an-old-problem?traffic_source=rss",
+      "observedAt": "2026-09-25T16:10:55.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.656Z",
+      "curatedSummary": "Ethiopia’s new rebel alliance faces an old problem — Former enemies have united against Abiy Ahmed, but disputes over territory, power and command could pull them apart.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-students-strike-across-germany-in-protest-agains",
+      "title": "Students strike across Germany in protest against military service",
+      "summary": "A law establishing voluntary military service came into effect in January, but protest organisers fear compulsory service could follow.",
+      "layer": "unrest",
+      "severity": 4,
+      "falloutRisk": "high",
+      "confidence": 0.72,
+      "lat": 52.52,
+      "lon": 13.4,
+      "region": "Europe",
+      "mapEligible": true,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cxnvlnve52qdo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-25T15:36:22.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
+      "curatedSummary": "Students strike across Germany in protest against military service — A law establishing voluntary military service came into effect in January, but protest organisers fear compulsory service could follow.",
+      "briefSource": "wire"
+    },
+    {
+      "id": "rss-bbc-world-senior-kazakh-officials-detained-after-14-servic",
+      "title": "Senior Kazakh officials detained after 14 service members swept out to sea",
+      "summary": "Seventeen service members were swept out to the Caspian Sea during military exercises.",
+      "layer": "conflict",
+      "severity": 2,
+      "falloutRisk": "low",
+      "confidence": 0.72,
+      "lat": null,
+      "lon": null,
+      "region": "Global",
+      "mapEligible": false,
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/cm0reew1591zo?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-25T15:29:48.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
+      "curatedSummary": "Senior Kazakh officials detained after 14 service members swept out to sea — Seventeen service members were swept out to the Caspian Sea during military exercises.",
       "briefSource": "wire"
     },
     {
@@ -196,189 +456,49 @@
       "source": "rss:BBC World",
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-25T12:44:08.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
+      "observedAt": "2026-09-25T15:06:41.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
       "curatedSummary": "Pope warns against 'losing humanity' to AI machines — The pontiff delivered the warning on the first day of his trip to France on Friday.",
       "briefSource": "wire"
     },
     {
-      "id": "rss-aljazeera-israeli-official-takes-notes-after-un-walkout-ag",
-      "title": "Israeli official takes notes after UN walkout against Netanyahu",
-      "summary": "An Israeli official was filmed taking notes after UN delegates staged a walk out during a speech by Netanyahu.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 31.78,
-      "lon": 35.22,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/israeli-official-takes-notes-after-un-walkout-against-netanyahu?traffic_source=rss",
-      "observedAt": "2026-09-25T12:41:21.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "Israeli official takes notes after UN walkout against Netanyahu — An Israeli official was filmed taking notes after UN delegates staged a walk out during a speech by Netanyahu.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-fighting-in-northern-ethiopia-spurs-fears-of-bla",
-      "title": "Fighting in northern Ethiopia spurs fears of blackout and blockade",
-      "summary": "Tigray was cut off from the world during the 2020-2022 civil war, which killed around 600,000 people.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": null,
-      "lon": null,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/25/fighting-in-northern-ethiopia-spurs-fears-of-blackout-and-blockade?traffic_source=rss",
-      "observedAt": "2026-09-25T12:30:05.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "Fighting in northern Ethiopia spurs fears of blackout and blockade — Tigray was cut off from the world during the 2020-2022 civil war, which killed around 600,000 people.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-us-seeking-to-revive-russia-ukraine-ceasefire-ta",
-      "title": "US seeking to revive Russia-Ukraine ceasefire talks",
-      "summary": "Ukraine&#039;s president added that eight regions have come under attack by Russian forces since the start of the day.",
-      "layer": "sanctions",
-      "severity": 3,
-      "falloutRisk": "medium",
-      "confidence": 0.58,
-      "lat": 55.76,
-      "lon": 37.62,
-      "region": "Europe",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/25/us-seeking-to-revive-russia-ukraine-ceasefire-talks?traffic_source=rss",
-      "observedAt": "2026-09-25T12:09:14.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "US seeking to revive Russia-Ukraine ceasefire talks — Ukraine&#039;s president added that eight regions have come under attack by Russian forces since the start of the day.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-fighting-erupts-between-tigray-s-rebel-alliance-",
-      "title": "Fighting erupts between Tigray’s rebel alliance and Ethiopia’s military",
-      "summary": "Fighting has intensified between Ethiopia’s military and a new rebel alliance in Tigray.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": null,
-      "lon": null,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/25-09-sv-tigray-ethiopia-conflict-restarts-et?traffic_source=rss",
-      "observedAt": "2026-09-25T12:08:16.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "Fighting erupts between Tigray’s rebel alliance and Ethiopia’s military — Fighting has intensified between Ethiopia’s military and a new rebel alliance in Tigray.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-protests-in-uk-after-arrest-of-far-right-activis",
-      "title": "Protests in UK after arrest of far-right activist Daniel Thomas",
-      "summary": "Protesters gathered outside a police station in southern England after far-right activist Daniel Thomas.",
-      "layer": "unrest",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": null,
-      "lon": null,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/25/protests-in-uk-after-arrest-of-far-right-activist-daniel-thomas?traffic_source=rss",
-      "observedAt": "2026-09-25T11:49:24.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "Protests in UK after arrest of far-right activist Daniel Thomas — Protesters gathered outside a police station in southern England after far-right activist Daniel Thomas.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-netanyahu-defends-israeli-military-action-as-del",
-      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
-      "summary": "The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
+      "id": "rss-bbc-world-special-agents-blood-and-urine-test-results-stol",
+      "title": "Special agents' blood and urine test results stolen in FBI hack",
+      "summary": "Experts say the hack could leave agents vulnerable to scams, blackmail and targeted attacks.",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
       "confidence": 0.72,
-      "lat": 31.78,
-      "lon": 35.22,
-      "region": "Middle East",
+      "lat": null,
+      "lon": null,
+      "region": "Global",
       "mapEligible": false,
       "source": "rss:BBC World",
       "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-25T11:44:44.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
-      "curatedSummary": "Netanyahu defends Israeli military action as delegates walk out before UN speech — The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
+      "url": "https://www.bbc.co.uk/news/articles/cw62me2vlj07o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-25T13:56:16.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
+      "curatedSummary": "Special agents' blood and urine test results stolen in FBI hack — Experts say the hack could leave agents vulnerable to scams, blackmail and targeted attacks.",
       "briefSource": "wire"
     },
     {
-      "id": "rss-aljazeera-humanitarian-crisis-worsens-in-ceuta-as-thousand",
-      "title": "Humanitarian crisis worsens in Ceuta as thousands remain stranded",
-      "summary": "People face harsh conditions, overcrowding, limited aid, and alleged abuse while awaiting decisions on their future.",
-      "layer": "terrorism",
+      "id": "rss-bbc-world-man-shot-during-2024-trump-campaign-rally-in-but",
+      "title": "Man shot during 2024 Trump campaign rally in Butler dies",
+      "summary": "A gunman shot Jim Copenhaver twice while also killing another man and grazing Trump's ear with a bullet.",
+      "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
-      "confidence": 0.58,
+      "confidence": 0.72,
       "lat": null,
       "lon": null,
-      "region": "Middle East",
+      "region": "Global",
       "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/25/humanitarian-crisis-worsens-in-ceuta-as-thousands-remain-stranded?traffic_source=rss",
-      "observedAt": "2026-09-25T11:23:59.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "Humanitarian crisis worsens in Ceuta as thousands remain stranded — People face harsh conditions, overcrowding, limited aid, and alleged abuse while awaiting decisions on their future.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-pakistan-turkiye-edge-closer-towards-joining-sau",
-      "title": "Pakistan, Turkiye edge closer towards joining Saudi war against Houthis",
-      "summary": "Pakistani and Turkish military chiefs head to Riyadh for urgent talks, but both countries remain cautious on involvement",
-      "layer": "conflict",
-      "severity": 4,
-      "falloutRisk": "high",
-      "confidence": 0.58,
-      "lat": 15.35,
-      "lon": 44.21,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/25/pakistan-turkiye-edge-closer-towards-joining-saudi-war-against-houthis?traffic_source=rss",
-      "observedAt": "2026-09-25T11:22:45.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "Pakistan, Turkiye edge closer towards joining Saudi war against Houthis — Pakistani and Turkish military chiefs head to Riyadh for urgent talks, but both countries remain cautious on involvement",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-un-general-assembly-live-leaders-from-lebanon-ir",
-      "title": "UN General Assembly live: Leaders from Lebanon, Iraq, Pakistan to speak",
-      "summary": "The US-Israel war on Iran will continue to be a focus as the UNGA enters its fourth day.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 33.89,
-      "lon": 35.5,
-      "region": "Middle East",
-      "mapEligible": true,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/9/25/un-general-assembly-live-leaders-from-lebanon-iraq-pakistan-to-speak?traffic_source=rss",
-      "observedAt": "2026-09-25T11:00:00.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "UN General Assembly live: Leaders from Lebanon, Iraq, Pakistan to speak — The US-Israel war on Iran will continue to be a focus as the UNGA enters its fourth day.",
+      "source": "rss:BBC World",
+      "sourceReliability": "A",
+      "url": "https://www.bbc.co.uk/news/articles/c5dj401d88l3o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-25T13:23:33.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
+      "curatedSummary": "Man shot during 2024 Trump campaign rally in Butler dies — A gunman shot Jim Copenhaver twice while also killing another man and grazing Trump's ear with a bullet.",
       "briefSource": "wire"
     },
     {
@@ -397,48 +517,8 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cm4g53547wygo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-25T10:51:28.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
       "curatedSummary": "Jay-Z rape accuser says her allegation was false — A woman who accused Jay-Z of raping her when she was 13 now says she has never met the rap superstar.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-aljazeera-what-s-in-iran-s-seven-day-plan-to-reopen-the-st",
-      "title": "What’s in Iran’s seven-day plan to reopen the Strait of Hormuz?",
-      "summary": "Tehran’s offer comes as high fuel prices put pressure on Trump ahead of the US midterm elections.",
-      "layer": "maritime",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.58,
-      "lat": 32.43,
-      "lon": 53.69,
-      "region": "Middle East",
-      "mapEligible": false,
-      "source": "rss:Al Jazeera",
-      "sourceReliability": "B",
-      "url": "https://www.aljazeera.com/news/2026/9/25/whats-in-irans-seven-day-plan-to-reopen-the-strait-of-hormuz?traffic_source=rss",
-      "observedAt": "2026-09-25T10:49:48.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.422Z",
-      "curatedSummary": "What’s in Iran’s seven-day plan to reopen the Strait of Hormuz? — Tehran’s offer comes as high fuel prices put pressure on Trump ahead of the US midterm elections.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-trump-and-xi-exchange-warm-words-at-state-dinner",
-      "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
-      "summary": "Despite diplomatic niceties and gifts, little was shared on substantial issues separating the leaders.",
-      "layer": "conflict",
-      "severity": 4,
-      "falloutRisk": "high",
-      "confidence": 0.72,
-      "lat": null,
-      "lon": null,
-      "region": "Global",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-25T10:36:55.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
-      "curatedSummary": "Trump and Xi exchange warm words at state dinner but little progress on key issues — Despite diplomatic niceties and gifts, little was shared on substantial issues separating the leaders.",
       "briefSource": "wire"
     },
     {
@@ -457,14 +537,14 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/25/weather-tracker-hurricane-polo-baja-california-mexico",
       "observedAt": "2026-09-25T10:28:45.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "Area’s second-most intense hurricane on record being fuelled by exceptionally warm Pacific watersHurricane Polo is barreling towards the Baja California region of Mexico, the latest system in a Pacific hurricane season that has been notably active in recent months. On 22 Septembe",
       "briefSource": "wire"
     },
     {
-      "id": "rss-bbc-world-africa-s-richest-man-helps-fund-660m-fuel-pipeli",
-      "title": "Africa's richest man helps fund $660m fuel pipeline between Ethiopia and Djibouti",
-      "summary": "The pipeline would strengthen energy security in landlocked Ethiopia, while creating jobs at Djibouti's port.",
+      "id": "rss-bbc-world-us-backs-elon-musk-s-bid-to-overturn-120m-eu-fin",
+      "title": "US backs Elon Musk's bid to overturn €120m EU fine against X",
+      "summary": "The EU had said X \"deceives users\" by selling blue ticks without \"meaningfully verifying\" accounts.",
       "layer": "conflict",
       "severity": 2,
       "falloutRisk": "low",
@@ -475,10 +555,10 @@
       "mapEligible": false,
       "source": "rss:BBC World",
       "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/c6z9z7lv41wgo?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-25T06:48:07.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
-      "curatedSummary": "Africa's richest man helps fund $660m fuel pipeline between Ethiopia and Djibouti — The pipeline would strengthen energy security in landlocked Ethiopia, while creating jobs at Djibouti's port.",
+      "url": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss",
+      "observedAt": "2026-09-25T09:48:33.000Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
+      "curatedSummary": "US backs Elon Musk's bid to overturn €120m EU fine against X — The EU had said X \"deceives users\" by selling blue ticks without \"meaningfully verifying\" accounts.",
       "briefSource": "wire"
     },
     {
@@ -497,7 +577,7 @@
       "sourceReliability": "A",
       "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
       "observedAt": "2026-09-25T03:57:09.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
+      "ingestedAt": "2026-09-25T18:25:37.058Z",
       "curatedSummary": "Xi got Trump's red carpet welcome - but not everything he wanted — China wanted progress on trade, technology and Taiwan - but hasn't got as much as it would have hoped for.",
       "briefSource": "wire"
     },
@@ -517,74 +597,14 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/25/lula-says-trump-wants-to-colonise-and-capture-brazils-resources-by-meddling-in-election",
       "observedAt": "2026-09-25T03:33:48.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "A TV spot claims the US president is trying to sway October’s presidential vote in favour of Lula’s far-right opponentsLuiz Inácio Lula da Silva’s presidential campaign has accused Donald Trump of wanting to “colonise” Brazil in order to capture its natural resources by meddling",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-media-outlets-banned-by-trump-denied-access-to-w",
-      "title": "Media outlets banned by Trump denied access to White House dinner despite judge's order",
-      "summary": "CNN and MS NOW reporters say they were barred from covering a state dinner after a judge ruled their passes should be restored.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": 38.91,
-      "lon": -77.04,
-      "region": "Americas",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-25T01:10:35.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
-      "curatedSummary": "Media outlets banned by Trump denied access to White House dinner despite judge's order — CNN and MS NOW reporters say they were barred from covering a state dinner after a judge ruled their passes should be restored.",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-italy-ministers-agree-to-ban-burqa-and-niqab-in-",
-      "title": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class",
-      "summary": "Prime Minister Giorgia Meloni described the measures as \"common-sense tools that do not divide but really help to integrate\".",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": null,
-      "lon": null,
-      "region": "Global",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T19:32:59.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
-      "curatedSummary": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class — Prime Minister Giorgia Meloni described the measures as \"common-sense tools that do not divide but really help to integrate\".",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-bbc-world-why-australia-chose-the-world-s-biggest-politica",
-      "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
-      "summary": "Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": null,
-      "lon": null,
-      "region": "Global",
-      "mapEligible": false,
-      "source": "rss:BBC World",
-      "sourceReliability": "A",
-      "url": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
-      "observedAt": "2026-09-24T18:06:40.000Z",
-      "ingestedAt": "2026-09-25T13:34:06.852Z",
-      "curatedSummary": "Why Australia chose the world's biggest political stage to reveal OpenAI hack — Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
       "briefSource": "wire"
     },
     {
       "id": "rss-guardian-world-democratic-lawmakers-accuse-trump-administration",
       "title": "Democratic lawmakers accuse Trump administration of interference in Brazilian elections",
-      "summary": "Legislators sent letter to Marco Rubio saying US interference is weakening  Brazil’s democratic institutionsUS politics live – latest updatesA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump adminis",
+      "summary": "Legislators sent letter to Marco Rubio saying US interference is weakening Brazil’s democratic institutionsA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump administration over “an apparent effort t",
       "layer": "conflict",
       "severity": 3,
       "falloutRisk": "medium",
@@ -597,8 +617,8 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/24/trump-brazil-election-interference",
       "observedAt": "2026-09-24T17:56:06.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
-      "curatedSummary": "Legislators sent letter to Marco Rubio saying US interference is weakening  Brazil’s democratic institutionsUS politics live – latest updatesA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump adminis",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
+      "curatedSummary": "Legislators sent letter to Marco Rubio saying US interference is weakening Brazil’s democratic institutionsA group of 31 Democratic members of the US Congress has sent a letter to the secretary of state, Marco Rubio, criticising the Trump administration over “an apparent effort t",
       "briefSource": "wire"
     },
     {
@@ -617,7 +637,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army",
       "observedAt": "2026-09-24T15:29:42.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "Fighting escalates after Tigrayan rebels form new coalition aimed at overthrowing Abiy Ahmed governmentThere are growing fears of a return to civil war in Ethiopia after an offensive by fighters from Tigray into the neighbouring states of Afar and Amhara and the formation of a ne",
       "briefSource": "wire"
     },
@@ -637,28 +657,8 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/uk-news/2026/sep/23/argentina-president-attacks-un-over-inaction-on-falkland-islands-sovereignty",
       "observedAt": "2026-09-23T18:50:43.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "Argentinian president accuses United Nations of being filled with ‘parasites’ in bellicose general assembly speechJavier Milei has condemned the UN as he warned that Argentina would take “matters into our own hands” in its dispute with Britain over the sovereignty of the Falkland",
-      "briefSource": "wire"
-    },
-    {
-      "id": "rss-guardian-world-delcy-rodr-guez-poses-with-trump-in-new-york-as-",
-      "title": "Delcy Rodríguez poses with Trump in New York as Maduro languishes in jail nearby",
-      "summary": "Venezuela’s interim president hails ‘historic meeting’ and does not say whether she will visit snatched predecessorVenezuela’s interim president, Delcy Rodríguez, has celebrated a “historic” meeting with Donald Trump in New York, posing for a smiley photo with the US president, l",
-      "layer": "conflict",
-      "severity": 2,
-      "falloutRisk": "low",
-      "confidence": 0.72,
-      "lat": null,
-      "lon": null,
-      "region": "Global",
-      "mapEligible": false,
-      "source": "rss:Guardian World",
-      "sourceReliability": "A",
-      "url": "https://www.theguardian.com/world/2026/sep/23/venezuela-delcy-rodriguez-meeting-donald-trump-new-york",
-      "observedAt": "2026-09-23T12:54:07.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
-      "curatedSummary": "Venezuela’s interim president hails ‘historic meeting’ and does not say whether she will visit snatched predecessorVenezuela’s interim president, Delcy Rodríguez, has celebrated a “historic” meeting with Donald Trump in New York, posing for a smiley photo with the US president, l",
       "briefSource": "wire"
     },
     {
@@ -677,7 +677,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/business/2026/sep/23/indian-billionaire-payments-firm-london-flotation-airtel-money",
       "observedAt": "2026-09-23T11:08:01.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "Sunil Bharti Mittal’s Airtel Money targets $9bn IPO in boost for ailing UK stock marketNils Pratley: Does this mark the end of London’s listing drought? Not yetA payments business that operates across Africa and is ultimately controlled by an Indian billionaire has announced its",
       "briefSource": "wire"
     },
@@ -697,7 +697,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/world/2026/sep/23/south-africa-top-police-officer-shadrack-sibiya-charged-rape-grooming",
       "observedAt": "2026-09-23T09:38:06.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "Arrest of Shadrack Sibiya comes as country reels from cases of femicide and alleged police corruption and criminalityOne of South Africa’s most senior police officers has been charged with raping an 18-year-old woman and grooming a 16-year-old girl, as the country’s police face a",
       "briefSource": "wire"
     },
@@ -717,7 +717,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/us-news/2026/sep/21/africa-healthcare-aid-program-withdrawl",
       "observedAt": "2026-09-21T22:33:40.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "Accra Reset’s report states countries in the region and global south should take greater control of their health development after USAID debacleThe United States’ withdrawal from key aid programs has put healthcare in Africa and the global south “under growing strain” a new repor",
       "briefSource": "wire"
     },
@@ -737,7 +737,7 @@
       "sourceReliability": "A",
       "url": "https://www.theguardian.com/us-news/ng-interactive/2026/sep/21/trump-deportation-deals",
       "observedAt": "2026-09-21T05:00:38.000Z",
-      "ingestedAt": "2026-09-25T13:34:07.163Z",
+      "ingestedAt": "2026-09-25T18:25:37.390Z",
       "curatedSummary": "After a plane journey in shackles, an Iranian woman found herself in the middle of Africa in a country she did not know existed. She is one of thousands deported from the US on the back of shadowy deals made with dozens of countries. An in-depth investigation reveals the ‘show of",
       "briefSource": "wire"
     },
@@ -1364,46 +1364,59 @@
       "pctChange20d": -1.33,
       "adverseStreak": 1,
       "latestValue": 3029.45,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
     {
       "seriesId": "ndx",
       "seriesName": "Nasdaq 100",
-      "zScore": 1.86,
-      "pctChange1d": 0.2,
-      "pctChange5d": 3.03,
-      "pctChange20d": 3.03,
+      "zScore": 2,
+      "pctChange1d": 0.54,
+      "pctChange5d": 3.37,
+      "pctChange20d": 3.38,
       "adverseStreak": 0,
-      "latestValue": 30541.103515625,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "latestValue": 30642.37890625,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
     {
       "seriesId": "eurusd",
       "seriesName": "EUR/USD",
-      "zScore": -1.23,
-      "pctChange1d": 0.19,
-      "pctChange5d": -0.63,
-      "pctChange20d": -2.17,
+      "zScore": -1.29,
+      "pctChange1d": 0.14,
+      "pctChange5d": -0.69,
+      "pctChange20d": -2.22,
       "adverseStreak": 0,
-      "latestValue": 1.140380859375,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "latestValue": 1.1397310495376587,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
     {
       "seriesId": "dxy",
       "seriesName": "US Dollar Index",
-      "zScore": 1.02,
-      "pctChange1d": -0.33,
-      "pctChange5d": 0.74,
-      "pctChange20d": 1.82,
+      "zScore": 1.1,
+      "pctChange1d": -0.26,
+      "pctChange5d": 0.81,
+      "pctChange20d": 1.89,
       "adverseStreak": 0,
-      "latestValue": 100.95999908447266,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "latestValue": 101.03099822998047,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-25"
+    },
+    {
+      "seriesId": "spx",
+      "seriesName": "S&P 500",
+      "zScore": 1.07,
+      "pctChange1d": 0.52,
+      "pctChange5d": 1.22,
+      "pctChange20d": 0.17,
+      "adverseStreak": 0,
+      "latestValue": 7743.81982421875,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
@@ -1416,85 +1429,85 @@
       "pctChange20d": -0.24,
       "adverseStreak": 5,
       "latestValue": 4.2,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-25"
-    },
-    {
-      "seriesId": "spx",
-      "seriesName": "S&P 500",
-      "zScore": 0.89,
-      "pctChange1d": 0.23,
-      "pctChange5d": 0.93,
-      "pctChange20d": -0.12,
-      "adverseStreak": 0,
-      "latestValue": 7721.89990234375,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-25"
-    },
-    {
-      "seriesId": "brent",
-      "seriesName": "Brent Crude",
-      "zScore": 0.83,
-      "pctChange1d": -7.45,
-      "pctChange5d": -5.02,
-      "pctChange20d": 9.99,
-      "adverseStreak": 0,
-      "latestValue": 98.66000366210938,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-25"
-    },
-    {
-      "seriesId": "wti",
-      "seriesName": "WTI Crude",
-      "zScore": 0.82,
-      "pctChange1d": -1.72,
-      "pctChange5d": -7.3,
-      "pctChange20d": 11.31,
-      "adverseStreak": 0,
-      "latestValue": 92.9800033569336,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-25"
-    },
-    {
-      "seriesId": "usdjpy",
-      "seriesName": "USD/JPY",
-      "zScore": -0.76,
-      "pctChange1d": -0.76,
-      "pctChange5d": 0.6,
-      "pctChange20d": -1.42,
-      "adverseStreak": 0,
-      "latestValue": 157.06100463867188,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
     {
       "seriesId": "vix",
       "seriesName": "VIX",
-      "zScore": -0.64,
-      "pctChange1d": -3.13,
-      "pctChange5d": 2.5,
-      "pctChange20d": 5.2,
+      "zScore": -0.78,
+      "pctChange1d": -4.4,
+      "pctChange5d": 1.15,
+      "pctChange20d": 3.81,
       "adverseStreak": 0,
-      "latestValue": 15.180000305175781,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "latestValue": 14.979999542236328,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-25"
+    },
+    {
+      "seriesId": "usdjpy",
+      "seriesName": "USD/JPY",
+      "zScore": -0.7,
+      "pctChange1d": -0.65,
+      "pctChange5d": 0.71,
+      "pctChange20d": -1.3,
+      "adverseStreak": 0,
+      "latestValue": 157.2429962158203,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-25"
+    },
+    {
+      "seriesId": "wti",
+      "seriesName": "WTI Crude",
+      "zScore": 0.7,
+      "pctChange1d": -2.86,
+      "pctChange5d": -8.37,
+      "pctChange20d": 10.02,
+      "adverseStreak": 0,
+      "latestValue": 91.9000015258789,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-25"
+    },
+    {
+      "seriesId": "brent",
+      "seriesName": "Brent Crude",
+      "zScore": 0.63,
+      "pctChange1d": -9.17,
+      "pctChange5d": -6.78,
+      "pctChange20d": 7.95,
+      "adverseStreak": 0,
+      "latestValue": 96.83000183105469,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
     {
       "seriesId": "dax",
       "seriesName": "DAX",
-      "zScore": -0.51,
-      "pctChange1d": 0.7,
-      "pctChange5d": 0.55,
-      "pctChange20d": -4.24,
+      "zScore": -0.58,
+      "pctChange1d": 0.56,
+      "pctChange5d": 0.41,
+      "pctChange20d": -4.37,
       "adverseStreak": 0,
-      "latestValue": 25443.80078125,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "latestValue": 25408.640625,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
+      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+      "snapshot": "live@2026-09-25"
+    },
+    {
+      "seriesId": "nky",
+      "seriesName": "Nikkei 225",
+      "zScore": -0.32,
+      "pctChange1d": 0.76,
+      "pctChange5d": 3.18,
+      "pctChange20d": -0.02,
+      "adverseStreak": 0,
+      "latestValue": 65513.98828125,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
@@ -1507,20 +1520,7 @@
       "pctChange20d": 0.19,
       "adverseStreak": 3,
       "latestValue": 5.32,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
-      "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-      "snapshot": "live@2026-09-25"
-    },
-    {
-      "seriesId": "nky",
-      "seriesName": "Nikkei 225",
-      "zScore": 0.11,
-      "pctChange1d": 1.3,
-      "pctChange5d": 4.54,
-      "pctChange20d": 0.77,
-      "adverseStreak": 0,
-      "latestValue": 66364.203125,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     },
@@ -1528,25 +1528,25 @@
       "seriesId": "gold",
       "seriesName": "Gold",
       "zScore": 0.05,
-      "pctChange1d": 0.55,
-      "pctChange5d": -2.34,
-      "pctChange20d": -7.34,
+      "pctChange1d": 0.51,
+      "pctChange5d": -2.38,
+      "pctChange20d": -7.38,
       "adverseStreak": 1,
-      "latestValue": 4321.5,
-      "evaluatedAt": "2026-09-25T13:33:54.944Z",
+      "latestValue": 4319.7998046875,
+      "evaluatedAt": "2026-09-25T18:25:25.165Z",
       "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
       "snapshot": "live@2026-09-25"
     }
   ],
   "stress": {
-    "score": 32.8,
+    "score": 31.8,
     "components": {
-      "equities": 33,
-      "usd": 45,
+      "equities": 30,
+      "usd": 47,
       "vix": 20,
-      "oil": 36
+      "oil": 35
     },
-    "evaluatedAt": "2026-09-25T13:33:54.945Z",
+    "evaluatedAt": "2026-09-25T18:25:25.166Z",
     "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
     "snapshot": "live@2026-09-25"
   },
@@ -1573,7 +1573,7 @@
       "id": "x-scroll",
       "name": "X allowlist scroll",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-25T13:34:21.832Z",
+      "lastEvaluatedAt": "2026-09-25T18:25:51.587Z",
       "detail": "live: 5 pointers merged (no X API search); 1 login-wall profile(s)",
       "rule": "allowlist_scroll && merge_by_id",
       "snapshot": "x-scroll@2026-09-25"
@@ -1591,7 +1591,7 @@
       "id": "rss",
       "name": "RSS wires",
       "status": "Pass",
-      "lastEvaluatedAt": "2026-09-25T13:34:07.432Z",
+      "lastEvaluatedAt": "2026-09-25T18:25:37.665Z",
       "detail": "merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10",
       "rule": "http_200 && items>=1",
       "snapshot": "rss@2026-09-25"
@@ -1608,50 +1608,47 @@
   ],
   "hotspots": [
     {
-      "region": "Global",
-      "count": 15,
-      "maxSeverity": 4,
-      "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-25T13:34:20.217Z",
-      "layers": [
-        "maritime",
-        "conflict"
-      ]
-    },
-    {
       "region": "Middle East",
-      "count": 12,
+      "count": 10,
       "maxSeverity": 4,
       "freshestSource": "x-scroll-curated",
-      "freshestAt": "2026-09-25T13:34:20.217Z",
+      "freshestAt": "2026-09-25T18:25:49.967Z",
       "layers": [
-        "conflict",
-        "unrest",
-        "terrorism",
         "maritime",
+        "conflict",
         "sanctions"
       ]
     },
     {
-      "region": "South Asia",
-      "count": 2,
-      "maxSeverity": 3,
-      "freshestSource": "rss:Al Jazeera",
-      "freshestAt": "2026-09-25T12:59:16.000Z",
+      "region": "Global",
+      "count": 16,
+      "maxSeverity": 4,
+      "freshestSource": "x-scroll-curated",
+      "freshestAt": "2026-09-25T18:25:49.967Z",
       "layers": [
-        "unrest",
+        "maritime",
         "conflict"
       ]
     },
     {
       "region": "Europe",
-      "count": 4,
+      "count": 5,
       "maxSeverity": 4,
-      "freshestSource": "rss:BBC World",
-      "freshestAt": "2026-09-25T12:44:08.000Z",
+      "freshestSource": "rss:Al Jazeera",
+      "freshestAt": "2026-09-25T18:05:32.000Z",
       "layers": [
         "conflict",
-        "sanctions"
+        "unrest"
+      ]
+    },
+    {
+      "region": "Americas",
+      "count": 4,
+      "maxSeverity": 3,
+      "freshestSource": "rss:Al Jazeera",
+      "freshestAt": "2026-09-25T17:44:39.000Z",
+      "layers": [
+        "conflict"
       ]
     },
     {
@@ -1663,16 +1660,6 @@
       "layers": [
         "conflict",
         "maritime"
-      ]
-    },
-    {
-      "region": "Americas",
-      "count": 3,
-      "maxSeverity": 3,
-      "freshestSource": "rss:Guardian World",
-      "freshestAt": "2026-09-25T03:33:48.000Z",
-      "layers": [
-        "conflict"
       ]
     },
     {
@@ -1759,6 +1746,16 @@
       "layers": [
         "terrorism",
         "maritime"
+      ]
+    },
+    {
+      "region": "South Asia",
+      "count": 1,
+      "maxSeverity": 3,
+      "freshestSource": "GDELT/AFP",
+      "freshestAt": "2026-09-19T12:00:00.000Z",
+      "layers": [
+        "conflict"
       ]
     },
     {
@@ -2523,7 +2520,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 7721.89990234375
+          "v": 7743.81982421875
         }
       ]
     },
@@ -2891,7 +2888,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 30541.103515625
+          "v": 30642.37890625
         }
       ]
     },
@@ -3259,7 +3256,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 25443.80078125
+          "v": 25408.640625
         }
       ]
     },
@@ -3269,6 +3266,10 @@
       "unit": "index",
       "source": "yahoo",
       "points": [
+        {
+          "t": "2026-05-15",
+          "v": 61409.2890625
+        },
         {
           "t": "2026-05-18",
           "v": 60815.94921875
@@ -3624,10 +3625,6 @@
         {
           "t": "2026-09-24",
           "v": 65513.98828125
-        },
-        {
-          "t": "2026-09-25",
-          "v": 66364.203125
         }
       ]
     },
@@ -4367,7 +4364,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 1.140380859375
+          "v": 1.1397310495376587
         }
       ]
     },
@@ -4735,7 +4732,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 157.06100463867188
+          "v": 157.2429962158203
         }
       ]
     },
@@ -5103,7 +5100,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 100.95999908447266
+          "v": 101.03099822998047
         }
       ]
     },
@@ -5471,7 +5468,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 92.9800033569336
+          "v": 91.9000015258789
         }
       ]
     },
@@ -5839,7 +5836,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 98.66000366210938
+          "v": 96.83000183105469
         }
       ]
     },
@@ -6207,7 +6204,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 4321.5
+          "v": 4319.7998046875
         }
       ]
     },
@@ -6947,7 +6944,7 @@
         },
         {
           "t": "2026-09-25",
-          "v": 15.180000305175781
+          "v": 14.979999542236328
         }
       ]
     },
