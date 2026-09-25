@@ -1,12 +1,12 @@
 # Global Security Pulse — Daily Report 2026-09-25
 
-Generated: 2026-09-25T18:25:56.230Z
+Generated: 2026-09-25T23:22:00.182Z
 Ingest package: daily-2026-09-25
 
 ## Stress composite
 
-- **Score:** 31.8 (equities 30, USD 47, VIX 20, oil 35)
-- Evaluated at: 2026-09-25T18:25:25.166Z
+- **Score:** 32 (equities 30, USD 47, VIX 20, oil 36)
+- Evaluated at: 2026-09-25T23:21:26.037Z
 - Rule: `0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil`
 
 ## Top anomalies (|z|)
@@ -14,18 +14,18 @@ Ingest package: daily-2026-09-25
 | Series | z | 1d% | 5d% | Streak |
 |--------|---|-----|-----|--------|
 | Shanghai Composite | -2.03 | -0.22 | -0.3 | 1 |
-| Nasdaq 100 | 2 | 0.54 | 3.37 | 0 |
-| EUR/USD | -1.29 | 0.14 | -0.69 | 0 |
-| US Dollar Index | 1.1 | -0.26 | 0.81 | 0 |
-| S&P 500 | 1.07 | 0.52 | 1.22 | 0 |
+| Nasdaq 100 | 1.95 | 0.42 | 3.25 | 0 |
+| EUR/USD | -1.32 | 0.15 | -0.76 | 0 |
+| US Dollar Index | 1.1 | -0.25 | 0.81 | 0 |
+| S&P 500 | 1.07 | 0.51 | 1.21 | 0 |
 | Copper | 0.92 | -0.24 | -1.18 | 5 |
-| VIX | -0.78 | -4.4 | 1.15 | 0 |
-| USD/JPY | -0.7 | -0.65 | 0.71 | 0 |
+| DAX | -0.88 | -0.57 | -1.75 | 2 |
+| VIX | -0.86 | -5.11 | 0.41 | 0 |
 
 ## High / critical fallout events
 
-- **[high]** Poland boosts air defence after ‘Russian provocations’ amid Ukraine war — Europe (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/25/poland-boosts-air-defence-after-russian-provocations-amid-ukraine-war?traffic_source=rss))
-- **[high]** Al Jazeera rejects Netanyahu’s attack on journalists in UN speech — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/25/al-jazeera-rejects-netanyahus-attack-on-journalists-in-un-speech?traffic_source=rss))
+- **[high]** Houthi attack on Mecca, Medina would cross ‘red line’, Pakistan PM tells UN — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/25/houthi-attack-on-mecca-medina-would-cross-red-line-pakistan-pm-tells-un?traffic_source=rss))
+- **[high]** Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says — Eastern Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss))
 - **[high]** Students strike across Germany in protest against military service — Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cxnvlnve52qdo?at_medium=RSS&at_campaign=rss))
 - **[high]** Pope warns against 'losing humanity' to AI machines — Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss))
 - **[high]** Hurricane Polo barrels towards Baja California region of Mexico — Global (rss:Guardian World; [link](https://www.theguardian.com/world/2026/sep/25/weather-tracker-hurricane-polo-baja-california-mexico))
@@ -51,9 +51,9 @@ _No supply-route metadata._
 
 - GDELT GEO: **Pass** @ 2026-09-20T15:30:00.000Z — Seed + optional live refresh
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
-- X allowlist scroll: **Pass** @ 2026-09-25T18:25:51.587Z — live: 5 pointers merged (no X API search); 1 login-wall profile(s)
+- X allowlist scroll: **Pass** @ 2026-09-25T23:21:54.768Z — live: 5 pointers merged (no X API search); 1 login-wall profile(s)
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
-- RSS wires: **Pass** @ 2026-09-25T18:25:37.665Z — merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10
+- RSS wires: **Pass** @ 2026-09-25T23:21:38.447Z — merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired
 
 ## Notes
