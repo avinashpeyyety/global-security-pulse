@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type { TransitionEvent } from 'react';
 import type { DashboardSnapshot, EventLayer } from '@gsp/shared';
 import { EVENT_LAYERS, LAYER_LABELS } from '@gsp/shared';
 import { loadSnapshot, normalizeSnapshot } from './lib/loadData';
@@ -12,6 +13,10 @@ import { FeedChips } from './components/FeedChips';
 import { EconPanel } from './components/EconPanel';
 import { DailyReports } from './components/DailyReports';
 import { UpdateStatus } from './components/UpdateStatus';
+import { usePanelOpen, usePanelShortcuts } from './lib/panels';
+
+/** Keep in sync with --side-transition in ops.css (fallback if transitionend never fires). */
+const SIDE_TRANSITION_MS = 220;
 
 /** Anchor "now" to snapshot generation so seed windows stay populated. */
 function snapshotNow(snap: DashboardSnapshot): number {
@@ -27,6 +32,28 @@ export default function App() {
   const [layers, setLayers] = useState<Set<EventLayer>>(() => new Set(EVENT_LAYERS));
   const [showSupplyRoutes, setShowSupplyRoutes] = useState(true);
   const [showPosture, setShowPosture] = useState(true);
+  const [leftOpen, toggleLeft] = usePanelOpen('left');
+  const [rightOpen, toggleRight] = usePanelOpen('right');
+  const [mapResizeSignal, setMapResizeSignal] = useState(0);
+  usePanelShortcuts(toggleLeft, toggleRight);
+
+  // After a panel collapses/expands, tell MapLibre to re-layout once the slide settles.
+  const bumpMapResize = useCallback(() => setMapResizeSignal((n) => n + 1), []);
+  const firstPanelRender = useRef(true);
+  useEffect(() => {
+    if (firstPanelRender.current) {
+      firstPanelRender.current = false;
+      return;
+    }
+    const t = globalThis.setTimeout(bumpMapResize, SIDE_TRANSITION_MS + 80);
+    return () => globalThis.clearTimeout(t);
+  }, [leftOpen, rightOpen, bumpMapResize]);
+  const onSideTransitionEnd = useCallback(
+    (e: TransitionEvent<HTMLElement>) => {
+      if (e.target === e.currentTarget && e.propertyName === 'width') bumpMapResize();
+    },
+    [bumpMapResize],
+  );
 
   useEffect(() => {
     loadSnapshot()
@@ -97,9 +124,13 @@ export default function App() {
       </header>
 
       <div className="main">
-        <div className="map-wrap">
-          <SecurityMap events={filtered} postures={filteredPostures} showSupplyRoutes={showSupplyRoutes} />
-          <div className="map-overlay layers">
+        <aside
+          id="gsp-panel-left"
+          className={`side side-left${leftOpen ? '' : ' collapsed'}`}
+          aria-label="Layers and legend"
+          onTransitionEnd={onSideTransitionEnd}
+        >
+          <div className="side-inner" aria-hidden={!leftOpen}>
             <LayerToggles
               layers={EVENT_LAYERS}
               labels={LAYER_LABELS}
@@ -111,11 +142,68 @@ export default function App() {
               onTogglePosture={() => setShowPosture((v) => !v)}
             />
           </div>
+          {!leftOpen && (
+            <button
+              type="button"
+              className="side-handle"
+              onClick={toggleLeft}
+              aria-label="Show layers panel ([)"
+              title="Show layers panel ( [ )"
+            />
+          )}
+        </aside>
+
+        <div className="map-wrap">
+          <SecurityMap
+            events={filtered}
+            postures={filteredPostures}
+            showSupplyRoutes={showSupplyRoutes}
+            resizeSignal={mapResizeSignal}
+          />
+          <button
+            type="button"
+            className="panel-tab panel-tab-left"
+            onClick={toggleLeft}
+            aria-controls="gsp-panel-left"
+            aria-expanded={leftOpen}
+            title={`${leftOpen ? 'Hide' : 'Show'} layers panel ( [ )`}
+          >
+            {leftOpen ? '«' : '»'}
+          </button>
+          <button
+            type="button"
+            className="panel-tab panel-tab-right"
+            onClick={toggleRight}
+            aria-controls="gsp-panel-right"
+            aria-expanded={rightOpen}
+            title={`${rightOpen ? 'Hide' : 'Show'} hotspots panel ( ] )`}
+          >
+            {rightOpen ? '»' : '«'}
+          </button>
           <div className="map-overlay scrubber">
             <TimeScrubber value={window} onChange={setWindow} />
           </div>
         </div>
-        <HotspotRail hotspots={hotspots} />
+
+        <aside
+          id="gsp-panel-right"
+          className={`side side-right${rightOpen ? '' : ' collapsed'}`}
+          aria-label="Hotspots"
+          onTransitionEnd={onSideTransitionEnd}
+        >
+          <div className="side-inner" aria-hidden={!rightOpen}>
+            <HotspotRail hotspots={hotspots} />
+          </div>
+          {!rightOpen && (
+            <button
+              type="button"
+              className="side-handle"
+              onClick={toggleRight}
+              aria-label="Show hotspots panel (])"
+              title="Show hotspots panel ( ] )"
+            />
+          )}
+        </aside>
       </div>
 
       <EconPanel

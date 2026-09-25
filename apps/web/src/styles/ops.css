@@ -78,15 +78,100 @@ body {
 .chip .status { color: var(--text); }
 
 .main {
-  display: grid;
-  grid-template-columns: 1fr 280px;
+  display: flex;
   min-height: 0;
+  --side-transition: 220ms cubic-bezier(0.2, 0, 0, 1);
 }
 
 .map-wrap {
   position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
   min-height: 0;
-  border-right: 1px solid var(--border);
+}
+
+/* Collapsible side panels flanking the map ([ / ] or the edge tabs) */
+.side {
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--side-w);
+  min-height: 0;
+  overflow: hidden;
+  background: var(--bg-panel);
+  transition: width var(--side-transition);
+}
+.side-left { --side-w: 248px; border-right: 1px solid var(--border); }
+.side-right { --side-w: 280px; border-left: 1px solid var(--border); }
+.side-inner {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: var(--side-w);
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  opacity: 1;
+  transition: opacity var(--side-transition), visibility 0s;
+}
+/* Anchor content to the outer edge so shrinking the column slides it off-screen */
+.side-left .side-inner { right: 0; }
+.side-right .side-inner { left: 0; }
+.side-right .side-inner > .rail { flex: 1; min-height: 0; }
+.side.collapsed { width: 7px; }
+.side.collapsed .side-inner {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--side-transition), visibility 0s linear 220ms;
+}
+.side-handle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: var(--bg-elev);
+  cursor: pointer;
+}
+.side-handle::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 1px; height: 36px;
+  transform: translate(-50%, -50%);
+  background: var(--muted);
+  opacity: 0.6;
+}
+.side-handle:hover, .side-handle:focus-visible { background: var(--border); outline: none; }
+
+.panel-tab {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 44px;
+  padding: 0;
+  background: rgba(18, 23, 28, 0.94);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+}
+.panel-tab-left { left: 0; border-left: none; border-radius: 0 2px 2px 0; }
+.panel-tab-right { right: 0; border-right: none; border-radius: 2px 0 0 2px; }
+.panel-tab:hover, .panel-tab:focus-visible {
+  color: var(--text);
+  background: var(--bg-elev);
+  border-color: var(--accent);
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .main { --side-transition: 1ms linear; }
 }
 .map-el { position: absolute; inset: 0; }
 

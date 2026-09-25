@@ -211,10 +211,13 @@ export function SecurityMap({
   events,
   postures = [],
   showSupplyRoutes = true,
+  resizeSignal = 0,
 }: {
   events: SecurityEvent[];
   postures?: MilitaryPosture[];
   showSupplyRoutes?: boolean;
+  /** Bump to force map.resize() (e.g. after a side-panel collapse transition). */
+  resizeSignal?: number;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
@@ -560,6 +563,11 @@ export function SecurityMap({
     if (map.isStyleLoaded()) apply();
     else map.once('load', apply);
   }, [postures]);
+
+  useEffect(() => {
+    if (!resizeSignal) return;
+    mapRef.current?.resize();
+  }, [resizeSignal]);
 
   return <div ref={containerRef} className="map-el" />;
 }
