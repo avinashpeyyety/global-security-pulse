@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-24T23:24:59.503Z",
-  "updatedAtLabel": "Updated 6:24 PM CT Sep 24",
-  "nextUpdateAt": "2026-09-25T13:20:00.000Z",
-  "nextUpdateHint": "Next update ~8:20 AM CT Fri",
+  "updatedAt": "2026-09-25T13:34:28.425Z",
+  "updatedAtLabel": "Updated 8:34 AM CT Sep 25",
+  "nextUpdateAt": "2026-09-25T18:20:00.000Z",
+  "nextUpdateHint": "Next update ~1:20 PM CT",
   "timezone": "America/Chicago",
   "schedule": {
     "daily": [
@@ -12,6 +12,6 @@
     ],
     "weekendPolicy": "daily"
   },
-  "date": "2026-09-24",
-  "packageId": "daily-2026-09-24"
+  "date": "2026-09-25",
+  "packageId": "daily-2026-09-25"
 }
