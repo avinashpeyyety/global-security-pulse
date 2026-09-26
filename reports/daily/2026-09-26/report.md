@@ -1,12 +1,12 @@
 # Global Security Pulse — Daily Report 2026-09-26
 
-Generated: 2026-09-26T18:24:31.300Z
+Generated: 2026-09-26T23:27:46.728Z
 Ingest package: daily-2026-09-26
 
 ## Stress composite
 
 - **Score:** 31.8 (equities 30, USD 45, VIX 20, oil 36)
-- Evaluated at: 2026-09-26T18:23:45.359Z
+- Evaluated at: 2026-09-26T23:27:16.220Z
 - Rule: `0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil`
 
 ## Top anomalies (|z|)
@@ -24,10 +24,10 @@ Ingest package: daily-2026-09-26
 
 ## High / critical fallout events
 
-- **[high]** Venezuelan government, opposition agree to work towards reform of top court — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/9/26/venezuelan-government-opposition-agree-to-work-towards-reform-of-top-court?traffic_source=rss))
+- **[high]** Russia scales up strikes on Ukraine as largest steelmaker halts operations — Eastern Europe (rss:Al Jazeera; [link](https://www.aljazeera.com/video/newsfeed/2026/9/26/russia-scales-up-strikes-on-ukraine-as-largest-steelmaker-halts-operations?traffic_source=rss))
+- **[high]** Saudi FM accuses Iran of ‘flagrant attacks’ and condemns Houthis at UNGA — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/video/newsfeed/2026/9/26/saudi-fm-accuses-iran-of-flagrant-attacks-and-condemns-houthis-at-unga?traffic_source=rss))
 - **[high]** US strikes on Ecuadorian fishing boats raise humanitarian concerns but Trump admin not wavering — Global (rss:Guardian World; [link](https://www.theguardian.com/world/2026/sep/26/us-airstrikes-ecuador-fishers))
 - **[high]** Security lapses at Utah campus where Charlie Kirk was killed, review says — Global (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cq4g55r76d9lo?at_medium=RSS&at_campaign=rss))
-- **[critical]** South African white genocide does not exist, new ambassador to US tells BBC — Global (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cm2l8qv7zppko?at_medium=RSS&at_campaign=rss))
 - **[high]** Hurricane Polo barrels towards Baja California region of Mexico — Global (rss:Guardian World; [link](https://www.theguardian.com/world/2026/sep/25/weather-tracker-hurricane-polo-baja-california-mexico))
 - **[high]** Rebel offensive against Ethiopian army stokes fears of return to civil war — Global (rss:Guardian World; [link](https://www.theguardian.com/world/2026/sep/24/fears-return-to-war-tigray-rebels-launch-offensive-against-ethiopian-army))
 - **[high]** Healthcare in Africa ‘under growing strain’ after US withdrawal from aid programs, report warns — Global (rss:Guardian World; [link](https://www.theguardian.com/us-news/2026/sep/21/africa-healthcare-aid-program-withdrawl))
@@ -51,9 +51,9 @@ _No supply-route metadata._
 
 - GDELT GEO: **Pass** @ 2026-09-20T15:30:00.000Z — Seed + optional live refresh
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
-- X allowlist scroll: **Pass** @ 2026-09-26T18:24:25.801Z — live: 5 pointers merged (no X API search); 1 login-wall profile(s)
+- X allowlist scroll: **Pass** @ 2026-09-26T23:27:42.621Z — live: 5 pointers merged (no X API search); 1 login-wall profile(s)
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
-- RSS wires: **Pass** @ 2026-09-26T18:23:55.475Z — merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10
+- RSS wires: **Pass** @ 2026-09-26T23:27:27.446Z — merged 30 (added 30); bbc-world:10, guardian-world:10, aljazeera:10
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired
 
 ## Notes
