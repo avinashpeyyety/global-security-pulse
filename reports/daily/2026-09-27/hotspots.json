@@ -1,10 +1,66 @@
 [
   {
-    "region": "Middle East",
-    "count": 77,
+    "region": "Global",
+    "count": 120,
     "maxSeverity": 4,
-    "freshestSource": "rss:NYT World",
-    "freshestAt": "2026-09-27T18:21:32.000Z",
+    "freshestSource": "rss:BleepingComputer",
+    "freshestAt": "2026-09-27T23:40:39.000Z",
+    "layers": [
+      "cyber",
+      "disaster",
+      "conflict",
+      "unrest",
+      "maritime",
+      "terrorism",
+      "sanctions"
+    ]
+  },
+  {
+    "region": "Americas",
+    "count": 70,
+    "maxSeverity": 4,
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-09-27T23:37:26.000Z",
+    "layers": [
+      "conflict",
+      "disaster",
+      "cyber",
+      "terrorism",
+      "maritime",
+      "unrest"
+    ]
+  },
+  {
+    "region": "Africa",
+    "count": 70,
+    "maxSeverity": 4,
+    "freshestSource": "rss:France 24",
+    "freshestAt": "2026-09-27T23:27:29.000Z",
+    "layers": [
+      "conflict",
+      "terrorism",
+      "disaster",
+      "maritime",
+      "unrest"
+    ]
+  },
+  {
+    "region": "Persian Gulf",
+    "count": 16,
+    "maxSeverity": 3,
+    "freshestSource": "rss:Times of Israel",
+    "freshestAt": "2026-09-27T23:27:21.000Z",
+    "layers": [
+      "conflict",
+      "maritime"
+    ]
+  },
+  {
+    "region": "Middle East",
+    "count": 111,
+    "maxSeverity": 4,
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-27T23:20:14.000Z",
     "layers": [
       "conflict",
       "maritime",
@@ -16,109 +72,53 @@
   },
   {
     "region": "Europe",
-    "count": 69,
-    "maxSeverity": 5,
-    "freshestSource": "rss:NYT World",
-    "freshestAt": "2026-09-27T18:18:35.000Z",
-    "layers": [
-      "terrorism",
-      "maritime",
-      "conflict",
-      "unrest",
-      "disaster",
-      "sanctions"
-    ]
-  },
-  {
-    "region": "Global",
     "count": 86,
-    "maxSeverity": 4,
-    "freshestSource": "rss:France 24",
-    "freshestAt": "2026-09-27T18:17:00.000Z",
+    "maxSeverity": 5,
+    "freshestSource": "rss:Al Jazeera",
+    "freshestAt": "2026-09-27T23:14:15.000Z",
     "layers": [
       "conflict",
-      "cyber",
-      "disaster",
-      "terrorism",
       "sanctions",
       "maritime",
-      "unrest"
-    ]
-  },
-  {
-    "region": "East / SE Asia",
-    "count": 69,
-    "maxSeverity": 4,
-    "freshestSource": "rss:CBS World",
-    "freshestAt": "2026-09-27T18:12:17.000Z",
-    "layers": [
-      "conflict",
-      "disaster",
-      "maritime",
-      "sanctions",
-      "cyber"
-    ]
-  },
-  {
-    "region": "Americas",
-    "count": 55,
-    "maxSeverity": 4,
-    "freshestSource": "rss:CBS World",
-    "freshestAt": "2026-09-27T18:10:16.000Z",
-    "layers": [
-      "conflict",
-      "disaster",
       "terrorism",
-      "maritime",
       "unrest",
-      "cyber"
+      "disaster"
     ]
   },
   {
     "region": "South Asia",
-    "count": 22,
+    "count": 28,
     "maxSeverity": 4,
-    "freshestSource": "rss:DW World",
-    "freshestAt": "2026-09-27T17:47:00.000Z",
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-27T23:03:19.000Z",
     "layers": [
       "conflict",
-      "disaster",
-      "unrest",
       "terrorism",
+      "unrest",
+      "disaster",
       "maritime"
     ]
   },
   {
-    "region": "Africa",
-    "count": 52,
+    "region": "East / SE Asia",
+    "count": 76,
     "maxSeverity": 4,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-09-27T16:58:36.000Z",
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-27T22:16:37.000Z",
     "layers": [
       "conflict",
       "maritime",
       "disaster",
-      "unrest",
-      "terrorism"
-    ]
-  },
-  {
-    "region": "Persian Gulf",
-    "count": 13,
-    "maxSeverity": 3,
-    "freshestSource": "rss:CBS World",
-    "freshestAt": "2026-09-27T15:01:20.000Z",
-    "layers": [
-      "maritime",
-      "conflict"
+      "sanctions",
+      "cyber"
     ]
   },
   {
     "region": "Eastern Europe",
-    "count": 16,
+    "count": 21,
     "maxSeverity": 4,
-    "freshestSource": "rss:France 24",
-    "freshestAt": "2026-09-27T10:01:18.000Z",
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-09-27T22:04:02.000Z",
     "layers": [
       "conflict",
       "unrest",
