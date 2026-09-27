@@ -14,11 +14,17 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { computeMapEligible } from './lib/geocode.mjs';
 import { fileURLToPath } from 'node:url';
 import { geocodeFromText } from './lib/geocode.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
+const TRUSTED_X = new Map(
+  (JSON.parse(fs.readFileSync(path.join(root, 'ingest/allowlists/x-security.json'), 'utf8')).accounts || []).map(
+    (a) => [String(a.handle).toLowerCase(), a.reliability],
+  ),
+);
 const publicEvents = path.join(root, 'apps/web/public/data/events.json');
 const publicSnapshot = path.join(root, 'apps/web/public/data/snapshot.json');
 const publicHotspots = path.join(root, 'apps/web/public/data/hotspots.json');
@@ -346,7 +352,22 @@ function main() {
   }
 
   const dryDropped = raw.filter(isDryRun);
-  const liveX = raw.filter((e) => isRawXScroll(e) && !isDryRun(e));
+  // Raw X posts are consumed into wrappers/xPosts on each run, so persist them in a
+  // sidecar pool. Re-runs (report:daily calls this again) and later runs without a new
+  // handoff then rebuild from the pool instead of wiping every X-derived event.
+  const poolPath = path.join(root, 'data/raw/x-live-pool.json');
+  const poolMaxAgeMs = Number(process.env.GSP_MAX_AGE_DAYS || 7) * 86400e3;
+  const pool = new Map();
+  if (fs.existsSync(poolPath)) {
+    for (const e of JSON.parse(fs.readFileSync(poolPath, 'utf8'))) pool.set(e.id, e);
+  }
+  for (const e of raw) if (isRawXScroll(e) && !isDryRun(e)) pool.set(e.id, e);
+  for (const [id, e] of pool) {
+    const t = Date.parse(e.observedAt || '');
+    if (!Number.isFinite(t) || Date.now() - t > poolMaxAgeMs) pool.delete(id);
+  }
+  fs.writeFileSync(poolPath, JSON.stringify([...pool.values()], null, 1));
+  const liveX = [...pool.values()];
   // Keep prior curated wrappers + non-X wire/seed events
   const curatedBase = raw.filter((e) => !isRawXScroll(e));
 
@@ -420,6 +441,29 @@ function main() {
         observedAt: x.observedAt,
         ingestedAt: x.ingestedAt || new Date().toISOString(),
       });
+      // Same strict gate as wire events: named place + impact language in the post text.
+      {
+        const w = wrappers[wrappers.length - 1];
+        const hit = geocodeFromText(`${x.title || ''} ${x.summary || ''}`);
+        if (hit) {
+          w.lat = hit.lat;
+          w.lon = hit.lon;
+          w.region = hit.region;
+        }
+        const grade = TRUSTED_X.get(String(post.author || '').toLowerCase());
+        if (grade) w.sourceReliability = grade;
+        // Map pins from X only for allowlisted A/B accounts; open-search posts stay list-only.
+        w.mapEligible = (grade === 'A' || grade === 'B') && computeMapEligible({
+          title: x.title || '',
+          summary: x.summary || '',
+          layer: w.layer,
+          falloutRisk: w.falloutRisk,
+          lat: w.lat,
+          lon: w.lon,
+          place: hit ? hit.place : null,
+          hasPlace: !!hit,
+        });
+      }
       continue;
     }
 
