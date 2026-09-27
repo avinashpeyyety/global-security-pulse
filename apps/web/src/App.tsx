@@ -28,7 +28,7 @@ export default function App() {
   const [archiveSnap, setArchiveSnap] = useState<DashboardSnapshot | null>(null);
   const [archiveDate, setArchiveDate] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
-  const [window, setWindow] = useState<TimeWindow>('7d');
+  const [window, setWindow] = useState<TimeWindow>('24h');
   const [layers, setLayers] = useState<Set<EventLayer>>(() => new Set(EVENT_LAYERS));
   const [showSupplyRoutes, setShowSupplyRoutes] = useState(true);
   const [showPosture, setShowPosture] = useState(true);

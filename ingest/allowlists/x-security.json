@@ -1,6 +1,6 @@
 {
-  "description": "Editorial allowlist of reputable security / defense / wire accounts for budgeted X timeline scroll. Not an endorsement list — operational source reliability labels for ingest heuristics only. No paid X API search.",
-  "version": "0.2",
+  "description": "Editorial allowlist of reputable security / defense / wire accounts for budgeted X timeline scroll. Not an endorsement list \u2014 operational source reliability labels for ingest heuristics only. No paid X API search. v0.3 adds OSINT analysts, verification, maritime, imagery, cyber and hazard accounts; the Edge focused-scroll collector reads them in from: batches by group.",
+  "version": "0.3",
   "budget": {
     "maxProfilesPerSession": 12,
     "maxPostsPerProfile": 10,
@@ -9,30 +9,685 @@
     "stopAfterMs": 180000
   },
   "accounts": [
-    { "handle": "DeptofDefense", "displayName": "U.S. Department of Defense", "category": "defense", "reliability": "A", "regionHint": "Americas" },
-    { "handle": "CENTCOM", "displayName": "U.S. Central Command", "category": "defense", "reliability": "B", "regionHint": "Middle East" },
-    { "handle": "USNavy", "displayName": "U.S. Navy", "category": "defense", "reliability": "B", "regionHint": "Global" },
-    { "handle": "Reuters", "displayName": "Reuters", "category": "wire", "reliability": "A", "regionHint": "Global" },
-    { "handle": "AP", "displayName": "Associated Press", "category": "wire", "reliability": "A", "regionHint": "Global" },
-    { "handle": "AFP", "displayName": "Agence France-Presse", "category": "wire", "reliability": "A", "regionHint": "Global" },
-    { "handle": "BBCWorld", "displayName": "BBC News (World)", "category": "wire", "reliability": "A", "regionHint": "Global" },
-    { "handle": "AJEnglish", "displayName": "Al Jazeera English", "category": "wire", "reliability": "B", "regionHint": "Middle East" },
-    { "handle": "DefenceHQ", "displayName": "UK Ministry of Defence", "category": "defense", "reliability": "A", "regionHint": "Europe" },
-    { "handle": "NATO", "displayName": "NATO", "category": "defense", "reliability": "A", "regionHint": "Europe" },
-    { "handle": "CSIS", "displayName": "Center for Strategic & International Studies", "category": "think", "reliability": "B", "regionHint": "Global" },
-    { "handle": "IISS_org", "displayName": "International Institute for Strategic Studies", "category": "think", "reliability": "B", "regionHint": "Global" },
-    { "handle": "CFR_org", "displayName": "Council on Foreign Relations", "category": "think", "reliability": "B", "regionHint": "Global" },
-    { "handle": "UN", "displayName": "United Nations", "category": "un", "reliability": "A", "regionHint": "Global" },
-    { "handle": "UNOCHA", "displayName": "UN OCHA", "category": "un", "reliability": "B", "regionHint": "Global" },
-    { "handle": "UN_News_Centre", "displayName": "UN News", "category": "un", "reliability": "B", "regionHint": "Global" },
-    { "handle": "DefenseOne", "displayName": "Defense One", "category": "defense", "reliability": "B", "regionHint": "Global" },
-    { "handle": "USNINews", "displayName": "USNI News", "category": "defense", "reliability": "B", "regionHint": "Global" },
-    { "handle": "UK_MTO", "displayName": "UK Maritime Trade Operations", "category": "maritime", "reliability": "B", "regionHint": "Red Sea / Bab el-Mandeb" },
-    { "handle": "IMOHQ", "displayName": "International Maritime Organization", "category": "maritime", "reliability": "B", "regionHint": "Global" },
-    { "handle": "IAEAOrg", "displayName": "IAEA", "category": "un", "reliability": "A", "regionHint": "Global" },
-    { "handle": "Aus_Defence", "displayName": "Australian Department of Defence", "category": "defense", "reliability": "B", "regionHint": "East / SE Asia" },
-    { "handle": "IsraeliPM", "displayName": "Prime Minister of Israel", "category": "defense", "reliability": "C", "regionHint": "Middle East" },
-    { "handle": "Ukraine", "displayName": "Ukraine / Official", "category": "defense", "reliability": "C", "regionHint": "Eastern Europe" },
-    { "handle": "ModIndia", "displayName": "Ministry of Defence India", "category": "defense", "reliability": "B", "regionHint": "South Asia" }
+    {
+      "handle": "DeptofDefense",
+      "displayName": "U.S. Department of Defense",
+      "category": "defense",
+      "reliability": "A",
+      "regionHint": "Americas",
+      "group": "core"
+    },
+    {
+      "handle": "CENTCOM",
+      "displayName": "U.S. Central Command",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "Middle East",
+      "group": "core"
+    },
+    {
+      "handle": "USNavy",
+      "displayName": "U.S. Navy",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "Reuters",
+      "displayName": "Reuters",
+      "category": "wire",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "AP",
+      "displayName": "Associated Press",
+      "category": "wire",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "AFP",
+      "displayName": "Agence France-Presse",
+      "category": "wire",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "BBCWorld",
+      "displayName": "BBC News (World)",
+      "category": "wire",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "AJEnglish",
+      "displayName": "Al Jazeera English",
+      "category": "wire",
+      "reliability": "B",
+      "regionHint": "Middle East",
+      "group": "core"
+    },
+    {
+      "handle": "DefenceHQ",
+      "displayName": "UK Ministry of Defence",
+      "category": "defense",
+      "reliability": "A",
+      "regionHint": "Europe",
+      "group": "core"
+    },
+    {
+      "handle": "NATO",
+      "displayName": "NATO",
+      "category": "defense",
+      "reliability": "A",
+      "regionHint": "Europe",
+      "group": "core"
+    },
+    {
+      "handle": "CSIS",
+      "displayName": "Center for Strategic & International Studies",
+      "category": "think",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "IISS_org",
+      "displayName": "International Institute for Strategic Studies",
+      "category": "think",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "CFR_org",
+      "displayName": "Council on Foreign Relations",
+      "category": "think",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "UN",
+      "displayName": "United Nations",
+      "category": "un",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "UNOCHA",
+      "displayName": "UN OCHA",
+      "category": "un",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "UN_News_Centre",
+      "displayName": "UN News",
+      "category": "un",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "DefenseOne",
+      "displayName": "Defense One",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "USNINews",
+      "displayName": "USNI News",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "UK_MTO",
+      "displayName": "UK Maritime Trade Operations",
+      "category": "maritime",
+      "reliability": "B",
+      "regionHint": "Red Sea / Bab el-Mandeb",
+      "group": "core"
+    },
+    {
+      "handle": "IMOHQ",
+      "displayName": "International Maritime Organization",
+      "category": "maritime",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "IAEAOrg",
+      "displayName": "IAEA",
+      "category": "un",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "core"
+    },
+    {
+      "handle": "Aus_Defence",
+      "displayName": "Australian Department of Defence",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "East / SE Asia",
+      "group": "core"
+    },
+    {
+      "handle": "IsraeliPM",
+      "displayName": "Prime Minister of Israel",
+      "category": "defense",
+      "reliability": "C",
+      "regionHint": "Middle East",
+      "group": "core"
+    },
+    {
+      "handle": "Ukraine",
+      "displayName": "Ukraine / Official",
+      "category": "defense",
+      "reliability": "C",
+      "regionHint": "Eastern Europe",
+      "group": "core"
+    },
+    {
+      "handle": "ModIndia",
+      "displayName": "Ministry of Defence India",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "South Asia",
+      "group": "core"
+    },
+    {
+      "handle": "TheStudyofWar",
+      "displayName": "Institute for the Study of War",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "RALee85",
+      "displayName": "Rob Lee (FPRI)",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "KofmanMichael",
+      "displayName": "Michael Kofman",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "oryxspioenkop",
+      "displayName": "Oryx",
+      "category": "osint-verification",
+      "reliability": "A",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "DefMon3",
+      "displayName": "DefMon",
+      "category": "osint-mapping",
+      "reliability": "B",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "War_Mapper",
+      "displayName": "War Mapper",
+      "category": "osint-mapping",
+      "reliability": "B",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "Tatarigami_UA",
+      "displayName": "Tatarigami",
+      "category": "osint-analysis",
+      "reliability": "B",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "ChristopherJM",
+      "displayName": "Christopher Miller (FT)",
+      "category": "journalist",
+      "reliability": "A",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "UAWeapons",
+      "displayName": "Ukraine Weapons Tracker",
+      "category": "osint-verification",
+      "reliability": "B",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "noelreports",
+      "displayName": "NOELREPORTS",
+      "category": "osint-aggregator",
+      "reliability": "C",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "KyivIndependent",
+      "displayName": "The Kyiv Independent",
+      "category": "news",
+      "reliability": "A",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "DefenceU",
+      "displayName": "Ministry of Defence of Ukraine",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "Eastern Europe",
+      "group": "ukraine"
+    },
+    {
+      "handle": "bellingcat",
+      "displayName": "Bellingcat",
+      "category": "osint-verification",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "EliotHiggins",
+      "displayName": "Eliot Higgins",
+      "category": "osint-verification",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "GeoConfirmed",
+      "displayName": "GeoConfirmed",
+      "category": "osint-verification",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "Osinttechnical",
+      "displayName": "OSINTtechnical",
+      "category": "osint-aggregator",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "IntelCrab",
+      "displayName": "Intel Crab",
+      "category": "osint-aggregator",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "AuroraIntel",
+      "displayName": "Aurora Intel",
+      "category": "osint-aggregator",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "CalibreObscura",
+      "displayName": "Calibre Obscura",
+      "category": "osint-verification",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "Archer83Able",
+      "displayName": "Archer83Able",
+      "category": "osint-analysis",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "sentdefender",
+      "displayName": "OSINTdefender",
+      "category": "osint-aggregator",
+      "reliability": "C",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "FaytuksNetwork",
+      "displayName": "Faytuks Network",
+      "category": "osint-aggregator",
+      "reliability": "C",
+      "regionHint": "Global",
+      "group": "verify"
+    },
+    {
+      "handle": "criticalthreats",
+      "displayName": "Critical Threats (AEI)",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Middle East",
+      "group": "mideast"
+    },
+    {
+      "handle": "Joe_Truzman",
+      "displayName": "Joe Truzman (FDD Long War Journal)",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Middle East",
+      "group": "mideast"
+    },
+    {
+      "handle": "Charles_Lister",
+      "displayName": "Charles Lister (MEI)",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Middle East",
+      "group": "mideast"
+    },
+    {
+      "handle": "Elizrael",
+      "displayName": "Elizabeth Tsurkov",
+      "category": "osint-analysis",
+      "reliability": "B",
+      "regionHint": "Middle East",
+      "group": "mideast"
+    },
+    {
+      "handle": "IDF",
+      "displayName": "Israel Defense Forces",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "Middle East",
+      "group": "mideast"
+    },
+    {
+      "handle": "LongWarJournal",
+      "displayName": "FDD's Long War Journal",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "mideast"
+    },
+    {
+      "handle": "AmichaiStein1",
+      "displayName": "Amichai Stein (i24)",
+      "category": "journalist",
+      "reliability": "B",
+      "regionHint": "Middle East",
+      "group": "mideast"
+    },
+    {
+      "handle": "TankerTrackers",
+      "displayName": "TankerTrackers.com",
+      "category": "osint-maritime",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "maritime"
+    },
+    {
+      "handle": "LloydsList",
+      "displayName": "Lloyd's List",
+      "category": "maritime",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "maritime"
+    },
+    {
+      "handle": "gCaptain",
+      "displayName": "gCaptain",
+      "category": "maritime",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "maritime"
+    },
+    {
+      "handle": "MarineTraffic",
+      "displayName": "MarineTraffic",
+      "category": "maritime",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "maritime"
+    },
+    {
+      "handle": "Windward_AI",
+      "displayName": "Windward",
+      "category": "osint-maritime",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "maritime"
+    },
+    {
+      "handle": "ACLEDINFO",
+      "displayName": "ACLED",
+      "category": "osint-data",
+      "reliability": "A",
+      "regionHint": "Africa",
+      "group": "africa"
+    },
+    {
+      "handle": "CrisisGroup",
+      "displayName": "International Crisis Group",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "africa"
+    },
+    {
+      "handle": "Menastream",
+      "displayName": "MENASTREAM",
+      "category": "osint-analysis",
+      "reliability": "B",
+      "regionHint": "Africa",
+      "group": "africa"
+    },
+    {
+      "handle": "Caleb_Weiss7",
+      "displayName": "Caleb Weiss (Bridgeway / LWJ)",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Africa",
+      "group": "africa"
+    },
+    {
+      "handle": "SudanWarMonitor",
+      "displayName": "Sudan War Monitor",
+      "category": "osint-analysis",
+      "reliability": "B",
+      "regionHint": "Africa",
+      "group": "africa"
+    },
+    {
+      "handle": "detresfa_",
+      "displayName": "Damien Symon (satellite)",
+      "category": "osint-imagery",
+      "reliability": "A",
+      "regionHint": "South Asia",
+      "group": "asia"
+    },
+    {
+      "handle": "MoNDefense",
+      "displayName": "Taiwan Ministry of National Defense",
+      "category": "defense",
+      "reliability": "B",
+      "regionHint": "East / SE Asia",
+      "group": "asia"
+    },
+    {
+      "handle": "JosephHDempsey",
+      "displayName": "Joseph Dempsey (IISS)",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "asia"
+    },
+    {
+      "handle": "nktpnd",
+      "displayName": "Ankit Panda",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "East / SE Asia",
+      "group": "asia"
+    },
+    {
+      "handle": "38NorthNK",
+      "displayName": "38 North",
+      "category": "osint-imagery",
+      "reliability": "A",
+      "regionHint": "East / SE Asia",
+      "group": "asia"
+    },
+    {
+      "handle": "ArmsControlWonk",
+      "displayName": "Arms Control Wonk",
+      "category": "osint-analysis",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "asia"
+    },
+    {
+      "handle": "amtinitiative",
+      "displayName": "CSIS AMTI (South China Sea)",
+      "category": "osint-imagery",
+      "reliability": "A",
+      "regionHint": "East / SE Asia",
+      "group": "asia"
+    },
+    {
+      "handle": "ImageSatIntl",
+      "displayName": "ImageSat International",
+      "category": "osint-imagery",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "asia"
+    },
+    {
+      "handle": "Maxar",
+      "displayName": "Maxar Technologies",
+      "category": "osint-imagery",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "asia"
+    },
+    {
+      "handle": "TheRecord_Media",
+      "displayName": "The Record",
+      "category": "cyber",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "cyber"
+    },
+    {
+      "handle": "BleepinComputer",
+      "displayName": "BleepingComputer",
+      "category": "cyber",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "cyber"
+    },
+    {
+      "handle": "campuscodi",
+      "displayName": "Catalin Cimpanu",
+      "category": "cyber",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "cyber"
+    },
+    {
+      "handle": "GossiTheDog",
+      "displayName": "Kevin Beaumont",
+      "category": "cyber",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "cyber"
+    },
+    {
+      "handle": "vxunderground",
+      "displayName": "vx-underground",
+      "category": "cyber",
+      "reliability": "B",
+      "regionHint": "Global",
+      "group": "cyber"
+    },
+    {
+      "handle": "CISAgov",
+      "displayName": "CISA",
+      "category": "cyber",
+      "reliability": "A",
+      "regionHint": "Americas",
+      "group": "cyber"
+    },
+    {
+      "handle": "NCSC",
+      "displayName": "UK NCSC",
+      "category": "cyber",
+      "reliability": "A",
+      "regionHint": "Europe",
+      "group": "cyber"
+    },
+    {
+      "handle": "USGS_Quakes",
+      "displayName": "USGS Earthquakes",
+      "category": "disaster",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "disaster"
+    },
+    {
+      "handle": "NWSNHC",
+      "displayName": "NWS National Hurricane Center",
+      "category": "disaster",
+      "reliability": "A",
+      "regionHint": "Americas",
+      "group": "disaster"
+    },
+    {
+      "handle": "GDACS",
+      "displayName": "GDACS",
+      "category": "disaster",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "disaster"
+    },
+    {
+      "handle": "ReliefWeb",
+      "displayName": "ReliefWeb",
+      "category": "humanitarian",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "disaster"
+    },
+    {
+      "handle": "Flightradar24",
+      "displayName": "Flightradar24",
+      "category": "osint-aviation",
+      "reliability": "A",
+      "regionHint": "Global",
+      "group": "disaster"
+    }
   ]
 }

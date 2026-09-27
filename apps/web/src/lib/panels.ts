@@ -2,14 +2,22 @@ import { useCallback, useEffect, useState } from 'react';
 
 export type PanelSide = 'left' | 'right';
 
-/** Below this viewport width both side panels default to collapsed (no saved pref). */
-export const NARROW_VIEWPORT_PX = 1000;
+/** Panels open by default on every visit. Only phone-width screens start collapsed. */
+export const NARROW_VIEWPORT_PX = 700;
 
-const storageKey = (side: PanelSide) => `gsp:panel:${side}`;
+// Session-scoped: a collapse lasts for this visit only, so each new visit opens both panels.
+const storageKey = (side: PanelSide) => `gsp:panel2:${side}`;
+const store = (): Storage | null => {
+  try {
+    return window.sessionStorage;
+  } catch {
+    return null;
+  }
+};
 
 function readSaved(side: PanelSide): boolean | null {
   try {
-    const v = window.localStorage.getItem(storageKey(side));
+    const v = store()?.getItem(storageKey(side)) ?? null;
     if (v === 'open') return true;
     if (v === 'collapsed') return false;
   } catch {
@@ -24,14 +32,14 @@ function defaultOpen(side: PanelSide): boolean {
   return typeof window === 'undefined' ? true : window.innerWidth >= NARROW_VIEWPORT_PX;
 }
 
-/** Open/collapsed state for a side panel, persisted per side in localStorage. */
+/** Open/collapsed state for a side panel, persisted per side for this visit (sessionStorage). */
 export function usePanelOpen(side: PanelSide): [boolean, () => void] {
   const [open, setOpen] = useState<boolean>(() => defaultOpen(side));
   const toggle = useCallback(() => {
     setOpen((prev) => {
       const next = !prev;
       try {
-        window.localStorage.setItem(storageKey(side), next ? 'open' : 'collapsed');
+        store()?.setItem(storageKey(side), next ? 'open' : 'collapsed');
       } catch {
         /* ignore */
       }

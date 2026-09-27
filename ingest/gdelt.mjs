@@ -119,7 +119,6 @@ function loadSeed() {
 function writeEvents(events) {
   fs.mkdirSync(path.dirname(publicEvents), { recursive: true });
   fs.writeFileSync(publicEvents, JSON.stringify(events, null, 2));
-  fs.writeFileSync(seedEvents, JSON.stringify(events, null, 2));
   if (fs.existsSync(publicSnapshot)) {
     const snap = JSON.parse(fs.readFileSync(publicSnapshot, 'utf8'));
     snap.events = events;
@@ -132,15 +131,19 @@ async function main() {
   try {
     const events = await fetchGdelt();
     if (!events.length) throw new Error('empty GDELT payload');
-    writeEvents(events);
+    // Merge by id into what RSS / X already accumulated; never replace the file wholesale.
+    const existing = fs.existsSync(publicEvents) ? JSON.parse(fs.readFileSync(publicEvents, 'utf8')) : [];
+    const byId = new Map(existing.map((e) => [e.id, e]));
+    for (const e of events) byId.set(e.id, e);
+    writeEvents([...byId.values()]);
     const um = stampMeta();
     console.log(`ingest:gdelt Pass — wrote ${events.length} live events`);
     console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
   } catch (err) {
-    const seed = loadSeed();
-    writeEvents(seed);
+    // Leave accumulated events untouched. Re-injecting the seed pack here used to wipe
+    // every RSS / X event and pin week-old placeholder events on the map.
     const um = stampMeta();
-    console.warn(`ingest:gdelt Warn — network/API failed (${err.message}); kept seed (${seed.length} events)`);
+    console.warn(`ingest:gdelt Warn — network/API failed (${err.message}); events left unchanged`);
     console.log(`  ${um.updatedAtLabel} · ${um.nextUpdateHint}`);
   }
 }
