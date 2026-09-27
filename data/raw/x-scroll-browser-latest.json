@@ -1,0 +1,1235 @@
+{
+ "mode": "browser",
+ "collector": "edge-focused-scroll",
+ "generatedAt": "2026-09-27T08:06:24.384182+00:00",
+ "startedAt": "2026-09-27T07:47:57.717717+00:00",
+ "maxAgeHours": 24,
+ "runs": [
+  {
+   "query": "accounts-core-1",
+   "status": "ok",
+   "kept": 12,
+   "secs": 63
+  },
+  {
+   "query": "accounts-core-2",
+   "status": "ok",
+   "kept": 15,
+   "secs": 69
+  },
+  {
+   "query": "accounts-ukraine-1",
+   "status": "ok",
+   "kept": 14,
+   "secs": 62
+  },
+  {
+   "query": "accounts-verify-1",
+   "status": "ok",
+   "kept": 13,
+   "secs": 60
+  },
+  {
+   "query": "accounts-mideast-1",
+   "status": "ok",
+   "kept": 4,
+   "secs": 24
+  },
+  {
+   "query": "accounts-maritime-1",
+   "status": "ok",
+   "kept": 15,
+   "secs": 83
+  },
+  {
+   "query": "accounts-africa-1",
+   "status": "ok",
+   "kept": 1,
+   "secs": 21
+  },
+  {
+   "query": "accounts-asia-1",
+   "status": "ok",
+   "kept": 0,
+   "secs": 18
+  },
+  {
+   "query": "accounts-cyber-1",
+   "status": "ok",
+   "kept": 0,
+   "secs": 18
+  },
+  {
+   "query": "accounts-disaster-1",
+   "status": "ok",
+   "kept": 2,
+   "secs": 28
+  },
+  {
+   "query": "red-sea",
+   "status": "ok",
+   "kept": 17,
+   "secs": 77
+  },
+  {
+   "query": "ukraine-russia",
+   "status": "ok",
+   "kept": 13,
+   "secs": 25
+  },
+  {
+   "query": "israel-gaza-lebanon",
+   "status": "ok",
+   "kept": 12,
+   "secs": 29
+  },
+  {
+   "query": "iran",
+   "status": "ok",
+   "kept": 0,
+   "secs": 15
+  },
+  {
+   "query": "sudan-horn",
+   "status": "ok",
+   "kept": 6,
+   "secs": 30
+  },
+  {
+   "query": "sahel",
+   "status": "ok",
+   "kept": 6,
+   "secs": 25
+  },
+  {
+   "query": "indo-pacific",
+   "status": "ok",
+   "kept": 8,
+   "secs": 55
+  },
+  {
+   "query": "south-asia",
+   "status": "ok",
+   "kept": 14,
+   "secs": 69
+  },
+  {
+   "query": "americas",
+   "status": "ok",
+   "kept": 8,
+   "secs": 55
+  },
+  {
+   "query": "cyber",
+   "status": "ok",
+   "kept": 1,
+   "secs": 22
+  },
+  {
+   "query": "disaster",
+   "status": "ok",
+   "kept": 1,
+   "secs": 19
+  }
+ ],
+ "pointers": [
+  {
+   "postId": "2104115689560633485",
+   "author": "BBCWorld",
+   "url": "https://x.com/BBCWorld/status/2104115689560633485",
+   "observedAt": "2026-09-27T07:47:27.000Z",
+   "text": "Medal of hero killed in last week of WW1 auctioned",
+   "title": "Medal of hero killed in last week of WW1 auctioned",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104113366297886729",
+   "author": "IDF",
+   "url": "https://x.com/IDF/status/2104113366297886729",
+   "observedAt": "2026-09-27T07:38:13.000Z",
+   "text": "🔴ELIMINATED: Saher Nidal Latfi Sakr, a terrorist operative affiliated with global jihadist organizations operating in Gaza. Among other activities, he supplied weapons to Hamas during the war.\n\nSakr infiltrated Israel during the October 7 Massacre and drove the motorcycle used",
+   "title": "🔴ELIMINATED: Saher Nidal Latfi Sakr, a terrorist operative affiliated with global jihadist organizations operating in Gaza. Among other activities, he supplied ",
+   "theatre": "accounts-mideast-1"
+  },
+  {
+   "postId": "2104112969781252496",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104112969781252496",
+   "observedAt": "2026-09-27T07:36:39.000Z",
+   "text": "Former Israeli PM Naftali Bennett predicts the opposition can win 63 seats and form a new government after agreeing with other parties to act together in the October 27 elections.\n\n🔴 LIVE updates: \nhttps://\naje.news/r7py14",
+   "title": "Former Israeli PM Naftali Bennett predicts the opposition can win 63 seats and form a new government after agreeing with other parties to act together in the Oc",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104112679438913703",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2104112679438913703",
+   "observedAt": "2026-09-27T07:35:29.000Z",
+   "text": "Gloucester, UK Police have declared a major incident in the Whelford area near RAF Fairford after several men were arrested on suspicion of offensives. A number of properties are being evacuated along with numerous vehicles being searched. They believe the incident is contained.",
+   "title": "Gloucester, UK Police have declared a major incident in the Whelford area near RAF Fairford after several men were arrested on suspicion of offensives. A number",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2104111333570433262",
+   "author": "Reuters",
+   "url": "https://x.com/Reuters/status/2104111333570433262",
+   "observedAt": "2026-09-27T07:30:09.000Z",
+   "text": "Bangkok floodwaters recede after torrential rain as residents count losses \nhttps://\nreut.rs/4ABXfuk",
+   "title": "Bangkok floodwaters recede after torrential rain as residents count losses https:// reut.rs/4ABXfuk",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104111131287593358",
+   "author": "UNOCHA",
+   "url": "https://x.com/UNOCHA/status/2104111131287593358",
+   "observedAt": "2026-09-27T07:29:20.000Z",
+   "text": "“For the first time in a long time, there will be vegetables on our table.”\n\nWith support from the Myanmar Humanitarian Fund, \n@UNDP\n is helping families in Myanmar with seeds, organic fertilizer and farming guidance to grow fresh food and meet their food needs.",
+   "title": "“For the first time in a long time, there will be vegetables on our table.” With support from the Myanmar Humanitarian Fund, @UNDP is helping families in Myanma",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104110292427018660",
+   "author": "IsraelWarRoom",
+   "url": "https://x.com/IsraelWarRoom/status/2104110292427018660",
+   "observedAt": "2026-09-27T07:26:00.000Z",
+   "text": "🔥🔥CONFIRMED: The IDF and Shin Bet confirm Saher Nidal Latfi Sakr, the terrorist filmed driving the motorcycle used to abduct Noa Argamani and Avinatan Or from the Nova festival on October 7, was eliminated in an Israeli strike in Nuseirat.",
+   "title": "🔥🔥CONFIRMED: The IDF and Shin Bet confirm Saher Nidal Latfi Sakr, the terrorist filmed driving the motorcycle used to abduct Noa Argamani and Avinatan Or from t",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104108839130009815",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2104108839130009815",
+   "observedAt": "2026-09-27T07:20:14.000Z",
+   "text": "At least 17 people were killed and 15 people were injured during a mass shooting at a tavern in Gauteng, South Africa. Two vehicles were set on fire, and police have launched a manhunt for 8 suspects who were reportedly armed with AK-47s and pistols.",
+   "title": "At least 17 people were killed and 15 people were injured during a mass shooting at a tavern in Gauteng, South Africa. Two vehicles were set on fire, and police",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2104108802521903180",
+   "author": "Reuters",
+   "url": "https://x.com/Reuters/status/2104108802521903180",
+   "observedAt": "2026-09-27T07:20:05.000Z",
+   "text": "Security increased at US Fairford air base in England \nhttps://\nreut.rs/4ykKa7a",
+   "title": "Security increased at US Fairford air base in England https:// reut.rs/4ykKa7a",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104108160747557087",
+   "author": "Jvnior",
+   "url": "https://x.com/Jvnior/status/2104108160747557087",
+   "observedAt": "2026-09-27T07:17:32.000Z",
+   "text": "🚨🇮🇱 BREAKING: IDF soldiers just tortured a Palestinian hostage to death on CCTV\n\nHe asked them if his family was alive, one of the guards lost his temper, and they killed him.\n\nThey silently dumped his body after.",
+   "title": "🚨🇮🇱 BREAKING: IDF soldiers just tortured a Palestinian hostage to death on CCTV He asked them if his family was alive, one of the guards lost his temper, and th",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104107495274778635",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104107495274778635",
+   "observedAt": "2026-09-27T07:14:53.000Z",
+   "text": "Ukrainian forces destroyed a Russian BM-21 Grad MLRS loaded with ammunition after intelligence narrowed down its likely location and an FPV drone found the target. The strike triggered secondary detonations and a fire. #Ukraine",
+   "title": "Ukrainian forces destroyed a Russian BM-21 Grad MLRS loaded with ammunition after intelligence narrowed down its likely location and an FPV drone found the targ",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104107172325912614",
+   "author": "KyivIndependent",
+   "url": "https://x.com/KyivIndependent/status/2104107172325912614",
+   "observedAt": "2026-09-27T07:13:36.000Z",
+   "text": "On Sept. 13, a Russian drone struck the locomotive of a Kyiv–Warsaw passenger train just 2 kilometers from the Polish border. The attack near Yahodyn caused no casualties, but it drew attention to one of Ukraine's most important links to the outside world amid the pressures of",
+   "title": "On Sept. 13, a Russian drone struck the locomotive of a Kyiv–Warsaw passenger train just 2 kilometers from the Polish border. The attack near Yahodyn caused no ",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104106278322676170",
+   "author": "Reuters",
+   "url": "https://x.com/Reuters/status/2104106278322676170",
+   "observedAt": "2026-09-27T07:10:03.000Z",
+   "text": "US 'very much' understands Taiwan's defence needs, Taipei official says \nhttps://\nreut.rs/4xShmSz",
+   "title": "US 'very much' understands Taiwan's defence needs, Taipei official says https:// reut.rs/4xShmSz",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104105909249020231",
+   "author": "RealWahidaAFG",
+   "url": "https://x.com/RealWahidaAFG/status/2104105909249020231",
+   "observedAt": "2026-09-27T07:08:35.000Z",
+   "text": "🚨 BREAKING ⚡\n\nMilitants detained in Nuristan reportedly claim they were trained by 🇵🇰 Pakistani intelligence and sent into 🇦🇫 Afghanistan for sabotage.\n\nThey allegedly say they were brought to Pakistan from  Iran and other countries for training.",
+   "title": "🚨 BREAKING ⚡ Militants detained in Nuristan reportedly claim they were trained by 🇵🇰 Pakistani intelligence and sent into 🇦🇫 Afghanistan for sabotage. They alle",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104104753626231008",
+   "author": "UN_News_Centre",
+   "url": "https://x.com/UN_News_Centre/status/2104104753626231008",
+   "observedAt": "2026-09-27T07:04:00.000Z",
+   "text": "AI is racing ahead. Migration pressures are mounting. Africa’s youth population is growing fast.\n\nSaturday at #UNGA, leaders asked who will benefit from these changes, who risks being left behind & who gets to make the rules.\n\nThe Takeaway, Day 5 is here:",
+   "title": "AI is racing ahead. Migration pressures are mounting. Africa’s youth population is growing fast. Saturday at #UNGA, leaders asked who will benefit from these ch",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104103749664854141",
+   "author": "Marcorio61O",
+   "url": "https://x.com/Marcorio61O/status/2104103749664854141",
+   "observedAt": "2026-09-27T07:00:00.000Z",
+   "text": "🎪 THE CLOWN WORLD GAZETTE\n\nTHE CIRCUS LEFT TOWN. THE CLOWNS STAYED.\n\nPutin mocks Estonia. EU sends €6.6B — €4.7B returns to Brussels. Ukraine steel: zero. Dobropillya encircled. Trump tells Zelensky: go to Moscow. And von der Leyen sells “multilateralism” as democracy.\n\nBy",
+   "title": "🎪 THE CLOWN WORLD GAZETTE THE CIRCUS LEFT TOWN. THE CLOWNS STAYED. Putin mocks Estonia. EU sends €6.6B — €4.7B returns to Brussels. Ukraine steel: zero. Dobropi",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104102139534639291",
+   "author": "FBRSpokesperson",
+   "url": "https://x.com/FBRSpokesperson/status/2104102139534639291",
+   "observedAt": "2026-09-27T06:53:37.000Z",
+   "text": "Statement by the Federal Board of Revenue\n***\nThe Federal Board of Revenue condemns in the strongest terms the terrorist attack on the Joint Check Post at Aman Mela, Dera Ismail Khan, in which personnel of Pakistan Customs, the Khyber Pakhtunkhwa Police and the Khyber Pakhtunkhwa",
+   "title": "Statement by the Federal Board of Revenue *** The Federal Board of Revenue condemns in the strongest terms the terrorist attack on the Joint Check Post at Aman ",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104101537698197995",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104101537698197995",
+   "observedAt": "2026-09-27T06:51:13.000Z",
+   "text": "Israeli forces have tightened restrictions in and around the occupied West Bank city by closing several roads and entrances, the Wafa news agency reports. \n\n🔴 LIVE updates: \nhttps://\naje.news/r7py14",
+   "title": "Israeli forces have tightened restrictions in and around the occupied West Bank city by closing several roads and entrances, the Wafa news agency reports. 🔴 LIV",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104100489323319440",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104100489323319440",
+   "observedAt": "2026-09-27T06:47:03.000Z",
+   "text": "❗️Poland has offered to host a factory producing Patriot missiles for Ukraine if licensed production moves forward, Deputy Defense Minister Magdalena Sobkowiak-Czarnecka says. She said Poland’s separate effort to secure a Patriot service center and later domestic production would",
+   "title": "❗️Poland has offered to host a factory producing Patriot missiles for Ukraine if licensed production moves forward, Deputy Defense Minister Magdalena Sobkowiak-",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104098057726071062",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104098057726071062",
+   "observedAt": "2026-09-27T06:37:23.000Z",
+   "text": "BREAKING: Israeli authorities have decided to “impose a comprehensive closure on the West Bank” and close the crossings from Sunday until next Saturday, the Wafa news agency reports. \n\n🔴 LIVE updates: \nhttps://\naje.news/r7py14",
+   "title": "BREAKING: Israeli authorities have decided to “impose a comprehensive closure on the West Bank” and close the crossings from Sunday until next Saturday, the Waf",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104097765965885517",
+   "author": "MOSSADil",
+   "url": "https://x.com/MOSSADil/status/2104097765965885517",
+   "observedAt": "2026-09-27T06:36:14.000Z",
+   "text": "🚨 MOSSADIL DECLASSIFIED: THE MOSSAD DOESN’T JUST HUNT TARGETS — IT WAITS FOR THEM\n\nImad Mughniyeh spent years as one of the world’s most elusive Hezbollah commanders. In 2008, after months of surveillance in Damascus, a joint CIA-Mossad operation killed him with a precisely",
+   "title": "🚨 MOSSADIL DECLASSIFIED: THE MOSSAD DOESN’T JUST HUNT TARGETS — IT WAITS FOR THEM Imad Mughniyeh spent years as one of the world’s most elusive Hezbollah comman",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104097552152830252",
+   "author": "IDF",
+   "url": "https://x.com/IDF/status/2104097552152830252",
+   "observedAt": "2026-09-27T06:35:23.000Z",
+   "text": "🎯STRUCK IN RESPONSE: Hezbollah targets in several areas of southern Lebanon, including sites Hezbollah used to launch explosive drones & anti-tank missiles toward IDF soldiers.\n\nThe strikes came after Hezbollah launched an explosive drone toward IDF soldiers operating in the",
+   "title": "🎯STRUCK IN RESPONSE: Hezbollah targets in several areas of southern Lebanon, including sites Hezbollah used to launch explosive drones & anti-tank missiles towa",
+   "theatre": "accounts-mideast-1"
+  },
+  {
+   "postId": "2104096795710165296",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104096795710165296",
+   "observedAt": "2026-09-27T06:32:22.000Z",
+   "text": "Ukraine will begin mass deployment of interceptor drones within several months, Head of the Presidential office Kyrylo Budanov says. Prototypes are already undergoing combat testing and shooting down Russian drones. He also said a large prisoner exchange between Ukraine and",
+   "title": "Ukraine will begin mass deployment of interceptor drones within several months, Head of the Presidential office Kyrylo Budanov says. Prototypes are already unde",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104096629351473432",
+   "author": "AFP",
+   "url": "https://x.com/AFP/status/2104096629351473432",
+   "observedAt": "2026-09-27T06:31:43.000Z",
+   "text": "Thousands of Bangkok residents awoke in shelters after flooding triggered by days of heavy rain in the Thai capital inundated homes and roads.\n\nNearly 4,900 people have been evacuated to shelters, with around 52,000 households affected by the floods, which prompted a disaster",
+   "title": "Thousands of Bangkok residents awoke in shelters after flooding triggered by days of heavy rain in the Thai capital inundated homes and roads. Nearly 4,900 peop",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104096617661977002",
+   "author": "YanPeronn",
+   "url": "https://x.com/YanPeronn/status/2104096617661977002",
+   "observedAt": "2026-09-27T06:31:40.000Z",
+   "text": "In case you didn't watch sports today:\n\n>🏈Colin Simmons pulled his penis out in the presence of Donald Trump (video in replies)\n\n>🥊A Miami cop made UFC debut vs convicted felon & choked him out in 57 seconds\n\n>🥊Raoni Barcelos got carried out on a stretcher & taken to the",
+   "title": "In case you didn't watch sports today: >🏈Colin Simmons pulled his penis out in the presence of Donald Trump (video in replies) >🥊A Miami cop made UFC debut vs c",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104095672781709313",
+   "author": "masskeemz",
+   "url": "https://x.com/masskeemz/status/2104095672781709313",
+   "observedAt": "2026-09-27T06:27:55.000Z",
+   "text": "“Please be careful”: Christian youth leader warns terrorists previously reported as massing in hills south of Jos, Nigeria may attempt another attack during or after church services today, Sunday, September 27.\n\nSo far, nine people have been confirmed killed in yesterday's",
+   "title": "“Please be careful”: Christian youth leader warns terrorists previously reported as massing in hills south of Jos, Nigeria may attempt another attack during or ",
+   "theatre": "sahel"
+  },
+  {
+   "postId": "2104095284787810495",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104095284787810495",
+   "observedAt": "2026-09-27T06:26:22.000Z",
+   "text": "Ukrainian forces struck the area of the former Luhansk Border Guard detachment in occupied Luhansk overnight, with more than five explosions reported at the site. A separate strike near the city may also have hit an ammunition depot, according to local reports. #Ukraine",
+   "title": "Ukrainian forces struck the area of the former Luhansk Border Guard detachment in occupied Luhansk overnight, with more than five explosions reported at the sit",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104094659500761553",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104094659500761553",
+   "observedAt": "2026-09-27T06:23:53.000Z",
+   "text": "🫠A Russian serviceman told Rossiya 1 that a roughly 70-year-old woman walked across a heavily mined field in Zaporizhzhia region before reaching Russian positions. He said Russian troops knew the field was heavily mined and explicitly stated it had been mined “not by us.” He",
+   "title": "🫠A Russian serviceman told Rossiya 1 that a roughly 70-year-old woman walked across a heavily mined field in Zaporizhzhia region before reaching Russian positio",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104094454886105509",
+   "author": "DefenceU",
+   "url": "https://x.com/DefenceU/status/2104094454886105509",
+   "observedAt": "2026-09-27T06:23:04.000Z",
+   "text": "“People like to say that the conflict is between good and evil. The real conflict is between truth and lies.”\nDon Miguel Ruiz\n\nThe combat losses of the enemy from February 24, 2022 to September 27, 2026.",
+   "title": "“People like to say that the conflict is between good and evil. The real conflict is between truth and lies.” Don Miguel Ruiz The combat losses of the enemy fro",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104093813912502612",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104093813912502612",
+   "observedAt": "2026-09-27T06:20:32.000Z",
+   "text": "Hamas’s political bureau member Khaled Meshaal has warned that Israeli actions and measures towards Al-Aqsa Mosque are “paving the way for total control” over the site.\n\n🔴 LIVE updates: \nhttps://\naje.news/r7py14",
+   "title": "Hamas’s political bureau member Khaled Meshaal has warned that Israeli actions and measures towards Al-Aqsa Mosque are “paving the way for total control” over t",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104093544361189484",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104093544361189484",
+   "observedAt": "2026-09-27T06:19:27.000Z",
+   "text": "German Foreign Minister Johann Wadephul urged Russia to halt hybrid attacks and further escalation against Germany, Europe and NATO during a 20-minute meeting with Sergey Lavrov at the UN. According to the German delegation, Wadephul cited an attempted attack in Leipzig that",
+   "title": "German Foreign Minister Johann Wadephul urged Russia to halt hybrid attacks and further escalation against Germany, Europe and NATO during a 20-minute meeting w",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104093192941449358",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104093192941449358",
+   "observedAt": "2026-09-27T06:18:04.000Z",
+   "text": "Ukraine’s General Staff confirmed the September 26 strike on the Azov Optical-Mechanical Plant in Russia’s Rostov region. A fire was recorded in the foundry and equipment was damaged in five production buildings. The plant manufactures components for Russian weapons. #Russia",
+   "title": "Ukraine’s General Staff confirmed the September 26 strike on the Azov Optical-Mechanical Plant in Russia’s Rostov region. A fire was recorded in the foundry and",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104092951643099487",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104092951643099487",
+   "observedAt": "2026-09-27T06:17:06.000Z",
+   "text": "Russia launched 170 drones at Ukraine overnight, including 76 jet-powered Shaheds, the Air Force says. Ukrainian air defenses downed or suppressed 147 Shahed, Gerbera and other UAVs. Impacts were recorded at 18 locations, while debris from intercepted drones fell at eight.",
+   "title": "Russia launched 170 drones at Ukraine overnight, including 76 jet-powered Shaheds, the Air Force says. Ukrainian air defenses downed or suppressed 147 Shahed, G",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104092778963595715",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104092778963595715",
+   "observedAt": "2026-09-27T06:16:25.000Z",
+   "text": "Russian losses per 27/09/26 repored by the Ukrainian General Staff\n\n+1690 men\n+8 tanks\n+7 ACVs\n+57 artillery\n+3 MLRS\n+4 AD systems\n+1826 UAVs\n+14 GRCs",
+   "title": "Russian losses per 27/09/26 repored by the Ukrainian General Staff +1690 men +8 tanks +7 ACVs +57 artillery +3 MLRS +4 AD systems +1826 UAVs +14 GRCs",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104092504807047591",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104092504807047591",
+   "observedAt": "2026-09-27T06:15:19.000Z",
+   "text": "The 26/09/26 SitRep on Ukraine is ready: \nhttps://\nthreadreaderapp.com/thread/2104091\n960416080276.html\n…\n\nNearly 700,000 people rely on our Ukraine war reporting across platforms, reaching over 800 million impressions per year. This reporting has no sponsors, no corporate backing, and no political funding. It exists",
+   "title": "The 26/09/26 SitRep on Ukraine is ready: https:// threadreaderapp.com/thread/2104091 960416080276.html … Nearly 700,000 people rely on our Ukraine war reporting",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104091960416080276",
+   "author": "NOELreports",
+   "url": "https://x.com/NOELreports/status/2104091960416080276",
+   "observedAt": "2026-09-27T06:13:10.000Z",
+   "text": "SitRep - 26/09/26 - Ukraine attacked another refinery\n\nAn overview of the daily events in Russia's invasion of Ukraine. At night, Ukraines struck another refinery. This time the Ilsky refinery in Krasnodar Krai was subject to drone attacks.\n\nREPOST=appreciated\n\n1/X",
+   "title": "SitRep - 26/09/26 - Ukraine attacked another refinery An overview of the daily events in Russia's invasion of Ukraine. At night, Ukraines struck another refiner",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104091428544455093",
+   "author": "AFP",
+   "url": "https://x.com/AFP/status/2104091428544455093",
+   "observedAt": "2026-09-27T06:11:03.000Z",
+   "text": "BREAKING Gunmen kill 17 people in South Africa bar shooting, 15 wounded, police say",
+   "title": "BREAKING Gunmen kill 17 people in South Africa bar shooting, 15 wounded, police say",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104091183127363995",
+   "author": "Reuters",
+   "url": "https://x.com/Reuters/status/2104091183127363995",
+   "observedAt": "2026-09-27T06:10:04.000Z",
+   "text": "South Africa police launch manhunt after 17 killed in tavern shooting \nhttps://\nreut.rs/46LhMPy",
+   "title": "South Africa police launch manhunt after 17 killed in tavern shooting https:// reut.rs/46LhMPy",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104090776640672074",
+   "author": "MOSSADil",
+   "url": "https://x.com/MOSSADil/status/2104090776640672074",
+   "observedAt": "2026-09-27T06:08:27.000Z",
+   "text": "TWO YEARS AGO TODAY.\nDozens of diplomats walked out as Prime Minister Netanyahu began addressing the UN General Assembly.\nShortly after he finished speaking, Israeli jets struck Hezbollah’s headquarters in Beirut — the strike that killed Hassan Nasrallah.\n\nThey walked out on",
+   "title": "TWO YEARS AGO TODAY. Dozens of diplomats walked out as Prime Minister Netanyahu began addressing the UN General Assembly. Shortly after he finished speaking, Is",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104089888647758294",
+   "author": "GoddayIzakpa",
+   "url": "https://x.com/GoddayIzakpa/status/2104089888647758294",
+   "observedAt": "2026-09-27T06:04:56.000Z",
+   "text": "In 1989, a young Gustavo Fring and his partner, Max Arciniega, travel to Don Eladio’s estate in Mexico hoping to sell their exceptionally pure meth to the cartel.\n\nRather than following the cartel’s usual protocol, they deliberately force a meeting by getting their product",
+   "title": "In 1989, a young Gustavo Fring and his partner, Max Arciniega, travel to Don Eladio’s estate in Mexico hoping to sell their exceptionally pure meth to the carte",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2104089770708107369",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104089770708107369",
+   "observedAt": "2026-09-27T06:04:28.000Z",
+   "text": "BREAKING: At least 17 people have been killed and 15 others were wounded in a shooting at a tavern in South Africa’s Gauteng province, police said.\n\n🔗: \nhttps://\naje.news/cpfib3",
+   "title": "BREAKING: At least 17 people have been killed and 15 others were wounded in a shooting at a tavern in South Africa’s Gauteng province, police said. 🔗: https:// ",
+   "theatre": "accounts-core-1"
+  },
+  {
+   "postId": "2104089268347969858",
+   "author": "DropSiteNews",
+   "url": "https://x.com/DropSiteNews/status/2104089268347969858",
+   "observedAt": "2026-09-27T06:02:28.000Z",
+   "text": "🇸🇩 Sudan's army captures Sodari, extending its push across North Kordofan toward Darfur\n\nSudanese army troops and allied Joint Force fighters, a coalition of former Darfur rebel groups, captured the North Kordofan town of Sodari on Friday, the army said, claiming heavy losses on",
+   "title": "🇸🇩 Sudan's army captures Sodari, extending its push across North Kordofan toward Darfur Sudanese army troops and allied Joint Force fighters, a coalition of for",
+   "theatre": "sudan-horn"
+  },
+  {
+   "postId": "2104088806916063666",
+   "author": "ChrisinLiuzhou",
+   "url": "https://x.com/ChrisinLiuzhou/status/2104088806916063666",
+   "observedAt": "2026-09-27T06:00:38.000Z",
+   "text": "2 things the US never wants you to question about China…\n\n🤼 China is aggressive \n\nFor 40+ years, this is what China’s aggression looks like:  Zero invasions, zero regime changes, zero overseas wars, zero bombing foreign governments, zero killing of civilians.\n\nThat's a lot of",
+   "title": "2 things the US never wants you to question about China… 🤼 China is aggressive For 40+ years, this is what China’s aggression looks like: Zero invasions, zero r",
+   "theatre": "sudan-horn"
+  },
+  {
+   "postId": "2104088678502982122",
+   "author": "Reuters",
+   "url": "https://x.com/Reuters/status/2104088678502982122",
+   "observedAt": "2026-09-27T06:00:07.000Z",
+   "text": "Northern Ireland court allows Protestant march in Catholic area \nhttps://\nreut.rs/4xO61Tg",
+   "title": "Northern Ireland court allows Protestant march in Catholic area https:// reut.rs/4xO61Tg",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104088652863467865",
+   "author": "UN_News_Centre",
+   "url": "https://x.com/UN_News_Centre/status/2104088652863467865",
+   "observedAt": "2026-09-27T06:00:01.000Z",
+   "text": "\"Those who polluted the most must do far more to repair the damage they caused. Polluters must pay.\" - UN Secretary-General \n@antonioguterres\n told world leaders during his last #UNGA speech. \n\n\nhttps://\nnews.un.org/en/story/2026/\n09/1168392\n…",
+   "title": "\"Those who polluted the most must do far more to repair the damage they caused. Polluters must pay.\" - UN Secretary-General @antonioguterres told world leaders ",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104088652380831787",
+   "author": "iaeaorg",
+   "url": "https://x.com/iaeaorg/status/2104088652380831787",
+   "observedAt": "2026-09-27T06:00:01.000Z",
+   "text": "On #WorldRiversDay we reflect on how nuclear science can help us learn more about our water sources.\n\nThe IAEA, using isotope hydrology techniques, has pioneered a method to assess the contributions of different water sources to river flow.\n\nBy analysing the stable isotopes of",
+   "title": "On #WorldRiversDay we reflect on how nuclear science can help us learn more about our water sources. The IAEA, using isotope hydrology techniques, has pioneered",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104088103795188133",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104088103795188133",
+   "observedAt": "2026-09-27T05:57:50.000Z",
+   "text": "China’s Vice President Han Zheng has called for respect for the sovereignty and security of nations in the Middle East as he addressed the UNGA. \n\n🔴 LIVE updates: \nhttps://\naje.news/r7py14",
+   "title": "China’s Vice President Han Zheng has called for respect for the sovereignty and security of nations in the Middle East as he addressed the UNGA. 🔴 LIVE updates:",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104087556916744444",
+   "author": "SprinterPress",
+   "url": "https://x.com/SprinterPress/status/2104087556916744444",
+   "observedAt": "2026-09-27T05:55:40.000Z",
+   "text": "A few hours ago, Iran launched one of its largest attacks since the start of the war against oil tankers transiting the Strait of Hormuz.\n\nResidents in the northern United Arab Emirates reported hearing \"dozens of explosions\" coming from the sea. These explosions were described",
+   "title": "A few hours ago, Iran launched one of its largest attacks since the start of the war against oil tankers transiting the Strait of Hormuz. Residents in the north",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104086836490486041",
+   "author": "AmichaiStein1",
+   "url": "https://x.com/AmichaiStein1/status/2104086836490486041",
+   "observedAt": "2026-09-27T05:52:48.000Z",
+   "text": "Report: A Hamas terrorist who abducted Noa Argamani from the Nova music festival and took her to the Gaza Strip on October 7 has been eliminated.",
+   "title": "Report: A Hamas terrorist who abducted Noa Argamani from the Nova music festival and took her to the Gaza Strip on October 7 has been eliminated.",
+   "theatre": "accounts-mideast-1"
+  },
+  {
+   "postId": "2104086141205168467",
+   "author": "ANI",
+   "url": "https://x.com/ANI/status/2104086141205168467",
+   "observedAt": "2026-09-27T05:50:02.000Z",
+   "text": "Addressing the 138th Episode of Mann Ki Baat, Prime Minister Narendra Modi says, \"Terrorist attacks have hurt India for a long time. There was a time when serial blasts were a common occurrence in India. In this very month of September, on 13th September 2008, many innocent",
+   "title": "Addressing the 138th Episode of Mann Ki Baat, Prime Minister Narendra Modi says, \"Terrorist attacks have hurt India for a long time. There was a time when seria",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104085835846984014",
+   "author": "realFFK",
+   "url": "https://x.com/realFFK/status/2104085835846984014",
+   "observedAt": "2026-09-27T05:48:49.000Z",
+   "text": "THE SEVENTH BID OF WAZIRI\n\nWaziri Atiku Abubakar (\n@atiku\n), the former Vice President of Nigeria, has attempted to become President of our nation no less than 6 times and his latest attempt is the 7th.\n\nIn 1993 he contested the Social Democratic Party (SDP) presidential primaries",
+   "title": "THE SEVENTH BID OF WAZIRI Waziri Atiku Abubakar ( @atiku ), the former Vice President of Nigeria, has attempted to become President of our nation no less than 6",
+   "theatre": "sahel"
+  },
+  {
+   "postId": "2104084582614045178",
+   "author": "ZvikaKlein",
+   "url": "https://x.com/ZvikaKlein/status/2104084582614045178",
+   "observedAt": "2026-09-27T05:43:51.000Z",
+   "text": "Saher Saqr, the terrorist documented taking Noa Argamani into Gaza on a motorcycle on October 7, was reportedly killed in a strike in Nuseirat this weekend.\n\nPalestinian media reported his death. The Jerusalem Post reports his role in the abduction.\n\nArgamani was rescued alive in",
+   "title": "Saher Saqr, the terrorist documented taking Noa Argamani into Gaza on a motorcycle on October 7, was reportedly killed in a strike in Nuseirat this weekend. Pal",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104084165276606639",
+   "author": "dn_osama_rabee",
+   "url": "https://x.com/dn_osama_rabee/status/2104084165276606639",
+   "observedAt": "2026-09-27T05:42:11.000Z",
+   "text": "🚨 A strike targets a group of civilians near the White Mosque in Al-Shati Camp, west of Gaza City.",
+   "title": "🚨 A strike targets a group of civilians near the White Mosque in Al-Shati Camp, west of Gaza City.",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104083916453802044",
+   "author": "OsintTV",
+   "url": "https://x.com/OsintTV/status/2104083916453802044",
+   "observedAt": "2026-09-27T05:41:12.000Z",
+   "text": "🚨🇵🇰 PAKISTAN BURNS, SHEHBAZ IS ON A SUPER-LONG FOREIGN TOUR SINCE SEPT 21, WHILE TERROR, CLASHES & UNREST ROCK HOME.\n\nSince Sept 21, Pakistan has faced:\n\n🔴 D.I. KHAN: 19 killed, 30+ critically injured in a TTP-claimed attack.\n\n🔴 AFGHANISTAN FRONT: Pakistani airstrikes,",
+   "title": "🚨🇵🇰 PAKISTAN BURNS, SHEHBAZ IS ON A SUPER-LONG FOREIGN TOUR SINCE SEPT 21, WHILE TERROR, CLASHES & UNREST ROCK HOME. Since Sept 21, Pakistan has faced: 🔴 D.I. K",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104081097294495875",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104081097294495875",
+   "observedAt": "2026-09-27T05:30:00.000Z",
+   "text": "Pope Leo XIV drew around 800,000 people to central Paris for an open-air Mass at Place de la Concorde, marking a major moment in his France visit.\n\nThe Pope also made the pilgrimage to Lourdes, where thousands welcomed him ahead of prayers at the Grotto of Massabielle.",
+   "title": "Pope Leo XIV drew around 800,000 people to central Paris for an open-air Mass at Place de la Concorde, marking a major moment in his France visit. The Pope also",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104080400003850738",
+   "author": "WhaleNewsDaily",
+   "url": "https://x.com/WhaleNewsDaily/status/2104080400003850738",
+   "observedAt": "2026-09-27T05:27:13.000Z",
+   "text": "🚨 IRAN JUST OPENED FIRE IN THE STRAIT OF HORMUZ\n\nAnti-ship missiles launched from Sirik, southern Iran.\n\nThe target: ships under US ESCORT in the Omani corridor, the lane America set up to keep oil moving.\n\nWhat's being reported right now:\n\n→ DOUBLE-DIGIT explosions in the",
+   "title": "🚨 IRAN JUST OPENED FIRE IN THE STRAIT OF HORMUZ Anti-ship missiles launched from Sirik, southern Iran. The target: ships under US ESCORT in the Omani corridor, ",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104076080055304418",
+   "author": "Reuters",
+   "url": "https://x.com/Reuters/status/2104076080055304418",
+   "observedAt": "2026-09-27T05:10:03.000Z",
+   "text": "Northern Ireland court allows Protestant march in Catholic area, Sky News reports \nhttps://\nreut.rs/4AzKeRN",
+   "title": "Northern Ireland court allows Protestant march in Catholic area, Sky News reports https:// reut.rs/4AzKeRN",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104074998428086624",
+   "author": "Cryptoiconn",
+   "url": "https://x.com/Cryptoiconn/status/2104074998428086624",
+   "observedAt": "2026-09-27T05:05:46.000Z",
+   "text": "One thing I’ve learned from markets: follow the story.\n\nRight now, the story is not only about crypto or stocks. Oil is becoming a major part of the conversation.\n\nThe Strait of Hormuz, tanker disruptions, Iran negotiations, diesel prices and global supply are all factors traders",
+   "title": "One thing I’ve learned from markets: follow the story. Right now, the story is not only about crypto or stocks. Oil is becoming a major part of the conversation",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104074259412987977",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2104074259412987977",
+   "observedAt": "2026-09-27T05:02:49.000Z",
+   "text": "https://\ngulfnews.com/world/gulf/sau\ndi/saudi-arabia-shifts-riyadh-schools-to-remote-learning-for-a-week-1.500689308\n…\n\nParents and students in Riyadh were notified of the suspension of in person classes through officially approved communication channels.\n\n“We have just been informed by Saudi authorities that schools must remain closed all week,” read two separate messages",
+   "title": "https:// gulfnews.com/world/gulf/sau di/saudi-arabia-shifts-riyadh-schools-to-remote-learning-for-a-week-1.500689308 … Parents and students in Riyadh were notif",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2104073954612916429",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104073954612916429",
+   "observedAt": "2026-09-27T05:01:37.000Z",
+   "text": "More than 10,000 Thai troops have been deployed in Bangkok to evacuate residents caught in flooding. Heavy rain has overwhelmed the city's drainage systems, and officials have set up temporary shelters for more than 4,000 displaced.\n\nAl Jazeera's Tony Cheng reports from Bangkok.",
+   "title": "More than 10,000 Thai troops have been deployed in Bangkok to evacuate residents caught in flooding. Heavy rain has overwhelmed the city's drainage systems, and",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104073826984202516",
+   "author": "DailyIranNews",
+   "url": "https://x.com/DailyIranNews/status/2104073826984202516",
+   "observedAt": "2026-09-27T05:01:06.000Z",
+   "text": "BREAKING: The IRGC Navy reportedly launched a major overnight assault on vessels in the Strait of Hormuz, using anti-ship cruise missiles, drones and fast-attack boats.\n\nAt least three vessels were reportedly hit, while more than 10 missiles were launched. Some reports claim up",
+   "title": "BREAKING: The IRGC Navy reportedly launched a major overnight assault on vessels in the Strait of Hormuz, using anti-ship cruise missiles, drones and fast-attac",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104072518197825695",
+   "author": "RealPearseSeun",
+   "url": "https://x.com/RealPearseSeun/status/2104072518197825695",
+   "observedAt": "2026-09-27T04:55:54.000Z",
+   "text": "🚨Nigerian misguided muslims value the lives in Palestine than the lives of the muslims dying in Sokoto, Zamfara and Katsina?\n\nThey refused to value the lives of their African muslims dying in Congo/Sudan/Mali etc but that of Saudi/Iran/Palestine.\n\nMore people are killed,",
+   "title": "🚨Nigerian misguided muslims value the lives in Palestine than the lives of the muslims dying in Sokoto, Zamfara and Katsina? They refused to value the lives of ",
+   "theatre": "sudan-horn"
+  },
+  {
+   "postId": "2104071175739785235",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104071175739785235",
+   "observedAt": "2026-09-27T04:50:34.000Z",
+   "text": "Thousands of protesters have marched through Madrid, demanding solutions to the city’s housing crisis.\n\nThe forced eviction of an 87-year old woman from her home on Wednesday has renewed public anger and calls for the government to act.",
+   "title": "Thousands of protesters have marched through Madrid, demanding solutions to the city’s housing crisis. The forced eviction of an 87-year old woman from her home",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104068863809782269",
+   "author": "MarioNawfal",
+   "url": "https://x.com/MarioNawfal/status/2104068863809782269",
+   "observedAt": "2026-09-27T04:41:23.000Z",
+   "text": "🇺🇸 🇨🇺 A leaked Pentagon plan reportedly calls for invading Cuba with Army Reserve and National Guard troops\n\nThe island's intelligence service is the reason that should worry people, with drones reportedly sitting ready and 90 miles of water between Havana and Florida that",
+   "title": "🇺🇸 🇨🇺 A leaked Pentagon plan reportedly calls for invading Cuba with Army Reserve and National Guard troops The island's intelligence service is the reason that",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2104068540496216512",
+   "author": "ReddestMaple",
+   "url": "https://x.com/ReddestMaple/status/2104068540496216512",
+   "observedAt": "2026-09-27T04:40:06.000Z",
+   "text": "3 Iranian anti-ship cruise missiles fired so far at violating vessels in the Strait of Hormuz.",
+   "title": "3 Iranian anti-ship cruise missiles fired so far at violating vessels in the Strait of Hormuz.",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104068204213809633",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2104068204213809633",
+   "observedAt": "2026-09-27T04:38:46.000Z",
+   "text": "More details of the message sent to students in Riyadh, suspending in person classes till Thursday",
+   "title": "More details of the message sent to students in Riyadh, suspending in person classes till Thursday",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2104066520141926873",
+   "author": "AJEnglish",
+   "url": "https://x.com/AJEnglish/status/2104066520141926873",
+   "observedAt": "2026-09-27T04:32:04.000Z",
+   "text": "Israeli forces have shot and wounded a Palestinian girl at a checkpoint in Qalandiya in the occupied West Bank, Palestinian media reports.\n\nThe nature of her wounds and her condition are not confirmed.\n\n🔴 LIVE updates: \nhttps://\naje.news/r7py14",
+   "title": "Israeli forces have shot and wounded a Palestinian girl at a checkpoint in Qalandiya in the occupied West Bank, Palestinian media reports. The nature of her wou",
+   "theatre": "accounts-core-2"
+  },
+  {
+   "postId": "2104066000064770285",
+   "author": "MarioNawfal",
+   "url": "https://x.com/MarioNawfal/status/2104066000064770285",
+   "observedAt": "2026-09-27T04:30:00.000Z",
+   "text": "🇲🇽🇮🇱 Mexico bought powerful Israeli spyware... Then cartels reportedly found ways to use it too.\n\nMexican government agencies became major customers of Israeli surveillance technology, including Pegasus, purchasing spyware for intelligence and law-enforcement operations.",
+   "title": "🇲🇽🇮🇱 Mexico bought powerful Israeli spyware... Then cartels reportedly found ways to use it too. Mexican government agencies became major customers of Israeli s",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2104065636322390138",
+   "author": "RealBababanaras",
+   "url": "https://x.com/RealBababanaras/status/2104065636322390138",
+   "observedAt": "2026-09-27T04:28:34.000Z",
+   "text": "Big security incident in the Strait of Hormuz \n\nIRGC launched at least 10 anti-ship missiles in Strait of Hormuz and hit 3 commercial vessels.",
+   "title": "Big security incident in the Strait of Hormuz IRGC launched at least 10 anti-ship missiles in Strait of Hormuz and hit 3 commercial vessels.",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104064044831281241",
+   "author": "MenchOsint",
+   "url": "https://x.com/MenchOsint/status/2104064044831281241",
+   "observedAt": "2026-09-27T04:22:14.000Z",
+   "text": "Apparently there were explosions in the Strait of Hormuz last night, no confirmation any tanker was hit.\n\nMeanwhile, Taiwan-linked Oil Tanker EVER VICT crossed the strait last night.",
+   "title": "Apparently there were explosions in the Strait of Hormuz last night, no confirmation any tanker was hit. Meanwhile, Taiwan-linked Oil Tanker EVER VICT crossed t",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104061675431240039",
+   "author": "MOSSADil",
+   "url": "https://x.com/MOSSADil/status/2104061675431240039",
+   "observedAt": "2026-09-27T04:12:49.000Z",
+   "text": "🚨 U.S. CONDEMNS CHINA OVER SOUTH CHINA SEA CONFRONTATION\n\nThe United States condemned China’s “dangerous” interference with a Philippine resupply mission to Second Thomas Shoal on September 24.\n\nChinese Coast Guard and PLA Navy vessels allegedly blocked and maneuvered",
+   "title": "🚨 U.S. CONDEMNS CHINA OVER SOUTH CHINA SEA CONFRONTATION The United States condemned China’s “dangerous” interference with a Philippine resupply mission to Seco",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2104058700172251373",
+   "author": "MoNDefense",
+   "url": "https://x.com/MoNDefense/status/2104058700172251373",
+   "observedAt": "2026-09-27T04:01:00.000Z",
+   "text": "Turns out, he wasn’t talking about sports cars.\n\n#ROCArmedForces #MobileGunSystem\n#MadeInTaiwan",
+   "title": "Turns out, he wasn’t talking about sports cars. #ROCArmedForces #MobileGunSystem #MadeInTaiwan",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104057531761053855",
+   "author": "Osinttechnical",
+   "url": "https://x.com/Osinttechnical/status/2104057531761053855",
+   "observedAt": "2026-09-27T03:56:21.000Z",
+   "text": "Ukrainian Air Force MiG-29UB Fulcrum scrambling on an intercept this month, afterburners ablaze.",
+   "title": "Ukrainian Air Force MiG-29UB Fulcrum scrambling on an intercept this month, afterburners ablaze.",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2104057390148747555",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2104057390148747555",
+   "observedAt": "2026-09-27T03:55:47.000Z",
+   "text": "In person classes have been suspended for a week in Riyadh.",
+   "title": "In person classes have been suspended for a week in Riyadh.",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2104054152200597524",
+   "author": "burhan_uddin_0",
+   "url": "https://x.com/burhan_uddin_0/status/2104054152200597524",
+   "observedAt": "2026-09-27T03:42:55.000Z",
+   "text": "ISIS members captured alive In Nuristan:\n\nAFG forces intercepted & captured over a dozen ISIS militants crossing into AFG from Pak, while the rest fled back to Pakistan.\n\nPakistan intelligence agency (ISI) is training ISIS terrorists and sending them to other countries in an",
+   "title": "ISIS members captured alive In Nuristan: AFG forces intercepted & captured over a dozen ISIS militants crossing into AFG from Pak, while the rest fled back to P",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104050891137630462",
+   "author": "MajorSaurabhSh1",
+   "url": "https://x.com/MajorSaurabhSh1/status/2104050891137630462",
+   "observedAt": "2026-09-27T03:29:58.000Z",
+   "text": "Join me in paying homage to\n\nLIEUTENANT DHEERENDRA SINGH ATRI\n3 RAJPUT\n\non his birth anniversary today.\nLieutenant Dheerendra Singh Attri has immortalized fighting terrorists at Kupwara in J&K in 2003.\n\n#KnowYourHeroes #VeerYatra #lieutenantdheerendraatri #rajputregiment",
+   "title": "Join me in paying homage to LIEUTENANT DHEERENDRA SINGH ATRI 3 RAJPUT on his birth anniversary today. Lieutenant Dheerendra Singh Attri has immortalized fightin",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104050409329283155",
+   "author": "TheIranianzg3z",
+   "url": "https://x.com/TheIranianzg3z/status/2104050409329283155",
+   "observedAt": "2026-09-27T03:28:03.000Z",
+   "text": "BREAKING: The IRGC Navy reportedly launched a major overnight assault on vessels in the Strait of Hormuz, using anti-ship cruise missiles, drones and fast-attack boats.\n\nAt least three vessels were reportedly hit, while more than 10 missiles were launched. Some reports claim up",
+   "title": "BREAKING: The IRGC Navy reportedly launched a major overnight assault on vessels in the Strait of Hormuz, using anti-ship cruise missiles, drones and fast-attac",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104049336263082060",
+   "author": "nettermike",
+   "url": "https://x.com/nettermike/status/2104049336263082060",
+   "observedAt": "2026-09-27T03:23:47.000Z",
+   "text": "For those that still don’t understand what  Benghazi was all about:\n\n🚨mSo here's the REAL story: \n\nAmbassador Stevens was sent to Benghazi to secretly retrieve US made Stinger Missiles that the State Dept had supplied to Ansar al Sharia in Libya WITHOUT Congressional oversight",
+   "title": "For those that still don’t understand what Benghazi was all about: 🚨mSo here's the REAL story: Ambassador Stevens was sent to Benghazi to secretly retrieve US m",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104049009417428994",
+   "author": "flightradar24",
+   "url": "https://x.com/flightradar24/status/2104049009417428994",
+   "observedAt": "2026-09-27T03:22:29.000Z",
+   "text": "Giant Pandas Ping Ping and Fu Shuang are en route to their new home at the Atlanta Zoo. FedEx has extensive experience in live animal transport and has been the go-to carrier for Pandas for many years. \n\nhttps://\nfr24.com/FDX9756/41d988\n21\n…",
+   "title": "Giant Pandas Ping Ping and Fu Shuang are en route to their new home at the Atlanta Zoo. FedEx has extensive experience in live animal transport and has been the",
+   "theatre": "accounts-disaster-1"
+  },
+  {
+   "postId": "2104048968824926232",
+   "author": "globaltimesnews",
+   "url": "https://x.com/globaltimesnews/status/2104048968824926232",
+   "observedAt": "2026-09-27T03:22:20.000Z",
+   "text": "Since 2023, the Philippines has repeatedly carried out infringement and provocative activities around Chinese islands and reefs in the South China Sea — intruding into adjacent waters, ramming Chinese vessels and attempting to maintain an illegal presence.\nIn response, the China",
+   "title": "Since 2023, the Philippines has repeatedly carried out infringement and provocative activities around Chinese islands and reefs in the South China Sea — intrudi",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2104047621895860420",
+   "author": "mtave0128",
+   "url": "https://x.com/mtave0128/status/2104047621895860420",
+   "observedAt": "2026-09-27T03:16:59.000Z",
+   "text": "building more agents is easy to put on a roadmap.\n\nkilling the wrong one is probably harder.\n\n\n@sleepagotchi\n gives Gotchi Labs a real starting point: users, behavior, revenue history and a live AI product.\n\nbut that shouldn’t mean every future vertical deserves to survive.\n\nsome",
+   "title": "building more agents is easy to put on a roadmap. killing the wrong one is probably harder. @sleepagotchi gives Gotchi Labs a real starting point: users, behavi",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2104046776286392346",
+   "author": "Revelation1217",
+   "url": "https://x.com/Revelation1217/status/2104046776286392346",
+   "observedAt": "2026-09-27T03:13:37.000Z",
+   "text": "Absolute chaos is erupting in the Strait of Hormuz tonight!\n\nIran has unleashed a barrage of anti-ship missiles from Sirik, directly targeting US-escorted vessels in the southern corridor! 💥\n\nMultiple explosions have been confirmed. 🔥🚢",
+   "title": "Absolute chaos is erupting in the Strait of Hormuz tonight! Iran has unleashed a barrage of anti-ship missiles from Sirik, directly targeting US-escorted vessel",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104046616110067892",
+   "author": "AfghanStratEye",
+   "url": "https://x.com/AfghanStratEye/status/2104046616110067892",
+   "observedAt": "2026-09-27T03:12:59.000Z",
+   "text": "How the Afghan government is treating the captured militants",
+   "title": "How the Afghan government is treating the captured militants",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104044437420769410",
+   "author": "defense_civil25",
+   "url": "https://x.com/defense_civil25/status/2104044437420769410",
+   "observedAt": "2026-09-27T03:04:19.000Z",
+   "text": "🚨Alert: With President Trump rejection of the Iranian ceasefire proposal, Iran has launched a new wave of attacks across the Strait of Hormuz. At least 3 vessels have been hit, with a fourth barely escaping attack!!",
+   "title": "🚨Alert: With President Trump rejection of the Iranian ceasefire proposal, Iran has launched a new wave of attacks across the Strait of Hormuz. At least 3 vessel",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104040615298392163",
+   "author": "MeghUpdates",
+   "url": "https://x.com/MeghUpdates/status/2104040615298392163",
+   "observedAt": "2026-09-27T02:49:08.000Z",
+   "text": "Afghan forces have captured Pakistan Army-trained ISIS militants while they were attempting to enter through the disputed Durand Line into Nooristan.\n\nOn camera, they can be seen admitting that the Pakistan Army had trained them to carry out terrorist activities in Afghanistan.",
+   "title": "Afghan forces have captured Pakistan Army-trained ISIS militants while they were attempting to enter through the disputed Durand Line into Nooristan. On camera,",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104036556650459553",
+   "author": "Diplomat_APAC",
+   "url": "https://x.com/Diplomat_APAC/status/2104036556650459553",
+   "observedAt": "2026-09-27T02:33:00.000Z",
+   "text": "Each attack by Pakistan so far has further raised anti-Pakistan sentiment inside Afghanistan. It could embolden the Afghan Taliban as well, who have little incentive to accede to Islamabad’s demands.",
+   "title": "Each attack by Pakistan so far has further raised anti-Pakistan sentiment inside Afghanistan. It could embolden the Afghan Taliban as well, who have little ince",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104036072015683809",
+   "author": "gauravcsawant",
+   "url": "https://x.com/gauravcsawant/status/2104036072015683809",
+   "observedAt": "2026-09-27T02:31:05.000Z",
+   "text": "1993 Mumbai serial blasts 257 killed. No response from India to Pak terror.\n\n1999 IC 814 hijack, J&K assembly, Parliament attack, Kaluchak massacre: Zero deterrence for Pak.\n\nOur temples, markets, trains attacked \n2006 Mumbai: 200 Indians killed.\n26/11 Mumbai: 166 killed. Zero",
+   "title": "1993 Mumbai serial blasts 257 killed. No response from India to Pak terror. 1999 IC 814 hijack, J&K assembly, Parliament attack, Kaluchak massacre: Zero deterre",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104035237831319588",
+   "author": "JMC_Broadcast1",
+   "url": "https://x.com/JMC_Broadcast1/status/2104035237831319588",
+   "observedAt": "2026-09-27T02:27:46.000Z",
+   "text": "🇺🇸🇪🇨 U.S. troops walked into predawn house raids in Ecuador and helped bag a crew tied to Mexico’s Jalisco cartel\n\nAbout 50 SOUTHCOM personnel and DEA agents went with more than 320 Ecuadorian police.\n\nDozens arrested, including the alleged boss and the money man.\n\nFirst time",
+   "title": "🇺🇸🇪🇨 U.S. troops walked into predawn house raids in Ecuador and helped bag a crew tied to Mexico’s Jalisco cartel About 50 SOUTHCOM personnel and DEA agents wen",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2104033884618821653",
+   "author": "Iran_Army_Stan",
+   "url": "https://x.com/Iran_Army_Stan/status/2104033884618821653",
+   "observedAt": "2026-09-27T02:22:23.000Z",
+   "text": "BREAKING: Iran has reportedly started launching a major wave of attacks in the Strait of Hormuz, with at least 4 unconfirmed impacts from Iranian missiles and drones against ships, including a drone strike on a vessel just moments ago.\n\nInitial reports indicate an Iranian cruise",
+   "title": "BREAKING: Iran has reportedly started launching a major wave of attacks in the Strait of Hormuz, with at least 4 unconfirmed impacts from Iranian missiles and d",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104032929080864780",
+   "author": "ME_Observer_",
+   "url": "https://x.com/ME_Observer_/status/2104032929080864780",
+   "observedAt": "2026-09-27T02:18:35.000Z",
+   "text": "⚡️🚨 Digest — 23:11–02:11 UTC\n\nSatellite data cited by Rasd Akhbar Shehaba (NOAA-20/21 passes at 21:12 and 21:54 UTC) detected no thermal hot spots or fires in the Strait of Hormuz, casting doubt on earlier strike claims, even as IRGC Navy warns any ship crossing outside Iran's",
+   "title": "⚡️🚨 Digest — 23:11–02:11 UTC Satellite data cited by Rasd Akhbar Shehaba (NOAA-20/21 passes at 21:12 and 21:54 UTC) detected no thermal hot spots or fires in th",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104030603691860379",
+   "author": "Megatron_ron",
+   "url": "https://x.com/Megatron_ron/status/2104030603691860379",
+   "observedAt": "2026-09-27T02:09:21.000Z",
+   "text": "BREAKING: 🇺🇸In the past few hours, the IRGC Navy has begun substantially escalating its targeting of violating vessels in the Strait of Hormuz\n\nAnti-ship cruise missiles and drones were launched at various vessels. Simultaneously, fast-attack boats of the IRGC Navy are engaging",
+   "title": "BREAKING: 🇺🇸In the past few hours, the IRGC Navy has begun substantially escalating its targeting of violating vessels in the Strait of Hormuz Anti-ship cruise ",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104030096994562276",
+   "author": "CharlieSue_USA",
+   "url": "https://x.com/CharlieSue_USA/status/2104030096994562276",
+   "observedAt": "2026-09-27T02:07:20.000Z",
+   "text": "Here’s a list of the ongoing U.S. involvement around the world.  Keep in mind we provide support to 175 of 195 countries around the world - many of which don’t provide defense or provide military intelligence like Israel 🇮🇱:\n🗽 Russia 🇷🇺 Ukraine 🇺🇦 war: Full-scale fighting",
+   "title": "Here’s a list of the ongoing U.S. involvement around the world. Keep in mind we provide support to 175 of 195 countries around the world - many of which don’t p",
+   "theatre": "sudan-horn"
+  },
+  {
+   "postId": "2104028590073413702",
+   "author": "apexguardhq",
+   "url": "https://x.com/apexguardhq/status/2104028590073413702",
+   "observedAt": "2026-09-27T02:01:21.000Z",
+   "text": "Saturday September 26th 2026 [Evening News Brief]\n\n🟥ICE officers across the country were reportedly instructed this weekend to cease arrests of non-criminal immigrants - Daily Wire\n\n🟥 Terrorists (TTP) ambushed vehicles with injured and first responders after their initial VBIED",
+   "title": "Saturday September 26th 2026 [Evening News Brief] 🟥ICE officers across the country were reportedly instructed this weekend to cease arrests of non-criminal immi",
+   "theatre": "sudan-horn"
+  },
+  {
+   "postId": "2104028252448641495",
+   "author": "UN_News_Centre",
+   "url": "https://x.com/UN_News_Centre/status/2104028252448641495",
+   "observedAt": "2026-09-27T02:00:00.000Z",
+   "text": "From a standing ovation for the UN Secretary-General to high-level meetings bringing world leaders together, the UN General Assembly is once again at the centre of global diplomacy.\n\nCheck UN News' latest highlights and stories from #UNGA ⤵️\n\nhttps://\nnews.un.org/en/tags/unga81",
+   "title": "From a standing ovation for the UN Secretary-General to high-level meetings bringing world leaders together, the UN General Assembly is once again at the centre",
+   "theatre": "israel-gaza-lebanon"
+  },
+  {
+   "postId": "2104025548540575884",
+   "author": "BlueWolfNFTs",
+   "url": "https://x.com/BlueWolfNFTs/status/2104025548540575884",
+   "observedAt": "2026-09-27T01:49:16.000Z",
+   "text": "#bluesnews - crypto and stock news with my views! \n\nGM if Stallone taking steroids shocks you. Bulimia did a bit. \n\nIt’s Sunday the funday down under. Yesterday was hot af. 35C or 95F. But today is cold and wet. That’s spring for you. \n\nIt’s time for me to take a look around and",
+   "title": "#bluesnews - crypto and stock news with my views! GM if Stallone taking steroids shocks you. Bulimia did a bit. It’s Sunday the funday down under. Yesterday was",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2104025062453965225",
+   "author": "KyivIndependent",
+   "url": "https://x.com/KyivIndependent/status/2104025062453965225",
+   "observedAt": "2026-09-27T01:47:20.000Z",
+   "text": "⚡️German, Russian foreign ministers meet for 1st time since full-scale war against Ukraine.",
+   "title": "⚡️German, Russian foreign ministers meet for 1st time since full-scale war against Ukraine.",
+   "theatre": "accounts-ukraine-1"
+  },
+  {
+   "postId": "2104024831008117235",
+   "author": "HardHatVetX",
+   "url": "https://x.com/HardHatVetX/status/2104024831008117235",
+   "observedAt": "2026-09-27T01:46:25.000Z",
+   "text": "For those that still don’t understand what  Benghazi was all about:\n\n🚨So here's the REAL story: \n\nAmbassador Stevens was sent to Benghazi to secretly retrieve US made Stinger Missiles that the State Dept had supplied to Ansar al Sharia in Libya WITHOUT Congressional oversight or",
+   "title": "For those that still don’t understand what Benghazi was all about: 🚨So here's the REAL story: Ambassador Stevens was sent to Benghazi to secretly retrieve US ma",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104020756057485541",
+   "author": "MajorSaurabhSh1",
+   "url": "https://x.com/MajorSaurabhSh1/status/2104020756057485541",
+   "observedAt": "2026-09-27T01:30:13.000Z",
+   "text": "Homage to\n\nMAJOR GANESH MADAPPA\n36 RR - 82 ARMOURED\n\non his Balidan Diwas today.\nMajor Ganesh Madappa has immortalized fighting terrorists at Budgam in Kashmir in 1995.\n\nMajor Ganesh Madappa is survived by his wife Smt Nirupa Madappa and daughter Tanavi.\n\n#knowyourheroes",
+   "title": "Homage to MAJOR GANESH MADAPPA 36 RR - 82 ARMOURED on his Balidan Diwas today. Major Ganesh Madappa has immortalized fighting terrorists at Budgam in Kashmir in",
+   "theatre": "south-asia"
+  },
+  {
+   "postId": "2104018230885191901",
+   "author": "Currentreport1",
+   "url": "https://x.com/Currentreport1/status/2104018230885191901",
+   "observedAt": "2026-09-27T01:20:11.000Z",
+   "text": "Multiple explosions have been reported in the Strait of Hormuz over the past few hours.\n\nIran reportedly launched 6 anti-ship missiles at vessels attempting to pass through the strait under US protection on the Omani side.\n\nIran's PGSA reports that ships later contacted Iranian",
+   "title": "Multiple explosions have been reported in the Strait of Hormuz over the past few hours. Iran reportedly launched 6 anti-ship missiles at vessels attempting to p",
+   "theatre": "ukraine-russia"
+  },
+  {
+   "postId": "2104015604844032377",
+   "author": "criticalthreats",
+   "url": "https://x.com/criticalthreats/status/2104015604844032377",
+   "observedAt": "2026-09-27T01:09:45.000Z",
+   "text": "Ukrainian forces appear to be shifting their counteroffensive tactics toward systematically targeting Russian efforts to reinforce initial Russian infiltrations rather than focusing on clearing the infiltrators immediately in various sectors of the frontline.",
+   "title": "Ukrainian forces appear to be shifting their counteroffensive tactics toward systematically targeting Russian efforts to reinforce initial Russian infiltrations",
+   "theatre": "accounts-mideast-1"
+  },
+  {
+   "postId": "2104015464603214033",
+   "author": "YourAnonCentral",
+   "url": "https://x.com/YourAnonCentral/status/2104015464603214033",
+   "observedAt": "2026-09-27T01:09:12.000Z",
+   "text": "Russia has launched more than 2,100 missiles, including 950 ballistic missiles, and 63,000 attack drones at Ukraine in 2026, From January through August, the UN recorded 15,280 civilian casualties in Ukraine—55% more than the same period last year.",
+   "title": "Russia has launched more than 2,100 missiles, including 950 ballistic missiles, and 63,000 attack drones at Ukraine in 2026, From January through August, the UN",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2104013157341839828",
+   "author": "MoNDefense",
+   "url": "https://x.com/MoNDefense/status/2104013157341839828",
+   "observedAt": "2026-09-27T01:00:02.000Z",
+   "text": "2 sorties of PLA aircraft, 5 PLAN vessels and 6 official ships operating around Taiwan detected up until 6 a.m. (UTC+8) today. #ROCArmedForces have monitored the situation and responded.",
+   "title": "2 sorties of PLA aircraft, 5 PLAN vessels and 6 official ships operating around Taiwan detected up until 6 a.m. (UTC+8) today. #ROCArmedForces have monitored th",
+   "theatre": "red-sea"
+  },
+  {
+   "postId": "2103995581567746461",
+   "author": "CrisisGroup",
+   "url": "https://x.com/CrisisGroup/status/2103995581567746461",
+   "observedAt": "2026-09-26T23:50:11.000Z",
+   "text": "Criminal turf wars are raging in the Mexican state of Sinaloa, killing and displacing thousands. The government should harness U.S. pressure to tackle the official collusion and corruption that sustains organised crime.",
+   "title": "Criminal turf wars are raging in the Mexican state of Sinaloa, killing and displacing thousands. The government should harness U.S. pressure to tackle the offic",
+   "theatre": "accounts-africa-1"
+  },
+  {
+   "postId": "2103988364999299371",
+   "author": "yasminalombaert",
+   "url": "https://x.com/yasminalombaert/status/2103988364999299371",
+   "observedAt": "2026-09-26T23:21:31.000Z",
+   "text": "The Kremlin’s New \"Club for Dictators\":  \"Eurasian Charter of Diversity and Multipolarity in the 21st Century” - actually a safe space  for tyrants.\n\nLavrov: \n\"We proposed forming a new Eurasian security architecture as a foundation for the peaceful and progressive development of",
+   "title": "The Kremlin’s New \"Club for Dictators\": \"Eurasian Charter of Diversity and Multipolarity in the 21st Century” - actually a safe space for tyrants. Lavrov: \"We p",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2103983702363775093",
+   "author": "OInnocxnt",
+   "url": "https://x.com/OInnocxnt/status/2103983702363775093",
+   "observedAt": "2026-09-26T23:02:59.000Z",
+   "text": "Christians gather for Pastor Jerry Eze's conference and you turn it into a foreign direct investment class. meanwhile, thousands have been killed by Islamic terrorists in Nigeria; no one has asked about the tax deficit from their deaths.",
+   "title": "Christians gather for Pastor Jerry Eze's conference and you turn it into a foreign direct investment class. meanwhile, thousands have been killed by Islamic ter",
+   "theatre": "sahel"
+  },
+  {
+   "postId": "2103975540856373636",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2103975540856373636",
+   "observedAt": "2026-09-26T22:30:33.000Z",
+   "text": "Latvia says its eastern border surveillance system is being deliberately sabotaged, with cables cut and equipment cabinets damaged along the Russian and Belarusian borders. Officials blame growing provocations backed by the \"aggressor state\"",
+   "title": "Latvia says its eastern border surveillance system is being deliberately sabotaged, with cables cut and equipment cabinets damaged along the Russian and Belarus",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103975401706094822",
+   "author": "MarioNawfal",
+   "url": "https://x.com/MarioNawfal/status/2103975401706094822",
+   "observedAt": "2026-09-26T22:30:00.000Z",
+   "text": "🇺🇸🇪🇨 U.S. troops walked into predawn house raids in Ecuador and helped bag a crew tied to Mexico’s Jalisco cartel\n\nAbout 50 SOUTHCOM personnel and DEA agents went with more than 320 Ecuadorian police.\n\nDozens arrested, including the alleged boss and the money man.\n\nFirst time",
+   "title": "🇺🇸🇪🇨 U.S. troops walked into predawn house raids in Ecuador and helped bag a crew tied to Mexico’s Jalisco cartel About 50 SOUTHCOM personnel and DEA agents wen",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2103973488306659612",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2103973488306659612",
+   "observedAt": "2026-09-26T22:22:24.000Z",
+   "text": "U.S. Department of War Enhances Force Protection Condition after Unspecified Threat to Military Base Hosting Strategic Bombers",
+   "title": "U.S. Department of War Enhances Force Protection Condition after Unspecified Threat to Military Base Hosting Strategic Bombers",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103973154490122254",
+   "author": "sentdefender",
+   "url": "https://x.com/sentdefender/status/2103973154490122254",
+   "observedAt": "2026-09-26T22:21:04.000Z",
+   "text": "As it relates to the situation with Iran and the Houthis, at the time of writing, the two judgments below remain the same. \n\nWe’ll have a full updated regional assessment in the coming days on Iran, the likelihood of an expansion to the war in Yemen, and a post-UNGA regional",
+   "title": "As it relates to the situation with Iran and the Houthis, at the time of writing, the two judgments below remain the same. We’ll have a full updated regional as",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103972936461754726",
+   "author": "flightradar24",
+   "url": "https://x.com/flightradar24/status/2103972936461754726",
+   "observedAt": "2026-09-26T22:20:12.000Z",
+   "text": "On this week’s episode of our AvTalk podcast, the millisecond glitch that resulted in 2,000 canceled UK flights, plus the much for mundane reason airspace in the northeast US was snarled for a day. \nhttps://\nflightradar24.com/blog/avtalk-po\ndcast/avtalk-388\n…",
+   "title": "On this week’s episode of our AvTalk podcast, the millisecond glitch that resulted in 2,000 canceled UK flights, plus the much for mundane reason airspace in th",
+   "theatre": "accounts-disaster-1"
+  },
+  {
+   "postId": "2103971633136378356",
+   "author": "NewsHour",
+   "url": "https://x.com/NewsHour/status/2103971633136378356",
+   "observedAt": "2026-09-26T22:15:01.000Z",
+   "text": "Rain began falling Saturday as Hurricane Nolo bore down on the Hawaiian Islands, with officials warning about the potential for flash floods, dangerous winds and extreme surf in areas still recovering from previous storms.",
+   "title": "Rain began falling Saturday as Hurricane Nolo bore down on the Hawaiian Islands, with officials warning about the potential for flash floods, dangerous winds an",
+   "theatre": "disaster"
+  },
+  {
+   "postId": "2103970211175047656",
+   "author": "sentdefender",
+   "url": "https://x.com/sentdefender/status/2103970211175047656",
+   "observedAt": "2026-09-26T22:09:22.000Z",
+   "text": "The security posture at a number of airbases with a USAF presence across Britain has reportedly even raised in the past couple of days, with plane spotters and other sources now saying that local law enforcement, at the request of the U.S. have limited and/or stopped traffic on",
+   "title": "The security posture at a number of airbases with a USAF presence across Britain has reportedly even raised in the past couple of days, with plane spotters and ",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103965065112142235",
+   "author": "adam_wola",
+   "url": "https://x.com/adam_wola/status/2103965065112142235",
+   "observedAt": "2026-09-26T21:48:55.000Z",
+   "text": "\"The US has long provided Ecuador and other LatAm governments with intelligence, equipment and training… But until now, U.S. military personnel have mostly played a peripheral role in local operations, rather than participating directly in drug raids.\"",
+   "title": "\"The US has long provided Ecuador and other LatAm governments with intelligence, equipment and training… But until now, U.S. military personnel have mostly play",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2103958151833719199",
+   "author": "sentdefender",
+   "url": "https://x.com/sentdefender/status/2103958151833719199",
+   "observedAt": "2026-09-26T21:21:27.000Z",
+   "text": "Following a number of reported explosions in the vicinity of Iran’s Qeshm Island, local reports are now saying that Iran has again launched missiles into the strait. Likely against commercial shipping. While it’s yet unclear whether the U.S. is actively responding, recent attacks",
+   "title": "Following a number of reported explosions in the vicinity of Iran’s Qeshm Island, local reports are now saying that Iran has again launched missiles into the st",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103957682780885311",
+   "author": "TonySeruga",
+   "url": "https://x.com/TonySeruga/status/2103957682780885311",
+   "observedAt": "2026-09-26T21:19:35.000Z",
+   "text": "We just blocked over 65,000 bot farm accounts that were running denial-of-service (DoS/DDoS) attacks against our government clients.\n\nInterestingly, these are the same IP blocks that post social media drivel; they can pivot from one passion to the next in a nanosecond.",
+   "title": "We just blocked over 65,000 bot farm accounts that were running denial-of-service (DoS/DDoS) attacks against our government clients. Interestingly, these are th",
+   "theatre": "cyber"
+  },
+  {
+   "postId": "2103956535982363086",
+   "author": "Archer83Able",
+   "url": "https://x.com/Archer83Able/status/2103956535982363086",
+   "observedAt": "2026-09-26T21:15:02.000Z",
+   "text": "It's a few minutes past midnight, September 26, 1983. Lieutenant Colonel Stanislav Petrov is performing his night shift as a duty officer inside the Serpukhov-15 bunker south of Moscow. His main job - watching the screens of the \"Oko,\" the Soviet Union’s new space-based",
+   "title": "It's a few minutes past midnight, September 26, 1983. Lieutenant Colonel Stanislav Petrov is performing his night shift as a duty officer inside the Serpukhov-1",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103956447616970787",
+   "author": "FaytuksNetwork",
+   "url": "https://x.com/FaytuksNetwork/status/2103956447616970787",
+   "observedAt": "2026-09-26T21:14:41.000Z",
+   "text": "Residents of Qeshm Island report hearing 5-6 explosions coming from the direction of the Strait of Hormuz between roughly 12:00 and 12:30 local time.\n\nOne report says the blasts were far out at sea, a long distance from Qeshm's coast.",
+   "title": "Residents of Qeshm Island report hearing 5-6 explosions coming from the direction of the Strait of Hormuz between roughly 12:00 and 12:30 local time. One report",
+   "theatre": "accounts-verify-1"
+  },
+  {
+   "postId": "2103954081534579165",
+   "author": "MizarVision",
+   "url": "https://x.com/MizarVision/status/2103954081534579165",
+   "observedAt": "2026-09-26T21:05:17.000Z",
+   "text": "🇰🇵 NORTH KOREA | New warship construction underway at Chongjin Shipyard\n\nNew satellite imagery shows the beginning of another major naval construction project at North Korea’s Chongjin Shipyard on the country’s northeast coast.\n\nPlanet Labs imagery from August 6, 2026 shows red",
+   "title": "🇰🇵 NORTH KOREA | New warship construction underway at Chongjin Shipyard New satellite imagery shows the beginning of another major naval construction project at",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2103953344267952170",
+   "author": "season879",
+   "url": "https://x.com/season879/status/2103953344267952170",
+   "observedAt": "2026-09-26T21:02:21.000Z",
+   "text": "Muslims will be up in arms and probably attack me… so here is the info…\nthe chart is based on UNICEF (and related World Bank/IndexMundi compilations of UNICEF Childinfo) data on the percentage of women aged 15–49 who have undergone female genital mutilation (FGM). \nThe figures",
+   "title": "Muslims will be up in arms and probably attack me… so here is the info… the chart is based on UNICEF (and related World Bank/IndexMundi compilations of UNICEF C",
+   "theatre": "sahel"
+  },
+  {
+   "postId": "2103953071487545508",
+   "author": "MizarVision",
+   "url": "https://x.com/MizarVision/status/2103953071487545508",
+   "observedAt": "2026-09-26T21:01:16.000Z",
+   "text": "🇰🇵 NORTH KOREA | Satellite imagery reveals new warship construction on both coasts\n\nNew high-resolution satellite imagery indicates that North Korea has begun assembling new large surface combatants at shipyards on both its western and eastern coasts.\n\nAt Nampho Shipyard, Maxar",
+   "title": "🇰🇵 NORTH KOREA | Satellite imagery reveals new warship construction on both coasts New high-resolution satellite imagery indicates that North Korea has begun as",
+   "theatre": "indo-pacific"
+  },
+  {
+   "postId": "2103949989638533373",
+   "author": "Baldo04555156",
+   "url": "https://x.com/Baldo04555156/status/2103949989638533373",
+   "observedAt": "2026-09-26T20:49:01.000Z",
+   "text": "💥 Ecuador fought the cartel.\nMexico’s government fought the photo-op.\nSame CJNG. Same pipeline. One country opened the door to hit them. The other hid behind “sovereignty” while the product kept walking north.\n\nThat’s not an ally. That’s a bottleneck with a flag.",
+   "title": "💥 Ecuador fought the cartel. Mexico’s government fought the photo-op. Same CJNG. Same pipeline. One country opened the door to hit them. The other hid behind “s",
+   "theatre": "americas"
+  },
+  {
+   "postId": "2103940249273692591",
+   "author": "jambuki888",
+   "url": "https://x.com/jambuki888/status/2103940249273692591",
+   "observedAt": "2026-09-26T20:10:19.000Z",
+   "text": "Same week: Trump and Xi smiled for cameras. Pelosi hit China on Tibet. One picture looks sunny, the other picture looks dastardly. \n\nSpeaker in the video Jason Smith \n@ShangguanJiewen\n \n\nTLDR - Tibet used to be a brutal theocratic feudal state. Land owners and Serf owners were",
+   "title": "Same week: Trump and Xi smiled for cameras. Pelosi hit China on Tibet. One picture looks sunny, the other picture looks dastardly. Speaker in the video Jason Sm",
+   "theatre": "indo-pacific"
+  }
+ ]
+}

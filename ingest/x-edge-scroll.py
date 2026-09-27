@@ -10,7 +10,7 @@ ingest/x-scroll-browser-handoff.mjs merges.
 Usage: python3 x_edge_scroll.py [--out PATH] [--max-age-h 24] [--queries N]
 """
 from __future__ import annotations
-import argparse, json, random, subprocess, time
+import argparse, json, os, random, subprocess, time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -85,20 +85,82 @@ def osa(script: str, timeout=30) -> str:
         raise RuntimeError((p.stderr or p.stdout).strip()[:300])
     return p.stdout.strip()
 
+# --- Target window: the Edge window that already holds the most x.com tabs ---------
+# (never the front window, so the user's other tabs are left alone). One worker tab
+# inside that window is reused for every search. GSP_X_WINDOW_ID overrides the pick.
+_WIN = {"id": None, "tab": None}
+
+def target_window() -> str:
+    if _WIN["id"]:
+        return _WIN["id"]
+    forced = os.environ.get("GSP_X_WINDOW_ID")
+    if forced:
+        _WIN["id"] = forced
+        return forced
+    out = osa(f'''tell application "{APP}"
+  set res to ""
+  repeat with w in windows
+    set n to 0
+    repeat with t in tabs of w
+      if (URL of t) contains "x.com/" then set n to n + 1
+    end repeat
+    set res to res & (id of w) & ":" & n & linefeed
+  end repeat
+  return res
+end tell''')
+    best, best_n = None, 0
+    for line in out.splitlines():
+        if ":" not in line:
+            continue
+        wid, n = line.rsplit(":", 1)
+        if int(n) > best_n:
+            best, best_n = wid.strip(), int(n)
+    if not best:
+        best = osa(f'tell application "{APP}" to return id of (make new window)')
+    _WIN["id"] = best
+    return best
+
+def _tab_ref() -> str:
+    return f'tab id {_WIN["tab"]} of window id {target_window()}'
+
 def js(code: str) -> str:
     JS_PATH.write_text(code, encoding="utf-8")
     return osa(f'set js to read POSIX file "{JS_PATH}" as «class utf8»\n'
-               f'tell application "{APP}" to execute active tab of front window javascript js')
+               f'tell application "{APP}" to execute {_tab_ref()} javascript js')
 
 def open_tab(url: str):
-    osa(f'''tell application "{APP}"
-  if (count of windows) = 0 then make new window
-  make new tab at end of tabs of front window with properties {{URL:"{url}"}}
-  set active tab index of front window to (count of tabs of front window)
+    wid = target_window()
+    if _WIN["tab"]:
+        try:
+            osa(f'tell application "{APP}" to set URL of {_tab_ref()} to "{url}"')
+            osa(f'''tell application "{APP}"
+  set w to window id {wid}
+  repeat with i from 1 to count of tabs of w
+    if id of tab i of w is {_WIN["tab"]} then set active tab index of w to i
+  end repeat
 end tell''')
+            return
+        except RuntimeError:
+            _WIN["tab"] = None
+    tid = osa(f'''tell application "{APP}"
+  set w to window id {wid}
+  set t to make new tab at end of tabs of w with properties {{URL:"{url}"}}
+  set active tab index of w to (count of tabs of w)
+  return id of t
+end tell''')
+    _WIN["tab"] = tid.strip()
 
 def close_tab():
-    osa(f'tell application "{APP}" to close active tab of front window')
+    # Worker tab is reused across searches; closed once at the end of the session.
+    pass
+
+def close_worker():
+    if _WIN["tab"]:
+        try:
+            osa(f'tell application "{APP}" to close {_tab_ref()}')
+        except RuntimeError:
+            pass
+        _WIN["tab"] = None
 
 def human_sleep(lo, hi):
     time.sleep(random.uniform(lo, hi))
@@ -169,6 +231,7 @@ def main():
            "startedAt": started.isoformat(), "maxAgeHours": a.max_age_h, "runs": runs,
            "pointers": sorted(pointers.values(), key=lambda p: p["observedAt"], reverse=True)}
     Path(a.out).write_text(json.dumps(doc, indent=1, ensure_ascii=False))
+    close_worker()
     print(f"DONE {len(pointers)} fresh posts -> {a.out}", flush=True)
 
 if __name__ == "__main__":
