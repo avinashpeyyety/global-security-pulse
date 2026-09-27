@@ -8,9 +8,9 @@
     "pctChange20d": -1.33,
     "adverseStreak": 1,
     "latestValue": 3029.45,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "ndx",
@@ -21,22 +21,9 @@
     "pctChange20d": 3.26,
     "adverseStreak": 0,
     "latestValue": 30608.130859375,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
-  },
-  {
-    "seriesId": "brent",
-    "seriesName": "Brent Crude",
-    "zScore": 1.43,
-    "pctChange1d": -2.14,
-    "pctChange5d": 0.43,
-    "pctChange20d": 16.3,
-    "adverseStreak": 0,
-    "latestValue": 104.31999969482422,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
-    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "eurusd",
@@ -47,9 +34,9 @@
     "pctChange20d": -1.62,
     "adverseStreak": 0,
     "latestValue": 1.1401208639144897,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "spx",
@@ -60,9 +47,9 @@
     "pctChange20d": 0.16,
     "adverseStreak": 0,
     "latestValue": 7743.41015625,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "dxy",
@@ -73,9 +60,9 @@
     "pctChange20d": 1.83,
     "adverseStreak": 0,
     "latestValue": 100.97000122070312,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "copper",
@@ -86,9 +73,9 @@
     "pctChange20d": -0.24,
     "adverseStreak": 5,
     "latestValue": 4.2,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "vix",
@@ -99,9 +86,9 @@
     "pctChange20d": 3.05,
     "adverseStreak": 0,
     "latestValue": 14.869999885559082,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "wti",
@@ -112,9 +99,9 @@
     "pctChange20d": 10.63,
     "adverseStreak": 0,
     "latestValue": 92.41000366210938,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "usdjpy",
@@ -125,9 +112,22 @@
     "pctChange20d": -1.83,
     "adverseStreak": 0,
     "latestValue": 157.18499755859375,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
+  },
+  {
+    "seriesId": "brent",
+    "seriesName": "Brent Crude",
+    "zScore": 0.7,
+    "pctChange1d": -8.59,
+    "pctChange5d": -6.19,
+    "pctChange20d": 8.63,
+    "adverseStreak": 0,
+    "latestValue": 97.44000244140625,
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
+    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "dax",
@@ -138,9 +138,9 @@
     "pctChange20d": -4.37,
     "adverseStreak": 0,
     "latestValue": 25408.640625,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "fedfunds",
@@ -151,9 +151,9 @@
     "pctChange20d": 0.19,
     "adverseStreak": 3,
     "latestValue": 5.32,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "nky",
@@ -164,9 +164,9 @@
     "pctChange20d": 0.77,
     "adverseStreak": 0,
     "latestValue": 66364.203125,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   },
   {
     "seriesId": "gold",
@@ -177,8 +177,8 @@
     "pctChange20d": -7.35,
     "adverseStreak": 1,
     "latestValue": 4321.2001953125,
-    "evaluatedAt": "2026-09-26T23:27:16.220Z",
+    "evaluatedAt": "2026-09-27T13:24:56.848Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-09-26"
+    "snapshot": "live@2026-09-27"
   }
 ]
