@@ -38,8 +38,32 @@ const FEEDS = [
     reliability: 'B',
     region: 'Middle East',
   },
-  // Reuters World / AP free RSS probed 2026-09 — blocked, hijacked, or HTML-only; skipped.
-  // (feeds.reuters.com 401; reutersagency 404; apnews output=rss is HTML; feedburner reuters ≠ Reuters)
+  // v0.2 feed pack (probed 2026-09-27 from box: all HTTP 200 with fresh items)
+  { id: 'france24', name: 'France 24', url: 'https://www.france24.com/en/rss', reliability: 'A', region: 'Global' },
+  { id: 'dw-world', name: 'DW World', url: 'https://rss.dw.com/rdf/rss-en-world', reliability: 'A', region: 'Global' },
+  { id: 'npr-world', name: 'NPR World', url: 'https://feeds.npr.org/1004/rss.xml', reliability: 'A', region: 'Global' },
+  { id: 'nyt-world', name: 'NYT World', url: 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', reliability: 'A', region: 'Global' },
+  { id: 'sky-world', name: 'Sky News World', url: 'https://feeds.skynews.com/feeds/rss/world.xml', reliability: 'A', region: 'Global' },
+  { id: 'cbs-world', name: 'CBS World', url: 'https://www.cbsnews.com/latest/rss/world', reliability: 'A', region: 'Global' },
+  { id: 'un-news', name: 'UN News', url: 'https://news.un.org/feed/subscribe/en/news/all/rss.xml', reliability: 'A', region: 'Global' },
+  { id: 'reliefweb', name: 'ReliefWeb', url: 'https://reliefweb.int/updates/rss.xml', reliability: 'A', region: 'Global', layer: 'disaster' },
+  { id: 'guardian-ukraine', name: 'Guardian Ukraine', url: 'https://www.theguardian.com/world/ukraine/rss', reliability: 'A', region: 'Europe' },
+  { id: 'times-of-israel', name: 'Times of Israel', url: 'https://www.timesofisrael.com/feed/', reliability: 'B', region: 'Middle East' },
+  { id: 'diplomat', name: 'The Diplomat', url: 'https://thediplomat.com/feed/', reliability: 'A', region: 'Asia' },
+  { id: 'scmp-asia', name: 'SCMP', url: 'https://www.scmp.com/rss/91/feed', reliability: 'B', region: 'Asia' },
+  { id: 'africanews', name: 'Africanews', url: 'https://www.africanews.com/feed/rss', reliability: 'B', region: 'Africa' },
+  { id: 'crisisgroup', name: 'Crisis Group', url: 'https://www.crisisgroup.org/rss.xml', reliability: 'A', region: 'Global' },
+  { id: 'breaking-defense', name: 'Breaking Defense', url: 'https://breakingdefense.com/feed/', reliability: 'A', region: 'Global' },
+  { id: 'defense-news', name: 'Defense News', url: 'https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml', reliability: 'A', region: 'Global' },
+  { id: 'gcaptain', name: 'gCaptain', url: 'https://gcaptain.com/feed/', reliability: 'A', region: 'Global', layer: 'maritime' },
+  { id: 'maritime-exec', name: 'Maritime Executive', url: 'https://www.maritime-executive.com/articles.rss', reliability: 'A', region: 'Global', layer: 'maritime' },
+  { id: 'cisa', name: 'CISA advisories', url: 'https://www.cisa.gov/cybersecurity-advisories/all.xml', reliability: 'A', region: 'Americas', layer: 'cyber' },
+  { id: 'bleepingcomputer', name: 'BleepingComputer', url: 'https://www.bleepingcomputer.com/feed/', reliability: 'A', region: 'Global', layer: 'cyber' },
+  { id: 'the-record', name: 'The Record', url: 'https://therecord.media/feed', reliability: 'A', region: 'Global', layer: 'cyber' },
+  { id: 'gdacs', name: 'GDACS alerts', url: 'https://www.gdacs.org/xml/rss.xml', reliability: 'A', region: 'Global', layer: 'disaster' },
+  { id: 'usgs-m45', name: 'USGS M4.5+ quakes', url: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.atom', reliability: 'A', region: 'Global', layer: 'disaster' },
+  { id: 'bellingcat', name: 'Bellingcat', url: 'https://www.bellingcat.com/feed/', reliability: 'A', region: 'Global' },
+  // Skipped: Reuters/AP (no clean free RSS), ISW (403), Kyiv Independent (404), MEE/Defense Post (empty).
 ];
 
 const LAYER_GUESS = [
@@ -104,9 +128,18 @@ function parseItems(xml, limit = 12) {
     const pub =
       decodeXml((block.match(/<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i) || [])[1] || '') ||
       decodeXml((block.match(/<updated[^>]*>([\s\S]*?)<\/updated>/i) || [])[1] || '') ||
-      decodeXml((block.match(/<published[^>]*>([\s\S]*?)<\/published>/i) || [])[1] || '');
+      decodeXml((block.match(/<published[^>]*>([\s\S]*?)<\/published>/i) || [])[1] || '') ||
+      decodeXml((block.match(/<dc:date[^>]*>([\s\S]*?)<\/dc:date>/i) || [])[1] || '');
     if (!title) continue;
-    items.push({ title, link, desc, pub });
+    // Native coordinates (USGS georss:point, GDACS geo:lat/geo:long) + GDACS alert level.
+    let point = null;
+    const gp = block.match(/<georss:point>\s*(-?[\d.]+)\s+(-?[\d.]+)/i);
+    const gl = block.match(/<geo:lat>\s*(-?[\d.]+)/i);
+    const gn = block.match(/<geo:long>\s*(-?[\d.]+)/i);
+    if (gp) point = { lat: Number(gp[1]), lon: Number(gp[2]) };
+    else if (gl && gn) point = { lat: Number(gl[1]), lon: Number(gn[1]) };
+    const alert = ((block.match(/<gdacs:alertlevel>([^<]+)/i) || [])[1] || '').trim();
+    items.push({ title, link, desc, pub, point, alert });
   }
   return items;
 }
@@ -143,16 +176,20 @@ async function fetchFeed(feed) {
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const xml = await res.text();
-  const items = parseItems(xml, 10);
+  const MAX_AGE_MS = Number(process.env.GSP_RSS_MAX_AGE_H || 72) * 3600e3;
+  const items = parseItems(xml, 10).filter((it) => {
+    const t = new Date(it.pub).getTime();
+    return !Number.isFinite(t) || Date.now() - t <= MAX_AGE_MS;
+  });
   const now = new Date().toISOString();
   return items.map((it, i) => {
     const sev = severityFromTitle(it.title);
     const observed = it.pub ? new Date(it.pub) : new Date(Date.now() - i * 3600e3);
     const title = it.title.slice(0, 160);
     const summary = (it.desc || it.title).slice(0, 280);
-    const layer = guessLayer(`${it.title} ${it.desc}`);
+    const layer = feed.layer || guessLayer(`${it.title} ${it.desc}`);
     const falloutRisk = severityToFallout(sev);
-    const geo = resolveEventGeo({
+    let geo = resolveEventGeo({
       title,
       summary,
       region: feed.region,
@@ -161,6 +198,18 @@ async function fetchFeed(feed) {
       jitterIndex: i,
       jitterSalt: slugId(feed.id, it.title),
     });
+    // Hazard feeds with exact coords: pin significant events directly.
+    const mag = Number((it.title.match(/^M\s*([\d.]+)/) || [])[1]);
+    const significantHazard =
+      it.point &&
+      Number.isFinite(it.point.lat) &&
+      ((feed.id === 'usgs-m45' && mag >= 5.0) || (feed.id === 'gdacs' && /orange|red/i.test(it.alert)));
+    if (significantHazard) {
+      geo.lat = Math.round(it.point.lat * 100) / 100;
+      geo.lon = Math.round(it.point.lon * 100) / 100;
+      geo.mapEligible = true;
+      if (!geo.region || geo.region === 'Global') geo.region = feed.region;
+    }
     return {
       id: slugId(feed.id, it.title),
       title,
@@ -214,9 +263,12 @@ async function main() {
 
   const incoming = [];
   const notes = [];
-  for (const feed of FEEDS) {
+  const settled = await Promise.allSettled(FEEDS.map((f) => fetchFeed(f)));
+  for (const [idx, feed] of FEEDS.entries()) {
     try {
-      const items = await fetchFeed(feed);
+      const r = settled[idx];
+      if (r.status === 'rejected') throw r.reason;
+      const items = r.value;
       incoming.push(...items);
       notes.push(`${feed.id}:${items.length}`);
       console.log(`  rss ${feed.id}: ${items.length} items`);
