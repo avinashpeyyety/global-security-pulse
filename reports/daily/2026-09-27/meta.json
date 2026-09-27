@@ -1,9 +1,9 @@
 {
   "date": "2026-09-27",
-  "generatedAt": "2026-09-27T08:09:02.100Z",
+  "generatedAt": "2026-09-27T08:10:22.642Z",
   "packageId": "daily-2026-09-27",
-  "updatedAt": "2026-09-27T08:09:02.100Z",
-  "updatedAtLabel": "Updated 3:09 AM CT Sep 27",
+  "updatedAt": "2026-09-27T08:10:22.642Z",
+  "updatedAtLabel": "Updated 3:10 AM CT Sep 27",
   "nextUpdateAt": "2026-09-27T13:20:00.000Z",
   "nextUpdateHint": "Next update ~8:20 AM CT",
   "timezone": "America/Chicago",
@@ -51,7 +51,7 @@
       "at": null
     }
   ],
-  "snapshotGeneratedAt": "2026-09-27T08:09:02.100Z",
+  "snapshotGeneratedAt": "2026-09-27T08:10:22.642Z",
   "files": [
     "events.json",
     "postures.json",

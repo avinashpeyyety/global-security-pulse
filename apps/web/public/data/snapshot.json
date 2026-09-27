@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T08:09:02.257Z",
+  "generatedAt": "2026-09-27T08:10:22.642Z",
   "events": [
     {
       "id": "rss-un-news-the-takeaway-un-general-assembly-debate-day-5",
@@ -16,7 +16,7 @@
       "source": "rss:UN News",
       "sourceReliability": "A",
       "url": "https://news.un.org/feed/view/en/story/2026/09/1168462",
-      "observedAt": "2026-09-27T12:00:00.000Z",
+      "observedAt": "2026-09-27T08:10:20.039Z",
       "ingestedAt": "2026-09-27T07:52:02.082Z",
       "curatedSummary": "From artificial intelligence to migration, some of the forces reshaping the twenty-first century took centre stage at the UN General Assembly on Saturday. Leaders wrestled with a common dilemma: how to harness profound technological and social change without allowing it to deepen",
       "briefSource": "wire"
@@ -7805,7 +7805,7 @@
       "count": 67,
       "maxSeverity": 4,
       "freshestSource": "rss:UN News",
-      "freshestAt": "2026-09-27T12:00:00.000Z",
+      "freshestAt": "2026-09-27T08:10:20.039Z",
       "layers": [
         "conflict",
         "terrorism",
@@ -13368,7 +13368,7 @@
     "7d",
     "30d"
   ],
-  "updatedAt": "2026-09-27T08:09:02.100Z",
+  "updatedAt": "2026-09-27T08:10:22.642Z",
   "nextUpdateAt": "2026-09-27T13:20:00.000Z",
   "nextUpdateHint": "Next update ~8:20 AM CT"
 }

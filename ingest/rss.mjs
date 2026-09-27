@@ -184,7 +184,8 @@ async function fetchFeed(feed) {
   const now = new Date().toISOString();
   return items.map((it, i) => {
     const sev = severityFromTitle(it.title);
-    const observed = it.pub ? new Date(it.pub) : new Date(Date.now() - i * 3600e3);
+    let observed = it.pub ? new Date(it.pub) : new Date(Date.now() - i * 3600e3);
+    if (observed.getTime() > Date.now()) observed = new Date(); // some feeds stamp noon-of-day in the future
     const title = it.title.slice(0, 160);
     const summary = (it.desc || it.title).slice(0, 280);
     const layer = feed.layer || guessLayer(`${it.title} ${it.desc}`);

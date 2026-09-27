@@ -1,6 +1,6 @@
 # Global Security Pulse — Daily Report 2026-09-27
 
-Generated: 2026-09-27T08:09:02.100Z
+Generated: 2026-09-27T08:10:22.642Z
 Ingest package: daily-2026-09-27
 
 ## Stress composite
