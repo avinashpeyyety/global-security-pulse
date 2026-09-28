@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-09-28T18:34:08.421Z",
+  "updatedAt": "2026-09-28T23:28:39.449Z",
   "dates": [
     {
       "date": "2026-09-28",
       "path": "reports/daily/2026-09-28/",
       "publicPath": "reports/daily/2026-09-28/",
-      "generatedAt": "2026-09-28T18:34:08.421Z",
+      "generatedAt": "2026-09-28T23:28:39.449Z",
       "packageId": "daily-2026-09-28",
-      "stressScore": 38.2,
-      "eventCount": 823,
+      "stressScore": 39,
+      "eventCount": 892,
       "anomalyCount": 14
     },
     {
