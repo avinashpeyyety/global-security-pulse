@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-29",
+  "generatedAt": "2026-09-29T13:43:12.220Z",
+  "packageId": "daily-2026-09-29",
+  "updatedAt": "2026-09-29T13:43:12.220Z",
+  "updatedAtLabel": "Updated 8:43 AM CT Sep 29",
+  "nextUpdateAt": "2026-09-29T18:20:00.000Z",
+  "nextUpdateHint": "Next update ~1:20 PM CT",
+  "timezone": "America/Chicago",
+  "schedule": {
+    "daily": [
+      "08:20",
+      "13:20",
+      "18:20"
+    ],
+    "weekendPolicy": "daily"
+  },
+  "stressScore": 38.6,
+  "eventCount": 984,
+  "postureCount": 8,
+  "anomalyCount": 14,
+  "feedStatuses": [
+    {
+      "id": "gdelt",
+      "status": "Pass",
+      "at": "2026-09-20T15:30:00.000Z"
+    },
+    {
+      "id": "markets",
+      "status": "Pass",
+      "at": "2026-09-20T15:36:00.000Z"
+    },
+    {
+      "id": "x-scroll",
+      "status": "Pass",
+      "at": "2026-09-29T13:42:37.482Z"
+    },
+    {
+      "id": "fred",
+      "status": "Warn",
+      "at": "2026-09-20T15:00:00.000Z"
+    },
+    {
+      "id": "rss",
+      "status": "Pass",
+      "at": "2026-09-29T13:42:33.743Z"
+    },
+    {
+      "id": "baltic",
+      "status": "Not run",
+      "at": null
+    }
+  ],
+  "snapshotGeneratedAt": "2026-09-29T13:43:12.220Z",
+  "files": [
+    "events.json",
+    "postures.json",
+    "anomalies.json",
+    "stress.json",
+    "series.json",
+    "feeds.json",
+    "hotspots.json",
+    "supply-routes.json",
+    "snapshot.json",
+    "meta.json"
+  ]
+}
