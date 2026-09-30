@@ -15,7 +15,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
 
-APP = "Microsoft Edge"
+APP = os.environ.get("X_BROWSER", "Google Chrome")  # his signed-in Chrome (was Edge)
 JS_PATH = Path("/tmp/gsp-edge.js")
 BASE = " -filter:replies lang:en within_time:12h"
 
@@ -85,10 +85,18 @@ def osa(script: str, timeout=30) -> str:
         raise RuntimeError((p.stderr or p.stdout).strip()[:300])
     return p.stdout.strip()
 
-# --- Target window: the Edge window that already holds the most x.com tabs ---------
-# (never the front window, so the user's other tabs are left alone). One worker tab
-# inside that window is reused for every search. GSP_X_WINDOW_ID overrides the pick.
+# --- Target window: one private, minimized worker window shared with the Traceburst
+# scroller (~/.x-worker-window.id). Never his own windows; focus is handed back if a
+# window has to be created (Avinash 2026-09-29: keep X scrolling under the hood).
+# GSP_X_WINDOW_ID overrides the pick.
 _WIN = {"id": None, "tab": None}
+WORKER_FILE = Path.home() / ".x-worker-window.id"
+
+def _front_app() -> str:
+    try:
+        return osa('tell application "System Events" to return name of first process whose frontmost is true', timeout=10)
+    except Exception:
+        return ""
 
 def target_window() -> str:
     if _WIN["id"]:
@@ -97,28 +105,32 @@ def target_window() -> str:
     if forced:
         _WIN["id"] = forced
         return forced
-    out = osa(f'''tell application "{APP}"
-  set res to ""
-  repeat with w in windows
-    set n to 0
-    repeat with t in tabs of w
-      if (URL of t) contains "x.com/" then set n to n + 1
-    end repeat
-    set res to res & (id of w) & ":" & n & linefeed
-  end repeat
-  return res
-end tell''')
-    best, best_n = None, 0
-    for line in out.splitlines():
-        if ":" not in line:
-            continue
-        wid, n = line.rsplit(":", 1)
-        if int(n) > best_n:
-            best, best_n = wid.strip(), int(n)
-    if not best:
-        best = osa(f'tell application "{APP}" to return id of (make new window)')
-    _WIN["id"] = best
-    return best
+    try:
+        wid = WORKER_FILE.read_text().strip()
+        if wid and osa(f'tell application "{APP}" to return exists window id {wid}') == "true":
+            try:
+                osa(f'tell application "{APP}" to set minimized of window id {wid} to true')
+            except RuntimeError:
+                pass
+            _WIN["id"] = wid
+            return wid
+    except FileNotFoundError:
+        pass
+    prev = _front_app()
+    wid = osa(f'''tell application "{APP}"
+  set w to make new window
+  delay 0.8
+  set minimized of w to true
+  return id of w
+end tell''').strip()
+    if prev and prev != APP:
+        try:
+            osa(f'tell application "{prev}" to activate', timeout=10)
+        except Exception:
+            pass
+    WORKER_FILE.write_text(wid)
+    _WIN["id"] = wid
+    return wid
 
 def _tab_ref() -> str:
     return f'tab id {_WIN["tab"]} of window id {target_window()}'
