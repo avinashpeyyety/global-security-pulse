@@ -85,94 +85,54 @@ def osa(script: str, timeout=30) -> str:
         raise RuntimeError((p.stderr or p.stdout).strip()[:300])
     return p.stdout.strip()
 
-# --- Target window: one private, minimized worker window shared with the Traceburst
-# scroller (~/.x-worker-window.id). Never his own windows; focus is handed back if a
-# window has to be created (Avinash 2026-09-29: keep X scrolling under the hood).
-# GSP_X_WINDOW_ID overrides the pick.
-_WIN = {"id": None, "tab": None}
-WORKER_FILE = Path.home() / ".x-worker-window.id"
+# --- Headless engine (Avinash 2026-09-29: X scrolls must never touch his screen) ---
+# A windowless Chrome on a copy of his signed-in cookies, driven through
+# ~/x-headless/bridge.mjs (shared with the Traceburst scroller). No window, no
+# focus change, and pages render as "visible" so X keeps loading while scrolling.
+import urllib.request as _ur
+BRIDGE = Path.home() / "x-headless" / "bridge.mjs"
+BRIDGE_PORT = int(os.environ.get("GSP_BRIDGE_PORT", "9336"))
+_B = {"proc": None}
 
-def _front_app() -> str:
+def _bridge(path, payload=None, timeout=40):
+    req = _ur.Request(f"http://127.0.0.1:{BRIDGE_PORT}{path}", data=json.dumps(payload or {}).encode(),
+                      headers={"Content-Type": "application/json"}, method="POST")
     try:
-        return osa('tell application "System Events" to return name of first process whose frontmost is true', timeout=10)
-    except Exception:
-        return ""
+        with _ur.urlopen(req, timeout=timeout) as r:
+            return r.read().decode()
+    except Exception as e:
+        raise RuntimeError(f"bridge {path}: {e}"[:300])
 
 def target_window() -> str:
-    if _WIN["id"]:
-        return _WIN["id"]
-    forced = os.environ.get("GSP_X_WINDOW_ID")
-    if forced:
-        _WIN["id"] = forced
-        return forced
-    try:
-        wid = WORKER_FILE.read_text().strip()
-        if wid and osa(f'tell application "{APP}" to return exists window id {wid}') == "true":
-            try:
-                osa(f'tell application "{APP}" to set minimized of window id {wid} to true')
-            except RuntimeError:
-                pass
-            _WIN["id"] = wid
-            return wid
-    except FileNotFoundError:
-        pass
-    prev = _front_app()
-    wid = osa(f'''tell application "{APP}"
-  set w to make new window
-  delay 0.8
-  set minimized of w to true
-  return id of w
-end tell''').strip()
-    if prev and prev != APP:
-        try:
-            osa(f'tell application "{prev}" to activate', timeout=10)
-        except Exception:
-            pass
-    WORKER_FILE.write_text(wid)
-    _WIN["id"] = wid
-    return wid
-
-def _tab_ref() -> str:
-    return f'tab id {_WIN["tab"]} of window id {target_window()}'
+    if _B["proc"]:
+        return "headless"
+    _B["proc"] = subprocess.Popen(["node", str(BRIDGE)], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                                  env={**os.environ, "BRIDGE_PORT": str(BRIDGE_PORT), "CDP_PORT": str(BRIDGE_PORT + 1)}, text=True)
+    if _B["proc"].stdout.readline().strip() != "ready":
+        raise RuntimeError("headless bridge did not start")
+    import atexit; atexit.register(close_worker)
+    return "headless"
 
 def js(code: str) -> str:
-    JS_PATH.write_text(code, encoding="utf-8")
-    return osa(f'set js to read POSIX file "{JS_PATH}" as «class utf8»\n'
-               f'tell application "{APP}" to execute {_tab_ref()} javascript js')
+    target_window()
+    return _bridge("/eval", {"expr": code}).strip()
 
 def open_tab(url: str):
-    wid = target_window()
-    if _WIN["tab"]:
-        try:
-            osa(f'tell application "{APP}" to set URL of {_tab_ref()} to "{url}"')
-            osa(f'''tell application "{APP}"
-  set w to window id {wid}
-  repeat with i from 1 to count of tabs of w
-    if id of tab i of w is {_WIN["tab"]} then set active tab index of w to i
-  end repeat
-end tell''')
-            return
-        except RuntimeError:
-            _WIN["tab"] = None
-    tid = osa(f'''tell application "{APP}"
-  set w to window id {wid}
-  set t to make new tab at end of tabs of w with properties {{URL:"{url}"}}
-  set active tab index of w to (count of tabs of w)
-  return id of t
-end tell''')
-    _WIN["tab"] = tid.strip()
+    target_window()
+    _bridge("/navigate", {"url": url})
 
 def close_tab():
-    # Worker tab is reused across searches; closed once at the end of the session.
+    # One headless page is reused across searches; closed at the end of the session.
     pass
 
 def close_worker():
-    if _WIN["tab"]:
-        try:
-            osa(f'tell application "{APP}" to close {_tab_ref()}')
-        except RuntimeError:
-            pass
-        _WIN["tab"] = None
+    p = _B.get("proc")
+    if p:
+        try: _bridge("/quit", timeout=5)
+        except Exception: pass
+        try: p.wait(timeout=5)
+        except Exception: p.kill()
+        _B["proc"] = None
 
 def human_sleep(lo, hi):
     time.sleep(random.uniform(lo, hi))
