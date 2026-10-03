@@ -1,54 +1,89 @@
 [
   {
-    "region": "Persian Gulf",
-    "count": 58,
-    "maxSeverity": 4,
-    "freshestSource": "rss:CBS World",
-    "freshestAt": "2026-10-03T13:22:07.000Z",
+    "region": "Global",
+    "count": 446,
+    "maxSeverity": 5,
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-10-03T18:06:47.000Z",
     "layers": [
       "conflict",
       "terrorism",
-      "maritime"
+      "cyber",
+      "disaster",
+      "unrest",
+      "maritime",
+      "sanctions"
     ]
   },
   {
-    "region": "Global",
-    "count": 448,
-    "maxSeverity": 5,
-    "freshestSource": "rss:France 24",
-    "freshestAt": "2026-10-03T13:20:35.000Z",
+    "region": "Africa",
+    "count": 299,
+    "maxSeverity": 4,
+    "freshestSource": "rss:Al Jazeera",
+    "freshestAt": "2026-10-03T18:03:08.000Z",
     "layers": [
-      "unrest",
-      "terrorism",
       "conflict",
-      "maritime",
-      "cyber",
       "disaster",
+      "terrorism",
+      "maritime",
+      "sanctions",
+      "unrest",
+      "cyber"
+    ]
+  },
+  {
+    "region": "East / SE Asia",
+    "count": 261,
+    "maxSeverity": 5,
+    "freshestSource": "rss:USGS M4.5+ quakes",
+    "freshestAt": "2026-10-03T17:52:33.040Z",
+    "layers": [
+      "disaster",
+      "maritime",
+      "conflict",
+      "cyber",
+      "unrest",
       "sanctions"
     ]
   },
   {
     "region": "Americas",
-    "count": 240,
+    "count": 241,
     "maxSeverity": 5,
-    "freshestSource": "rss:NYT World",
-    "freshestAt": "2026-10-03T13:06:04.000Z",
+    "freshestSource": "rss:BBC World",
+    "freshestAt": "2026-10-03T17:48:42.000Z",
     "layers": [
       "conflict",
+      "disaster",
       "maritime",
       "cyber",
-      "disaster",
       "terrorism",
       "unrest",
       "sanctions"
     ]
   },
   {
+    "region": "Europe",
+    "count": 287,
+    "maxSeverity": 5,
+    "freshestSource": "rss:NYT World",
+    "freshestAt": "2026-10-03T17:47:09.000Z",
+    "layers": [
+      "conflict",
+      "disaster",
+      "unrest",
+      "terrorism",
+      "maritime",
+      "sanctions",
+      "cyber"
+    ]
+  },
+  {
     "region": "Middle East",
-    "count": 471,
+    "count": 479,
     "maxSeverity": 5,
     "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-10-03T13:01:40.000Z",
+    "freshestAt": "2026-10-03T17:25:28.000Z",
     "layers": [
       "conflict",
       "terrorism",
@@ -60,35 +95,15 @@
     ]
   },
   {
-    "region": "Africa",
-    "count": 294,
+    "region": "Persian Gulf",
+    "count": 58,
     "maxSeverity": 4,
     "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-10-03T13:00:57.000Z",
+    "freshestAt": "2026-10-03T16:17:23.000Z",
     "layers": [
-      "conflict",
-      "disaster",
       "terrorism",
-      "maritime",
-      "sanctions",
-      "unrest",
-      "cyber"
-    ]
-  },
-  {
-    "region": "Europe",
-    "count": 294,
-    "maxSeverity": 5,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-10-03T12:59:27.000Z",
-    "layers": [
-      "unrest",
       "conflict",
-      "disaster",
-      "terrorism",
-      "maritime",
-      "sanctions",
-      "cyber"
+      "maritime"
     ]
   },
   {
@@ -96,7 +111,7 @@
     "count": 86,
     "maxSeverity": 5,
     "freshestSource": "rss:BBC World",
-    "freshestAt": "2026-10-03T12:59:10.000Z",
+    "freshestAt": "2026-10-03T16:16:49.000Z",
     "layers": [
       "conflict",
       "disaster",
@@ -108,26 +123,11 @@
     ]
   },
   {
-    "region": "East / SE Asia",
-    "count": 260,
-    "maxSeverity": 5,
-    "freshestSource": "rss:Al Jazeera",
-    "freshestAt": "2026-10-03T11:51:22.000Z",
-    "layers": [
-      "conflict",
-      "disaster",
-      "maritime",
-      "cyber",
-      "unrest",
-      "sanctions"
-    ]
-  },
-  {
     "region": "South Asia",
-    "count": 105,
+    "count": 112,
     "maxSeverity": 4,
-    "freshestSource": "rss:ReliefWeb",
-    "freshestAt": "2026-10-03T05:24:03.000Z",
+    "freshestSource": "rss:NYT World",
+    "freshestAt": "2026-10-03T14:59:12.000Z",
     "layers": [
       "disaster",
       "conflict",
