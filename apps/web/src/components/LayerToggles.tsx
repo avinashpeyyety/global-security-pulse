@@ -2,7 +2,7 @@ import type { EventLayer } from '@gsp/shared';
 import {
   FALLOUT_LEVELS,
   FALLOUT_LABELS,
-  RISK_COLORS,
+  MARKER_RISK_COLORS,
   ROUTE_KIND_COLORS,
   ROUTE_KIND_LABELS,
 } from '@gsp/shared';
@@ -82,13 +82,13 @@ export function LayerToggles({
         <div className="risk-scale" role="img" aria-label="Risk scale from low to critical">
           {FALLOUT_LEVELS.map((level) => (
             <div key={level} className="risk-step">
-              <span className="risk-swatch" style={{ background: RISK_COLORS[level] }} />
+              <span className="risk-swatch" style={{ background: MARKER_RISK_COLORS[level].fill, borderColor: MARKER_RISK_COLORS[level].ring }} />
               <span className="risk-lbl">{level}</span>
             </div>
           ))}
         </div>
         <div className="risk-hint">
-          Circles = event fallout · Triangles = posture precipitate · {FALLOUT_LABELS.low} → {FALLOUT_LABELS.critical}
+          Circles = event fallout (size = severity) · Triangles = posture precipitate · Ringed = critical · Numbered rings = clusters · {FALLOUT_LABELS.low} → {FALLOUT_LABELS.critical}
         </div>
         <div className="risk-hint" style={{ marginTop: 6 }}>
           Popup briefs are agent/wire curated · X posts are supporting evidence (collapsible)

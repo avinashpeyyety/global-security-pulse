@@ -202,6 +202,21 @@ export const RISK_COLORS: Record<FalloutRisk, string> = {
   critical: '#ff2d6a',
 };
 
+/**
+ * Map marker palette (Traceburst look): muted slate → pale slate, with the single
+ * sky-blue accent (#7DD3FC) reserved for critical. Severity is carried mainly by
+ * marker size; color only separates the bands. `fill` = marker body, `ring` = thin outline.
+ */
+export const MARKER_RISK_COLORS: Record<FalloutRisk, { fill: string; ring: string }> = {
+  low: { fill: '#3b4757', ring: '#64748b' },
+  medium: { fill: '#64748b', ring: '#94a3b8' },
+  high: { fill: '#a5b4c8', ring: '#e2e8f0' },
+  critical: { fill: '#7dd3fc', ring: '#e0f2fe' },
+};
+
+/** Numeric rank for risk bands (cluster max / sort). */
+export const RISK_RANK: Record<FalloutRisk, number> = { low: 0, medium: 1, high: 2, critical: 3 };
+
 export const FALLOUT_LABELS: Record<FalloutRisk, string> = {
   low: 'Low fallout',
   medium: 'Medium fallout',

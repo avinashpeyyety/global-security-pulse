@@ -12,11 +12,12 @@ See [docs/BACKLOG.md](docs/BACKLOG.md) for v0.2+ iteration items (truth rail, co
 
 | Layer | Depiction | Color meaning |
 |-------|-----------|---------------|
-| Security events | **Circles** | `falloutRisk` / severity → Low (cool muted) → Medium (amber) → High (orange) → Critical (bright red/magenta) |
-| Military posture | **Triangles** | `precipitatePotential` on the same risk scale |
+| Security events | **Circles** (size = severity) | `falloutRisk` → Low (dark slate) → Medium (slate) → High (pale slate) → Critical (sky `#7DD3FC` + thin halo ring) |
+| Clusters (≤ z3) | **Numbered dark rings** | Ring tinted by the worst member; click to expand |
+| Military posture | **Triangles** (HiDPI canvas) | `precipitatePotential` on the same scale |
 | Supply routes | **Dotted lines** | Distinct color by kind (oil chokepoint, oil route, trade chokepoint, alt route) |
 
-Layer toggles include a visible legend (swatch/shape) and a Low → Critical risk-scale strip.
+Markers are Traceburst-style: WebGL circles at `devicePixelRatio`, thin outline, no blur; posture triangles are drawn at ≥2× DPR (`apps/web/src/lib/markers.ts`). Layer toggles include a visible legend (swatch/shape) and a Low → Critical risk-scale strip.
 
 ## Update status (header)
 

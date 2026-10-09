@@ -3,22 +3,21 @@ import maplibregl from 'maplibre-gl';
 import type { FalloutRisk, MilitaryPosture, SecurityEvent, XPostRef } from '@gsp/shared';
 import {
   PRECIPITATE_LABELS,
-  RISK_COLORS,
+  MARKER_RISK_COLORS,
+  RISK_RANK,
   ROUTE_KIND_COLORS,
   eventFalloutRisk,
   FALLOUT_LABELS,
+  FALLOUT_LEVELS,
 } from '@gsp/shared';
 import { ageLabel } from '../lib/time';
 import { isEventMapPlottable, isPostureMapPlottable } from '../lib/mapCoords';
+import { ACCENT, MARKER_BG, makeTriangleImage, markerRadius, postureImageId } from '../lib/markers';
 
 const STYLE = 'https://tiles.openfreemap.org/styles/dark';
 const ROUTES_URL = `${import.meta.env.BASE_URL}data/supply-routes.json`;
 
 const EMPTY_FC: GeoJSON.FeatureCollection = { type: 'FeatureCollection', features: [] };
-
-function markerRadius(severity: number, confidence: number): number {
-  return 4 + severity * 2.2 + confidence * 2;
-}
 
 /** Dry-run x-scroll placeholders must never be primary map markers. */
 function isDryRunXScroll(e: SecurityEvent): boolean {
@@ -94,36 +93,18 @@ function buildPosturePopupHtml(p: MilitaryPosture, color: string): string {
   </div>`;
 }
 
-/** White triangle SDF for icon-color tinting. */
-function makeTriangleImageData(size = 32): { data: Uint8Array; width: number; height: number } {
-  const canvas = document.createElement('canvas');
-  canvas.width = size;
-  canvas.height = size;
-  const ctx = canvas.getContext('2d')!;
-  ctx.clearRect(0, 0, size, size);
-  ctx.beginPath();
-  ctx.moveTo(size / 2, 1);
-  ctx.lineTo(size - 1, size - 1);
-  ctx.lineTo(1, size - 1);
-  ctx.closePath();
-  ctx.fillStyle = '#ffffff';
-  ctx.fill();
-  const imageData = ctx.getImageData(0, 0, size, size);
-  return { data: new Uint8Array(imageData.data.buffer), width: size, height: size };
-}
-
-const CIRCLE_COLOR: maplibregl.ExpressionSpecification = [
+const RISK_EXPR = (key: 'fill' | 'ring'): maplibregl.ExpressionSpecification => [
   'match',
   ['get', 'risk'],
   'low',
-  RISK_COLORS.low,
+  MARKER_RISK_COLORS.low[key],
   'medium',
-  RISK_COLORS.medium,
+  MARKER_RISK_COLORS.medium[key],
   'high',
-  RISK_COLORS.high,
+  MARKER_RISK_COLORS.high[key],
   'critical',
-  RISK_COLORS.critical,
-  RISK_COLORS.medium,
+  MARKER_RISK_COLORS.critical[key],
+  MARKER_RISK_COLORS.medium[key],
 ];
 
 const CIRCLE_OPACITY: maplibregl.ExpressionSpecification = [
@@ -131,38 +112,31 @@ const CIRCLE_OPACITY: maplibregl.ExpressionSpecification = [
   ['linear'],
   ['get', 'confidence'],
   0,
-  0.55,
+  0.72,
   1,
-  0.95,
+  0.98,
 ];
 
-const CIRCLE_RADIUS: maplibregl.ExpressionSpecification = [
+/** Gentle zoom scaling; radius stays small and crisp (Traceburst node scale). */
+const zoomScaled = (prop: string): maplibregl.ExpressionSpecification => [
   'interpolate',
   ['linear'],
   ['zoom'],
   1,
-  ['*', ['get', 'baseRadius'], 0.55],
+  ['*', ['get', prop], 0.8],
   3,
-  ['get', 'baseRadius'],
+  ['get', prop],
   6,
-  ['*', ['get', 'baseRadius'], 1.35],
+  ['*', ['get', prop], 1.25],
   10,
-  ['*', ['get', 'baseRadius'], 1.9],
+  ['*', ['get', prop], 1.6],
 ];
 
-const ICON_COLOR: maplibregl.ExpressionSpecification = [
-  'match',
-  ['get', 'risk'],
-  'low',
-  RISK_COLORS.low,
-  'medium',
-  RISK_COLORS.medium,
-  'high',
-  RISK_COLORS.high,
-  'critical',
-  RISK_COLORS.critical,
-  RISK_COLORS.medium,
-];
+const CIRCLE_RADIUS = zoomScaled('baseRadius');
+const HALO_RADIUS = zoomScaled('haloRadius');
+
+const IS_POINT: maplibregl.FilterSpecification = ['!', ['has', 'point_count']];
+const IS_CLUSTER: maplibregl.FilterSpecification = ['has', 'point_count'];
 
 function eventsToFeatureCollection(events: SecurityEvent[]): GeoJSON.FeatureCollection {
   const features: GeoJSON.Feature[] = [];
@@ -171,6 +145,7 @@ function eventsToFeatureCollection(events: SecurityEvent[]): GeoJSON.FeatureColl
     const lat = Number(e.lat);
     const lon = Number(e.lon);
     const risk = eventFalloutRisk(e);
+    const r = markerRadius(e.severity, risk);
     features.push({
       type: 'Feature',
       id: e.id,
@@ -178,9 +153,11 @@ function eventsToFeatureCollection(events: SecurityEvent[]): GeoJSON.FeatureColl
       properties: {
         id: e.id,
         risk,
+        rank: RISK_RANK[risk],
         severity: e.severity,
         confidence: e.confidence,
-        baseRadius: markerRadius(e.severity, e.confidence),
+        baseRadius: r,
+        haloRadius: r + 4.5,
         title: e.title,
       },
     });
@@ -199,6 +176,7 @@ function posturesToFeatureCollection(postures: MilitaryPosture[]): GeoJSON.Featu
       properties: {
         id: p.id,
         risk: p.precipitatePotential,
+        icon: postureImageId((p.precipitatePotential as FalloutRisk) ?? 'medium'),
         confidence: p.confidence,
         title: p.title,
       },
@@ -235,7 +213,17 @@ export function SecurityMap({
     if (!map || !layersReady.current) return;
     if (map.getLayer('events-circle')) {
       map.setPaintProperty('events-circle', 'circle-opacity', dimmed ? 0.22 : CIRCLE_OPACITY);
-      map.setPaintProperty('events-circle', 'circle-stroke-opacity', dimmed ? 0.2 : 0.85);
+      map.setPaintProperty('events-circle', 'circle-stroke-opacity', dimmed ? 0.2 : 0.9);
+    }
+    if (map.getLayer('events-halo')) {
+      map.setPaintProperty('events-halo', 'circle-stroke-opacity', dimmed ? 0.1 : 0.5);
+    }
+    if (map.getLayer('events-cluster')) {
+      map.setPaintProperty('events-cluster', 'circle-opacity', dimmed ? 0.25 : 0.92);
+      map.setPaintProperty('events-cluster', 'circle-stroke-opacity', dimmed ? 0.2 : 0.95);
+    }
+    if (map.getLayer('events-cluster-count')) {
+      map.setPaintProperty('events-cluster-count', 'text-opacity', dimmed ? 0.25 : 1);
     }
     if (map.getLayer('postures-symbol')) {
       map.setPaintProperty('postures-symbol', 'icon-opacity', dimmed ? 0.25 : 0.92);
@@ -268,26 +256,102 @@ export function SecurityMap({
   const ensureEventPostureLayers = (map: maplibregl.Map) => {
     if (layersReady.current) return;
 
-    if (!map.hasImage('posture-triangle')) {
-      const img = makeTriangleImageData(32);
-      map.addImage('posture-triangle', img, { sdf: true });
+    for (const risk of FALLOUT_LEVELS) {
+      const id = postureImageId(risk);
+      if (!map.hasImage(id)) {
+        const img = makeTriangleImage(risk);
+        map.addImage(id, { width: img.width, height: img.height, data: img.data }, { pixelRatio: img.pixelRatio });
+      }
     }
 
     if (!map.getSource('events')) {
-      map.addSource('events', { type: 'geojson', data: EMPTY_FC });
+      map.addSource('events', {
+        type: 'geojson',
+        data: EMPTY_FC,
+        cluster: true,
+        clusterRadius: 22,
+        clusterMaxZoom: 3,
+        clusterProperties: { maxRank: ['max', ['get', 'rank']] },
+      });
+    }
+    if (!map.getLayer('events-cluster')) {
+      // Cluster = dark disc + thin ring tinted by the worst member; count in mono-ish label.
+      map.addLayer({
+        id: 'events-cluster',
+        type: 'circle',
+        source: 'events',
+        filter: IS_CLUSTER,
+        paint: {
+          'circle-color': '#10151b',
+          'circle-opacity': 0.92,
+          'circle-radius': ['step', ['get', 'point_count'], 9, 4, 11, 10, 13.5, 25, 16],
+          'circle-stroke-width': 1,
+          'circle-stroke-color': [
+            'match',
+            ['get', 'maxRank'],
+            3,
+            ACCENT,
+            2,
+            MARKER_RISK_COLORS.high.ring,
+            1,
+            MARKER_RISK_COLORS.medium.ring,
+            MARKER_RISK_COLORS.low.ring,
+          ],
+          'circle-stroke-opacity': 0.95,
+        },
+      });
+    }
+    if (!map.getLayer('events-cluster-count')) {
+      map.addLayer({
+        id: 'events-cluster-count',
+        type: 'symbol',
+        source: 'events',
+        filter: IS_CLUSTER,
+        layout: {
+          'text-field': ['get', 'point_count_abbreviated'],
+          'text-font': ['Noto Sans Regular'],
+          'text-size': 10.5,
+          'text-allow-overlap': true,
+          'text-ignore-placement': true,
+        },
+        paint: {
+          'text-color': ['match', ['get', 'maxRank'], 3, '#e0f2fe', '#cbd5e1'],
+        },
+      });
+    }
+    if (!map.getLayer('events-halo')) {
+      // Critical only: a single crisp outer ring (no blur), Traceburst-style.
+      map.addLayer({
+        id: 'events-halo',
+        type: 'circle',
+        source: 'events',
+        filter: ['all', ['!', ['has', 'point_count']], ['==', ['get', 'rank'], 3]],
+        paint: {
+          'circle-radius': HALO_RADIUS,
+          'circle-color': ACCENT,
+          'circle-opacity': 0.06,
+          'circle-stroke-width': 0.8,
+          'circle-stroke-color': ACCENT,
+          'circle-stroke-opacity': 0.5,
+        },
+      });
     }
     if (!map.getLayer('events-circle')) {
       map.addLayer({
         id: 'events-circle',
         type: 'circle',
         source: 'events',
+        filter: IS_POINT,
+        layout: { 'circle-sort-key': ['get', 'rank'] },
         paint: {
-          'circle-color': CIRCLE_COLOR,
+          'circle-color': RISK_EXPR('fill'),
           'circle-radius': CIRCLE_RADIUS,
           'circle-opacity': CIRCLE_OPACITY,
-          'circle-stroke-width': 1.2,
-          'circle-stroke-color': 'rgba(255,255,255,0.45)',
-          'circle-stroke-opacity': 0.85,
+          'circle-blur': 0,
+          'circle-stroke-width': 0.8,
+          'circle-stroke-color': RISK_EXPR('ring'),
+          'circle-stroke-opacity': 0.9,
+          'circle-pitch-alignment': 'map',
         },
       });
     }
@@ -301,32 +365,35 @@ export function SecurityMap({
         type: 'symbol',
         source: 'postures',
         layout: {
-          'icon-image': 'posture-triangle',
-          'icon-size': [
-            'interpolate',
-            ['linear'],
-            ['zoom'],
-            1,
-            0.45,
-            3,
-            0.65,
-            6,
-            0.9,
-            10,
-            1.15,
-          ],
+          'icon-image': ['get', 'icon'],
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.85, 4, 1, 8, 1.2],
           'icon-anchor': 'bottom',
           'icon-allow-overlap': true,
           'icon-ignore-placement': true,
         },
         paint: {
-          'icon-color': ICON_COLOR,
-          'icon-opacity': 0.92,
-          'icon-halo-color': 'rgba(0,0,0,0.75)',
-          'icon-halo-width': 1.2,
+          'icon-opacity': 0.95,
         },
       });
     }
+
+    map.on('click', 'events-cluster', async (e) => {
+      const f = e.features?.[0];
+      if (!f || f.geometry.type !== 'Point') return;
+      const src = map.getSource('events') as maplibregl.GeoJSONSource;
+      try {
+        const zoom = await src.getClusterExpansionZoom(Number(f.properties?.cluster_id));
+        map.easeTo({ center: (f.geometry as GeoJSON.Point).coordinates as [number, number], zoom: zoom + 0.2 });
+      } catch {
+        /* ignore */
+      }
+    });
+    map.on('mouseenter', 'events-cluster', () => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', 'events-cluster', () => {
+      map.getCanvas().style.cursor = '';
+    });
 
     map.on('click', 'events-circle', (e) => {
       const f = e.features?.[0];
@@ -335,7 +402,7 @@ export function SecurityMap({
       const ev = eventsByIdRef.current.get(id);
       if (!ev) return;
       const risk = eventFalloutRisk(ev);
-      const color = RISK_COLORS[risk];
+      const color = MARKER_RISK_COLORS[risk].ring;
       const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
       closeActivePopup();
       const popup = new maplibregl.Popup({
@@ -365,7 +432,7 @@ export function SecurityMap({
       const id = String(f.properties?.id ?? '');
       const p = posturesByIdRef.current.get(id);
       if (!p) return;
-      const color = RISK_COLORS[p.precipitatePotential as FalloutRisk] ?? RISK_COLORS.medium;
+      const color = (MARKER_RISK_COLORS[p.precipitatePotential as FalloutRisk] ?? MARKER_RISK_COLORS.medium).ring;
       const coords = (f.geometry as GeoJSON.Point).coordinates as [number, number];
       closeActivePopup();
       const popup = new maplibregl.Popup({
@@ -437,6 +504,8 @@ export function SecurityMap({
       style: STYLE,
       center: [40, 18],
       zoom: 1.55,
+      // Explicit HiDPI: render the GL canvas at the device pixel ratio so markers stay razor-sharp.
+      pixelRatio: Math.max(1, window.devicePixelRatio || 1),
       attributionControl: { compact: true },
     });
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
@@ -462,7 +531,7 @@ export function SecurityMap({
                 'line-opacity': 0.18,
               },
             },
-            'events-circle',
+            'events-cluster',
           );
           map.addLayer(
             {
@@ -489,7 +558,7 @@ export function SecurityMap({
                 'line-dasharray': [1.2, 2.2],
               },
             },
-            'events-circle',
+            'events-cluster',
           );
           map.on('click', 'supply-routes-dash', (e) => {
             const f = e.features?.[0];
