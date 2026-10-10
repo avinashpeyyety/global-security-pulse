@@ -1,11 +1,11 @@
 {
   "date": "2026-10-10",
-  "generatedAt": "2026-10-10T13:29:11.584Z",
+  "generatedAt": "2026-10-10T18:34:09.480Z",
   "packageId": "daily-2026-10-10",
-  "updatedAt": "2026-10-10T13:29:11.584Z",
-  "updatedAtLabel": "Updated 8:29 AM CT Oct 10",
-  "nextUpdateAt": "2026-10-10T18:20:00.000Z",
-  "nextUpdateHint": "Next update ~1:20 PM CT",
+  "updatedAt": "2026-10-10T18:34:09.480Z",
+  "updatedAtLabel": "Updated 1:34 PM CT Oct 10",
+  "nextUpdateAt": "2026-10-10T23:20:00.000Z",
+  "nextUpdateHint": "Next update ~6:20 PM CT",
   "timezone": "America/Chicago",
   "schedule": {
     "daily": [
@@ -16,7 +16,7 @@
     "weekendPolicy": "daily"
   },
   "stressScore": 33.7,
-  "eventCount": 2206,
+  "eventCount": 2216,
   "postureCount": 8,
   "anomalyCount": 14,
   "feedStatuses": [
@@ -33,7 +33,7 @@
     {
       "id": "x-scroll",
       "status": "Pass",
-      "at": "2026-10-10T13:26:00.255Z"
+      "at": "2026-10-10T18:30:51.771Z"
     },
     {
       "id": "fred",
@@ -43,7 +43,7 @@
     {
       "id": "rss",
       "status": "Pass",
-      "at": "2026-10-10T13:25:56.245Z"
+      "at": "2026-10-10T18:30:45.994Z"
     },
     {
       "id": "baltic",
@@ -51,7 +51,7 @@
       "at": null
     }
   ],
-  "snapshotGeneratedAt": "2026-10-10T13:29:11.584Z",
+  "snapshotGeneratedAt": "2026-10-10T18:34:09.480Z",
   "files": [
     "events.json",
     "postures.json",
