@@ -6,7 +6,7 @@
     "vix": 20,
     "oil": 32
   },
-  "evaluatedAt": "2026-10-10T23:26:29.300Z",
+  "evaluatedAt": "2026-10-11T13:26:59.319Z",
   "rule": "0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil",
-  "snapshot": "live@2026-10-10"
+  "snapshot": "live@2026-10-11"
 }
