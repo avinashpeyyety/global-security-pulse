@@ -25,3 +25,7 @@ GSP_X_STORAGE_STATE*
 playwright/.auth/
 **/storage-state.json
 **/cookies.json
+
+# GSP live local view: private data never in git / never on Pages
+live/private/
+live/**/__pycache__/

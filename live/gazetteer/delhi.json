@@ -1,0 +1,1848 @@
+{
+ "city": "delhi",
+ "source": "hand-built gazetteer (approx. centroids, OSM-derived knowledge); no paid geocoder",
+ "places": [
+  {
+   "id": "connaught-place",
+   "name": "Connaught Place",
+   "kind": "landmark",
+   "lat": 28.6315,
+   "lon": 77.2167,
+   "aliases": [
+    "Rajiv Chowk",
+    "कनॉट प्लेस"
+   ]
+  },
+  {
+   "id": "rajiv-chowk-metro",
+   "name": "Rajiv Chowk Metro",
+   "kind": "station",
+   "lat": 28.6328,
+   "lon": 77.2197,
+   "aliases": [
+    "Rajiv Chowk metro"
+   ]
+  },
+  {
+   "id": "janpath",
+   "name": "Janpath",
+   "kind": "road",
+   "lat": 28.625,
+   "lon": 77.2187,
+   "aliases": [
+    "जनपथ"
+   ]
+  },
+  {
+   "id": "jantar-mantar",
+   "name": "Jantar Mantar",
+   "kind": "landmark",
+   "lat": 28.6271,
+   "lon": 77.2166,
+   "aliases": [
+    "जंतर मंतर"
+   ]
+  },
+  {
+   "id": "india-gate",
+   "name": "India Gate",
+   "kind": "landmark",
+   "lat": 28.6129,
+   "lon": 77.2295,
+   "aliases": [
+    "इंडिया गेट"
+   ]
+  },
+  {
+   "id": "kartavya-path",
+   "name": "Kartavya Path",
+   "kind": "road",
+   "lat": 28.614,
+   "lon": 77.219,
+   "aliases": [
+    "Rajpath",
+    "कर्तव्य पथ"
+   ]
+  },
+  {
+   "id": "rashtrapati-bhavan",
+   "name": "Rashtrapati Bhavan",
+   "kind": "landmark",
+   "lat": 28.6143,
+   "lon": 77.1994,
+   "aliases": [
+    "राष्ट्रपति भवन"
+   ]
+  },
+  {
+   "id": "parliament-house",
+   "name": "Parliament House",
+   "kind": "landmark",
+   "lat": 28.6172,
+   "lon": 77.2081,
+   "aliases": [
+    "Parliament",
+    "Sansad Bhavan",
+    "संसद भवन",
+    "संसद"
+   ]
+  },
+  {
+   "id": "north-block",
+   "name": "North Block",
+   "kind": "landmark",
+   "lat": 28.6155,
+   "lon": 77.2063,
+   "aliases": []
+  },
+  {
+   "id": "vijay-chowk",
+   "name": "Vijay Chowk",
+   "kind": "landmark",
+   "lat": 28.6156,
+   "lon": 77.2087,
+   "aliases": []
+  },
+  {
+   "id": "red-fort",
+   "name": "Red Fort",
+   "kind": "landmark",
+   "lat": 28.6562,
+   "lon": 77.241,
+   "aliases": [
+    "Lal Qila",
+    "लाल किला"
+   ]
+  },
+  {
+   "id": "chandni-chowk",
+   "name": "Chandni Chowk",
+   "kind": "locality",
+   "lat": 28.6506,
+   "lon": 77.2303,
+   "aliases": [
+    "चांदनी चौक"
+   ]
+  },
+  {
+   "id": "jama-masjid",
+   "name": "Jama Masjid",
+   "kind": "landmark",
+   "lat": 28.6507,
+   "lon": 77.2334,
+   "aliases": [
+    "जामा मस्जिद"
+   ]
+  },
+  {
+   "id": "daryaganj",
+   "name": "Daryaganj",
+   "kind": "locality",
+   "lat": 28.643,
+   "lon": 77.24,
+   "aliases": [
+    "दरियागंज"
+   ]
+  },
+  {
+   "id": "old-delhi",
+   "name": "Old Delhi",
+   "kind": "locality",
+   "lat": 28.655,
+   "lon": 77.23,
+   "aliases": [
+    "Purani Dilli",
+    "पुरानी दिल्ली"
+   ]
+  },
+  {
+   "id": "kashmere-gate",
+   "name": "Kashmere Gate",
+   "kind": "locality",
+   "lat": 28.6675,
+   "lon": 77.228,
+   "aliases": [
+    "Kashmiri Gate",
+    "ISBT Kashmere Gate",
+    "कश्मीरी गेट"
+   ]
+  },
+  {
+   "id": "sadar-bazar",
+   "name": "Sadar Bazar",
+   "kind": "locality",
+   "lat": 28.658,
+   "lon": 77.212,
+   "aliases": [
+    "सदर बाजार"
+   ]
+  },
+  {
+   "id": "paharganj",
+   "name": "Paharganj",
+   "kind": "locality",
+   "lat": 28.6448,
+   "lon": 77.2127,
+   "aliases": [
+    "पहाड़गंज"
+   ]
+  },
+  {
+   "id": "new-delhi-railway-station",
+   "name": "New Delhi Railway Station",
+   "kind": "station",
+   "lat": 28.643,
+   "lon": 77.2193,
+   "aliases": [
+    "NDLS",
+    "नई दिल्ली रेलवे स्टेशन"
+   ]
+  },
+  {
+   "id": "old-delhi-railway-station",
+   "name": "Old Delhi Railway Station",
+   "kind": "station",
+   "lat": 28.661,
+   "lon": 77.2272,
+   "aliases": [
+    "Delhi Junction"
+   ]
+  },
+  {
+   "id": "karol-bagh",
+   "name": "Karol Bagh",
+   "kind": "locality",
+   "lat": 28.6519,
+   "lon": 77.1909,
+   "aliases": [
+    "करोल बाग"
+   ]
+  },
+  {
+   "id": "rajendra-place",
+   "name": "Rajendra Place",
+   "kind": "locality",
+   "lat": 28.642,
+   "lon": 77.178,
+   "aliases": []
+  },
+  {
+   "id": "patel-nagar",
+   "name": "Patel Nagar",
+   "kind": "locality",
+   "lat": 28.65,
+   "lon": 77.164,
+   "aliases": [
+    "पटेल नगर"
+   ]
+  },
+  {
+   "id": "jhandewalan",
+   "name": "Jhandewalan",
+   "kind": "locality",
+   "lat": 28.644,
+   "lon": 77.201,
+   "aliases": []
+  },
+  {
+   "id": "ito",
+   "name": "ITO",
+   "kind": "landmark",
+   "lat": 28.628,
+   "lon": 77.241,
+   "aliases": [
+    "आईटीओ"
+   ]
+  },
+  {
+   "id": "pragati-maidan",
+   "name": "Pragati Maidan",
+   "kind": "landmark",
+   "lat": 28.6185,
+   "lon": 77.244,
+   "aliases": [
+    "Bharat Mandapam",
+    "प्रगति मैदान"
+   ]
+  },
+  {
+   "id": "delhi-police-hq",
+   "name": "Delhi Police HQ",
+   "kind": "landmark",
+   "lat": 28.625,
+   "lon": 77.238,
+   "aliases": [
+    "Police Headquarters"
+   ]
+  },
+  {
+   "id": "mandi-house",
+   "name": "Mandi House",
+   "kind": "landmark",
+   "lat": 28.6258,
+   "lon": 77.234,
+   "aliases": []
+  },
+  {
+   "id": "bengali-market",
+   "name": "Bengali Market",
+   "kind": "locality",
+   "lat": 28.629,
+   "lon": 77.231,
+   "aliases": []
+  },
+  {
+   "id": "barakhamba-road",
+   "name": "Barakhamba Road",
+   "kind": "road",
+   "lat": 28.63,
+   "lon": 77.225,
+   "aliases": []
+  },
+  {
+   "id": "gole-market",
+   "name": "Gole Market",
+   "kind": "locality",
+   "lat": 28.6345,
+   "lon": 77.205,
+   "aliases": []
+  },
+  {
+   "id": "mandir-marg",
+   "name": "Mandir Marg",
+   "kind": "road",
+   "lat": 28.635,
+   "lon": 77.2,
+   "aliases": []
+  },
+  {
+   "id": "ram-lila-maidan",
+   "name": "Ram Lila Maidan",
+   "kind": "landmark",
+   "lat": 28.64,
+   "lon": 77.231,
+   "aliases": [
+    "Ramlila Maidan",
+    "रामलीला मैदान"
+   ]
+  },
+  {
+   "id": "delhi-gate",
+   "name": "Delhi Gate",
+   "kind": "landmark",
+   "lat": 28.64,
+   "lon": 77.2405,
+   "aliases": []
+  },
+  {
+   "id": "rajghat",
+   "name": "Rajghat",
+   "kind": "landmark",
+   "lat": 28.6407,
+   "lon": 77.2495,
+   "aliases": [
+    "Raj Ghat",
+    "राजघाट"
+   ]
+  },
+  {
+   "id": "feroz-shah-kotla",
+   "name": "Feroz Shah Kotla",
+   "kind": "landmark",
+   "lat": 28.6379,
+   "lon": 77.2432,
+   "aliases": [
+    "Arun Jaitley Stadium"
+   ]
+  },
+  {
+   "id": "chanakyapuri",
+   "name": "Chanakyapuri",
+   "kind": "locality",
+   "lat": 28.596,
+   "lon": 77.187,
+   "aliases": [
+    "चाणक्यपुरी"
+   ]
+  },
+  {
+   "id": "khan-market",
+   "name": "Khan Market",
+   "kind": "locality",
+   "lat": 28.6002,
+   "lon": 77.227,
+   "aliases": [
+    "खान मार्केट"
+   ]
+  },
+  {
+   "id": "lodhi-road",
+   "name": "Lodhi Road",
+   "kind": "road",
+   "lat": 28.591,
+   "lon": 77.227,
+   "aliases": [
+    "Lodhi Colony",
+    "लोधी रोड"
+   ]
+  },
+  {
+   "id": "lodhi-garden",
+   "name": "Lodhi Garden",
+   "kind": "landmark",
+   "lat": 28.5933,
+   "lon": 77.2197,
+   "aliases": []
+  },
+  {
+   "id": "nizamuddin",
+   "name": "Nizamuddin",
+   "kind": "locality",
+   "lat": 28.589,
+   "lon": 77.244,
+   "aliases": [
+    "Hazrat Nizamuddin",
+    "निजामुद्दीन"
+   ]
+  },
+  {
+   "id": "hazrat-nizamuddin-railway-station",
+   "name": "Hazrat Nizamuddin Railway Station",
+   "kind": "station",
+   "lat": 28.588,
+   "lon": 77.253,
+   "aliases": [
+    "Nizamuddin station"
+   ]
+  },
+  {
+   "id": "humayun-s-tomb",
+   "name": "Humayun's Tomb",
+   "kind": "landmark",
+   "lat": 28.5933,
+   "lon": 77.2507,
+   "aliases": [
+    "Humayun Tomb"
+   ]
+  },
+  {
+   "id": "sarai-kale-khan",
+   "name": "Sarai Kale Khan",
+   "kind": "locality",
+   "lat": 28.589,
+   "lon": 77.258,
+   "aliases": [
+    "ISBT Sarai Kale Khan",
+    "सराय काले खां"
+   ]
+  },
+  {
+   "id": "ashram-chowk",
+   "name": "Ashram Chowk",
+   "kind": "locality",
+   "lat": 28.572,
+   "lon": 77.258,
+   "aliases": []
+  },
+  {
+   "id": "lajpat-nagar",
+   "name": "Lajpat Nagar",
+   "kind": "locality",
+   "lat": 28.5677,
+   "lon": 77.2433,
+   "aliases": [
+    "लाजपत नगर"
+   ]
+  },
+  {
+   "id": "defence-colony",
+   "name": "Defence Colony",
+   "kind": "locality",
+   "lat": 28.572,
+   "lon": 77.231,
+   "aliases": [
+    "डिफेंस कॉलोनी"
+   ]
+  },
+  {
+   "id": "jangpura",
+   "name": "Jangpura",
+   "kind": "locality",
+   "lat": 28.583,
+   "lon": 77.241,
+   "aliases": []
+  },
+  {
+   "id": "bhogal",
+   "name": "Bhogal",
+   "kind": "locality",
+   "lat": 28.584,
+   "lon": 77.247,
+   "aliases": []
+  },
+  {
+   "id": "south-extension",
+   "name": "South Extension",
+   "kind": "locality",
+   "lat": 28.569,
+   "lon": 77.22,
+   "aliases": [
+    "South Ex"
+   ]
+  },
+  {
+   "id": "aiims",
+   "name": "AIIMS",
+   "kind": "landmark",
+   "lat": 28.5672,
+   "lon": 77.21,
+   "aliases": [
+    "एम्स"
+   ]
+  },
+  {
+   "id": "safdarjung-hospital",
+   "name": "Safdarjung Hospital",
+   "kind": "landmark",
+   "lat": 28.5685,
+   "lon": 77.206,
+   "aliases": [
+    "Safdarjung"
+   ]
+  },
+  {
+   "id": "ina",
+   "name": "INA",
+   "kind": "locality",
+   "lat": 28.575,
+   "lon": 77.209,
+   "aliases": [
+    "INA Market",
+    "Dilli Haat"
+   ]
+  },
+  {
+   "id": "sarojini-nagar",
+   "name": "Sarojini Nagar",
+   "kind": "locality",
+   "lat": 28.577,
+   "lon": 77.196,
+   "aliases": [
+    "सरोजिनी नगर"
+   ]
+  },
+  {
+   "id": "rk-puram",
+   "name": "RK Puram",
+   "kind": "locality",
+   "lat": 28.566,
+   "lon": 77.176,
+   "aliases": [
+    "R.K. Puram",
+    "आरके पुरम"
+   ]
+  },
+  {
+   "id": "vasant-vihar",
+   "name": "Vasant Vihar",
+   "kind": "locality",
+   "lat": 28.56,
+   "lon": 77.16,
+   "aliases": [
+    "वसंत विहार"
+   ]
+  },
+  {
+   "id": "munirka",
+   "name": "Munirka",
+   "kind": "locality",
+   "lat": 28.557,
+   "lon": 77.173,
+   "aliases": [
+    "मुनिरका"
+   ]
+  },
+  {
+   "id": "jnu",
+   "name": "JNU",
+   "kind": "landmark",
+   "lat": 28.5402,
+   "lon": 77.1662,
+   "aliases": [
+    "Jawaharlal Nehru University",
+    "जेएनयू"
+   ]
+  },
+  {
+   "id": "iit-delhi",
+   "name": "IIT Delhi",
+   "kind": "landmark",
+   "lat": 28.545,
+   "lon": 77.1926,
+   "aliases": []
+  },
+  {
+   "id": "hauz-khas",
+   "name": "Hauz Khas",
+   "kind": "locality",
+   "lat": 28.5494,
+   "lon": 77.2001,
+   "aliases": [
+    "हौज खास"
+   ]
+  },
+  {
+   "id": "green-park",
+   "name": "Green Park",
+   "kind": "locality",
+   "lat": 28.559,
+   "lon": 77.207,
+   "aliases": []
+  },
+  {
+   "id": "malviya-nagar",
+   "name": "Malviya Nagar",
+   "kind": "locality",
+   "lat": 28.533,
+   "lon": 77.209,
+   "aliases": [
+    "मालवीय नगर"
+   ]
+  },
+  {
+   "id": "saket",
+   "name": "Saket",
+   "kind": "locality",
+   "lat": 28.5245,
+   "lon": 77.2066,
+   "aliases": [
+    "साकेत"
+   ]
+  },
+  {
+   "id": "select-citywalk",
+   "name": "Select Citywalk",
+   "kind": "landmark",
+   "lat": 28.5286,
+   "lon": 77.219,
+   "aliases": []
+  },
+  {
+   "id": "mehrauli",
+   "name": "Mehrauli",
+   "kind": "locality",
+   "lat": 28.5183,
+   "lon": 77.1854,
+   "aliases": [
+    "महरौली"
+   ]
+  },
+  {
+   "id": "qutub-minar",
+   "name": "Qutub Minar",
+   "kind": "landmark",
+   "lat": 28.5245,
+   "lon": 77.1855,
+   "aliases": [
+    "Qutab Minar",
+    "कुतुब मीनार"
+   ]
+  },
+  {
+   "id": "chhatarpur",
+   "name": "Chhatarpur",
+   "kind": "locality",
+   "lat": 28.495,
+   "lon": 77.179,
+   "aliases": [
+    "छतरपुर"
+   ]
+  },
+  {
+   "id": "vasant-kunj",
+   "name": "Vasant Kunj",
+   "kind": "locality",
+   "lat": 28.52,
+   "lon": 77.158,
+   "aliases": [
+    "वसंत कुंज"
+   ]
+  },
+  {
+   "id": "mahipalpur",
+   "name": "Mahipalpur",
+   "kind": "locality",
+   "lat": 28.544,
+   "lon": 77.126,
+   "aliases": [
+    "महिपालपुर"
+   ]
+  },
+  {
+   "id": "igi-airport",
+   "name": "IGI Airport",
+   "kind": "landmark",
+   "lat": 28.5562,
+   "lon": 77.1,
+   "aliases": [
+    "Delhi Airport",
+    "IGI airport",
+    "Indira Gandhi International Airport",
+    "Terminal 3",
+    "एयरपोर्ट"
+   ]
+  },
+  {
+   "id": "aerocity",
+   "name": "Aerocity",
+   "kind": "locality",
+   "lat": 28.549,
+   "lon": 77.121,
+   "aliases": []
+  },
+  {
+   "id": "dhaula-kuan",
+   "name": "Dhaula Kuan",
+   "kind": "landmark",
+   "lat": 28.5918,
+   "lon": 77.1617,
+   "aliases": [
+    "Dhaula Kuan Flyover",
+    "धौला कुआं"
+   ]
+  },
+  {
+   "id": "delhi-cantonment",
+   "name": "Delhi Cantonment",
+   "kind": "locality",
+   "lat": 28.595,
+   "lon": 77.135,
+   "aliases": [
+    "Delhi Cantt",
+    "दिल्ली कैंट"
+   ]
+  },
+  {
+   "id": "palam",
+   "name": "Palam",
+   "kind": "locality",
+   "lat": 28.589,
+   "lon": 77.088,
+   "aliases": [
+    "पालम"
+   ]
+  },
+  {
+   "id": "dwarka",
+   "name": "Dwarka",
+   "kind": "locality",
+   "lat": 28.5921,
+   "lon": 77.046,
+   "aliases": [
+    "द्वारका"
+   ]
+  },
+  {
+   "id": "dwarka-expressway",
+   "name": "Dwarka Expressway",
+   "kind": "road",
+   "lat": 28.53,
+   "lon": 77.03,
+   "aliases": []
+  },
+  {
+   "id": "uttam-nagar",
+   "name": "Uttam Nagar",
+   "kind": "locality",
+   "lat": 28.621,
+   "lon": 77.055,
+   "aliases": [
+    "उत्तम नगर"
+   ]
+  },
+  {
+   "id": "janakpuri",
+   "name": "Janakpuri",
+   "kind": "locality",
+   "lat": 28.6219,
+   "lon": 77.0878,
+   "aliases": [
+    "जनकपुरी"
+   ]
+  },
+  {
+   "id": "vikaspuri",
+   "name": "Vikaspuri",
+   "kind": "locality",
+   "lat": 28.64,
+   "lon": 77.069,
+   "aliases": []
+  },
+  {
+   "id": "tilak-nagar",
+   "name": "Tilak Nagar",
+   "kind": "locality",
+   "lat": 28.64,
+   "lon": 77.096,
+   "aliases": [
+    "तिलक नगर"
+   ]
+  },
+  {
+   "id": "rajouri-garden",
+   "name": "Rajouri Garden",
+   "kind": "locality",
+   "lat": 28.649,
+   "lon": 77.122,
+   "aliases": [
+    "राजौरी गार्डन"
+   ]
+  },
+  {
+   "id": "punjabi-bagh",
+   "name": "Punjabi Bagh",
+   "kind": "locality",
+   "lat": 28.668,
+   "lon": 77.131,
+   "aliases": [
+    "पंजाबी बाग"
+   ]
+  },
+  {
+   "id": "paschim-vihar",
+   "name": "Paschim Vihar",
+   "kind": "locality",
+   "lat": 28.67,
+   "lon": 77.1,
+   "aliases": [
+    "पश्चिम विहार"
+   ]
+  },
+  {
+   "id": "nangloi",
+   "name": "Nangloi",
+   "kind": "locality",
+   "lat": 28.68,
+   "lon": 77.064,
+   "aliases": [
+    "नांगलोई"
+   ]
+  },
+  {
+   "id": "mundka",
+   "name": "Mundka",
+   "kind": "locality",
+   "lat": 28.683,
+   "lon": 77.03,
+   "aliases": [
+    "मुंडका"
+   ]
+  },
+  {
+   "id": "tikri-border",
+   "name": "Tikri Border",
+   "kind": "border",
+   "lat": 28.689,
+   "lon": 76.992,
+   "aliases": [
+    "Tikri",
+    "टीकरी बॉर्डर"
+   ]
+  },
+  {
+   "id": "najafgarh",
+   "name": "Najafgarh",
+   "kind": "locality",
+   "lat": 28.609,
+   "lon": 76.979,
+   "aliases": [
+    "नजफगढ़"
+   ]
+  },
+  {
+   "id": "bawana",
+   "name": "Bawana",
+   "kind": "locality",
+   "lat": 28.799,
+   "lon": 77.033,
+   "aliases": [
+    "बवाना"
+   ]
+  },
+  {
+   "id": "narela",
+   "name": "Narela",
+   "kind": "locality",
+   "lat": 28.853,
+   "lon": 77.092,
+   "aliases": [
+    "नरेला"
+   ]
+  },
+  {
+   "id": "alipur",
+   "name": "Alipur",
+   "kind": "locality",
+   "lat": 28.798,
+   "lon": 77.134,
+   "aliases": [
+    "अलीपुर"
+   ]
+  },
+  {
+   "id": "singhu-border",
+   "name": "Singhu Border",
+   "kind": "border",
+   "lat": 28.846,
+   "lon": 77.104,
+   "aliases": [
+    "Singhu",
+    "सिंघु बॉर्डर"
+   ]
+  },
+  {
+   "id": "rohini",
+   "name": "Rohini",
+   "kind": "locality",
+   "lat": 28.7383,
+   "lon": 77.0822,
+   "aliases": [
+    "रोहिणी"
+   ]
+  },
+  {
+   "id": "pitampura",
+   "name": "Pitampura",
+   "kind": "locality",
+   "lat": 28.698,
+   "lon": 77.138,
+   "aliases": [
+    "पीतमपुरा"
+   ]
+  },
+  {
+   "id": "shalimar-bagh",
+   "name": "Shalimar Bagh",
+   "kind": "locality",
+   "lat": 28.717,
+   "lon": 77.163,
+   "aliases": [
+    "शालीमार बाग"
+   ]
+  },
+  {
+   "id": "ashok-vihar",
+   "name": "Ashok Vihar",
+   "kind": "locality",
+   "lat": 28.69,
+   "lon": 77.176,
+   "aliases": [
+    "अशोक विहार"
+   ]
+  },
+  {
+   "id": "azadpur",
+   "name": "Azadpur",
+   "kind": "locality",
+   "lat": 28.707,
+   "lon": 77.18,
+   "aliases": [
+    "Azadpur Mandi",
+    "आजादपुर"
+   ]
+  },
+  {
+   "id": "jahangirpuri",
+   "name": "Jahangirpuri",
+   "kind": "locality",
+   "lat": 28.726,
+   "lon": 77.163,
+   "aliases": [
+    "जहांगीरपुरी"
+   ]
+  },
+  {
+   "id": "adarsh-nagar",
+   "name": "Adarsh Nagar",
+   "kind": "locality",
+   "lat": 28.715,
+   "lon": 77.172,
+   "aliases": []
+  },
+  {
+   "id": "model-town",
+   "name": "Model Town",
+   "kind": "locality",
+   "lat": 28.703,
+   "lon": 77.194,
+   "aliases": [
+    "मॉडल टाउन"
+   ]
+  },
+  {
+   "id": "mukherjee-nagar",
+   "name": "Mukherjee Nagar",
+   "kind": "locality",
+   "lat": 28.706,
+   "lon": 77.206,
+   "aliases": [
+    "मुखर्जी नगर"
+   ]
+  },
+  {
+   "id": "gtb-nagar",
+   "name": "GTB Nagar",
+   "kind": "locality",
+   "lat": 28.698,
+   "lon": 77.207,
+   "aliases": []
+  },
+  {
+   "id": "delhi-university",
+   "name": "Delhi University",
+   "kind": "landmark",
+   "lat": 28.689,
+   "lon": 77.21,
+   "aliases": [
+    "DU",
+    "North Campus",
+    "दिल्ली विश्वविद्यालय"
+   ]
+  },
+  {
+   "id": "burari",
+   "name": "Burari",
+   "kind": "locality",
+   "lat": 28.752,
+   "lon": 77.198,
+   "aliases": [
+    "बुराड़ी"
+   ]
+  },
+  {
+   "id": "civil-lines",
+   "name": "Civil Lines",
+   "kind": "locality",
+   "lat": 28.681,
+   "lon": 77.224,
+   "aliases": [
+    "सिविल लाइंस"
+   ]
+  },
+  {
+   "id": "majnu-ka-tilla",
+   "name": "Majnu ka Tilla",
+   "kind": "locality",
+   "lat": 28.701,
+   "lon": 77.228,
+   "aliases": []
+  },
+  {
+   "id": "wazirabad",
+   "name": "Wazirabad",
+   "kind": "locality",
+   "lat": 28.714,
+   "lon": 77.233,
+   "aliases": [
+    "वजीराबाद"
+   ]
+  },
+  {
+   "id": "timarpur",
+   "name": "Timarpur",
+   "kind": "locality",
+   "lat": 28.705,
+   "lon": 77.223,
+   "aliases": []
+  },
+  {
+   "id": "shastri-park",
+   "name": "Shastri Park",
+   "kind": "locality",
+   "lat": 28.672,
+   "lon": 77.25,
+   "aliases": []
+  },
+  {
+   "id": "seelampur",
+   "name": "Seelampur",
+   "kind": "locality",
+   "lat": 28.67,
+   "lon": 77.266,
+   "aliases": [
+    "सीलमपुर"
+   ]
+  },
+  {
+   "id": "jaffrabad",
+   "name": "Jaffrabad",
+   "kind": "locality",
+   "lat": 28.682,
+   "lon": 77.273,
+   "aliases": [
+    "जाफराबाद"
+   ]
+  },
+  {
+   "id": "maujpur",
+   "name": "Maujpur",
+   "kind": "locality",
+   "lat": 28.687,
+   "lon": 77.28,
+   "aliases": [
+    "मौजपुर"
+   ]
+  },
+  {
+   "id": "bhajanpura",
+   "name": "Bhajanpura",
+   "kind": "locality",
+   "lat": 28.702,
+   "lon": 77.261,
+   "aliases": [
+    "भजनपुरा"
+   ]
+  },
+  {
+   "id": "khajuri-khas",
+   "name": "Khajuri Khas",
+   "kind": "locality",
+   "lat": 28.712,
+   "lon": 77.262,
+   "aliases": []
+  },
+  {
+   "id": "mustafabad",
+   "name": "Mustafabad",
+   "kind": "locality",
+   "lat": 28.711,
+   "lon": 77.283,
+   "aliases": [
+    "मुस्तफाबाद"
+   ]
+  },
+  {
+   "id": "karawal-nagar",
+   "name": "Karawal Nagar",
+   "kind": "locality",
+   "lat": 28.73,
+   "lon": 77.279,
+   "aliases": [
+    "करावल नगर"
+   ]
+  },
+  {
+   "id": "gokulpuri",
+   "name": "Gokulpuri",
+   "kind": "locality",
+   "lat": 28.702,
+   "lon": 77.293,
+   "aliases": [
+    "गोकुलपुरी"
+   ]
+  },
+  {
+   "id": "shiv-vihar",
+   "name": "Shiv Vihar",
+   "kind": "locality",
+   "lat": 28.709,
+   "lon": 77.303,
+   "aliases": []
+  },
+  {
+   "id": "seemapuri",
+   "name": "Seemapuri",
+   "kind": "locality",
+   "lat": 28.685,
+   "lon": 77.32,
+   "aliases": [
+    "सीमापुरी"
+   ]
+  },
+  {
+   "id": "dilshad-garden",
+   "name": "Dilshad Garden",
+   "kind": "locality",
+   "lat": 28.682,
+   "lon": 77.317,
+   "aliases": [
+    "दिलशाद गार्डन"
+   ]
+  },
+  {
+   "id": "shahdara",
+   "name": "Shahdara",
+   "kind": "locality",
+   "lat": 28.673,
+   "lon": 77.289,
+   "aliases": [
+    "शाहदरा"
+   ]
+  },
+  {
+   "id": "vivek-vihar",
+   "name": "Vivek Vihar",
+   "kind": "locality",
+   "lat": 28.672,
+   "lon": 77.312,
+   "aliases": [
+    "विवेक विहार"
+   ]
+  },
+  {
+   "id": "anand-vihar",
+   "name": "Anand Vihar",
+   "kind": "locality",
+   "lat": 28.647,
+   "lon": 77.316,
+   "aliases": [
+    "Anand Vihar ISBT",
+    "आनंद विहार"
+   ]
+  },
+  {
+   "id": "preet-vihar",
+   "name": "Preet Vihar",
+   "kind": "locality",
+   "lat": 28.641,
+   "lon": 77.295,
+   "aliases": []
+  },
+  {
+   "id": "laxmi-nagar",
+   "name": "Laxmi Nagar",
+   "kind": "locality",
+   "lat": 28.631,
+   "lon": 77.277,
+   "aliases": [
+    "लक्ष्मी नगर"
+   ]
+  },
+  {
+   "id": "shakarpur",
+   "name": "Shakarpur",
+   "kind": "locality",
+   "lat": 28.63,
+   "lon": 77.283,
+   "aliases": []
+  },
+  {
+   "id": "mayur-vihar",
+   "name": "Mayur Vihar",
+   "kind": "locality",
+   "lat": 28.608,
+   "lon": 77.293,
+   "aliases": [
+    "मयूर विहार"
+   ]
+  },
+  {
+   "id": "patparganj",
+   "name": "Patparganj",
+   "kind": "locality",
+   "lat": 28.62,
+   "lon": 77.3,
+   "aliases": []
+  },
+  {
+   "id": "akshardham",
+   "name": "Akshardham",
+   "kind": "landmark",
+   "lat": 28.6127,
+   "lon": 77.2773,
+   "aliases": [
+    "अक्षरधाम"
+   ]
+  },
+  {
+   "id": "ghazipur",
+   "name": "Ghazipur",
+   "kind": "locality",
+   "lat": 28.624,
+   "lon": 77.326,
+   "aliases": [
+    "Ghazipur landfill",
+    "गाजीपुर"
+   ]
+  },
+  {
+   "id": "ghazipur-border",
+   "name": "Ghazipur Border",
+   "kind": "border",
+   "lat": 28.629,
+   "lon": 77.333,
+   "aliases": [
+    "UP Gate",
+    "गाजीपुर बॉर्डर"
+   ]
+  },
+  {
+   "id": "kondli",
+   "name": "Kondli",
+   "kind": "locality",
+   "lat": 28.617,
+   "lon": 77.324,
+   "aliases": []
+  },
+  {
+   "id": "trilokpuri",
+   "name": "Trilokpuri",
+   "kind": "locality",
+   "lat": 28.613,
+   "lon": 77.308,
+   "aliases": [
+    "त्रिलोकपुरी"
+   ]
+  },
+  {
+   "id": "dnd-flyway",
+   "name": "DND Flyway",
+   "kind": "border",
+   "lat": 28.58,
+   "lon": 77.29,
+   "aliases": [
+    "DND",
+    "डीएनडी"
+   ]
+  },
+  {
+   "id": "chilla-border",
+   "name": "Chilla Border",
+   "kind": "border",
+   "lat": 28.597,
+   "lon": 77.312,
+   "aliases": [
+    "Chilla",
+    "चिल्ला बॉर्डर"
+   ]
+  },
+  {
+   "id": "kalindi-kunj",
+   "name": "Kalindi Kunj",
+   "kind": "border",
+   "lat": 28.545,
+   "lon": 77.307,
+   "aliases": [
+    "कालिंदी कुंज"
+   ]
+  },
+  {
+   "id": "shaheen-bagh",
+   "name": "Shaheen Bagh",
+   "kind": "locality",
+   "lat": 28.547,
+   "lon": 77.297,
+   "aliases": [
+    "शाहीन बाग"
+   ]
+  },
+  {
+   "id": "jamia-nagar",
+   "name": "Jamia Nagar",
+   "kind": "locality",
+   "lat": 28.562,
+   "lon": 77.283,
+   "aliases": [
+    "Jamia",
+    "Jamia Millia",
+    "Batla House",
+    "जामिया"
+   ]
+  },
+  {
+   "id": "okhla",
+   "name": "Okhla",
+   "kind": "locality",
+   "lat": 28.555,
+   "lon": 77.271,
+   "aliases": [
+    "ओखला"
+   ]
+  },
+  {
+   "id": "okhla-industrial-area",
+   "name": "Okhla Industrial Area",
+   "kind": "locality",
+   "lat": 28.531,
+   "lon": 77.272,
+   "aliases": []
+  },
+  {
+   "id": "jasola",
+   "name": "Jasola",
+   "kind": "locality",
+   "lat": 28.539,
+   "lon": 77.29,
+   "aliases": []
+  },
+  {
+   "id": "sarita-vihar",
+   "name": "Sarita Vihar",
+   "kind": "locality",
+   "lat": 28.531,
+   "lon": 77.293,
+   "aliases": []
+  },
+  {
+   "id": "badarpur",
+   "name": "Badarpur",
+   "kind": "locality",
+   "lat": 28.495,
+   "lon": 77.303,
+   "aliases": [
+    "बदरपुर"
+   ]
+  },
+  {
+   "id": "badarpur-border",
+   "name": "Badarpur Border",
+   "kind": "border",
+   "lat": 28.489,
+   "lon": 77.308,
+   "aliases": []
+  },
+  {
+   "id": "tughlakabad",
+   "name": "Tughlakabad",
+   "kind": "locality",
+   "lat": 28.484,
+   "lon": 77.261,
+   "aliases": [
+    "तुगलकाबाद"
+   ]
+  },
+  {
+   "id": "sangam-vihar",
+   "name": "Sangam Vihar",
+   "kind": "locality",
+   "lat": 28.498,
+   "lon": 77.246,
+   "aliases": [
+    "संगम विहार"
+   ]
+  },
+  {
+   "id": "govindpuri",
+   "name": "Govindpuri",
+   "kind": "locality",
+   "lat": 28.535,
+   "lon": 77.265,
+   "aliases": [
+    "गोविंदपुरी"
+   ]
+  },
+  {
+   "id": "kalkaji",
+   "name": "Kalkaji",
+   "kind": "locality",
+   "lat": 28.539,
+   "lon": 77.258,
+   "aliases": [
+    "कालकाजी"
+   ]
+  },
+  {
+   "id": "nehru-place",
+   "name": "Nehru Place",
+   "kind": "locality",
+   "lat": 28.5491,
+   "lon": 77.2533,
+   "aliases": [
+    "नेहरू प्लेस"
+   ]
+  },
+  {
+   "id": "greater-kailash",
+   "name": "Greater Kailash",
+   "kind": "locality",
+   "lat": 28.548,
+   "lon": 77.238,
+   "aliases": [
+    "ग्रेटर कैलाश"
+   ]
+  },
+  {
+   "id": "chirag-delhi",
+   "name": "Chirag Delhi",
+   "kind": "locality",
+   "lat": 28.539,
+   "lon": 77.225,
+   "aliases": []
+  },
+  {
+   "id": "lotus-temple",
+   "name": "Lotus Temple",
+   "kind": "landmark",
+   "lat": 28.5535,
+   "lon": 77.2588,
+   "aliases": []
+  },
+  {
+   "id": "moolchand",
+   "name": "Moolchand",
+   "kind": "landmark",
+   "lat": 28.565,
+   "lon": 77.234,
+   "aliases": []
+  },
+  {
+   "id": "sarai-rohilla",
+   "name": "Sarai Rohilla",
+   "kind": "station",
+   "lat": 28.664,
+   "lon": 77.186,
+   "aliases": []
+  },
+  {
+   "id": "mangolpuri",
+   "name": "Mangolpuri",
+   "kind": "locality",
+   "lat": 28.695,
+   "lon": 77.083,
+   "aliases": [
+    "मंगोलपुरी"
+   ]
+  },
+  {
+   "id": "sultanpuri",
+   "name": "Sultanpuri",
+   "kind": "locality",
+   "lat": 28.695,
+   "lon": 77.07,
+   "aliases": [
+    "सुल्तानपुरी"
+   ]
+  },
+  {
+   "id": "kirari",
+   "name": "Kirari",
+   "kind": "locality",
+   "lat": 28.702,
+   "lon": 77.044,
+   "aliases": []
+  },
+  {
+   "id": "prem-nagar",
+   "name": "Prem Nagar",
+   "kind": "locality",
+   "lat": 28.688,
+   "lon": 77.049,
+   "aliases": []
+  },
+  {
+   "id": "bhalswa",
+   "name": "Bhalswa",
+   "kind": "locality",
+   "lat": 28.743,
+   "lon": 77.163,
+   "aliases": [
+    "Bhalswa landfill",
+    "भलस्वा"
+   ]
+  },
+  {
+   "id": "mukundpur",
+   "name": "Mukundpur",
+   "kind": "locality",
+   "lat": 28.733,
+   "lon": 77.175,
+   "aliases": []
+  },
+  {
+   "id": "mayapuri",
+   "name": "Mayapuri",
+   "kind": "locality",
+   "lat": 28.634,
+   "lon": 77.125,
+   "aliases": [
+    "मायापुरी"
+   ]
+  },
+  {
+   "id": "naraina",
+   "name": "Naraina",
+   "kind": "locality",
+   "lat": 28.631,
+   "lon": 77.142,
+   "aliases": [
+    "नारायणा"
+   ]
+  },
+  {
+   "id": "kirti-nagar",
+   "name": "Kirti Nagar",
+   "kind": "locality",
+   "lat": 28.656,
+   "lon": 77.144,
+   "aliases": [
+    "कीर्ति नगर"
+   ]
+  },
+  {
+   "id": "moti-nagar",
+   "name": "Moti Nagar",
+   "kind": "locality",
+   "lat": 28.658,
+   "lon": 77.156,
+   "aliases": []
+  },
+  {
+   "id": "anand-parbat",
+   "name": "Anand Parbat",
+   "kind": "locality",
+   "lat": 28.658,
+   "lon": 77.173,
+   "aliases": []
+  },
+  {
+   "id": "ring-road",
+   "name": "Ring Road",
+   "kind": "road",
+   "lat": 28.58,
+   "lon": 77.23,
+   "aliases": [
+    "रिंग रोड"
+   ]
+  },
+  {
+   "id": "outer-ring-road",
+   "name": "Outer Ring Road",
+   "kind": "road",
+   "lat": 28.7,
+   "lon": 77.12,
+   "aliases": []
+  },
+  {
+   "id": "noida",
+   "name": "Noida",
+   "kind": "city",
+   "lat": 28.5355,
+   "lon": 77.391,
+   "aliases": [
+    "नोएडा"
+   ]
+  },
+  {
+   "id": "noida-sector-18",
+   "name": "Noida Sector 18",
+   "kind": "locality",
+   "lat": 28.57,
+   "lon": 77.326,
+   "aliases": []
+  },
+  {
+   "id": "noida-film-city",
+   "name": "Noida Film City",
+   "kind": "landmark",
+   "lat": 28.572,
+   "lon": 77.319,
+   "aliases": [
+    "Film City"
+   ]
+  },
+  {
+   "id": "greater-noida",
+   "name": "Greater Noida",
+   "kind": "city",
+   "lat": 28.4744,
+   "lon": 77.504,
+   "aliases": [
+    "ग्रेटर नोएडा"
+   ]
+  },
+  {
+   "id": "ghaziabad",
+   "name": "Ghaziabad",
+   "kind": "city",
+   "lat": 28.6692,
+   "lon": 77.4538,
+   "aliases": [
+    "गाजियाबाद"
+   ]
+  },
+  {
+   "id": "vaishali",
+   "name": "Vaishali",
+   "kind": "locality",
+   "lat": 28.645,
+   "lon": 77.339,
+   "aliases": []
+  },
+  {
+   "id": "indirapuram",
+   "name": "Indirapuram",
+   "kind": "locality",
+   "lat": 28.641,
+   "lon": 77.371,
+   "aliases": []
+  },
+  {
+   "id": "gurugram",
+   "name": "Gurugram",
+   "kind": "city",
+   "lat": 28.4595,
+   "lon": 77.0266,
+   "aliases": [
+    "Gurgaon",
+    "गुरुग्राम",
+    "गुड़गांव"
+   ]
+  },
+  {
+   "id": "sirhaul-border",
+   "name": "Sirhaul Border",
+   "kind": "border",
+   "lat": 28.497,
+   "lon": 77.087,
+   "aliases": [
+    "Sirhaul",
+    "Delhi-Gurugram border",
+    "सरहौल"
+   ]
+  },
+  {
+   "id": "cyber-city",
+   "name": "Cyber City",
+   "kind": "locality",
+   "lat": 28.495,
+   "lon": 77.089,
+   "aliases": [
+    "Cyber Hub",
+    "DLF Cyber City"
+   ]
+  },
+  {
+   "id": "faridabad",
+   "name": "Faridabad",
+   "kind": "city",
+   "lat": 28.4089,
+   "lon": 77.3178,
+   "aliases": [
+    "फरीदाबाद"
+   ]
+  },
+  {
+   "id": "bahadurgarh",
+   "name": "Bahadurgarh",
+   "kind": "city",
+   "lat": 28.692,
+   "lon": 76.924,
+   "aliases": [
+    "बहादुरगढ़"
+   ]
+  },
+  {
+   "id": "delhi-secretariat",
+   "name": "Delhi Secretariat",
+   "kind": "landmark",
+   "lat": 28.628,
+   "lon": 77.242,
+   "aliases": []
+  },
+  {
+   "id": "tis-hazari-court",
+   "name": "Tis Hazari Court",
+   "kind": "landmark",
+   "lat": 28.667,
+   "lon": 77.216,
+   "aliases": [
+    "Tis Hazari"
+   ]
+  },
+  {
+   "id": "patiala-house-court",
+   "name": "Patiala House Court",
+   "kind": "landmark",
+   "lat": 28.617,
+   "lon": 77.236,
+   "aliases": [
+    "Patiala House"
+   ]
+  },
+  {
+   "id": "saket-court",
+   "name": "Saket Court",
+   "kind": "landmark",
+   "lat": 28.521,
+   "lon": 77.214,
+   "aliases": []
+  },
+  {
+   "id": "tihar-jail",
+   "name": "Tihar Jail",
+   "kind": "landmark",
+   "lat": 28.628,
+   "lon": 77.098,
+   "aliases": [
+    "Tihar",
+    "तिहाड़"
+   ]
+  },
+  {
+   "id": "yamuna-bank",
+   "name": "Yamuna Bank",
+   "kind": "landmark",
+   "lat": 28.623,
+   "lon": 77.269,
+   "aliases": []
+  },
+  {
+   "id": "isbt-kashmere-gate",
+   "name": "ISBT Kashmere Gate",
+   "kind": "station",
+   "lat": 28.668,
+   "lon": 77.23,
+   "aliases": []
+  },
+  {
+   "id": "kashmere-gate-metro",
+   "name": "Kashmere Gate Metro",
+   "kind": "station",
+   "lat": 28.667,
+   "lon": 77.228,
+   "aliases": []
+  },
+  {
+   "id": "kingsway-camp",
+   "name": "Kingsway Camp",
+   "kind": "locality",
+   "lat": 28.705,
+   "lon": 77.2,
+   "aliases": []
+  },
+  {
+   "id": "sabzi-mandi",
+   "name": "Sabzi Mandi",
+   "kind": "locality",
+   "lat": 28.67,
+   "lon": 77.199,
+   "aliases": []
+  },
+  {
+   "id": "gandhi-nagar",
+   "name": "Gandhi Nagar",
+   "kind": "locality",
+   "lat": 28.662,
+   "lon": 77.269,
+   "aliases": [
+    "गांधी नगर"
+   ]
+  },
+  {
+   "id": "krishna-nagar",
+   "name": "Krishna Nagar",
+   "kind": "locality",
+   "lat": 28.656,
+   "lon": 77.29,
+   "aliases": []
+  },
+  {
+   "id": "geeta-colony",
+   "name": "Geeta Colony",
+   "kind": "locality",
+   "lat": 28.656,
+   "lon": 77.272,
+   "aliases": []
+  }
+ ]
+}

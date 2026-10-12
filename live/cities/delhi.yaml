@@ -1,0 +1,51 @@
+# GSP live local "ground situation" watch — Delhi.
+# Private, 127.0.0.1-only. Data goes to <runtime>/private/delhi/ (gitignored, never on Pages).
+id: delhi
+name: Delhi NCR
+timezone: Asia/Kolkata
+center: [77.2090, 28.6280]   # lon, lat
+zoom: 11.3
+pitch: 56
+bearing: -12
+bounds: [76.84, 28.40, 77.55, 28.90]   # lon/lat box used to reject far-away geocodes
+gazetteer: gazetteer/delhi.json
+# words that make a post "about Delhi" even without a gazetteer hit
+city_terms: [delhi, "new delhi", ncr, दिल्ली, "नई दिल्ली", dilli]
+
+collect:
+  every_min: 12            # launchd StartInterval is 720 s; this is the min gap enforced in code too
+  queries_per_run: 3       # rotated round-robin; a full cycle every ~36 min
+  scrolls: 3               # partial-viewport scrolls per query (human pace)
+  max_age_h: 6             # only keep posts newer than this
+  suffix: " -filter:replies within_time:6h"
+  # Traceburst pause conventions. Unclear whether they cover GSP -> default allow (false = ignore).
+  respect_scroll_authorized: true    # ~/Library/Application Support/traceburst/state.json scroll_authorized:false pauses the watch
+  respect_quiet_hours: false         # Avinash 2026-10-12: no time-window limits for the Delhi watch
+  skip_if_running: [x_edge_scroll.py, "traceburst collect", dense_collect]
+
+queries:
+  - {id: core-en, q: '(Delhi OR "New Delhi" OR NCR) (blast OR explosion OR fire OR protest OR clash OR shooting OR firing OR curfew OR stampede OR evacuated OR evacuation)'}
+  - {id: core-hi, q: '(दिल्ली) (धमाका OR विस्फोट OR आग OR प्रदर्शन OR झड़प OR फायरिंग OR गोलीबारी OR हादसा OR भगदड़ OR कर्फ्यू OR जाम)'}
+  - {id: traffic, q: '(Delhi OR Noida OR Gurugram OR Gurgaon OR Ghaziabad) ("traffic jam" OR blockade OR "road blocked" OR "traffic advisory" OR diverted OR accident OR waterlogging)'}
+  - {id: areas-central, q: '("Connaught Place" OR "Chandni Chowk" OR "Jantar Mantar" OR "India Gate" OR "Karol Bagh" OR "Paharganj" OR "ITO") (police OR fire OR protest OR blast OR clash OR accident OR jam OR evacuated)'}
+  - {id: areas-ne, q: '(Seelampur OR Jahangirpuri OR "Shaheen Bagh" OR Jaffrabad OR Mustafabad OR "Jamia" OR "Sangam Vihar") (police OR protest OR clash OR stone OR fire OR firing OR curfew)'}
+  - {id: borders, q: '("Singhu border" OR "Tikri border" OR "Ghazipur border" OR "DND" OR "Kalindi Kunj" OR "Delhi-Noida" OR "Delhi-Gurugram" OR "Sirhaul") (jam OR blockade OR protest OR closed OR barricade OR accident)'}
+  - {id: aqi, q: '(Delhi OR NCR) (AQI OR smog OR GRAP OR "air quality") (severe OR alert OR emergency OR hazardous OR "very poor")'}
+  - {id: official, q: '(from:DelhiPolice OR from:dtptraffic OR from:ANI OR from:PTI_News OR from:htdelhi OR from:TOIDelhi OR from:IndianExpress OR from:NDTV OR from:OfficialDMRC OR from:LtGovDelhi)'}
+
+# Handles that count extra toward corroboration (news desks / official accounts). Lower-case.
+trusted_handles: [delhipolice, dtptraffic, ani, pti_news, ians_india, htdelhi, toidelhi, timesofindia,
+  indianexpress, ieDelhi, ndtv, ndtvindia, indiatoday, aajtak, ddnewslive, officialdmrc, ltgovdelhi,
+  cmodelhi, cpcb_official, ndmaindia, zeenews, republic, thehindu, hindustantimes, the_hindu,
+  newindianxpress, abpnews, news18india, cnnnews18, imd_weather, dfsdelhi]
+
+cluster:
+  window_h: 3          # posts of same type within this window and radius merge
+  radius_km: 1.5
+  half_life_h: 6       # decay
+  min_weight: 0.04     # hide below this
+
+grok:
+  enabled: true        # SuperGrok via traceburst SuperGrokEdge (headless Edge, consumer plan). Never the paid API.
+  min_interval_min: 60
+  max_posts: 30

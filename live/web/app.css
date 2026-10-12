@@ -1,0 +1,40 @@
+:root{--bg:#0b0d10;--p1:#12151a;--p2:#181c22;--line:#232833;--tx:#e6e8eb;--mu:#8a93a1;--dim:#5b6472;--acc:#7dd3fc;
+--low:#3b4757;--med:#64748b;--high:#a5b4c8;--crit:#7dd3fc;
+font:13px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tx);background:var(--bg)}
+*{box-sizing:border-box}body{margin:0;height:100vh;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+.bar{height:44px;display:flex;align-items:center;gap:14px;padding:0 14px;border-bottom:1px solid var(--line);background:var(--p1);flex:none}
+.brand{font-weight:700;letter-spacing:.2px}.brand span{font-weight:400;color:var(--mu);margin-left:6px}
+.sel{background:var(--p2);color:var(--tx);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font:inherit;font-size:12px}
+.chips{display:flex;gap:6px}.chip{border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--mu);font-size:12px}
+.chip b{color:var(--tx);font-weight:600}.dim{color:var(--dim)}.spacer{flex:1}
+.tog{color:var(--mu);font-size:12px;display:flex;gap:5px;align-items:center;cursor:pointer}.tog input{accent-color:#7dd3fc}
+main{flex:1;display:flex;min-height:0}
+.mapwrap{flex:1;position:relative;min-width:0}#map{position:absolute;inset:0 0 58px 0}
+.rail{width:372px;flex:none;border-left:1px solid var(--line);background:var(--p1);display:flex;flex-direction:column;min-height:0}
+.rail-h{padding:10px 14px;border-bottom:1px solid var(--line)}
+.list{overflow:auto;flex:1;padding:6px 10px 14px}
+.inc{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:7px 0;background:var(--p2);cursor:pointer}
+.inc:hover{border-color:#3a4252}.inc.sel{border-color:#7dd3fc80;box-shadow:inset 2px 0 0 #7dd3fc}
+.inc .top{display:flex;align-items:center;gap:8px}.inc .dot{width:9px;height:9px;border-radius:50%;flex:none;border:1px solid}
+.inc .ty{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--mu)}
+.inc .pl{font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.inc .age{color:var(--dim);font-size:11.5px}
+.inc .meta{display:flex;gap:10px;margin-top:5px;font-size:11.5px;color:var(--mu)}
+.bars{display:inline-flex;gap:2px;vertical-align:middle}.bars i{width:5px;height:8px;border-radius:1px;background:#232833;display:inline-block}
+.posts{margin-top:6px;display:none}.inc.sel .posts{display:block}
+.post{border-top:1px solid var(--line);padding:5px 0 3px;font-size:12px;color:#c3c9d2}
+.post a{color:var(--acc);text-decoration:none}.post a:hover{text-decoration:underline}.post .pm{color:var(--dim);font-size:11px}
+.pill{display:inline-block;font-size:10px;border:1px solid var(--line);border-radius:4px;padding:0 4px;margin-left:4px;color:var(--mu)}
+.empty{color:var(--mu);border:1px dashed var(--line);border-radius:10px;padding:16px;margin:10px 4px}
+.legend{position:absolute;left:10px;top:10px;background:#0f1216e6;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:11.5px;color:var(--mu);max-width:300px}
+.lg-t{color:var(--tx);font-weight:600;margin-bottom:4px}.lg-row{display:flex;gap:10px;align-items:center}
+.lg-row span{display:inline-flex;align-items:center;gap:4px}.lg-row i{display:inline-block;border-radius:50%;border:1px solid}
+.lg-h{margin-top:5px;color:var(--dim);font-size:10.5px}
+.timeline{position:absolute;left:0;right:0;bottom:0;height:58px;border-top:1px solid var(--line);background:var(--p1);display:flex;align-items:center;gap:8px;padding:0 10px}
+#tl{flex:1;height:40px;cursor:ew-resize}
+.tbtn{background:var(--p2);border:1px solid var(--line);color:var(--mu);border-radius:6px;padding:4px 9px;font:inherit;font-size:11.5px;cursor:pointer}
+.tbtn.on{color:var(--acc);border-color:#7dd3fc55}.asof{color:var(--mu);font-size:11.5px;min-width:150px;text-align:right;font-variant-numeric:tabular-nums}
+.maplibregl-ctrl-group{background:var(--p1)!important;border:1px solid var(--line);box-shadow:none!important}
+.maplibregl-ctrl-group button span{filter:invert(.8)}
+.maplibregl-ctrl-attrib{background:#0f1216cc!important;color:var(--dim)}.maplibregl-ctrl-attrib a{color:var(--mu)}
+.maplibregl-popup-content{background:var(--p1);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px}
+.maplibregl-popup-tip{border-top-color:var(--line)!important;border-bottom-color:var(--line)!important}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GSP · Live ground situation</title>
+<link rel="stylesheet" href="./vendor/maplibre-gl.css">
+<link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">GSP <span>live · ground situation</span></div>
+  <select id="city" class="sel" aria-label="City"></select>
+  <div class="chips">
+    <span class="chip" id="st-upd">—</span>
+    <span class="chip" id="st-cnt">—</span>
+    <span class="chip dim" id="st-src">local · 127.0.0.1</span>
+  </div>
+  <div class="spacer"></div>
+  <label class="tog"><input type="checkbox" id="t-3d" checked> 3D</label>
+  <label class="tog"><input type="checkbox" id="t-bld" checked> buildings</label>
+  <label class="tog"><input type="checkbox" id="t-ter"> terrain</label>
+</header>
+<main>
+  <section class="mapwrap">
+    <div id="map"></div>
+    <div class="legend">
+      <div class="lg-t">Severity · size + height</div>
+      <div class="lg-row" id="lg-bands"></div>
+      <div class="lg-h">Column height = severity × corroboration × decay · ring = critical · pulse = new (&lt;30 min)</div>
+    </div>
+    <div class="timeline">
+      <button id="play" class="tbtn" title="Replay last 24 h">▶</button>
+      <canvas id="tl"></canvas>
+      <button id="live" class="tbtn on" title="Jump to now">LIVE</button>
+      <span id="asof" class="asof">—</span>
+    </div>
+  </section>
+  <aside class="rail">
+    <div class="rail-h"><b>Incidents</b> <span id="rail-n" class="dim"></span></div>
+    <div id="list" class="list"></div>
+  </aside>
+</main>
+<script src="./vendor/maplibre-gl.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>

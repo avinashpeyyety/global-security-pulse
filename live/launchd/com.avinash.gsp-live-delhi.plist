@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>com.avinash.gsp-live-delhi</string>
+<!-- Delhi X watch: headless Edge (Traceburst HeadlessBrowser, per-run profile copy, FocusGuard) every 12 min.
+     Rate limits / lock / skip-if-another-X-scroll in gsp_live/collect.py. -->
+<key>ProgramArguments</key><array>
+<string>__PY__</string><string>-m</string><string>gsp_live</string><string>collect</string><string>--city</string><string>delhi</string>
+</array>
+<key>WorkingDirectory</key><string>__RT__</string>
+<key>StartInterval</key><integer>720</integer>
+<key>RunAtLoad</key><false/>
+<key>ProcessType</key><string>Background</string>
+<key>LowPriorityIO</key><true/>
+<key>Nice</key><integer>5</integer>
+<key>StandardOutPath</key><string>__HOME__/Library/Logs/gsp-live-delhi.log</string>
+<key>StandardErrorPath</key><string>__HOME__/Library/Logs/gsp-live-delhi.log</string>
+</dict></plist>
