@@ -1,0 +1,164 @@
+[
+  {
+    "region": "Europe",
+    "count": 290,
+    "maxSeverity": 4,
+    "freshestSource": "rss:CBS World",
+    "freshestAt": "2026-10-14T13:51:55.000Z",
+    "layers": [
+      "maritime",
+      "conflict",
+      "cyber",
+      "sanctions",
+      "unrest",
+      "terrorism",
+      "disaster"
+    ]
+  },
+  {
+    "region": "Eastern Europe",
+    "count": 133,
+    "maxSeverity": 4,
+    "freshestSource": "rss:Defense News",
+    "freshestAt": "2026-10-14T13:51:21.000Z",
+    "layers": [
+      "conflict",
+      "terrorism",
+      "sanctions",
+      "cyber",
+      "maritime",
+      "unrest",
+      "disaster"
+    ]
+  },
+  {
+    "region": "Middle East",
+    "count": 375,
+    "maxSeverity": 5,
+    "freshestSource": "rss:France 24",
+    "freshestAt": "2026-10-14T13:50:37.000Z",
+    "layers": [
+      "conflict",
+      "maritime",
+      "terrorism",
+      "unrest",
+      "sanctions",
+      "cyber",
+      "disaster"
+    ]
+  },
+  {
+    "region": "Africa",
+    "count": 206,
+    "maxSeverity": 5,
+    "freshestSource": "rss:ReliefWeb",
+    "freshestAt": "2026-10-14T13:50:27.000Z",
+    "layers": [
+      "disaster",
+      "conflict",
+      "maritime",
+      "terrorism",
+      "unrest",
+      "sanctions",
+      "cyber"
+    ]
+  },
+  {
+    "region": "Global",
+    "count": 467,
+    "maxSeverity": 5,
+    "freshestSource": "rss:ReliefWeb",
+    "freshestAt": "2026-10-14T13:47:43.000Z",
+    "layers": [
+      "disaster",
+      "conflict",
+      "cyber",
+      "unrest",
+      "maritime",
+      "terrorism",
+      "sanctions"
+    ]
+  },
+  {
+    "region": "East / SE Asia",
+    "count": 228,
+    "maxSeverity": 5,
+    "freshestSource": "rss:ReliefWeb",
+    "freshestAt": "2026-10-14T13:26:24.000Z",
+    "layers": [
+      "disaster",
+      "cyber",
+      "terrorism",
+      "conflict",
+      "maritime",
+      "unrest",
+      "sanctions"
+    ]
+  },
+  {
+    "region": "Persian Gulf",
+    "count": 55,
+    "maxSeverity": 4,
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-10-14T13:15:00.000Z",
+    "layers": [
+      "maritime",
+      "conflict",
+      "unrest",
+      "sanctions"
+    ]
+  },
+  {
+    "region": "Americas",
+    "count": 211,
+    "maxSeverity": 4,
+    "freshestSource": "rss:SCMP",
+    "freshestAt": "2026-10-14T13:08:29.000Z",
+    "layers": [
+      "conflict",
+      "disaster",
+      "maritime",
+      "cyber",
+      "terrorism",
+      "unrest",
+      "sanctions"
+    ]
+  },
+  {
+    "region": "South Asia",
+    "count": 118,
+    "maxSeverity": 4,
+    "freshestSource": "x-scroll-curated",
+    "freshestAt": "2026-10-14T13:00:54.000Z",
+    "layers": [
+      "unrest",
+      "conflict",
+      "maritime",
+      "terrorism",
+      "disaster"
+    ]
+  },
+  {
+    "region": "Red Sea / Bab el-Mandeb",
+    "count": 3,
+    "maxSeverity": 2,
+    "freshestSource": "rss:Maritime Executive",
+    "freshestAt": "2026-10-14T00:25:49.000Z",
+    "layers": [
+      "maritime"
+    ]
+  },
+  {
+    "region": "Asia",
+    "count": 17,
+    "maxSeverity": 2,
+    "freshestSource": "rss:The Diplomat",
+    "freshestAt": "2026-10-13T12:28:00.000Z",
+    "layers": [
+      "conflict",
+      "unrest",
+      "maritime",
+      "terrorism"
+    ]
+  }
+]
