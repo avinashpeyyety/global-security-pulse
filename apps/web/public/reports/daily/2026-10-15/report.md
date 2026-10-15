@@ -1,12 +1,12 @@
 # Global Security Pulse — Daily Report 2026-10-15
 
-Generated: 2026-10-15T13:39:48.490Z
+Generated: 2026-10-15T18:51:31.142Z
 Ingest package: daily-2026-10-15
 
 ## Stress composite
 
-- **Score:** 45.8 (equities 48, USD 52, VIX 45, oil 36)
-- Evaluated at: 2026-10-15T13:35:24.826Z
+- **Score:** 42.7 (equities 45, USD 51, VIX 36, oil 40)
+- Evaluated at: 2026-10-15T18:29:06.849Z
 - Rule: `0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil`
 
 ## Top anomalies (|z|)
@@ -14,31 +14,31 @@ Ingest package: daily-2026-10-15
 | Series | z | 1d% | 5d% | Streak |
 |--------|---|-----|-----|--------|
 | Shanghai Composite | -2.03 | -0.22 | -0.3 | 1 |
-| EUR/USD | -1.78 | 0.08 | 0.11 | 0 |
-| US Dollar Index | 1.47 | -0.48 | -0.08 | 0 |
-| VIX | 1.38 | 3.79 | 13.63 | 4 |
-| Brent Crude | 1.1 | -0.91 | 0.78 | 0 |
-| DAX | -1.05 | -0.17 | 1.8 | 1 |
+| EUR/USD | -1.73 | 0.16 | 0.19 | 0 |
+| US Dollar Index | 1.43 | -0.54 | -0.14 | 0 |
+| Brent Crude | 1.22 | 0 | 1.71 | 0 |
+| WTI Crude | 1.05 | 1.55 | 5.54 | 6 |
 | Copper | 0.92 | -0.24 | -1.18 | 5 |
-| Gold | -0.85 | 1.7 | 0.5 | 1 |
+| VIX | 0.87 | -0.06 | 9.41 | 0 |
+| Nikkei 225 | 0.85 | -0.05 | -4.16 | 5 |
 
 ## High / critical fallout events
 
-- **[high]** 32 Children Killed After School Roof Collapses in Pakistan — South Asia (rss:NYT World; [link](https://www.nytimes.com/2026/10/15/world/asia/pakistan-school-collapse.html))
-- **[high]** Zelenskyy says latest Russian attacks come ‘in response to signals from US’ – Europe live — Europe (rss:Guardian Ukraine; [link](https://www.theguardian.com/world/live/2026/oct/15/ukraine-russia-war-starlink-zelenskyy-putin-elon-musk-trump-europe-latest-news))
 - **[high]** Strait of Hormuz still unsafe for ships, maritime group warns — Persian Gulf (rss:CBS World; [link](https://www.cbsnews.com/live-updates/iran-war-us-houthi-saudi-arabia-trump/))
-- **[high]** Pakistan: Classrooms reduced to rubble in deadly school disaster, at leat 32 pupils killed — South Asia (rss:Africanews; [link](http://www.africanews.com/2026/10/15/pakistan-classrooms-reduced-to-rubble-in-deadly-school-disaster-at-leat-32-pupils-killed/))
-- **[high]** Chad’s ICC exit plans raise concerns over Sudan war crimes probes — Africa (rss:France 24; [link](https://www.france24.com/en/video/20261015-chad-s-icc-exit-plans-raise-concerns-over-sudan-war-crimes-probes))
-- **[high]** Ukraine's Zelensky defies Trump with Russian refinery strikes — Europe (rss:France 24; [link](https://www.france24.com/en/video/20261015-ukraine-s-zelensky-defies-trump-with-russian-refinery-strikes))
-- **[high]** At least 33 pupils and teacher killed after school roof collapses in Pakistan — South Asia (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cked326llddgo?at_medium=RSS&at_campaign=rss))
-- **[high]** Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume — Eastern Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss))
-- **[high]** Hypersonic missiles highlight arms race on Korean Peninsula — East / SE Asia (rss:DW World; [link](https://www.dw.com/en/hypersonic-missiles-highlight-arms-race-on-korean-peninsula/a-79667084?maca=en-rss-en-world-4025-rdf))
-- **[high]** Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump — Europe (rss:NYT World; [link](https://www.nytimes.com/2026/10/15/world/europe/ukraine-russia-oil-strikes-zelensky-us-intelligence.html))
-- **[high]** Why Does Saudi Arabia Struggle to Stop Houthi Attacks? — Middle East (rss:NYT World; [link](https://www.nytimes.com/2026/10/15/world/middleeast/saudi-arabia-defense-houthi-attacks-yemen.html))
-- **[high]** Ukrainians fear US intelligence cuts as Russian strikes intensify — Europe (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/10/15/ukrainians-fear-us-intelligence-cuts-as-russian-strikes-intensify?traffic_source=rss))
-- **[high]** Eight crew missing after drone attack leaves tanker ablaze off Romania's coast — Eastern Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c60qkgpp592yo?at_medium=RSS&at_campaign=rss))
-- **[high]** Hong Kong teenager pleads guilty to acid attack on Singaporean tourist — East / SE Asia (rss:SCMP; [link](https://www.scmp.com/news/hong-kong/law-and-crime/article/3371038/hong-kong-teenager-pleads-guilty-acid-attack-singaporean-tourist?utm_source=rss_feed))
-- **[high]** 'American abandonment' threatens Ukraine's civilians in war against Russia — Europe (rss:France 24; [link](https://www.france24.com/en/tv-shows/press-review/20261015-american-abandonment-threatens-ukraine-s-civilians-in-war-against-russia))
+- **[high]** China bought half of Brazil's oil exports as Iran war shut Hormuz, driving sales to record — East / SE Asia (rss:SCMP; [link](https://www.scmp.com/news/china/article/3371064/china-bought-half-brazils-oil-exports-iran-war-shut-hormuz-driving-sales-record?utm_source=rss_feed))
+- **[critical]** Early warnings and indications of a regime shift in Washington 👀 — Americas (x-scroll-curated; [link](https://x.com/DefMon3/status/2110796049203744800))
+- **[high]** In first, Netanyahu reveals he spoke with Syria&#8217;s Sharaa after 2025 strike in Damascus — Middle East (rss:Times of Israel; [link](https://www.timesofisrael.com/in-first-netanyahu-reveals-he-spoke-with-syrias-sharaa-after-2025-strike-in-damascus/))
+- **[critical]** Malware is cool because either 1) If you're writing malware: you're programming with the intent to be as convoluted as possible to evade detection. It is a fun — Global (x-scroll-curated; [link](https://x.com/vxunderground/status/2110794933577580984))
+- **[critical]** An Israeli ad-tech firm helped deploy spyware through “zero-click” online ads targeting devices used by Al Jazeera and other organisations, a Citizen Lab invest — Middle East (x-scroll-curated; [link](https://x.com/AJEnglish/status/2110792822576316868))
+- **[high]** NATO Discusses Black Sea After More Vessel Strikes Leave Seven Crew Missing — Eastern Europe (rss:Maritime Executive; [link](https://maritime-executive.com/article/nato-discusses-black-sea-after-more-vessel-strikes-leave-seven-crew-missing))
+- **[high]** Trump calls off livestream of Fort Hood attacker's execution by firing squad — Global (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss))
+- **[high]** Oct 15, 1880: The Apache chief Victorio died at Tres Castillos in Mexico, surrounded by Mexican troops after a year of running and fighting through three states — Americas (x-scroll-curated; [link](https://x.com/EchoesofWarYT/status/2110788252860907919))
+- **[high]** Yemen Says Prime Minister Unhurt After Iran-Backed Houthis Strike Palace — Middle East (rss:NYT World; [link](https://www.nytimes.com/2026/10/15/world/middleeast/yemen-strike-aden-palace.html))
+- **[high]** Seven sailors missing after drones strike tankers near Romania’s Black Sea coast — Eastern Europe (rss:Guardian Ukraine; [link](https://www.theguardian.com/world/2026/oct/15/sailors-missing-drone-strike-tankers-romania-black-sea-coast))
+- **[high]** Iraqi commander killed by Islamic State following Iraqi airstrikes against the group — Middle East (x-scroll-curated; [link](https://x.com/LongWarJournal/status/2110785526378779076))
+- **[critical]** Artificial intelligence promises to improve intelligence forecasting. It could also make political decisions to delay preparing for a crisis harder to justify. — Global (x-scroll-curated; [link](https://x.com/IISS_org/status/2110785310850191737))
+- **[critical]** Fake Arch Linux packages push malware with root privileges https:// bleepingcomputer.com/news/security/ fake-arch-linux-packages-push-malware-with-root-privileg — Global (x-scroll-curated; [link](https://x.com/BleepinComputer/status/2110780972530565459))
+- **[high]** Fake Arch Linux packages push malware with root privileges — Global (rss:BleepingComputer; [link](https://www.bleepingcomputer.com/news/security/fake-arch-linux-packages-push-malware-with-root-privileges/))
 
 ## High / critical postures
 
@@ -54,9 +54,9 @@ _No supply-route metadata._
 
 - GDELT GEO: **Pass** @ 2026-09-20T15:30:00.000Z — Seed + optional live refresh
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
-- X allowlist scroll: **Pass** @ 2026-10-15T13:35:42.368Z — browser: 173 pointers
+- X allowlist scroll: **Pass** @ 2026-10-15T18:45:27.530Z — browser: 450 pointers
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
-- RSS wires: **Pass** @ 2026-10-15T13:35:41.530Z — merged 235 (added 138); bbc-world:10, guardian-world:8, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:7, cbs-world:10, un-news:10, reliefweb:10, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:1, breaking-defense:10, defense-news:10, gcaptain:10, maritime-exec:10, cisa:5, bleepingcomputer:10, the-record:5, gdacs:10, usgs-m45:8, bellingcat:1
+- RSS wires: **Pass** @ 2026-10-15T18:29:38.408Z — merged 232 (added 108); bbc-world:10, guardian-world:8, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:7, cbs-world:10, un-news:10, reliefweb:fail, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:1, breaking-defense:10, defense-news:10, gcaptain:10, maritime-exec:10, cisa:10, bleepingcomputer:10, the-record:5, gdacs:10, usgs-m45:10, bellingcat:1
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired
 
 ## Notes
