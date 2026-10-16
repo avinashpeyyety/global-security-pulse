@@ -1,44 +1,44 @@
 # Global Security Pulse — Daily Report 2026-10-16
 
-Generated: 2026-10-16T18:30:23.241Z
+Generated: 2026-10-16T23:33:17.189Z
 Ingest package: daily-2026-10-16
 
 ## Stress composite
 
-- **Score:** 64 (equities 60, USD 50, VIX 98, oil 44)
-- Evaluated at: 2026-10-16T18:22:11.470Z
+- **Score:** 58.2 (equities 57, USD 48, VIX 79, oil 44)
+- Evaluated at: 2026-10-16T23:25:24.693Z
 - Rule: `0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil`
 
 ## Top anomalies (|z|)
 
 | Series | z | 1d% | 5d% | Streak |
 |--------|---|-----|-----|--------|
-| VIX | 4.32 | 33.17 | 47.71 | 1 |
+| VIX | 3.26 | 21.45 | 34.7 | 1 |
 | Shanghai Composite | -2.03 | -0.22 | -0.3 | 1 |
-| EUR/USD | -1.6 | 0.33 | 0.17 | 0 |
-| Brent Crude | 1.59 | 3.29 | 4.48 | 1 |
-| WTI Crude | 1.33 | 0.89 | 7.61 | 7 |
-| US Dollar Index | 1.31 | -0.12 | -0.32 | 0 |
+| Brent Crude | 1.62 | 3.56 | 4.75 | 1 |
+| EUR/USD | -1.48 | 0.27 | 0.35 | 0 |
+| WTI Crude | 1.36 | 1.09 | 7.83 | 7 |
+| US Dollar Index | 1.22 | -0.22 | -0.42 | 0 |
 | Copper | 0.92 | -0.24 | -1.18 | 5 |
-| Gold | -0.85 | 0.32 | -0.78 | 2 |
+| Gold | -0.83 | 0.4 | -0.7 | 2 |
 
 ## High / critical fallout events
 
+- **[high]** Oregon teacher fought school attacker before armed dad shot suspect 'multiple times' — Global (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&at_campaign=rss))
+- **[high]** China warns EU not to ‘fantasise’ on trade approach as Brussels confirms new ‘kill switch’ — East / SE Asia (rss:SCMP; [link](https://www.scmp.com/news/china/diplomacy/article/3371217/china-warns-eu-not-fantasise-trade-approach-brussels-confirms-new-kill-switch?utm_source=rss_feed))
+- **[high]** Yemen’s government says Houthis fired two missiles at Aden airport — Red Sea / Bab el-Mandeb (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/10/16/yemens-government-says-houthis-fired-two-missiles-at-aden-airport?traffic_source=rss))
+- **[high]** How Israeli spyware used ‘zero click’ hack on Al Jazeera staff — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/video/newsfeed/2026/10/16/how-israeli-spyware-used-zero-click-hack-on-al-jazeera-staff?traffic_source=rss))
+- **[high]** Caracas Is Eerily Safe After Deadly Police Raids in Venezuela Killed Thousands — Americas (rss:NYT World; [link](https://www.nytimes.com/2026/10/16/world/americas/caracas-venezuela-crime-raids-icc.html))
+- **[high]** Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank — Middle East (rss:NYT World; [link](https://www.nytimes.com/2026/10/16/world/middleeast/israeli-settlers-washington-post-palestinians.html))
+- **[high]** Fog of War Deepens in Hormuz as UKMTO Says Most Ship Attacks Go Unreported — Persian Gulf (rss:gCaptain; [link](https://gcaptain.com/fog-of-war-deepens-in-hormuz-as-ukmto-says-most-ship-attacks-go-unreported/))
+- **[high]** War in Yemen Now Impacting the Whole Gulf Region — Middle East (rss:Maritime Executive; [link](https://maritime-executive.com/article/war-in-yemen-now-impacting-the-whole-gulf-region))
+- **[high]** 'US tilting toward Russia: Europeans are standing more and more solidly with Zelensky' — Europe (rss:France 24; [link](https://www.france24.com/en/tv-shows/spotlight/20261016-us-tilting-toward-russia-europeans-are-standing-more-and-more-solidly-with-zelensky))
 - **[high]** Bulgaria and Romania Continue Black Sea Searches After Attacks — Eastern Europe (rss:Maritime Executive; [link](https://maritime-executive.com/article/bulgaria-and-romania-continue-black-sea-searches-after-attacks))
 - **[high]** Zero-click attacks used targeted ads to deliver Candiru spyware — Global (rss:BleepingComputer; [link](https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/))
+- **[high]** Targeted ads installed Candiru spyware in zero-click attacks — Global (rss:BleepingComputer; [link](https://www.bleepingcomputer.com/news/security/zero-click-attacks-used-targeted-ads-to-deliver-candiru-spyware/))
 - **[high]** Houthi Attacks on Saudi Arabia Defy Difference in Military Power — Middle East (rss:gCaptain; [link](https://gcaptain.com/houthi-attacks-on-saudi-arabia-defy-difference-in-military-power/))
 - **[high]** Iran’s president condemns environmental impact of war in Middle East — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/video/newsfeed/2026/10/16/irans-president-condemns-environmental-impact-of-war-in-middle-eas?traffic_source=rss))
 - **[high]** Zelensky says Ukraine has right to defend itself after Trump calls latest strikes a 'disgrace' — Eastern Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c58jz174w89ro?at_medium=RSS&at_campaign=rss))
-- **[high]** Israeli settlers beat Palestinians and a U.S. photojournalist in West Bank attacks — Middle East (rss:NPR World; [link](https://www.npr.org/2026/10/16/nx-s1-6004904/israeli-settlers-beat-us-photojournalist-washington-post-west-bank))
-- **[high]** Houthi Attacks on Saudi Arabia Put In Doubt Kingdom’s Sports and Business Events — Middle East (rss:NYT World; [link](https://www.nytimes.com/2026/10/16/world/middleeast/saudi-arabia-houthi-attack-fii-events.html))
-- **[high]** Ethiopian gains in Tigray risk wider war with Eritrea, analyst warns — Africa (rss:Africanews; [link](http://www.africanews.com/2026/10/16/ethiopian-gains-in-tigray-risk-wider-war-with-eritrea-analyst-warns/))
-- **[high]** Power plant attacks reflect Russian blueprint to make Ukrainian cities unlivable — Europe (rss:Guardian Ukraine; [link](https://www.theguardian.com/world/2026/oct/16/attacks-on-ukraine-power-plants-show-russia-has-given-up-on-military-victory))
-- **[high]** Zelensky asks EU for extra $79 billion to sustain Ukraine’s war effort — Eastern Europe (rss:SCMP; [link](https://www.scmp.com/news/world/europe/article/3371207/zelensky-asks-eu-extra-79-billion-sustain-ukraines-war-effort?utm_source=rss_feed))
-- **[high]** Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack — Middle East (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss))
-- **[high]** Houthi attacks on strategic Saudi assets threaten Riyadh&apos;s regional leadership and economic ambitions — Middle East (rss:DW World; [link](https://www.dw.com/en/houthi-attacks-on-strategic-saudi-assets-threaten-riyadh-s-regional-leadership-and-economic-ambitions/a-79680200?maca=en-rss-en-world-4025-rdf))
-- **[high]** Baltimore suburb confirms August data breach after ransomware claims — Global (rss:The Record; [link](https://therecord.media/anne-arundel-county-maryland-confirms-data-breach))
-- **[high]** Team digitally traces Polish Revolutionary War hero’s West Point contributions — Europe (rss:Defense News; [link](https://www.defensenews.com/industry/techwatch/2026/10/15/team-digitally-traces-polish-revolutionary-war-heros-west-point-contributions/))
-- **[high]** Suspected Chinese espionage attackers abusing BeyondTrust IT support zero-day — East / SE Asia (rss:The Record; [link](https://therecord.media/beyond-trust-cyberattack-china))
 
 ## High / critical postures
 
@@ -54,9 +54,9 @@ _No supply-route metadata._
 
 - GDELT GEO: **Pass** @ 2026-09-20T15:30:00.000Z — Seed + optional live refresh
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
-- X allowlist scroll: **Pass** @ 2026-10-16T18:22:28.693Z — browser: 445 pointers
+- X allowlist scroll: **Pass** @ 2026-10-16T23:25:41.259Z — browser: 445 pointers
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
-- RSS wires: **Pass** @ 2026-10-16T18:22:27.293Z — merged 241 (added 114); bbc-world:10, guardian-world:8, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:9, cbs-world:10, un-news:10, reliefweb:10, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:0, breaking-defense:10, defense-news:10, gcaptain:10, maritime-exec:10, cisa:10, bleepingcomputer:10, the-record:5, gdacs:8, usgs-m45:10, bellingcat:1
+- RSS wires: **Pass** @ 2026-10-16T23:25:39.984Z — merged 243 (added 67); bbc-world:10, guardian-world:8, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:9, cbs-world:10, un-news:10, reliefweb:10, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:0, breaking-defense:10, defense-news:10, gcaptain:10, maritime-exec:10, cisa:10, bleepingcomputer:10, the-record:5, gdacs:10, usgs-m45:10, bellingcat:1
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired
 
 ## Notes
