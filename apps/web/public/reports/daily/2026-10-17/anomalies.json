@@ -8,7 +8,7 @@
     "pctChange20d": 34.98,
     "adverseStreak": 1,
     "latestValue": 19.989999771118164,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -21,7 +21,7 @@
     "pctChange20d": -1.33,
     "adverseStreak": 1,
     "latestValue": 3029.45,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -34,7 +34,7 @@
     "pctChange20d": 1.11,
     "adverseStreak": 7,
     "latestValue": 101.41000366210938,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -47,7 +47,7 @@
     "pctChange20d": 5.77,
     "adverseStreak": 1,
     "latestValue": 109.86000061035156,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -60,7 +60,7 @@
     "pctChange20d": -2.07,
     "adverseStreak": 0,
     "latestValue": 1.1242270469665527,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -73,7 +73,7 @@
     "pctChange20d": 1.62,
     "adverseStreak": 0,
     "latestValue": 101.83999633789062,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -86,7 +86,7 @@
     "pctChange20d": -0.24,
     "adverseStreak": 5,
     "latestValue": 4.2,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -99,7 +99,7 @@
     "pctChange20d": -5.51,
     "adverseStreak": 2,
     "latestValue": 4181.10009765625,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -112,7 +112,7 @@
     "pctChange20d": -1.54,
     "adverseStreak": 5,
     "latestValue": 29187.55078125,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -125,7 +125,7 @@
     "pctChange20d": 2.88,
     "adverseStreak": 0,
     "latestValue": 65324.2890625,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -138,7 +138,7 @@
     "pctChange20d": 0.19,
     "adverseStreak": 3,
     "latestValue": 5.32,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -151,7 +151,7 @@
     "pctChange20d": 1.26,
     "adverseStreak": 0,
     "latestValue": 25622.609375,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -164,7 +164,7 @@
     "pctChange20d": 0.12,
     "adverseStreak": 1,
     "latestValue": 7659.43994140625,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   },
@@ -177,7 +177,7 @@
     "pctChange20d": 0.6,
     "adverseStreak": 0,
     "latestValue": 157.98699951171875,
-    "evaluatedAt": "2026-10-17T18:30:21.754Z",
+    "evaluatedAt": "2026-10-17T23:28:01.894Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
     "snapshot": "live@2026-10-17"
   }
