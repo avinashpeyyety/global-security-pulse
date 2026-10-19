@@ -1,44 +1,44 @@
 # Global Security Pulse — Daily Report 2026-10-19
 
-Generated: 2026-10-19T18:41:13.555Z
+Generated: 2026-10-19T23:43:09.715Z
 Ingest package: daily-2026-10-19
 
 ## Stress composite
 
-- **Score:** 50.7 (equities 51, USD 50, VIX 57, oil 43)
-- Evaluated at: 2026-10-19T18:23:21.157Z
+- **Score:** 50.9 (equities 52, USD 51, VIX 57, oil 42)
+- Evaluated at: 2026-10-19T23:21:15.431Z
 - Rule: `0.35*equities_stress + 0.2*usd + 0.25*vix + 0.2*oil`
 
 ## Top anomalies (|z|)
 
 | Series | z | 1d% | 5d% | Streak |
 |--------|---|-----|-----|--------|
-| VIX | 2.04 | -7.9 | 21.04 | 0 |
+| VIX | 2.06 | -7.75 | 21.24 | 0 |
 | Shanghai Composite | -2.03 | -0.22 | -0.3 | 1 |
-| EUR/USD | -1.65 | 0.02 | 0.1 | 0 |
-| Brent Crude | 1.6 | 0.2 | 3.22 | 2 |
-| US Dollar Index | 1.35 | 0.11 | -0.62 | 1 |
-| WTI Crude | 1.31 | -2.24 | 5.76 | 0 |
-| Gold | -0.96 | -0.35 | -0.57 | 0 |
-| DAX | -0.94 | -1.18 | 0.17 | 1 |
+| EUR/USD | -1.6 | -0.09 | 0.5 | 1 |
+| Brent Crude | 1.51 | -0.53 | 2.47 | 0 |
+| US Dollar Index | 1.37 | 0.13 | -0.59 | 1 |
+| WTI Crude | 1.2 | -3.09 | 4.84 | 0 |
+| Gold | -1.03 | -0.66 | -0.89 | 0 |
+| Copper | 0.92 | -0.24 | -1.18 | 5 |
 
 ## High / critical fallout events
 
-- **[high]** US adds ‘wrongful detention’ warning for Americans travelling to China — East / SE Asia (rss:SCMP; [link](https://www.scmp.com/news/china/diplomacy/article/3371422/us-adds-wrongful-detention-warning-americans-travelling-china?utm_source=rss_feed))
-- **[high]** ‘Islamist’ bomb threats sent to hundreds of schools in UK, Hungary, Serbia — Europe (rss:SCMP; [link](https://www.scmp.com/news/world/europe/article/3371421/islamist-bomb-threats-sent-hundreds-schools-uk-hungary-serbia?utm_source=rss_feed))
-- **[high]** Russian envoy says visit to Iran aimed at averting return to war — Middle East (rss:CBS World; [link](https://www.cbsnews.com/live-updates/iran-war-us-trump-talks-russia-strait-of-hormuz/))
-- **[high]** OpenCode hack exposes API keys amid AI distillation attacks — Global (rss:BleepingComputer; [link](https://www.bleepingcomputer.com/news/security/opencode-hack-exposes-api-keys-amid-ai-distillation-attacks/))
-- **[high]** Trump backs Netanyahu: Is the US planning a new Iran attack with Israel? — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/10/19/trump-backs-netanyahu-is-the-us-planning-a-new-iran-attack-with-israel?traffic_source=rss))
-- **[high]** How HSBC’s Sharia fund invested millions in Israeli war-linked firms — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/10/19/how-hsbcs-sharia-fund-invested-millions-in-israeli-war-linked-firms?traffic_source=rss))
-- **[high]** Search under way for four soldiers missing after gang attack in Haiti — Americas (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/10/19/search-under-way-for-four-soldiers-missing-after-gang-attack-in-haiti?traffic_source=rss))
-- **[high]** Houthi missile strike on Yemen camp kills 50 security recruits, local authorities say — Middle East (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/cv0ld6lrr2zeo?at_medium=RSS&at_campaign=rss))
-- **[high]** Houthi ballistic missile strike on Yemeni military camp said to kill over 50 soldiers — Middle East (rss:Times of Israel; [link](https://www.timesofisrael.com/houthi-ballistic-missile-strike-on-yemeni-military-camp-said-to-kill-over-50-soldiers/))
-- **[high]** Russian social media giant VK faces disruptions after data center drone strike — Europe (rss:The Record; [link](https://therecord.media/russian-social-media-giant-vk-faces-disruptions-drone-strike-data-center))
-- **[high]** Zelenskyy says it&#039;s Putin who wants an endless war, not him — Eastern Europe (rss:CBS World; [link](https://www.cbsnews.com/news/russia-ukraine-war-zelenskyy-trump-putin-strikes-no-intelligence/))
-- **[high]** Palestinians attack pro-settlement group including right-wing politician, her party says — Middle East (rss:Times of Israel; [link](https://www.timesofisrael.com/palestinians-attack-pro-settlement-group-including-right-wing-politician-her-party-says/))
-- **[high]** Houthi attack kills 53 at Yemen government training camp — Middle East (rss:SCMP; [link](https://www.scmp.com/news/world/middle-east/article/3371416/houthi-attack-kills-53-yemen-government-training-camp?utm_source=rss_feed))
-- **[high]** Shield AI software cuts autonomous flight development to six weeks — Global (rss:Defense News; [link](https://www.defensenews.com/industry/techwatch/2026/10/16/shield-ai-software-cuts-autonomous-flight-development-to-six-weeks/))
-- **[high]** Drone attack near market kills 80 in Sudan — Africa (rss:Guardian World; [link](https://www.theguardian.com/world/2026/oct/19/drone-attack-market-al-dibab-west-kordofan-sudan))
+- **[critical]** Instead of letting attention toward the refugee crisis flag, the new Bangladeshi government should aim to reset its Rohingya policy around realistic goals and p — Global (x-scroll-curated; [link](https://x.com/CrisisGroup/status/2112319182658224206))
+- **[high]** The IDF has ordered a military-wide leave freeze starting Thursday, and instituted the highest state of alertness ahead of elections on the 27th. Reinforcements — Middle East (x-scroll-curated; [link](https://x.com/FaytuksNetwork/status/2112317196294881529))
+- **[critical]** Chinese Premier Li Qiang used talks with Iran's First Vice President Mohammad Reza Aref in Tajikistan to take a clear stance on the US-Israel war on Iran and ur — Middle East (x-scroll-curated; [link](https://x.com/AJEnglish/status/2112314113577902346))
+- **[high]** Australia's Albanese says attacker's car made U-turn before critically injuring lawmaker https:// reut.rs/4BeMQ87 — East / SE Asia (x-scroll-curated; [link](https://x.com/Reuters/status/2112310447433015302))
+- **[critical]** US President Donald Trump said on he is open to participating in a trilateral meeting with Chinese President Xi Jinping and Russian President Vladimir Putin and — East / SE Asia (x-scroll-curated; [link](https://x.com/Reuters/status/2112310322895974408))
+- **[high]** Alberta voters decide whether to take a step toward separating from Canada — Americas (rss:NPR World; [link](https://www.npr.org/2026/10/19/nx-s1-6005810/alberta-voters-decide-whether-to-take-a-step-toward-separating-from-canada))
+- **[high]** Zelensky should get ‘somebody else’ to negotiate to end Ukraine war, Trump says — Eastern Europe (rss:SCMP; [link](https://www.scmp.com/news/world/russia-central-asia/article/3371432/zelensky-should-get-somebody-else-negotiate-end-ukraine-war-trump-says?utm_source=rss_feed))
+- **[high]** 160 people reported killed in escalating drone attacks across Sudan — Africa (rss:Al Jazeera; [link](https://www.aljazeera.com/news/2026/10/19/160-reported-killed-in-escalating-drone-attacks-across-sudan?traffic_source=rss))
+- **[critical]** Jon Stewart signs on to continue as ‘Daily Show’ host through 2028 https:// reut.rs/4sxLqlr — Global (x-scroll-curated; [link](https://x.com/Reuters/status/2112295389613166981))
+- **[high]** The House Sergeant at Arms warns more suspicious white powder letters may reach congressional offices in the coming days. None received by congressional offices — Global (x-scroll-curated; [link](https://x.com/FaytuksNetwork/status/2112294615185310020))
+- **[high]** Israel to resume entry of private-sector goods to Gaza; 5 reportedly killed in Strip — Middle East (rss:Times of Israel; [link](https://www.timesofisrael.com/israel-to-resume-entry-of-private-sector-goods-to-gaza-as-5-reportedly-killed-in-strip/))
+- **[high]** Tennis star Svitolina says emotional toll of Ukraine war led to Monfils separation — Eastern Europe (rss:BBC World; [link](https://www.bbc.co.uk/news/articles/ckd7qy12j148o?at_medium=RSS&at_campaign=rss))
+- **[high]** Israeli police say they arrested 10 in connection with settler attacks — Middle East (rss:Al Jazeera; [link](https://www.aljazeera.com/video/newsfeed/2026/10/19/israeli-police-say-they-arrested-10-in-connection-with-settler-attacks?traffic_source=rss))
+- **[critical]** The latest Russia Contingency is out. I sit down with a staff member from Ukraine’s 3rd Army Corps to talk about operation Vivaldi, which has proven successful — Eastern Europe (x-scroll-curated; [link](https://x.com/KofmanMichael/status/2112286449806528533))
+- **[high]** Trump says that Russia “frankly, has been fine on Ukraine. They haven't been doing much." Notably, a Russian strike on a park in Ukraine's Kharkiv Oblast today — Eastern Europe (x-scroll-curated; [link](https://x.com/Osinttechnical/status/2112285459208450216))
 
 ## High / critical postures
 
@@ -54,9 +54,9 @@ _No supply-route metadata._
 
 - GDELT GEO: **Pass** @ 2026-09-20T15:30:00.000Z — Seed + optional live refresh
 - Markets (Stooq/Yahoo): **Pass** @ 2026-09-20T15:36:00.000Z — Seed series loaded
-- X allowlist scroll: **Pass** @ 2026-10-19T18:33:18.547Z — browser: 302 pointers
+- X allowlist scroll: **Pass** @ 2026-10-19T23:35:10.105Z — browser: 169 pointers
 - FRED macros: **Warn** @ 2026-09-20T15:00:00.000Z — No FRED_API_KEY; using seed proxy for fed funds
-- RSS wires: **Pass** @ 2026-10-19T18:23:36.146Z — merged 222 (added 112); bbc-world:10, guardian-world:10, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:10, cbs-world:10, un-news:6, reliefweb:10, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:0, breaking-defense:3, defense-news:10, gcaptain:10, maritime-exec:10, cisa:0, bleepingcomputer:10, the-record:3, gdacs:10, usgs-m45:10, bellingcat:0
+- RSS wires: **Pass** @ 2026-10-19T23:21:30.076Z — merged 231 (added 80); bbc-world:10, guardian-world:10, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:10, cbs-world:10, un-news:10, reliefweb:10, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:0, breaking-defense:6, defense-news:10, gcaptain:10, maritime-exec:10, cisa:0, bleepingcomputer:10, the-record:5, gdacs:10, usgs-m45:10, bellingcat:0
 - Baltic Dry: **Not run** @ n/a — No free reliable source wired
 
 ## Notes
