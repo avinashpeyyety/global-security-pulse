@@ -8,100 +8,100 @@
     "pctChange20d": -1.33,
     "adverseStreak": 1,
     "latestValue": 3029.45,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
+  },
+  {
+    "seriesId": "vix",
+    "seriesName": "VIX",
+    "zScore": 2,
+    "pctChange1d": 8.78,
+    "pctChange5d": -3.8,
+    "pctChange20d": 22.21,
+    "adverseStreak": 2,
+    "latestValue": 18.709999084472656,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
+    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "gold",
     "seriesName": "Gold",
-    "zScore": -1.67,
-    "pctChange1d": -0.65,
-    "pctChange5d": -0.86,
-    "pctChange20d": -4.21,
+    "zScore": -1.97,
+    "pctChange1d": -1.95,
+    "pctChange5d": -1.38,
+    "pctChange20d": -5.04,
     "adverseStreak": 0,
-    "latestValue": 4025.300048828125,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "latestValue": 3952.60009765625,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "wti",
     "seriesName": "WTI Crude",
-    "zScore": 1.42,
-    "pctChange1d": -0.01,
-    "pctChange5d": 3.32,
-    "pctChange20d": 10.66,
-    "adverseStreak": 0,
-    "latestValue": 102.7699966430664,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "zScore": 1.53,
+    "pctChange1d": 1.81,
+    "pctChange5d": 0.56,
+    "pctChange20d": 13.98,
+    "adverseStreak": 1,
+    "latestValue": 103.8499984741211,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "eurusd",
     "seriesName": "EUR/USD",
-    "zScore": -1.37,
-    "pctChange1d": 0.54,
-    "pctChange5d": -0.4,
-    "pctChange20d": -1.22,
+    "zScore": -1.42,
+    "pctChange1d": 0.11,
+    "pctChange5d": -0.47,
+    "pctChange20d": -0.73,
     "adverseStreak": 0,
-    "latestValue": 1.118943691253662,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "latestValue": 1.1168192625045776,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "brent",
     "seriesName": "Brent Crude",
-    "zScore": 1.29,
-    "pctChange1d": -3.34,
-    "pctChange5d": -1.5,
-    "pctChange20d": 8.95,
+    "zScore": 1.42,
+    "pctChange1d": -1.62,
+    "pctChange5d": -3.17,
+    "pctChange20d": 10.53,
     "adverseStreak": 0,
-    "latestValue": 111.47000122070312,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "latestValue": 113.0199966430664,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
+  },
+  {
+    "seriesId": "nky",
+    "seriesName": "Nikkei 225",
+    "zScore": -1.31,
+    "pctChange1d": -2.12,
+    "pctChange5d": 0.95,
+    "pctChange20d": -8.22,
+    "adverseStreak": 1,
+    "latestValue": 63290.109375,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
+    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "dxy",
     "seriesName": "US Dollar Index",
     "zScore": 1.02,
-    "pctChange1d": -0.33,
-    "pctChange5d": 0.24,
-    "pctChange20d": -0.24,
+    "pctChange1d": -0.13,
+    "pctChange5d": 0.1,
+    "pctChange20d": -0.02,
     "adverseStreak": 0,
-    "latestValue": 101.85399627685547,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "latestValue": 101.90799713134766,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
-  },
-  {
-    "seriesId": "vix",
-    "seriesName": "VIX",
-    "zScore": 0.96,
-    "pctChange1d": 1.71,
-    "pctChange5d": -9.62,
-    "pctChange20d": 4.94,
-    "adverseStreak": 1,
-    "latestValue": 17.200000762939453,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
-    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
-  },
-  {
-    "seriesId": "nky",
-    "seriesName": "Nikkei 225",
-    "zScore": -0.93,
-    "pctChange1d": 1.08,
-    "pctChange5d": -1.03,
-    "pctChange20d": -2.33,
-    "adverseStreak": 0,
-    "latestValue": 63954.19140625,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
-    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "copper",
@@ -112,9 +112,9 @@
     "pctChange20d": -0.24,
     "adverseStreak": 5,
     "latestValue": 4.2,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "ndx",
@@ -124,10 +124,23 @@
     "pctChange5d": 1.53,
     "pctChange20d": -3.6,
     "adverseStreak": 1,
-    "latestValue": 29402.5078125,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "latestValue": 29402.509765625,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
+  },
+  {
+    "seriesId": "dax",
+    "seriesName": "DAX",
+    "zScore": 0.4,
+    "pctChange1d": -0.66,
+    "pctChange5d": 2.73,
+    "pctChange20d": 2.52,
+    "adverseStreak": 1,
+    "latestValue": 25867.9296875,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
+    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "fedfunds",
@@ -138,9 +151,9 @@
     "pctChange20d": 0.19,
     "adverseStreak": 3,
     "latestValue": 5.32,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "spx",
@@ -151,34 +164,21 @@
     "pctChange20d": 0.7,
     "adverseStreak": 1,
     "latestValue": 7720.39013671875,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
-  },
-  {
-    "seriesId": "dax",
-    "seriesName": "DAX",
-    "zScore": 0.01,
-    "pctChange1d": 0.44,
-    "pctChange5d": 0.23,
-    "pctChange20d": 2,
-    "adverseStreak": 0,
-    "latestValue": 25704.01953125,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
-    "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   },
   {
     "seriesId": "usdjpy",
     "seriesName": "USD/JPY",
-    "zScore": 0,
-    "pctChange1d": -0.17,
-    "pctChange5d": -0.26,
-    "pctChange20d": 0.11,
+    "zScore": -0.23,
+    "pctChange1d": -0.33,
+    "pctChange5d": 0.53,
+    "pctChange20d": -0.38,
     "adverseStreak": 0,
-    "latestValue": 157.7239990234375,
-    "evaluatedAt": "2026-10-29T23:23:26.876Z",
+    "latestValue": 157.31900024414062,
+    "evaluatedAt": "2026-10-30T13:29:29.479Z",
     "rule": "rolling_z_60d + pct_1/5/20d + adverse_streak",
-    "snapshot": "live@2026-10-29"
+    "snapshot": "live@2026-10-30"
   }
 ]
