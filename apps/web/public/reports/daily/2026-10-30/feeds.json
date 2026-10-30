@@ -21,7 +21,7 @@
     "id": "x-scroll",
     "name": "X allowlist scroll",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-10-30T18:24:17.462Z",
+    "lastEvaluatedAt": "2026-10-30T23:21:01.334Z",
     "detail": "browser: 470 pointers",
     "rule": "allowlist_scroll && merge_by_id",
     "snapshot": "x-scroll@2026-10-30"
@@ -39,8 +39,8 @@
     "id": "rss",
     "name": "RSS wires",
     "status": "Pass",
-    "lastEvaluatedAt": "2026-10-30T18:24:16.983Z",
-    "detail": "merged 228 (added 96); bbc-world:10, guardian-world:9, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:8, cbs-world:10, un-news:10, reliefweb:fail, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:0, breaking-defense:10, defense-news:10, gcaptain:10, maritime-exec:10, cisa:5, bleepingcomputer:10, the-record:5, gdacs:10, usgs-m45:10, bellingcat:1",
+    "lastEvaluatedAt": "2026-10-30T23:21:00.845Z",
+    "detail": "merged 229 (added 71); bbc-world:10, guardian-world:9, aljazeera:10, france24:10, dw-world:10, npr-world:10, nyt-world:10, sky-world:8, cbs-world:10, un-news:10, reliefweb:fail, guardian-ukraine:10, times-of-israel:10, diplomat:10, scmp-asia:10, africanews:10, crisisgroup:0, breaking-defense:10, defense-news:10, gcaptain:10, maritime-exec:10, cisa:6, bleepingcomputer:10, the-record:5, gdacs:10, usgs-m45:10, bellingcat:1",
     "rule": "http_200 && items>=1",
     "snapshot": "rss@2026-10-30"
   },
