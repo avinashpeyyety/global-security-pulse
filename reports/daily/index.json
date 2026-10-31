@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2026-10-30T23:21:01.803Z",
+  "updatedAt": "2026-10-31T13:25:00.752Z",
   "dates": [
+    {
+      "date": "2026-10-31",
+      "path": "reports/daily/2026-10-31/",
+      "publicPath": "reports/daily/2026-10-31/",
+      "generatedAt": "2026-10-31T13:25:00.752Z",
+      "packageId": "daily-2026-10-31",
+      "stressScore": 57.1,
+      "eventCount": 814,
+      "anomalyCount": 14
+    },
     {
       "date": "2026-10-30",
       "path": "reports/daily/2026-10-30/",
@@ -332,5 +342,5 @@
       "anomalyCount": 14
     }
   ],
-  "latest": "2026-10-30"
+  "latest": "2026-10-31"
 }
